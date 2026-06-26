@@ -1,0 +1,469 @@
+{
+  "nav": {
+    "wordmark": "SpeakWith",
+    "links": {
+      "home": "Home",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "pricing": "Pricing"
+    },
+    "theme": {
+      "label": "Appearance",
+      "system": "System",
+      "light": "Light",
+      "dark": "Dark"
+    }
+  },
+  "app": {
+    "footer": {
+      "links": {
+        "home": "Home",
+        "privacy": "Privacy",
+        "terms": "Terms"
+      },
+      "tagline": "SpeakWith: your spoken ideas, captured as a daily document.",
+      "copyright": "© 2026 IKI Systems. All rights reserved."
+    }
+  },
+  "links": {
+    "buyMacGumroad": "https://ikisystems.gumroad.com/l/vozgsy"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "A voice-driven daily document",
+      "headline": "Speak Now. Refine Later.",
+      "lead": "Speak your day into a clean markdown file on Mac or iOS. Read it, edit it, share it. It works on its own, and it opens in VS Code, Obsidian, or any tool you point at it.",
+      "ctaPrimary": "Buy SpeakWith for Mac",
+      "ctaSecondary": "iOS — Coming Soon",
+      "ctaGhost": "See how it works",
+      "note": "Works on Mac and iOS. Your voice never leaves your device. No account required."
+    },
+    "moments": {
+      "title": "Say it now. Use it later.",
+      "heroImage": "canonical_screenshots/hero.png",
+      "heroAlt": "SpeakWith for Mac in live dictation: spoken words appearing as transcribed lines beneath a live waveform.",
+      "heroCaption": "Speak, and watch the thought land as text before it slips away."
+    },
+    "platforms": {
+      "eyebrow": "Two apps, one voice",
+      "title": "A recorder for the desk, a companion for everywhere else",
+      "sub": "SpeakWith is a voice recorder. It is tuned for speech and dictation, the way a person actually talks, not for capturing music or ambient sound.",
+      "items": [
+        {
+          "name": "SpeakWith for Mac",
+          "tag": "The studio",
+          "body": "Live and batch recorders, audio and video import, and a choice of transcription engines: Apple on-device, Whisper, or Parakeet. Every recording lands in your daily document, with playback you can click straight into.",
+          "points": [
+            "Live and batch recording",
+            "Import audio and video",
+            "Apple, Whisper, and Parakeet engines",
+            "Transcripts with click-to-play audio"
+          ]
+        },
+        {
+          "name": "SpeakWith for iOS",
+          "tag": "The companion",
+          "body": "A voice recorder for when you are away from the desk. Live dictation, a dictation board that collects what you capture, and your transcripts and audio files kept close. Transcription runs on-device with Apple Speech.",
+          "points": [
+            "Live dictation",
+            "Dictation board",
+            "Transcripts and audio files",
+            "On-device Apple Speech",
+            "English today, more languages in development"
+          ]
+        }
+      ]
+    },
+    "screenshots": {
+      "title": "See it work",
+      "subtitle": "The actual Mac app, in action.",
+      "items": [
+        {
+          "src": "assets/screenshots/01_job_queue_full.png",
+          "caption": "Every recording, tracked in one clear queue, grouped by day.",
+          "ariaLabel": "The SpeakWith job queue: a day's recordings grouped by date, each row showing its transcription status."
+        },
+        {
+          "src": "assets/screenshots/markdown.png",
+          "caption": "Everything lands in one plain .md file — yours to open in any editor.",
+          "ariaLabel": "The day's dictation as a markdown file open in VS Code: a dated daily document of transcribed notes."
+        },
+        {
+          "src": "assets/screenshots/click-in-transcript.png",
+          "caption": "Click any line to jump straight to that moment in the recording.",
+          "ariaLabel": "A finished transcript open in SpeakWith: timestamped lines beside an audio player, ready to click a line and jump to that point in the recording."
+        }
+      ]
+    },
+    "moat": {
+      "title": "Your file. Your machine. Your AI.",
+      "items": [
+        {
+          "label": "Local.",
+          "body": "Your recordings never leave your machine. Period.",
+          "isHtml": false
+        },
+        {
+          "label": "Markdown.",
+          "body": "A plain <code>.md</code> file you own. Open it in VS Code, Obsidian, or any editor. Feed it to any tool.",
+          "isHtml": true
+        },
+        {
+          "label": "No account.",
+          "body": "No login. No subscription cloud. No data trade.",
+          "isHtml": false
+        },
+        {
+          "label": "On your computer.",
+          "body": "Transcription and indexing run on your Mac. Nothing is uploaded. Ever.",
+          "isHtml": false
+        }
+      ]
+    },
+    "inclusive": {
+      "eyebrow": "For the AI-skeptical, too",
+      "heading": "You don't have to talk to AI to use this.",
+      "p1": "SpeakWith works on its own. Speak, get a clean markdown file, then edit it, search its text, and share it. Keep it that way for as long as you like.",
+      "p2Html": "The file is also something you can hand to an AI when <em>you</em> decide that's useful. AI is a thing the file can do, not a thing you have to do."
+    },
+    "features": {
+      "title": "What SpeakWith does",
+      "items": [
+        {
+          "title": "A document for every day",
+          "body": "Everything you record or type on a given day flows into a single organised document, in the order it happened. Tomorrow, a fresh one begins.",
+          "wide": false
+        },
+        {
+          "title": "Bring in audio & video",
+          "body": "Drop in a voice memo, a recorded call, or a screen recording. SpeakWith writes it up and folds it into your daily document like anything else.",
+          "wide": false
+        },
+        {
+          "title": "Speak and keep working",
+          "body": "Speaking and working no longer take turns. Your dictation flows into the document on its own, so you can organise sections, paste in snippets, or type something completely different at the same time — without interrupting the words you're capturing.",
+          "wide": false
+        },
+        {
+          "title": "Speaking rhythm, on screen",
+          "body": "A live meter shows the pauses inside what you are saying. Over time, that quiet feedback shapes how you speak: you hold a topic together longer, and the text on the other end gets easier to work with.",
+          "wide": true
+        }
+      ]
+    },
+    "parallel": {
+      "eyebrow": "Work at twice the pace",
+      "heading": "Like having an extra pair of hands",
+      "p1Html": "Most tools force a choice: record, <em>then</em> write. SpeakWith removes the \"then\". The moment you stop talking, keep going. Type the next idea, paste a link, tidy the paragraph above.",
+      "p2": "Your dictation is still being written up, and when it is ready it slots into the right place, because everything SpeakWith captures carries its moment in time. One pass through your thinking, twice the finished work."
+    },
+    "rhythm": {
+      "eyebrow": "Practice, every time you speak",
+      "heading": "The longer you use it, the better you speak.",
+      "p1": "While you record, a small meter shows the pauses inside what you are saying. Over weeks, the effect adds up. You notice when a thought starts to fragment, you stay on a topic a beat longer, and the next time you do it a little more cleanly.",
+      "p2": "The text on the other end changes too. Single topics arrive in coherent pieces, and paragraphs hold together, so your daily document is something you can hand to a person or a tool without reshaping it first."
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "Does SpeakWith need an internet connection?",
+          "a": "No. Recording, transcription, organising your daily document, and searching its text all happen on your Mac. SpeakWith does its core work offline."
+        },
+        {
+          "q": "Where are my recordings and documents stored?",
+          "a": "As ordinary files on your Mac. You can open, copy, back up, and delete them with any tool you like. They are not locked inside the app or held in an account."
+        },
+        {
+          "q": "How accurate is the transcription?",
+          "a": "Automatic transcription is very good but never perfect. Names and specialist terms are the usual places small errors appear. Your daily document is fully editable, so treat the transcript as an excellent first draft you can correct."
+        },
+        {
+          "q": "Does using SpeakWith change how I speak?",
+          "a": "Many people find that it does. While you record, a small meter shows the pauses inside what you are saying, a quiet form of feedback that you can glance at without breaking your train of thought. Over weeks, you start to hold a topic together longer and let it land in a single, coherent piece. Your daily document gets easier to work with, and so does the way you speak to people away from the screen."
+        },
+        {
+          "q": "Can I import audio and video I already have?",
+          "a": "Yes. Import a voice memo, a recorded meeting, or a screen recording, and SpeakWith writes it up the same way it writes up a live recording."
+        },
+        {
+          "q": "Can I keep working while a recording is written up?",
+          "a": "Yes. That is one of SpeakWith's best features. Type and paste into the day's document while dictation is still processing; everything ends up in the correct chronological order."
+        },
+        {
+          "q": "Is there an iOS app?",
+          "a": "Yes, and it is free. SpeakWith for iOS is a companion voice recorder: live dictation, a dictation board that collects what you capture, and your transcripts and audio files on hand. It transcribes on-device with Apple Speech, and it works alongside the Mac app rather than replacing it."
+        },
+        {
+          "q": "On iOS, the permission prompt says speech is \"sent to Apple\". Is my voice uploaded?",
+          "a": "No. That line is Apple's standard wording for the speech-recognition permission, shown to every app that asks for it. SpeakWith transcribes on-device using Apple's built-in dictation: your audio is turned into text on your iPhone or iPad. The only thing that downloads is the speech model itself, once. After that, transcription runs on your device."
+        },
+        {
+          "q": "What languages does SpeakWith support?",
+          "a": "English today. Support for more languages is in development, and they will arrive in updates as they are ready."
+        },
+        {
+          "q": "Is this an audio recorder?",
+          "a": "It is a voice recorder. SpeakWith is tuned for speech and dictation, the way a person actually talks, so it does its best work on the human voice. It is not built for capturing music or ambient sound."
+        }
+      ]
+    },
+    "download": {
+      "heading": "Get SpeakWith",
+      "body": "SpeakWith runs on Mac and iOS. Download it, grant microphone access, and your first recording is a click away.",
+      "ctaPrimary": "Buy SpeakWith for Mac",
+      "ctaSecondary": "iOS — Coming Soon"
+    }
+  },
+  "pricing": {
+    "header": {
+      "eyebrow": "Plans & Features",
+      "heading": "Choose how SpeakWith works for you",
+      "sub": "Start free with built-in dictation. Upgrade for advanced engines, batch transcription, and smart formatting."
+    },
+    "table": {
+      "headers": {
+        "feature": "Feature",
+        "freeName": "Free",
+        "freeTag": "App Store",
+        "paidName": "Paid",
+        "paidTag": "Direct"
+      },
+      "rows": {
+        "liveDictation": {
+          "feature": "Live dictation",
+          "subtitle": "Speak and watch your words appear instantly"
+        },
+        "offline": {
+          "feature": "Fully offline & private",
+          "subtitle": "Audio never leaves your device"
+        },
+        "engines": {
+          "feature": "Transcription engines",
+          "free": "Apple built-in",
+          "paid": "Apple + Whisper + Parakeet"
+        },
+        "importMedia": {
+          "feature": "Import audio & video files",
+          "subtitle": "Transcribe recordings you already have"
+        },
+        "batch": {
+          "feature": "Batch recorder",
+          "subtitle": "Record now, get polished text after"
+        },
+        "formatting": {
+          "feature": "Smart paragraph formatting",
+          "subtitle": "Automatically groups speech into clean paragraphs"
+        },
+        "escalation": {
+          "feature": "Automatic accuracy escalation",
+          "subtitle": "Detects low-confidence audio and re-runs it on a higher-accuracy model",
+          "paidPill": "Optional add-on"
+        },
+        "bestFor": {
+          "feature": "Best for",
+          "free": "Quick notes & dictation",
+          "paid": "Serious transcription & long recordings"
+        },
+        "price": {
+          "feature": "Price",
+          "freePrice": "Free",
+          "paidPrice": "Buy →",
+          "paidPriceSub": "one-time license"
+        }
+      }
+    },
+    "engines": {
+      "heading": "Three engines, one app",
+      "sub": "SpeakWith picks the right tool for the job. Here's what each engine is great at.",
+      "items": [
+        {
+          "badge": "Free & Paid",
+          "badgeKind": "free-paid",
+          "name": "Apple",
+          "body": "Built into macOS. Instant, offline, and free. Perfect for quick dictation and everyday notes.",
+          "note": ""
+        },
+        {
+          "badge": "Paid",
+          "badgeKind": "paid",
+          "name": "Whisper",
+          "body": "Maximum robustness on tough audio: accents, background noise, crosstalk. Steps up from a fast model to a high-accuracy model when it senses lower confidence.",
+          "note": "Automatic escalation requires the optional accuracy add-on."
+        },
+        {
+          "badge": "Paid",
+          "badgeKind": "paid",
+          "name": "Parakeet",
+          "body": "The speed champion. Near-instant transcription with excellent accuracy on clean audio.",
+          "note": ""
+        }
+      ]
+    },
+    "channels": {
+      "heading": "Two ways to get SpeakWith",
+      "sub": "Same app, two storefronts. Pick what fits how you work.",
+      "items": [
+        {
+          "lead": "App Store",
+          "heading": "Download free, upgrade anytime",
+          "body": "Get the free version in one click, then unlock Paid features in-app whenever you're ready. Fully sandboxed to meet App Store security standards.",
+          "ctaLabel": "",
+          "ctaUrl": ""
+        },
+        {
+          "lead": "Direct download",
+          "heading": "The full build, bought direct",
+          "body": "The complete Paid experience with a free trial, plus advanced storage control and direct model management for power users. Buy directly from us.",
+          "ctaLabel": "Buy on Gumroad",
+          "ctaUrl": "https://ikisystems.gumroad.com/l/vozgsy"
+        }
+      ]
+    },
+    "finePrint": "The free version is a complete, working product on its own. No purchase required to dictate. Some advanced features are planned to move to a paid tier as the app matures, on the App Store or through a direct license. The iOS companion app is free."
+  },
+  "privacy": {
+    "heading": "Privacy Policy",
+    "meta": "Last updated: June 2026",
+    "intro": "SpeakWith is built around a simple principle: your words are yours. This policy explains what SpeakWith does and does not do with the recordings, transcripts, and documents you create.",
+    "sections": [
+      {
+        "heading": "Your recordings are processed on your device",
+        "paragraphs": [
+          {
+            "text": "SpeakWith records, transcribes, organises, and searches entirely on your own device, whether that is your Mac or your iOS device. Turning speech into text, shaping it into your daily document, and answering your searches all happen locally. SpeakWith does not need an internet connection to do its core work, and it does not send your recordings or transcripts to a server to be processed.",
+            "isHtml": false
+          }
+        ]
+      },
+      {
+        "heading": "No telemetry, analytics, or tracking",
+        "paragraphs": [
+          {
+            "text": "SpeakWith does not include usage analytics, advertising, or behavioural tracking. We do not collect a record of how you use the app, what you record, or what you search for. There are no third-party trackers in the application.",
+            "isHtml": false
+          }
+        ]
+      },
+      {
+        "heading": "Your files belong to you",
+        "paragraphs": [
+          {
+            "text": "Everything SpeakWith produces (your recordings, transcripts, and daily documents) is stored as ordinary files on your device. You can open, copy, move, back up, and delete them with any tool you like. They are not locked inside a proprietary store, and they are not held in an account that we control.",
+            "isHtml": false
+          }
+        ]
+      },
+      {
+        "heading": "Crash reporting is opt-in only",
+        "paragraphs": [
+          {
+            "text": "If something in SpeakWith goes wrong, a diagnostic report can help us fix it. SpeakWith never sends such a report automatically. Crash and diagnostic reporting is strictly opt-in: nothing leaves your device unless you explicitly choose to send it, and you can decline or turn it off at any time.",
+            "isHtml": false
+          }
+        ]
+      },
+      {
+        "heading": "The support website",
+        "paragraphs": [
+          {
+            "text": "This website is a static information site. It does not set tracking cookies and does not profile its visitors. Standard server request logs may exist at the hosting provider, as they do for any website.",
+            "isHtml": false
+          }
+        ]
+      },
+      {
+        "heading": "Changes to this policy",
+        "paragraphs": [
+          {
+            "text": "If this policy changes, the updated version will be posted here with a new date. Material changes will be summarised at the top of the page.",
+            "isHtml": false
+          }
+        ]
+      },
+      {
+        "heading": "Contact",
+        "paragraphs": [
+          {
+            "text": "Questions about privacy? Reach us through the support channels listed with the app.",
+            "isHtml": false
+          }
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "heading": "Terms of Service",
+    "meta": "Last updated: June 2026",
+    "intro": "These terms govern your use of the SpeakWith application. By installing or using SpeakWith, you agree to them. Please read them carefully.",
+    "sections": [
+      {
+        "heading": "Licence to use SpeakWith",
+        "paragraphs": [
+          {
+            "text": "SpeakWith grants you a personal, non-exclusive, non-transferable licence to install and use the application on Mac computers and iOS devices you own or control, in accordance with these terms. You may not redistribute, resell, rent, or sublicense the application, or attempt to reverse engineer it except where that restriction is prohibited by law.",
+            "isHtml": false
+          }
+        ]
+      },
+      {
+        "heading": "Accuracy disclaimer",
+        "paragraphs": [
+          {
+            "text": "SpeakWith converts speech to text using automated processing. Automated transcription is a powerful aid, but it is <strong>not guaranteed to be accurate or complete</strong>. Results depend on factors including recording quality, background noise, accents, specialist vocabulary, and the nature of what was said.",
+            "isHtml": true
+          },
+          {
+            "text": "You should treat transcripts as a high-quality first draft to review and correct, not as a verbatim or certified record. Do not rely on SpeakWith's output for any purpose where an error could cause harm, loss, or legal consequence without independently verifying it.",
+            "isHtml": false
+          }
+        ]
+      },
+      {
+        "heading": "Your content",
+        "paragraphs": [
+          {
+            "text": "You own the recordings, transcripts, and documents you create with SpeakWith. SpeakWith does not claim any rights over your content. You are responsible for what you record and for having the right to record it. Because your content is stored as files on your own device, you are also responsible for backing it up.",
+            "isHtml": false
+          }
+        ]
+      },
+      {
+        "heading": "Provided \"as is\"",
+        "paragraphs": [
+          {
+            "text": "SpeakWith is provided \"as is\" and \"as available\", without warranties of any kind, whether express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the application will be uninterrupted, error-free, or that every recording will be processed successfully.",
+            "isHtml": false
+          }
+        ]
+      },
+      {
+        "heading": "Limitation of liability",
+        "paragraphs": [
+          {
+            "text": "To the maximum extent permitted by law, SpeakWith and IKI Systems will not be liable for any indirect, incidental, special, or consequential damages, or for any loss of data, arising out of or related to your use of the application. Nothing in these terms excludes liability that cannot be excluded under applicable law.",
+            "isHtml": false
+          }
+        ]
+      },
+      {
+        "heading": "Changes to these terms",
+        "paragraphs": [
+          {
+            "text": "These terms may be updated from time to time. The current version will always be posted here with its date. Continued use of SpeakWith after a change means you accept the updated terms.",
+            "isHtml": false
+          }
+        ]
+      },
+      {
+        "heading": "Contact",
+        "paragraphs": [
+          {
+            "text": "Questions about these terms can be directed to the support channels listed with the application.",
+            "isHtml": false
+          }
+        ]
+      }
+    ]
+  }
+}

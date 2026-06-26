@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SpeakWith Support: Your spoken ideas, captured as a daily document</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SpeakWith is a local-first voice recorder for Mac and iOS that turns daily speaking into a searchable, organised daily document. Tuned for speech and dictation, not music or ambient sound.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="theme-color" content="#131418" id="meta-theme-color">
+  <meta name="robots" content="noindex, nofollow">
+  <script>
+    // Resolve and apply the theme before first paint to avoid a flash.
+    (function () {
+      var choice = "system";
+      try {
+        var key = "speakwith-theme";
+        var raw = localStorage.getItem(key);
+        if (raw == null) {
+          var legacy = localStorage.getItem("lifebond-theme");
+          if (legacy != null) {
+            localStorage.setItem(key, legacy);
+            localStorage.removeItem("lifebond-theme");
+            raw = legacy;
+          }
+        }
+        if (raw === "system" || raw === "light" || raw === "dark") {
+          choice = raw;
+        }
+      } catch (e) {}
+      var resolved = choice === "system"
+        ? (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+        : choice;
+      document.documentElement.setAttribute("data-theme", resolved);
+    })();
+  </script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>

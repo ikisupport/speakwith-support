@@ -1,0 +1,214 @@
+/* SpeakWith support site: global styles.
+   "Studio" identity: deep charcoal + warm amber (dark, signature) and a
+   cohesive warm-paper light variant. All colours are CSS custom properties;
+   ThemeService follows prefers-color-scheme with a manual override. */
+
+:root,
+html[data-theme="light"] {
+  /* Warm-cream "studio", lightened. A first-class default for light-mode-OS
+     visitors under follow-OS. --accent stays a deep amber: it doubles as small
+     text (links, eyebrows, labels) on cream, so it must clear WCAG AA. */
+  --bg: #faf7f0;
+  --surface: #fffefb;
+  --surface-2: #f2ece0;
+  --text: #2b2620;
+  --text-dim: #6b6056;
+  --accent: #9a5b34;
+  --accent-strong: #7f4622;
+  --on-accent: #fdf8ee;
+  --rule: rgba(43, 38, 32, 0.12);
+  --shadow: 0 2px 20px rgba(43, 38, 32, 0.07);
+  --hero-grad: linear-gradient(160deg, #f2ece0 0%, #faf7f0 60%);
+  --max-width: 760px;
+}
+
+html[data-theme="dark"] {
+  /* Warm modern dark studio: crisper charcoal, higher-contrast text, a brighter
+     gold accent, and a lighter shadow so cards read less heavy. Bright gold works
+     as both text and fill on dark, so no separate fill token is needed here. */
+  --bg: #131418;
+  --surface: #1c2025;
+  --surface-2: #252a30;
+  --text: #f1efe9;
+  --text-dim: #a8a399;
+  --accent: #f3b54a;
+  --accent-strong: #f6c163;
+  --on-accent: #15171a;
+  --rule: rgba(241, 239, 233, 0.15);
+  --shadow: 0 4px 22px rgba(0, 0, 0, 0.30);
+  --hero-grad: linear-gradient(160deg, #1c2025 0%, #131418 65%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+  color: var(--text);
+  background-color: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+a:any-link {
+  color: var(--accent);
+}
+
+a:any-link:hover {
+  color: var(--accent-strong);
+}
+
+/* Anchors styled as a primary button must keep their on-accent text colour.
+   a:any-link above (specificity 0,1,1) otherwise outranks .button--primary
+   (0,1,0) and paints the label the same amber as the button fill — invisible.
+   These a-qualified rules tie a:any-link and win on source order. */
+a.button--primary,
+a.button--primary:hover {
+  color: var(--on-accent);
+}
+
+a:focus-visible,
+button:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+app-root,
+app-home,
+app-privacy,
+app-terms,
+app-pricing,
+app-not-found {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+.container {
+  width: min(92%, var(--max-width));
+  margin: 0 auto;
+}
+
+/* Headings ---------------------------------------------------------------- */
+h1, h2, h3 {
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--text);
+}
+
+h1 {
+  font-size: clamp(2.1rem, 5vw, 3rem);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 3.2vw, 1.85rem);
+  margin-bottom: 0.6rem;
+}
+
+h3 {
+  font-size: 1.12rem;
+  margin-bottom: 0.3rem;
+}
+
+p {
+  margin-bottom: 0.9rem;
+}
+
+/* Buttons ----------------------------------------------------------------- */
+.button {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.8rem 1.7rem;
+  border-radius: 0.7rem;
+  border: 1px solid transparent;
+  transition: transform 0.12s ease, background-color 0.2s ease;
+}
+
+.button--primary {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.button--primary:hover {
+  background: var(--accent-strong);
+  color: var(--on-accent);
+}
+
+.button--ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--rule);
+}
+
+.button--ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+/* Cards ------------------------------------------------------------------- */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  padding: 1.5rem 1.6rem;
+}
+
+/* Accessibility ----------------------------------------------------------- */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Generic prose sections (privacy / terms) -------------------------------- */
+.prose {
+  padding: 2.5rem 0 3.5rem;
+}
+
+.prose h2 {
+  margin-top: 2rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.prose p,
+.prose li {
+  color: var(--text-dim);
+}
+
+.prose ul {
+  margin: 0 0 1rem 1.2rem;
+}
+
+.prose li {
+  margin-bottom: 0.35rem;
+}

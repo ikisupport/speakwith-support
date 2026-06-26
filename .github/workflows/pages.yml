@@ -1,0 +1,111 @@
+# Publishes the Angular app to the gh-pages branch.
+#
+# Slack (optional): after a successful deploy, posts to your Incoming Webhook.
+#   1. https://api.slack.com/apps → Create New App → From a manifest → enable Incoming Webhooks → add webhook → copy URL.
+#   2. Store it as a REPOSITORY secret named exactly: SLACK_WEBHOOK_URL
+#      (Settings → Secrets and variables → Actions → New repository secret)
+#   Use a repository secret, NOT an environment secret: the notify job is not pinned to an
+#   environment (the auto-created `github-pages` environment rejects deploys from `main`).
+#   Repository secrets are visible to every job, so this just works.
+#
+# ntfy (optional): store NTFY_DEPLOY_TOPIC as a repository secret too.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Angular app
+        # Custom domain serves at the root, so base-href is "/".
+        # (For the ikisystems.github.io/speakwith-support/ project URL this would be /speakwith-support/.)
+        run: npm run build -- --base-href /
+
+      - name: Stage site files
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+          cp -r dist/speakwith-support/browser/* _site/
+          # Ensure 404.html exists for GH Pages
+          cp _site/404/index.html _site/404.html
+          touch _site/.nojekyll
+          ls -la _site
+
+      - name: Block disallowed attribution in published files
+        run: |
+          set -euo pipefail
+          if grep -RIn --include='*.html' --include='*.js' -E -i \
+            'made[[:space:]]+with[[:space:]]+cursor|built[[:space:]]+with[[:space:]]+cursor' _site; then
+            echo "::error::Published HTML/JS must not contain disallowed tooling attribution."
+            exit 1
+          fi
+
+      - name: Push to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _site
+          branch: gh-pages
+          clean: true
+          commit-message: "Deploy Angular support site"
+          git-config-name: github-actions[bot]
+          git-config-email: 41898282+github-actions[bot]@users.noreply.github.com
+
+  notify:
+    needs: deploy
+    if: ${{ needs.deploy.result == 'success' }}
+    runs-on: ubuntu-latest
+    # Intentionally NOT pinned to an environment. The auto-created `github-pages`
+    # environment has branch protection rules that reject deployments from `main`,
+    # which would fail this job. Repository secrets are visible to every job, so
+    # the notifications below work without an environment.
+    steps:
+      - name: Optional ntfy notification
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_DEPLOY_TOPIC }}
+        run: |
+          set -euo pipefail
+          if [ -z "${NTFY_TOPIC:-}" ]; then
+            echo "Skip ntfy (NTFY_DEPLOY_TOPIC not set for this environment)."
+            exit 0
+          fi
+          MSG="${GITHUB_REPOSITORY}: GitHub Pages deployed (${GITHUB_SHA:0:7}). ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          curl -fsS -H "Title: Pages deployed" -d "$MSG" "$NTFY_TOPIC" || echo "::warning::ntfy request failed (check NTFY_DEPLOY_TOPIC)"
+
+      - name: Notify Slack (Pages deployed)
+        continue-on-error: true
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          set -euo pipefail
+          if [ -z "${SLACK_WEBHOOK_URL:-}" ]; then
+            echo "Skip Slack (SLACK_WEBHOOK_URL not set for this environment)."
+            exit 0
+          fi
+          RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          MSG="*GitHub Pages deployed* — \`${GITHUB_REPOSITORY}\` @ \`${GITHUB_SHA:0:7}\` — <${RUN_URL}|Open workflow run>"
+          payload=$(jq -n --arg text "$MSG" '{text: $text}')
+          curl -fsS -X POST -H 'Content-Type: application/json' -d "$payload" "$SLACK_WEBHOOK_URL" || echo "::warning::Slack webhook request failed"
