@@ -3,17 +3,19 @@ import { provideRouter, withInMemoryScrolling, withEnabledBlockingInitialNavigat
 
 import { routes } from './app.routes';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { provideChunkErrorRecovery } from './services/chunk-error-recovery';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }), 
-    provideRouter(routes, 
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideRouter(routes,
       withInMemoryScrolling({
         anchorScrolling: 'enabled',
         scrollPositionRestoration: 'enabled'
       }),
       withEnabledBlockingInitialNavigation()
-    ), 
-    provideClientHydration(withEventReplay())
+    ),
+    provideClientHydration(withEventReplay()),
+    provideChunkErrorRecovery()
   ]
 };

@@ -8,7 +8,42 @@
   <meta name="description" content="SpeakWith is a local-first voice recorder for Mac and iOS that turns daily speaking into a searchable, organised daily document. Tuned for speech and dictation, not music or ambient sound.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <meta name="theme-color" content="#131418" id="meta-theme-color">
-  <meta name="robots" content="noindex, nofollow">
+  <!-- Theme tokens are defined inline (not in styles.css) so they apply on the very
+       first paint, before the deferred stylesheet loads. This is what prevents the
+       light-background flash on dark systems. Keep these the single source of truth
+       for the palette; styles.css only consumes them via var(--*). -->
+  <style id="theme-tokens">
+    :root,
+    html[data-theme="light"] {
+      color-scheme: light;
+      --bg: #faf7f0;
+      --surface: #fffefb;
+      --surface-2: #f2ece0;
+      --text: #2b2620;
+      --text-dim: #6b6056;
+      --accent: #9a5b34;
+      --accent-strong: #7f4622;
+      --on-accent: #fdf8ee;
+      --rule: rgba(43, 38, 32, 0.12);
+      --shadow: 0 2px 20px rgba(43, 38, 32, 0.07);
+      --hero-grad: linear-gradient(160deg, #f2ece0 0%, #faf7f0 60%);
+      --max-width: 760px;
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #131418;
+      --surface: #1c2025;
+      --surface-2: #252a30;
+      --text: #f1efe9;
+      --text-dim: #a8a399;
+      --accent: #f3b54a;
+      --accent-strong: #f6c163;
+      --on-accent: #15171a;
+      --rule: rgba(241, 239, 233, 0.15);
+      --shadow: 0 4px 22px rgba(0, 0, 0, 0.30);
+      --hero-grad: linear-gradient(160deg, #1c2025 0%, #131418 65%);
+    }
+  </style>
   <script>
     // Resolve and apply the theme before first paint to avoid a flash.
     (function () {

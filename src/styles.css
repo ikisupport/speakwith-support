@@ -3,41 +3,11 @@
    cohesive warm-paper light variant. All colours are CSS custom properties;
    ThemeService follows prefers-color-scheme with a manual override. */
 
-:root,
-html[data-theme="light"] {
-  /* Warm-cream "studio", lightened. A first-class default for light-mode-OS
-     visitors under follow-OS. --accent stays a deep amber: it doubles as small
-     text (links, eyebrows, labels) on cream, so it must clear WCAG AA. */
-  --bg: #faf7f0;
-  --surface: #fffefb;
-  --surface-2: #f2ece0;
-  --text: #2b2620;
-  --text-dim: #6b6056;
-  --accent: #9a5b34;
-  --accent-strong: #7f4622;
-  --on-accent: #fdf8ee;
-  --rule: rgba(43, 38, 32, 0.12);
-  --shadow: 0 2px 20px rgba(43, 38, 32, 0.07);
-  --hero-grad: linear-gradient(160deg, #f2ece0 0%, #faf7f0 60%);
-  --max-width: 760px;
-}
-
-html[data-theme="dark"] {
-  /* Warm modern dark studio: crisper charcoal, higher-contrast text, a brighter
-     gold accent, and a lighter shadow so cards read less heavy. Bright gold works
-     as both text and fill on dark, so no separate fill token is needed here. */
-  --bg: #131418;
-  --surface: #1c2025;
-  --surface-2: #252a30;
-  --text: #f1efe9;
-  --text-dim: #a8a399;
-  --accent: #f3b54a;
-  --accent-strong: #f6c163;
-  --on-accent: #15171a;
-  --rule: rgba(241, 239, 233, 0.15);
-  --shadow: 0 4px 22px rgba(0, 0, 0, 0.30);
-  --hero-grad: linear-gradient(160deg, #1c2025 0%, #131418 65%);
-}
+/* Theme tokens (the CSS custom properties for light/dark, including color-scheme)
+   are defined inline in src/index.html <head>, not here, so they apply on the very
+   first paint and avoid a theme flash on dark systems. Everything below consumes
+   them via var(--*). That inline block is the single source of truth for the palette;
+   keep brand-colour edits there. */
 
 *,
 *::before,

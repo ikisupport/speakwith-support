@@ -147,6 +147,16 @@ import COPY from '../../content/copy.json';
       </div>
     </section>
 
+    <!-- Home base across parallel work -->
+    <section class="band">
+      <div class="container band__inner">
+        <p class="eyebrow eyebrow--accent">{{ copy.home.homebase.eyebrow }}</p>
+        <h2>{{ copy.home.homebase.heading }}</h2>
+        <p>{{ copy.home.homebase.p1 }}</p>
+        <p>{{ copy.home.homebase.p2 }}</p>
+      </div>
+    </section>
+
     <!-- FAQ -->
     <section class="container section">
       <h2 class="section__title">{{ copy.home.faq.title }}</h2>

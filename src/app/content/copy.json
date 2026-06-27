@@ -34,7 +34,7 @@
       "headline": "Speak Now. Refine Later.",
       "lead": "Speak your day into a clean markdown file on Mac or iOS. Read it, edit it, share it. It works on its own, and it opens in VS Code, Obsidian, or any tool you point at it.",
       "ctaPrimary": "Buy SpeakWith for Mac",
-      "ctaSecondary": "iOS — Coming Soon",
+      "ctaSecondary": "iOS: Coming Soon",
       "ctaGhost": "See how it works",
       "note": "Works on Mac and iOS. Your voice never leaves your device. No account required."
     },
@@ -85,7 +85,7 @@
         },
         {
           "src": "assets/screenshots/markdown.png",
-          "caption": "Everything lands in one plain .md file — yours to open in any editor.",
+          "caption": "Everything lands in one plain .md file, yours to open in any editor.",
           "ariaLabel": "The day's dictation as a markdown file open in VS Code: a dated daily document of transcribed notes."
         },
         {
@@ -141,7 +141,7 @@
         },
         {
           "title": "Speak and keep working",
-          "body": "Speaking and working no longer take turns. Your dictation flows into the document on its own, so you can organise sections, paste in snippets, or type something completely different at the same time — without interrupting the words you're capturing.",
+          "body": "Speaking and working no longer take turns. Your dictation flows into the document on its own, so you can organise sections, paste in snippets, or type something completely different at the same time, without interrupting the words you're capturing.",
           "wide": false
         },
         {
@@ -162,6 +162,12 @@
       "heading": "The longer you use it, the better you speak.",
       "p1": "While you record, a small meter shows the pauses inside what you are saying. Over weeks, the effect adds up. You notice when a thought starts to fragment, you stay on a topic a beat longer, and the next time you do it a little more cleanly.",
       "p2": "The text on the other end changes too. Single topics arrive in coherent pieces, and paragraphs hold together, so your daily document is something you can hand to a person or a tool without reshaping it first."
+    },
+    "homebase": {
+      "eyebrow": "Built for how real work happens",
+      "heading": "The home base your thinking returns to",
+      "p1": "Real work runs in parallel. You start something that takes time to come back: a long process, a tool working away, a task you've handed off. Instead of waiting, you begin the next thing, then another. Before long, several are in flight at once.",
+      "p2": "Tools come and go; your daily document stays. It is the one place that holds every thread in a single file that is yours: what each one is for, where you left it, what to check when it lands. You can keep many things moving at once because you are not holding them all in your head."
     },
     "faq": {
       "title": "Frequently asked questions",
@@ -212,7 +218,7 @@
       "heading": "Get SpeakWith",
       "body": "SpeakWith runs on Mac and iOS. Download it, grant microphone access, and your first recording is a click away.",
       "ctaPrimary": "Buy SpeakWith for Mac",
-      "ctaSecondary": "iOS — Coming Soon"
+      "ctaSecondary": "iOS: Coming Soon"
     }
   },
   "pricing": {

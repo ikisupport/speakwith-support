@@ -70,6 +70,7 @@ jobs:
           folder: _site
           branch: gh-pages
           clean: true
+          single-commit: true
           commit-message: "Deploy Angular support site"
           git-config-name: github-actions[bot]
           git-config-email: 41898282+github-actions[bot]@users.noreply.github.com

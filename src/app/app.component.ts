@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { SeoService } from './services/seo.service';
 import COPY from './content/copy.json';
 
 /**
@@ -82,4 +83,8 @@ import COPY from './content/copy.json';
 })
 export class AppComponent {
   protected readonly copy = COPY;
+
+  constructor(seo: SeoService) {
+    seo.init();
+  }
 }
