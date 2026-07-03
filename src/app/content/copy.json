@@ -26,14 +26,15 @@
     }
   },
   "links": {
-    "buyMacGumroad": "https://ikisystems.gumroad.com/l/vozgsy"
+    "buyMacGumroad": "https://ikisystems.gumroad.com/l/vozgsy",
+    "trialMacGumroad": "https://ikisystems.gumroad.com/l/vkaxll"
   },
   "home": {
     "hero": {
       "eyebrow": "A voice-driven daily document",
       "headline": "Speak Now. Refine Later.",
       "lead": "Speak your day into a clean markdown file on Mac or iOS. Read it, edit it, share it. It works on its own, and it opens in VS Code, Obsidian, or any tool you point at it.",
-      "ctaPrimary": "Buy SpeakWith for Mac",
+      "ctaPrimary": "Try SpeakWith free",
       "ctaSecondary": "iOS: Coming Soon",
       "ctaGhost": "See how it works",
       "note": "Works on Mac and iOS. Your voice never leaves your device. No account required."
@@ -92,6 +93,16 @@
           "src": "assets/screenshots/click-in-transcript.png",
           "caption": "Click any line to jump straight to that moment in the recording.",
           "ariaLabel": "A finished transcript open in SpeakWith: timestamped lines beside an audio player, ready to click a line and jump to that point in the recording."
+        },
+        {
+          "src": "assets/screenshots/projects-setup.png",
+          "caption": "Set up separate projects and point each one at its own folder.",
+          "ariaLabel": "SpeakWith Settings showing several named projects, each with its own transcript folder and color."
+        },
+        {
+          "src": "assets/screenshots/projects-switcher.png",
+          "caption": "Switch between projects in a click to send new work to the right folder.",
+          "ariaLabel": "The project switcher menu open, listing projects with the active one checked and color tinted."
         }
       ]
     },
@@ -198,7 +209,7 @@
         },
         {
           "q": "Is there an iOS app?",
-          "a": "Yes, and it is free. SpeakWith for iOS is a companion voice recorder: live dictation, a dictation board that collects what you capture, and your transcripts and audio files on hand. It transcribes on-device with Apple Speech, and it works alongside the Mac app rather than replacing it."
+          "a": "It's on the way, and it will be free. SpeakWith for iOS is a companion voice recorder: live dictation, a dictation board that collects what you capture, and your transcripts and audio files on hand. It transcribes on-device with Apple Speech, and it works alongside the Mac app rather than replacing it."
         },
         {
           "q": "On iOS, the permission prompt says speech is \"sent to Apple\". Is my voice uploaded?",
@@ -225,15 +236,15 @@
     "header": {
       "eyebrow": "Plans & Features",
       "heading": "Choose how SpeakWith works for you",
-      "sub": "Start free with built-in dictation. Upgrade for advanced engines, batch transcription, and smart formatting."
+      "sub": "Start with built-in dictation, then upgrade for advanced engines, batch transcription, and smart formatting."
     },
     "table": {
       "headers": {
         "feature": "Feature",
         "freeName": "Free",
-        "freeTag": "App Store",
-        "paidName": "Paid",
-        "paidTag": "Direct"
+        "freeTag": "No cost",
+        "paidName": "Pro",
+        "paidTag": "Subscription or one-time"
       },
       "rows": {
         "liveDictation": {
@@ -274,8 +285,8 @@
         "price": {
           "feature": "Price",
           "freePrice": "Free",
-          "paidPrice": "Buy →",
-          "paidPriceSub": "one-time license"
+          "paidPrice": "See options ↓",
+          "paidPriceSub": "subscription or one-time, see below"
         }
       }
     },
@@ -284,21 +295,21 @@
       "sub": "SpeakWith picks the right tool for the job. Here's what each engine is great at.",
       "items": [
         {
-          "badge": "Free & Paid",
+          "badge": "Free & Pro",
           "badgeKind": "free-paid",
           "name": "Apple",
           "body": "Built into macOS. Instant, offline, and free. Perfect for quick dictation and everyday notes.",
           "note": ""
         },
         {
-          "badge": "Paid",
+          "badge": "Pro",
           "badgeKind": "paid",
           "name": "Whisper",
           "body": "Maximum robustness on tough audio: accents, background noise, crosstalk. Steps up from a fast model to a high-accuracy model when it senses lower confidence.",
           "note": "Automatic escalation requires the optional accuracy add-on."
         },
         {
-          "badge": "Paid",
+          "badge": "Pro",
           "badgeKind": "paid",
           "name": "Parakeet",
           "body": "The speed champion. Near-instant transcription with excellent accuracy on clean audio.",
@@ -312,21 +323,25 @@
       "items": [
         {
           "lead": "App Store",
-          "heading": "Download free, upgrade anytime",
-          "body": "Get the free version in one click, then unlock Paid features in-app whenever you're ready. Fully sandboxed to meet App Store security standards.",
+          "heading": "Coming soon to the App Store",
+          "body": "A free version, fully sandboxed to App Store standards, is coming to the App Store. Pro features (advanced engines, import, batch, and smart formatting) will follow as a subscription.",
           "ctaLabel": "",
-          "ctaUrl": ""
+          "ctaUrl": "",
+          "ctaSecondaryLabel": "",
+          "ctaSecondaryUrl": ""
         },
         {
-          "lead": "Direct download",
-          "heading": "The full build, bought direct",
-          "body": "The complete Paid experience with a free trial, plus advanced storage control and direct model management for power users. Buy directly from us.",
-          "ctaLabel": "Buy on Gumroad",
-          "ctaUrl": "https://ikisystems.gumroad.com/l/vozgsy"
+          "lead": "Direct (Gumroad)",
+          "heading": "14-day free trial, then buy once",
+          "body": "Try the full app free for 14 days. After that it unlocks with a single one-time purchase, no subscription. The direct build is the complete, unsandboxed version of SpeakWith.",
+          "ctaLabel": "Start 14-day free trial",
+          "ctaUrl": "https://ikisystems.gumroad.com/l/vkaxll",
+          "ctaSecondaryLabel": "Buy the full license",
+          "ctaSecondaryUrl": "https://ikisystems.gumroad.com/l/vozgsy"
         }
       ]
     },
-    "finePrint": "The free version is a complete, working product on its own. No purchase required to dictate. Some advanced features are planned to move to a paid tier as the app matures, on the App Store or through a direct license. The iOS companion app is free."
+    "finePrint": "The App Store version will be a free, complete product on its own, with no purchase required to dictate, and is coming soon. Pro features (advanced engines, audio and video import, batch transcription, and smart formatting) will unlock through an App Store subscription (also coming soon) or by buying once direct on Gumroad, available today. The Gumroad build includes a 14-day free trial that locks after 14 days until you buy. The iOS companion app will be free."
   },
   "privacy": {
     "heading": "Privacy Policy",

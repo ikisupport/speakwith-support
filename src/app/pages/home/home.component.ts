@@ -18,8 +18,7 @@ import COPY from '../../content/copy.json';
         <h1>{{ copy.home.hero.headline }}</h1>
         <p class="hero__lead">{{ copy.home.hero.lead }}</p>
         <div class="hero__actions">
-          <a class="button button--primary" [href]="copy.links.buyMacGumroad"
-             target="_blank" rel="noopener noreferrer">{{ copy.home.hero.ctaPrimary }}</a>
+          <a class="button button--primary" routerLink="/pricing">{{ copy.home.hero.ctaPrimary }}</a>
           <span class="button button--coming-soon">{{ copy.home.hero.ctaSecondary }}</span>
           <a class="button button--ghost" href="#moments">{{ copy.home.hero.ctaGhost }}</a>
         </div>

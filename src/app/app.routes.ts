@@ -39,7 +39,7 @@ export const routes: Routes = [
     title: 'Pricing | SpeakWith',
     data: {
       description:
-        'Start free with built-in dictation on the App Store, or go Paid for Whisper and Parakeet engines, batch transcription, and smart paragraph formatting.'
+        'Start with built-in dictation, or go Paid for Whisper and Parakeet engines, batch transcription, and smart paragraph formatting.'
     }
   },
   { path: '404', component: NotFoundComponent, title: 'Page Not Found | SpeakWith' },

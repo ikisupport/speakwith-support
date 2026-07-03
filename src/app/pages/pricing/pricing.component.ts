@@ -80,8 +80,7 @@ import COPY from '../../content/copy.json';
               <td class="feat">{{ copy.pricing.table.rows.price.feature }}</td>
               <td class="cell"><span class="price-free">{{ copy.pricing.table.rows.price.freePrice }}</span></td>
               <td class="cell">
-                <a class="coming-soon buy-link" [href]="copy.links.buyMacGumroad"
-                   target="_blank" rel="noopener noreferrer">{{ copy.pricing.table.rows.price.paidPrice }}</a><br>
+                <span class="coming-soon">{{ copy.pricing.table.rows.price.paidPrice }}</span><br>
                 <small>{{ copy.pricing.table.rows.price.paidPriceSub }}</small>
               </td>
             </tr>
@@ -117,6 +116,10 @@ import COPY from '../../content/copy.json';
             @if (ch.ctaUrl) {
               <a class="button button--primary channel-cta" [href]="ch.ctaUrl"
                  target="_blank" rel="noopener noreferrer">{{ ch.ctaLabel }}</a>
+            }
+            @if (ch.ctaSecondaryUrl) {
+              <a class="button button--ghost channel-cta channel-cta--secondary" [href]="ch.ctaSecondaryUrl"
+                 target="_blank" rel="noopener noreferrer">{{ ch.ctaSecondaryLabel }}</a>
             }
           </div>
         }
@@ -282,17 +285,6 @@ import COPY from '../../content/copy.json';
       color: var(--accent-strong);
     }
 
-    /* The Paid price pill, now a live link to the Gumroad purchase page */
-    .buy-link {
-      text-decoration: none;
-      cursor: pointer;
-      transition: background 0.15s ease;
-    }
-
-    .buy-link:hover {
-      background: color-mix(in srgb, var(--accent) 22%, transparent);
-    }
-
     /* Section headings */
     .section-title {
       font-size: 1.38rem;
@@ -380,9 +372,14 @@ import COPY from '../../content/copy.json';
       display: block;
     }
 
-    /* Buy button inside the "Direct download" channel card */
+    /* CTA buttons inside the channel cards */
     .channel-grid .card .channel-cta {
       margin-top: 1rem;
+    }
+
+    .channel-grid .card .channel-cta--secondary {
+      margin-top: 0.6rem;
+      margin-left: 0.6rem;
     }
 
     /* Fine print */
