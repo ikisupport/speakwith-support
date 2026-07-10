@@ -42,6 +42,16 @@ export const routes: Routes = [
         'Start with built-in dictation, or go Paid for Whisper and Parakeet engines, batch transcription, and smart paragraph formatting.'
     }
   },
+  {
+    path: 'automation',
+    loadComponent: () =>
+      import('./pages/automation/automation.component').then(m => m.AutomationComponent),
+    title: 'Automation | SpeakWith',
+    data: {
+      description:
+        'Start, stop, and control SpeakWith recording from the command line, Shortcuts, Automator, or a hotkey — via the speakwith:// URL scheme or AppleScript.'
+    }
+  },
   { path: '404', component: NotFoundComponent, title: 'Page Not Found | SpeakWith' },
   { path: '**', component: NotFoundComponent, title: 'Page Not Found | SpeakWith' },
 ];

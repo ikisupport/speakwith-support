@@ -5,7 +5,8 @@
       "home": "Home",
       "privacy": "Privacy",
       "terms": "Terms",
-      "pricing": "Pricing"
+      "pricing": "Pricing",
+      "automation": "Automation"
     },
     "theme": {
       "label": "Appearance",
@@ -342,6 +343,76 @@
       ]
     },
     "finePrint": "The App Store version will be a free, complete product on its own, with no purchase required to dictate, and is coming soon. Pro features (advanced engines, audio and video import, batch transcription, and smart formatting) will unlock through an App Store subscription (also coming soon) or by buying once direct on Gumroad, available today. The Gumroad build includes a 14-day free trial that locks after 14 days until you buy. The iOS companion app will be free."
+  },
+  "automation": {
+    "heading": "Automation",
+    "intro": "SpeakWith has two recorders you can drive from outside the app: Live dictation (real-time, finalised at each pause) and Live audio (voice-activated). You can start, stop, and control either one from the command line, a macOS Shortcut, Automator, or a hotkey launcher — with no extra setup. There are two equivalent ways to send a command: the speakwith:// URL scheme (simplest) and AppleScript (for scripting environments that prefer it).",
+    "sections": [
+      {
+        "heading": "Quick start: start recording",
+        "paragraphs": [
+          {
+            "text": "<p>The fastest way to begin a take is the URL scheme — one line any shell can run. Start the <strong>Live dictation</strong> recorder:</p><pre><code>open \"speakwith://live-dictation/start\"</code></pre><p>Prefer AppleScript? This does the same thing:</p><pre><code>osascript -e 'tell application \"SpeakWith\" to start recording recorder live dictation'</code></pre>",
+            "isHtml": true
+          },
+          {
+            "text": "<p>Start the <strong>Live audio</strong> (voice-activated) recorder instead:</p><pre><code>open \"speakwith://batch/start\"</code></pre>",
+            "isHtml": true
+          },
+          {
+            "text": "<p>Stop the current take (the microphone stays powered on, ready to start again):</p><pre><code>open \"speakwith://live-dictation/stop\"</code></pre>",
+            "isHtml": true
+          }
+        ]
+      },
+      {
+        "heading": "Full command reference",
+        "paragraphs": [
+          {
+            "text": "Each recorder supports five actions. The table below shows the Live dictation recorder. For the Live audio recorder, replace “live dictation” with “batch” in the AppleScript command, and “live-dictation” with “batch” in the URL.",
+            "isHtml": false
+          },
+          {
+            "text": "<table><thead><tr><th>Action</th><th>AppleScript command</th><th>URL scheme</th></tr></thead><tbody><tr><td>Power on (microphone only)</td><td><code>power on recorder live dictation</code></td><td><code>speakwith://live-dictation/power-on</code></td></tr><tr><td>Power off (release the microphone)</td><td><code>power off recorder live dictation</code></td><td><code>speakwith://live-dictation/power-off</code></td></tr><tr><td>Start a take</td><td><code>start recording recorder live dictation</code></td><td><code>speakwith://live-dictation/start</code></td></tr><tr><td>Stop a take</td><td><code>stop recording recorder live dictation</code></td><td><code>speakwith://live-dictation/stop</code></td></tr><tr><td>Set standby on / off</td><td><code>set standby recorder live dictation enabled true</code> (or <code>false</code>)</td><td><code>speakwith://live-dictation/standby?on=true</code> (or <code>false</code>)</td></tr></tbody></table>",
+            "isHtml": true
+          },
+          {
+            "text": "<p>Each AppleScript command runs inside <code>tell application \"SpeakWith\" to …</code> — for example, <code>osascript -e 'tell application \"SpeakWith\" to power off recorder batch'</code>.</p>",
+            "isHtml": true
+          },
+          {
+            "text": "A few things worth knowing: every command is safe to repeat — running “start” while already recording, or “power on” while already on, simply does nothing. Standby only affects the recorder that is currently powered on; it never powers a recorder on by itself.",
+            "isHtml": false
+          }
+        ]
+      },
+      {
+        "heading": "Targeting a specific build",
+        "paragraphs": [
+          {
+            "text": "By default these commands find SpeakWith by name. If you have more than one SpeakWith build installed, pin the exact one you want by its bundle identifier:",
+            "isHtml": false
+          },
+          {
+            "text": "<pre><code>osascript -e 'tell application id \"com.ikisystems.speakwith.macos.gumroad\" to start recording recorder live dictation'</code></pre>",
+            "isHtml": true
+          },
+          {
+            "text": "<p>The shipping bundle identifiers are <code>com.ikisystems.speakwith.macos.gumroad</code> (Gumroad), <code>com.ikisystems.speakwith.macos.appstore</code> (Mac App Store), and <code>com.ikisystems.speakwith.macos</code> (Developer ID direct download).</p>",
+            "isHtml": true
+          }
+        ]
+      },
+      {
+        "heading": "Wire it to a hotkey",
+        "paragraphs": [
+          {
+            "text": "Because these are ordinary commands and URLs, you can turn any of them into a keyboard shortcut today. Drop one into a macOS Shortcut, an Automator “Run Shell Script” action, or a launcher such as Raycast, Alfred, or Keyboard Maestro, and give it the hotkey you like.",
+            "isHtml": false
+          }
+        ]
+      }
+    ]
   },
   "privacy": {
     "heading": "Privacy Policy",

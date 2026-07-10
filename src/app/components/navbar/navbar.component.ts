@@ -22,6 +22,7 @@ import COPY from '../../content/copy.json';
           <a routerLink="/privacy" routerLinkActive="active">{{ copy.nav.links.privacy }}</a>
           <a routerLink="/terms" routerLinkActive="active">{{ copy.nav.links.terms }}</a>
           <a routerLink="/pricing" routerLinkActive="active">{{ copy.nav.links.pricing }}</a>
+          <a routerLink="/automation" routerLinkActive="active">{{ copy.nav.links.automation }}</a>
         </nav>
 
         <label class="theme">
