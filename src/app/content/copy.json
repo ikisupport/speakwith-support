@@ -228,7 +228,7 @@
     },
     "download": {
       "heading": "Get SpeakWith",
-      "body": "SpeakWith runs on Mac and iOS. Download it, grant microphone access, and your first recording is a click away.",
+      "body": "SpeakWith runs on Mac and iOS — it needs a Mac with Apple Silicon (M1 or later) running macOS 26 (Tahoe) or later, or an iPhone on iOS 26 or later. Download it, grant microphone access, and your first recording is a click away.",
       "ctaPrimary": "Buy SpeakWith for Mac",
       "ctaSecondary": "iOS: Coming Soon"
     }
