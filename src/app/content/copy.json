@@ -166,8 +166,8 @@
     "parallel": {
       "eyebrow": "Work at twice the pace",
       "heading": "Like having an extra pair of hands",
-      "p1Html": "Most tools force a choice: record, <em>then</em> write. SpeakWith removes the \"then\". The moment you stop talking, keep going. Type the next idea, paste a link, tidy the paragraph above.",
-      "p2": "Your dictation is still being written up, and when it is ready it slots into the right place, because everything SpeakWith captures carries its moment in time. One pass through your thinking, twice the finished work."
+      "p1Html": "Most tools force you to shift your focus from thinking to operating an application. SpeakWith removes <em>that</em> friction. Every recorder lives in the same application, and what you capture writes out to the project you have selected.",
+      "p2": "You can control SpeakWith with a remote microphone, so you never need to touch the keyboard, and there is no key to remember before you start recording. Your hands stay on the work while your voice does the writing."
     },
     "rhythm": {
       "eyebrow": "Practice, every time you speak",
