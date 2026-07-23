@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="en" data-beasties-container><head>
+  <meta charset="utf-8">
+  <title>Terms of Service | SpeakWith</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The terms of service for SpeakWith, the local-first voice recorder and transcription app for Mac and iOS.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="theme-color" content="#131418" id="meta-theme-color">
+  <!-- Theme tokens are defined inline (not in styles.css) so they apply on the very
+       first paint, before the deferred stylesheet loads. This is what prevents the
+       light-background flash on dark systems. Keep these the single source of truth
+       for the palette; styles.css only consumes them via var(--*). -->
+  <style id="theme-tokens">
+    :root,
+    html[data-theme="light"] {
+      color-scheme: light;
+      --bg: #faf7f0;
+      --surface: #fffefb;
+      --surface-2: #f2ece0;
+      --text: #2b2620;
+      --text-dim: #6b6056;
+      --accent: #9a5b34;
+      --accent-strong: #7f4622;
+      --on-accent: #fdf8ee;
+      --rule: rgba(43, 38, 32, 0.12);
+      --shadow: 0 2px 20px rgba(43, 38, 32, 0.07);
+      --hero-grad: linear-gradient(160deg, #f2ece0 0%, #faf7f0 60%);
+      --max-width: 760px;
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #131418;
+      --surface: #1c2025;
+      --surface-2: #252a30;
+      --text: #f1efe9;
+      --text-dim: #a8a399;
+      --accent: #f3b54a;
+      --accent-strong: #f6c163;
+      --on-accent: #15171a;
+      --rule: rgba(241, 239, 233, 0.15);
+      --shadow: 0 4px 22px rgba(0, 0, 0, 0.30);
+      --hero-grad: linear-gradient(160deg, #1c2025 0%, #131418 65%);
+    }
+  </style>
+  <script>
+    // Resolve and apply the theme before first paint to avoid a flash.
+    (function () {
+      var choice = "system";
+      try {
+        var key = "speakwith-theme";
+        var raw = localStorage.getItem(key);
+        if (raw == null) {
+          var legacy = localStorage.getItem("lifebond-theme");
+          if (legacy != null) {
+            localStorage.setItem(key, legacy);
+            localStorage.removeItem("lifebond-theme");
+            raw = legacy;
+          }
+        }
+        if (raw === "system" || raw === "light" || raw === "dark") {
+          choice = raw;
+        }
+      } catch (e) {}
+      var resolved = choice === "system"
+        ? (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+        : choice;
+      document.documentElement.setAttribute("data-theme", resolved);
+    })();
+  </script>
+<style>*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.65;color:var(--text);background-color:var(--bg);min-height:100vh;display:flex;flex-direction:column;transition:background-color .2s ease,color .2s ease}a:any-link{color:var(--accent)}a:any-link:hover{color:var(--accent-strong)}a:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}app-root,app-terms{display:block;width:100%;min-width:0}.container{width:min(92%,var(--max-width));margin:0 auto}h1,h2{line-height:1.2;font-weight:700;color:var(--text)}h1{font-size:clamp(2.1rem,5vw,3rem);letter-spacing:-.02em}h2{font-size:clamp(1.4rem,3.2vw,1.85rem);margin-bottom:.6rem}p{margin-bottom:.9rem}.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}.prose{padding:2.5rem 0 3.5rem}.prose h2{margin-top:2rem;padding-bottom:.35rem;border-bottom:1px solid var(--rule)}.prose p{color:var(--text-dim)}
+</style><link rel="stylesheet" href="styles-PPWQVOUV.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-PPWQVOUV.css"></noscript><style ng-app-id="ng">[_nghost-ng-c3049066325]{display:flex;flex-direction:column;min-height:100vh}main[_ngcontent-ng-c3049066325]{flex:1 0 auto}.footer[_ngcontent-ng-c3049066325]{border-top:1px solid var(--rule);background:var(--surface);color:var(--text-dim);font-size:.92rem}.footer__inner[_ngcontent-ng-c3049066325]{text-align:center;padding:2.4rem 0}.footer__links[_ngcontent-ng-c3049066325]{display:flex;justify-content:center;flex-wrap:wrap;gap:.5rem 1.2rem;margin-bottom:1rem}.footer__links[_ngcontent-ng-c3049066325]   a[_ngcontent-ng-c3049066325]{color:var(--text-dim);text-decoration:none;font-weight:600}.footer__links[_ngcontent-ng-c3049066325]   a[_ngcontent-ng-c3049066325]:hover{color:var(--accent)}.footer[_ngcontent-ng-c3049066325]   p[_ngcontent-ng-c3049066325]{margin-bottom:.25rem}.footer__fine[_ngcontent-ng-c3049066325]{font-size:.84rem;opacity:.8}</style><link rel="canonical" href="https://speakwith.ikisystems.com/terms/"><meta property="og:type" content="website"><meta property="og:site_name" content="SpeakWith"><meta property="og:title" content="Terms of Service | SpeakWith"><meta property="og:description" content="The terms of service for SpeakWith, the local-first voice recorder and transcription app for Mac and iOS."><meta property="og:url" content="https://speakwith.ikisystems.com/terms/"><meta property="og:image" content="https://speakwith.ikisystems.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Terms of Service | SpeakWith"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Terms of Service | SpeakWith"><meta name="twitter:description" content="The terms of service for SpeakWith, the local-first voice recorder and transcription app for Mac and iOS."><meta name="twitter:image:alt" content="Terms of Service | SpeakWith"><meta name="twitter:image" content="https://speakwith.ikisystems.com/og-image.png"><style ng-app-id="ng">.nav[_ngcontent-ng-c3161576892]{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--rule)}.nav__inner[_ngcontent-ng-c3161576892]{display:flex;align-items:center;gap:1rem 1.5rem;flex-wrap:wrap;padding:.85rem 0}.wordmark[_ngcontent-ng-c3161576892]{display:inline-flex;align-items:center;gap:.35rem;font-weight:800;font-size:1.18rem;letter-spacing:-.01em;color:var(--text);text-decoration:none}.wordmark__icon[_ngcontent-ng-c3161576892]{width:44px;height:44px;flex-shrink:0;box-sizing:border-box;padding:5px;background:#ffffff14;border-radius:50%}html[data-theme="light"][_nghost-ng-c3161576892]   .wordmark__icon[_ngcontent-ng-c3161576892], html[data-theme="light"]   [_nghost-ng-c3161576892]   .wordmark__icon[_ngcontent-ng-c3161576892]{background:#15171a}.nav__links[_ngcontent-ng-c3161576892]{display:flex;gap:.4rem 1.2rem;flex-wrap:wrap;margin-left:auto;font-weight:600;font-size:.96rem}.nav__links[_ngcontent-ng-c3161576892]   a[_ngcontent-ng-c3161576892]{color:var(--text-dim);text-decoration:none;border-bottom:2px solid transparent;padding-bottom:2px}.nav__links[_ngcontent-ng-c3161576892]   a[_ngcontent-ng-c3161576892]:hover, .nav__links[_ngcontent-ng-c3161576892]   a.active[_ngcontent-ng-c3161576892]{color:var(--accent);border-bottom-color:var(--accent)}.theme[_ngcontent-ng-c3161576892]   select[_ngcontent-ng-c3161576892]{font:inherit;font-size:.9rem;padding:.35rem .6rem;border-radius:.5rem;border:1px solid var(--rule);background:var(--surface);color:var(--text);cursor:pointer}@media(max-width:560px){.nav__links[_ngcontent-ng-c3161576892]{margin-left:0;width:100%}}</style><style ng-app-id="ng">.prose__meta[_ngcontent-ng-c512958460]{color:var(--text-dim);font-size:.92rem;margin-bottom:1.4rem}</style></head>
+<body><!--nghm--><script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
+</script><script>window.__jsaction_bootstrap(document.body,"ng",["click","change"],["blur"]);</script>
+  <app-root ng-version="19.2.22" _nghost-ng-c3049066325 ngh="2" ng-server-context="ssg"><app-navbar _ngcontent-ng-c3049066325 _nghost-ng-c3161576892 ngh="0"><header _ngcontent-ng-c3161576892 class="nav"><div _ngcontent-ng-c3161576892 class="container nav__inner"><a _ngcontent-ng-c3161576892 routerlink="/" aria-label="SpeakWith home" class="wordmark" href="/" jsaction="click:;"><img _ngcontent-ng-c3161576892 src="brand-icon.svg" alt aria-hidden="true" width="44" height="44" class="wordmark__icon"> SpeakWith </a><nav _ngcontent-ng-c3161576892 aria-label="Primary" class="nav__links"><a _ngcontent-ng-c3161576892 routerlink="/" routerlinkactive="active" href="/" class jsaction="click:;">Home</a><a _ngcontent-ng-c3161576892 routerlink="/privacy" routerlinkactive="active" href="/privacy" class jsaction="click:;">Privacy</a><a _ngcontent-ng-c3161576892 routerlink="/terms" routerlinkactive="active" href="/terms" class="active" jsaction="click:;">Terms</a><a _ngcontent-ng-c3161576892 routerlink="/pricing" routerlinkactive="active" href="/pricing" class jsaction="click:;">Pricing</a><a _ngcontent-ng-c3161576892 routerlink="/automation" routerlinkactive="active" href="/automation" class jsaction="click:;">Automation</a></nav><label _ngcontent-ng-c3161576892 class="theme"><span _ngcontent-ng-c3161576892 class="visually-hidden">Appearance</span><select _ngcontent-ng-c3161576892 aria-label="Appearance" class="ng-untouched ng-pristine ng-valid" jsaction="change:;blur:;"><option _ngcontent-ng-c3161576892 value="system">System</option><option _ngcontent-ng-c3161576892 value="light">Light</option><option _ngcontent-ng-c3161576892 value="dark">Dark</option></select></label></div></header></app-navbar><main _ngcontent-ng-c3049066325><router-outlet _ngcontent-ng-c3049066325></router-outlet><app-terms _nghost-ng-c512958460 ngh="1"><article _ngcontent-ng-c512958460 class="container prose"><h1 _ngcontent-ng-c512958460>Terms of Service</h1><p _ngcontent-ng-c512958460 class="prose__meta">Last updated: June 2026</p><p _ngcontent-ng-c512958460>These terms govern your use of the SpeakWith application. By installing or using SpeakWith, you agree to them. Please read them carefully.</p><h2 _ngcontent-ng-c512958460>Licence to use SpeakWith</h2><!----><p _ngcontent-ng-c512958460>SpeakWith grants you a personal, non-exclusive, non-transferable licence to install and use the application on Mac computers and iOS devices you own or control, in accordance with these terms. You may not redistribute, resell, rent, or sublicense the application, or attempt to reverse engineer it except where that restriction is prohibited by law.</p><!----><!----><h2 _ngcontent-ng-c512958460>Accuracy disclaimer</h2><p _ngcontent-ng-c512958460>SpeakWith converts speech to text using automated processing. Automated transcription is a powerful aid, but it is <strong>not guaranteed to be accurate or complete</strong>. Results depend on factors including recording quality, background noise, accents, specialist vocabulary, and the nature of what was said.</p><!----><!----><!----><p _ngcontent-ng-c512958460>You should treat transcripts as a high-quality first draft to review and correct, not as a verbatim or certified record. Do not rely on SpeakWith's output for any purpose where an error could cause harm, loss, or legal consequence without independently verifying it.</p><!----><!----><h2 _ngcontent-ng-c512958460>Your content</h2><!----><p _ngcontent-ng-c512958460>You own the recordings, transcripts, and documents you create with SpeakWith. SpeakWith does not claim any rights over your content. You are responsible for what you record and for having the right to record it. Because your content is stored as files on your own device, you are also responsible for backing it up.</p><!----><!----><h2 _ngcontent-ng-c512958460>Provided "as is"</h2><!----><p _ngcontent-ng-c512958460>SpeakWith is provided "as is" and "as available", without warranties of any kind, whether express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the application will be uninterrupted, error-free, or that every recording will be processed successfully.</p><!----><!----><h2 _ngcontent-ng-c512958460>Limitation of liability</h2><!----><p _ngcontent-ng-c512958460>To the maximum extent permitted by law, SpeakWith and IKI Systems will not be liable for any indirect, incidental, special, or consequential damages, or for any loss of data, arising out of or related to your use of the application. Nothing in these terms excludes liability that cannot be excluded under applicable law.</p><!----><!----><h2 _ngcontent-ng-c512958460>Changes to these terms</h2><!----><p _ngcontent-ng-c512958460>These terms may be updated from time to time. The current version will always be posted here with its date. Continued use of SpeakWith after a change means you accept the updated terms.</p><!----><!----><h2 _ngcontent-ng-c512958460>Contact</h2><!----><p _ngcontent-ng-c512958460>Questions about these terms can be directed to the support channels listed with the application.</p><!----><!----><!----></article></app-terms><!----></main><footer _ngcontent-ng-c3049066325 class="footer"><div _ngcontent-ng-c3049066325 class="container footer__inner"><nav _ngcontent-ng-c3049066325 aria-label="Footer" class="footer__links"><a _ngcontent-ng-c3049066325 routerlink="/" href="/" jsaction="click:;">Home</a><a _ngcontent-ng-c3049066325 routerlink="/privacy" href="/privacy" jsaction="click:;">Privacy</a><a _ngcontent-ng-c3049066325 routerlink="/terms" href="/terms" jsaction="click:;">Terms</a><a _ngcontent-ng-c3049066325 target="_blank" rel="noopener noreferrer" href="https://ikisystems.substack.com/">Substack</a><a _ngcontent-ng-c3049066325 target="_blank" rel="noopener noreferrer" href="https://x.com/ikisystems">X</a></nav><p _ngcontent-ng-c3049066325>SpeakWith: your spoken ideas, captured as a daily document.</p><p _ngcontent-ng-c3049066325 class="footer__fine">© 2026 IKI Systems. All rights reserved.</p></div></footer></app-root>
+<link rel="modulepreload" href="chunk-M5V4IW3F.js"><script src="polyfills-5CFQRCPP.js" type="module"></script><script src="main-GYXBTWJB.js" type="module"></script>
+
+<script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"8":"t0"},"c":{"8":[{"i":"t0","r":5,"t":{"3":"t1"},"c":{"3":[{"i":"t1","r":3,"t":{"0":"t2","1":"t3"},"c":{"0":[],"1":[{"i":"t3","r":1}]}}]}},{"i":"t0","r":8,"t":{"3":"t1"},"c":{"3":[{"i":"t1","r":3,"t":{"0":"t2","1":"t3"},"c":{"0":[{"i":"t2","r":1}],"1":[]}},{"i":"t1","r":3,"t":{"0":"t2","1":"t3"},"c":{"0":[],"1":[{"i":"t3","r":1}]}}]}},{"i":"t0","r":5,"t":{"3":"t1"},"c":{"3":[{"i":"t1","r":3,"t":{"0":"t2","1":"t3"},"c":{"0":[],"1":[{"i":"t3","r":1}]}}]},"x":5}]}},{"c":{"2":[{"i":"c512958460","r":1}]}}]}</script></body></html>
