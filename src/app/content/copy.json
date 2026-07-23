@@ -20,7 +20,9 @@
       "links": {
         "home": "Home",
         "privacy": "Privacy",
-        "terms": "Terms"
+        "terms": "Terms",
+        "newsletter": "Substack",
+        "x": "X"
       },
       "tagline": "SpeakWith: your spoken ideas, captured as a daily document.",
       "copyright": "© 2026 IKI Systems. All rights reserved."
@@ -28,7 +30,9 @@
   },
   "links": {
     "buyMacGumroad": "https://ikisystems.gumroad.com/l/vozgsy",
-    "trialMacGumroad": "https://ikisystems.gumroad.com/l/vkaxll"
+    "trialMacGumroad": "https://ikisystems.gumroad.com/l/vkaxll",
+    "newsletter": "https://ikisystems.substack.com/",
+    "x": "https://x.com/ikisystems"
   },
   "home": {
     "hero": {

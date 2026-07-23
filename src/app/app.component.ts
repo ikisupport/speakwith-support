@@ -24,6 +24,8 @@ import COPY from './content/copy.json';
           <a routerLink="/">{{ copy.app.footer.links.home }}</a>
           <a routerLink="/privacy">{{ copy.app.footer.links.privacy }}</a>
           <a routerLink="/terms">{{ copy.app.footer.links.terms }}</a>
+          <a [href]="copy.links.newsletter" target="_blank" rel="noopener noreferrer">{{ copy.app.footer.links.newsletter }}</a>
+          <a [href]="copy.links.x" target="_blank" rel="noopener noreferrer">{{ copy.app.footer.links.x }}</a>
         </nav>
         <p>{{ copy.app.footer.tagline }}</p>
         <p class="footer__fine">{{ copy.app.footer.copyright }}</p>
