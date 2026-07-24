@@ -58,12 +58,14 @@
         {
           "name": "SpeakWith for Mac",
           "tag": "The studio",
-          "body": "Live and batch recorders, audio and video import, and a choice of transcription engines: Apple on-device, Whisper, or Parakeet. Every recording lands in your daily document, with playback you can click straight into.",
+          "body": "Live and batch recorders, audio and video import, and a choice of transcription engines: Apple on-device, Whisper, or Parakeet. Every recording lands in your daily document, with playback you can click straight into. The direct build can also type finished phrases into the app you are already using.",
           "points": [
             "Live and batch recording",
+            "Hands-free standby when you want it",
+            "Type into the focused app (direct build)",
+            "Projects with separate folders",
             "Import audio and video",
-            "Apple, Whisper, and Parakeet engines",
-            "Transcripts with click-to-play audio"
+            "Apple, Whisper, and Parakeet engines"
           ]
         },
         {
@@ -131,7 +133,7 @@
         },
         {
           "label": "On your computer.",
-          "body": "Transcription and indexing run on your Mac. Nothing is uploaded. Ever.",
+          "body": "Transcription and summarization run on your Mac. Nothing is uploaded. Ever.",
           "isHtml": false
         }
       ]
@@ -148,6 +150,11 @@
         {
           "title": "A document for every day",
           "body": "Everything you record or type on a given day flows into a single organised document, in the order it happened. Tomorrow, a fresh one begins.",
+          "wide": false
+        },
+        {
+          "title": "Type into any app",
+          "body": "Turn on Type into focused app and each finished phrase pastes into whatever has keyboard focus: Notes, your browser, an editor. Your daily document still keeps a full copy. Available in the direct (Gumroad) Mac build.",
           "wide": false
         },
         {
@@ -171,7 +178,7 @@
       "eyebrow": "Work at twice the pace",
       "heading": "Like having an extra pair of hands",
       "p1Html": "Most tools force you to shift your focus from thinking to operating an application. SpeakWith removes <em>that</em> friction. Every recorder lives in the same application, and what you capture writes out to the project you have selected.",
-      "p2": "You can control SpeakWith with a remote microphone, so you never need to touch the keyboard, and there is no key to remember before you start recording. Your hands stay on the work while your voice does the writing."
+      "p2": "You can control SpeakWith with a remote microphone, so you never need to touch the keyboard, and there is no key to remember before you start recording. On the direct build you can also type into the app you are already in, while your daily document keeps the full record."
     },
     "rhythm": {
       "eyebrow": "Practice, every time you speak",
@@ -211,6 +218,10 @@
         {
           "q": "Can I keep working while a recording is written up?",
           "a": "Yes. That is one of SpeakWith's best features. Type and paste into the day's document while dictation is still processing; everything ends up in the correct chronological order."
+        },
+        {
+          "q": "Can I dictate into other apps?",
+          "a": "Yes, on the direct (Gumroad) Mac build. Turn on Type into focused app and SpeakWith pastes each finished phrase into whichever app currently has keyboard focus. Your daily document still receives everything as usual. The sandboxed App Store build cannot do this; macOS does not allow cross-app typing from sandboxed apps."
         },
         {
           "q": "Is there an iOS app?",
@@ -338,7 +349,7 @@
         {
           "lead": "Direct (Gumroad)",
           "heading": "14-day free trial, then buy once",
-          "body": "Try the full app free for 14 days. After that it unlocks with a single one-time purchase, no subscription. The direct build is the complete, unsandboxed version of SpeakWith.",
+          "body": "Try the full app free for 14 days. After that it unlocks with a single one-time purchase, no subscription. The direct build is the complete, unsandboxed version of SpeakWith, including Type into focused app so you can dictate into other applications.",
           "ctaLabel": "Start 14-day free trial",
           "ctaUrl": "https://ikisystems.gumroad.com/l/vkaxll",
           "ctaSecondaryLabel": "Buy the full license",
@@ -346,7 +357,7 @@
         }
       ]
     },
-    "finePrint": "The App Store version will be a free, complete product on its own, with no purchase required to dictate, and is coming soon. Pro features (advanced engines, audio and video import, batch transcription, and smart formatting) will unlock through an App Store subscription (also coming soon) or by buying once direct on Gumroad, available today. The Gumroad build includes a 14-day free trial that locks after 14 days until you buy. The iOS companion app will be free."
+    "finePrint": "The App Store version will be a free, complete product on its own, with no purchase required to dictate, and is coming soon. Pro features (advanced engines, audio and video import, batch transcription, and smart formatting) will unlock through an App Store subscription (also coming soon) or by buying once direct on Gumroad, available today. The Gumroad build includes a 14-day free trial that locks after 14 days until you buy, and Type into focused app for dictating into other applications. The iOS companion app will be free."
   },
   "automation": {
     "heading": "Automation",
