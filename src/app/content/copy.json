@@ -5,8 +5,7 @@
       "home": "Home",
       "privacy": "Privacy",
       "terms": "Terms",
-      "pricing": "Pricing",
-      "automation": "Automation"
+      "pricing": "Pricing"
     },
     "theme": {
       "label": "Appearance",
@@ -19,13 +18,14 @@
     "footer": {
       "links": {
         "home": "Home",
+        "automation": "Automation",
         "privacy": "Privacy",
         "terms": "Terms",
         "newsletter": "Substack",
         "x": "X"
       },
       "tagline": "SpeakWith: your spoken ideas, captured as a daily document.",
-      "copyright": "© 2026 IKI Systems. All rights reserved."
+      "copyright": "© {{year}} IKI Systems. All rights reserved."
     }
   },
   "links": {
@@ -39,16 +39,18 @@
       "eyebrow": "A voice-driven daily document",
       "headline": "Speak Now. Refine Later.",
       "lead": "Speak your day into a clean markdown file on Mac or iOS. Read it, edit it, share it. It works on its own, and it opens in VS Code, Obsidian, or any tool you point at it.",
+      "leadSecondary": "Flip one switch, and your voice goes into whichever app has focus. No copy, no paste. Just talk, and the words land where the cursor is.",
       "ctaPrimary": "Try SpeakWith free",
       "ctaSecondary": "iOS: Coming Soon",
       "ctaGhost": "See how it works",
-      "note": "Works on Mac and iOS. Your voice never leaves your device. No account required."
+      "note": "Works on Mac and iOS. Your voice never leaves your device. No account required.",
+      "ctaDemo": "Watch it type"
     },
     "moments": {
       "title": "Say it now. Use it later.",
-      "heroImage": "canonical_screenshots/hero.png",
-      "heroAlt": "SpeakWith for Mac in live dictation: spoken words appearing as transcribed lines beneath a live waveform.",
-      "heroCaption": "Speak, and watch the thought land as text before it slips away."
+      "heroImage": "canonical_screenshots/hero.png?v=20260726a",
+      "heroAlt": "SpeakWith for Mac in live dictation: spoken words landing as transcribed lines under a live waveform, ready to type into another app.",
+      "heroCaption": "Speak, and watch the subtitles for your thoughts take shape before the idea slips away."
     },
     "platforms": {
       "eyebrow": "Two apps, one voice",
@@ -62,7 +64,7 @@
           "points": [
             "Live and batch recording",
             "Hands-free standby when you want it",
-            "Type into the focused app (direct build)",
+            "Type into app (direct build)",
             "Projects with separate folders",
             "Import audio and video",
             "Apple, Whisper, and Parakeet engines"
@@ -82,14 +84,29 @@
         }
       ]
     },
+    "typeIntoApp": {
+      "id": "type-into-app",
+      "eyebrow": "Type into app",
+      "heading": "Talk. The words land where the cursor is.",
+      "lead": "On the direct Mac build, flip one switch. SpeakWith types finished phrases into whichever app has focus.",
+      "videoSrc": "assets/demo/type-into-app.mp4?v=20260726d",
+      "posterSrc": "assets/demo/type-into-app-poster.jpg?v=20260726d",
+      "caption": "A real take: SpeakWith typing into Messages as each utterance settles.",
+      "ariaLabel": "Screen recording of SpeakWith live dictation with the typing switch on, sending spoken phrases into an iMessage conversation."
+    },
     "screenshots": {
-      "title": "See it work",
-      "subtitle": "The actual Mac app, in action.",
+      "title": "More of the Mac app",
+      "subtitle": "Queue, daily document, playback, and projects.",
       "items": [
         {
           "src": "assets/screenshots/01_job_queue_full.png",
           "caption": "Every recording, tracked in one clear queue, grouped by day.",
           "ariaLabel": "The SpeakWith job queue: a day's recordings grouped by date, each row showing its transcription status."
+        },
+        {
+          "src": "assets/screenshots/type-into-combo.png",
+          "caption": "One switch on, and SpeakWith types into whichever app has focus. No copy, no paste.",
+          "ariaLabel": "SpeakWith live dictation beside macOS Messages: the typing switch is on, and the same spoken lines appear as delivered iMessage bubbles."
         },
         {
           "src": "assets/screenshots/markdown.png",
@@ -153,8 +170,8 @@
           "wide": false
         },
         {
-          "title": "Type into any app",
-          "body": "Turn on Type into focused app and each finished phrase pastes into whatever has keyboard focus: Notes, your browser, an editor. Your daily document still keeps a full copy. Available in the direct (Gumroad) Mac build.",
+          "title": "Type into app",
+          "body": "Flip one switch and SpeakWith types each finished phrase into whichever app has focus. Available in the direct (Gumroad) Mac build.",
           "wide": false
         },
         {
@@ -178,7 +195,7 @@
       "eyebrow": "Work at twice the pace",
       "heading": "Like having an extra pair of hands",
       "p1Html": "Most tools force you to shift your focus from thinking to operating an application. SpeakWith removes <em>that</em> friction. Every recorder lives in the same application, and what you capture writes out to the project you have selected.",
-      "p2": "You can control SpeakWith with a remote microphone, so you never need to touch the keyboard, and there is no key to remember before you start recording. On the direct build you can also type into the app you are already in, while your daily document keeps the full record."
+      "p2": "You can control SpeakWith with a remote microphone, so you never need to touch the keyboard, and there is no key to remember before you start recording. On the direct build, flip one switch and speak into the app you are already in."
     },
     "rhythm": {
       "eyebrow": "Practice, every time you speak",
@@ -209,7 +226,7 @@
         },
         {
           "q": "Does using SpeakWith change how I speak?",
-          "a": "Many people find that it does. While you record, a small meter shows the pauses inside what you are saying, a quiet form of feedback that you can glance at without breaking your train of thought. Over weeks, you start to hold a topic together longer and let it land in a single, coherent piece. Your daily document gets easier to work with, and so does the way you speak to people away from the screen."
+          "a": "It can, through quiet feedback. While you record, a small meter shows the pauses inside what you are saying, something you can glance at without breaking your train of thought. Over weeks, you may hold a topic together longer and let it land in a single, coherent piece. Your daily document gets easier to work with, and so can the way you speak to people away from the screen."
         },
         {
           "q": "Can I import audio and video I already have?",
@@ -221,7 +238,7 @@
         },
         {
           "q": "Can I dictate into other apps?",
-          "a": "Yes, on the direct (Gumroad) Mac build. Turn on Type into focused app and SpeakWith pastes each finished phrase into whichever app currently has keyboard focus. Your daily document still receives everything as usual. The sandboxed App Store build cannot do this; macOS does not allow cross-app typing from sandboxed apps."
+          "a": "Yes, on the direct (Gumroad) Mac build. Flip one switch and SpeakWith types each finished phrase into whichever app currently has keyboard focus. Your daily document still receives everything as usual. The sandboxed App Store build cannot do this; macOS does not allow cross-app typing from sandboxed apps."
         },
         {
           "q": "Is there an iOS app?",
@@ -349,7 +366,7 @@
         {
           "lead": "Direct (Gumroad)",
           "heading": "14-day free trial, then buy once",
-          "body": "Try the full app free for 14 days. After that it unlocks with a single one-time purchase, no subscription. The direct build is the complete, unsandboxed version of SpeakWith, including Type into focused app so you can dictate into other applications.",
+          "body": "Try the full app free for 14 days. After that it unlocks with a single one-time purchase, no subscription. The direct build is the complete, unsandboxed version of SpeakWith, including the switch that types your dictation into other applications.",
           "ctaLabel": "Start 14-day free trial",
           "ctaUrl": "https://ikisystems.gumroad.com/l/vkaxll",
           "ctaSecondaryLabel": "Buy the full license",
@@ -357,7 +374,7 @@
         }
       ]
     },
-    "finePrint": "The App Store version will be a free, complete product on its own, with no purchase required to dictate, and is coming soon. Pro features (advanced engines, audio and video import, batch transcription, and smart formatting) will unlock through an App Store subscription (also coming soon) or by buying once direct on Gumroad, available today. The Gumroad build includes a 14-day free trial that locks after 14 days until you buy, and Type into focused app for dictating into other applications. The iOS companion app will be free."
+    "finePrint": "The App Store version will be a free, complete product on its own, with no purchase required to dictate, and is coming soon. Pro features (advanced engines, audio and video import, batch transcription, and smart formatting) will unlock through an App Store subscription (also coming soon) or by buying once direct on Gumroad, available today. The Gumroad build includes a 14-day free trial that locks after 14 days until you buy, and a switch that types your dictation into other applications. The iOS companion app will be free."
   },
   "automation": {
     "heading": "Automation",

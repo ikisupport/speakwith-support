@@ -3,8 +3,8 @@ import { RouterLink } from '@angular/router';
 import COPY from '../../content/copy.json';
 
 /**
- * Home / landing page. Hero, moments strip, technical-moat row, feature
- * blocks, the parallel-input value-prop band, an FAQ, and a download CTA.
+ * Home / landing page. Hero, moments strip, Type into app demo band,
+ * platforms, technical-moat row, feature blocks, value-prop bands, FAQ, download CTA.
  */
 @Component({
   selector: 'app-home',
@@ -17,10 +17,14 @@ import COPY from '../../content/copy.json';
         <p class="eyebrow">{{ copy.home.hero.eyebrow }}</p>
         <h1>{{ copy.home.hero.headline }}</h1>
         <p class="hero__lead">{{ copy.home.hero.lead }}</p>
+        @if (copy.home.hero.leadSecondary) {
+          <p class="hero__lead hero__lead--secondary">{{ copy.home.hero.leadSecondary }}</p>
+        }
         <div class="hero__actions">
           <a class="button button--primary" routerLink="/pricing">{{ copy.home.hero.ctaPrimary }}</a>
           <span class="button button--coming-soon">{{ copy.home.hero.ctaSecondary }}</span>
           <a class="button button--ghost" href="#moments">{{ copy.home.hero.ctaGhost }}</a>
+          <a class="button button--ghost" [href]="'#' + copy.home.typeIntoApp.id">{{ copy.home.hero.ctaDemo }}</a>
         </div>
         <p class="hero__note">{{ copy.home.hero.note }}</p>
       </div>
@@ -58,6 +62,27 @@ import COPY from '../../content/copy.json';
             </article>
           }
         </div>
+      </div>
+    </section>
+
+    <!-- Type into app demo: separate band with stable #type-into-app anchor -->
+    <section [id]="copy.home.typeIntoApp.id" class="typedemo">
+      <div class="container heroshot__inner">
+        <p class="eyebrow eyebrow--accent">{{ copy.home.typeIntoApp.eyebrow }}</p>
+        <h2 class="heroshot__title">{{ copy.home.typeIntoApp.heading }}</h2>
+        <p class="typedemo__lead">{{ copy.home.typeIntoApp.lead }}</p>
+        <figure class="heroshot__figure">
+          <video
+            class="typedemo__video"
+            controls
+            playsinline
+            preload="metadata"
+            [poster]="copy.home.typeIntoApp.posterSrc"
+            [attr.aria-label]="copy.home.typeIntoApp.ariaLabel">
+            <source [src]="copy.home.typeIntoApp.videoSrc" type="video/mp4" />
+          </video>
+          <figcaption class="heroshot__caption">{{ copy.home.typeIntoApp.caption }}</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -216,8 +241,13 @@ import COPY from '../../content/copy.json';
       color: var(--text-dim);
       font-size: 1.12rem;
       max-width: 40rem;
-      margin: 1rem auto 1.8rem;
+      margin: 1rem auto 0.85rem;
       text-wrap: balance;
+    }
+
+    .hero__lead--secondary {
+      margin: 0 auto 1.8rem;
+      max-width: 42rem;
     }
 
     .hero__actions {
@@ -356,6 +386,28 @@ import COPY from '../../content/copy.json';
       color: var(--text-dim);
       font-size: 0.95rem;
       margin-bottom: 0.5rem;
+    }
+
+    /* Type into app demo band (layout reused from .heroshot) */
+    .typedemo {
+      background: var(--bg);
+      border-bottom: 1px solid var(--rule);
+    }
+    .typedemo__lead {
+      color: var(--text-dim);
+      font-size: 1.06rem;
+      margin: 0 auto 1.6rem;
+      max-width: 42rem;
+    }
+    .typedemo__video {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0.9rem;
+      border: 1px solid var(--rule);
+      box-shadow: var(--shadow);
+      background: #000;
+      aspect-ratio: 16 / 9;
     }
 
     /* Screenshots gallery: full-bleed 16:10 frames, alternating sides */
@@ -645,6 +697,7 @@ import COPY from '../../content/copy.json';
         padding: 3rem 0 2.8rem;
       }
       .heroshot__inner,
+      .platforms__inner,
       .moat__inner {
         padding: 2.8rem 0;
       }
