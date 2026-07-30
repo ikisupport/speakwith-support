@@ -4,7 +4,7 @@ import COPY from '../../content/copy.json';
 
 /**
  * Home / landing page. Hero, moments strip, Type into app demo band,
- * platforms, technical-moat row, feature blocks, value-prop bands, FAQ, download CTA.
+ * live-edit frames, platforms, technical-moat row, feature blocks, value-prop bands, FAQ, download CTA.
  */
 @Component({
   selector: 'app-home',
@@ -83,6 +83,25 @@ import COPY from '../../content/copy.json';
           </video>
           <figcaption class="heroshot__caption">{{ copy.home.typeIntoApp.caption }}</figcaption>
         </figure>
+      </div>
+    </section>
+
+    <!-- Live edit: fix or remove lines while recording -->
+    <section [id]="copy.home.liveEdit.id" class="liveedit">
+      <div class="container liveedit__inner">
+        <p class="eyebrow eyebrow--accent">{{ copy.home.liveEdit.eyebrow }}</p>
+        <h2 class="liveedit__title">{{ copy.home.liveEdit.heading }}</h2>
+        <p class="liveedit__lead">{{ copy.home.liveEdit.lead }}</p>
+        <div class="liveedit__grid">
+          @for (s of copy.home.liveEdit.items; track s.src) {
+            <figure class="liveedit__figure">
+              <div class="liveedit__frame">
+                <img class="liveedit__image" [src]="s.src" [alt]="s.ariaLabel" loading="lazy" />
+              </div>
+              <figcaption class="liveedit__caption">{{ s.caption }}</figcaption>
+            </figure>
+          }
+        </div>
       </div>
     </section>
 
@@ -410,6 +429,56 @@ import COPY from '../../content/copy.json';
       aspect-ratio: 16 / 9;
     }
 
+    /* Live edit band: two annotated frames side by side */
+    .liveedit {
+      background: var(--surface);
+      border-bottom: 1px solid var(--rule);
+    }
+    .liveedit__inner {
+      padding: 3.8rem 0 3.6rem;
+      max-width: 1100px;
+      width: min(94%, 1100px);
+      text-align: center;
+    }
+    .liveedit__title {
+      margin-bottom: 0.6rem;
+    }
+    .liveedit__lead {
+      color: var(--text-dim);
+      font-size: 1.06rem;
+      margin: 0 auto 2rem;
+      max-width: 42rem;
+    }
+    .liveedit__grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.4rem;
+      text-align: left;
+    }
+    .liveedit__figure {
+      margin: 0;
+    }
+    .liveedit__frame {
+      border-radius: 0.9rem;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--rule);
+      background: var(--surface-2);
+    }
+    .liveedit__image {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 10;
+      object-fit: contain;
+    }
+    .liveedit__caption {
+      margin-top: 0.85rem;
+      color: var(--text);
+      font-size: 1.06rem;
+      line-height: 1.5;
+    }
+
     /* Screenshots gallery: full-bleed 16:10 frames, alternating sides */
     .shots {
       background: var(--surface);
@@ -686,6 +755,13 @@ import COPY from '../../content/copy.json';
       }
     }
 
+    @media (max-width: 820px) {
+      .liveedit__grid {
+        grid-template-columns: 1fr;
+        gap: 1.6rem;
+      }
+    }
+
     @media (max-width: 620px) {
       .features {
         grid-template-columns: 1fr;
@@ -698,6 +774,7 @@ import COPY from '../../content/copy.json';
       }
       .heroshot__inner,
       .platforms__inner,
+      .liveedit__inner,
       .moat__inner {
         padding: 2.8rem 0;
       }

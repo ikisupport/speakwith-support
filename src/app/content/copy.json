@@ -94,6 +94,24 @@
       "caption": "A real take: SpeakWith typing into Messages as each utterance settles.",
       "ariaLabel": "Screen recording of SpeakWith live dictation with the typing switch on, sending spoken phrases into an iMessage conversation."
     },
+    "liveEdit": {
+      "id": "live-edit",
+      "eyebrow": "Live dictation",
+      "heading": "Fix lines as they land.",
+      "lead": "Wrong word? Wrong line? Edit or remove it while you are still recording. No need to wait for a finished take.",
+      "items": [
+        {
+          "src": "assets/screenshots/live-edit-remove.png?v=20260729v",
+          "caption": "Drop a line that does not belong with the minus tool, still mid-session.",
+          "ariaLabel": "SpeakWith live dictation showing a line marked for removal: This line does not belong here, with the minus control highlighted beside the timestamp."
+        },
+        {
+          "src": "assets/screenshots/live-edit-inline.png?v=20260729v",
+          "caption": "Tap a line, fix the wording, save. The take keeps going.",
+          "ariaLabel": "SpeakWith live dictation with one line open for inline editing: the text The metering is at tree o'clock is in an edit field with Save and Cancel, while recording continues."
+        }
+      ]
+    },
     "screenshots": {
       "title": "More of the Mac app",
       "subtitle": "Queue, daily document, playback, and projects.",
