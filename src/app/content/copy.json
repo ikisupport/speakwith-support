@@ -39,7 +39,7 @@
       "eyebrow": "A voice-driven daily document",
       "headline": "Speak Now. Refine Later.",
       "lead": "Speak your day into a clean markdown file on Mac or iOS. Read it, edit it, share it. It works on its own, and it opens in VS Code, Obsidian, or any tool you point at it.",
-      "leadSecondary": "Flip one switch, and your voice goes into whichever app has focus. No copy, no paste. Just talk, and the words land where the cursor is.",
+      "leadSecondary": "Use the recorder switch or a hotkey. Talk, and the words land where the cursor is.",
       "ctaPrimary": "Try SpeakWith free",
       "ctaSecondary": "iOS: Coming Soon",
       "ctaGhost": "See how it works",
@@ -88,7 +88,7 @@
       "id": "type-into-app",
       "eyebrow": "Type into app",
       "heading": "Talk. The words land where the cursor is.",
-      "lead": "On the direct Mac build, flip one switch. SpeakWith types finished phrases into whichever app has focus.",
+      "lead": "On the direct Mac build, turn on the recorder switch or a hotkey. SpeakWith types finished phrases into whichever app has focus.",
       "videoSrc": "assets/demo/type-into-app.mp4?v=20260726d",
       "posterSrc": "assets/demo/type-into-app-poster.jpg?v=20260726d",
       "caption": "A real take: SpeakWith typing into Messages as each utterance settles.",
@@ -101,12 +101,12 @@
       "lead": "Wrong word? Wrong line? Edit or remove it while you are still recording. No need to wait for a finished take.",
       "items": [
         {
-          "src": "assets/screenshots/live-edit-remove.png?v=20260729v",
+          "src": "assets/screenshots/live-edit-remove.png?v=20260801a",
           "caption": "Drop a line that does not belong with the minus tool, still mid-session.",
           "ariaLabel": "SpeakWith live dictation showing a line marked for removal: This line does not belong here, with the minus control highlighted beside the timestamp."
         },
         {
-          "src": "assets/screenshots/live-edit-inline.png?v=20260729v",
+          "src": "assets/screenshots/live-edit-inline.png?v=20260801a",
           "caption": "Tap a line, fix the wording, save. The take keeps going.",
           "ariaLabel": "SpeakWith live dictation with one line open for inline editing: the text The metering is at tree o'clock is in an edit field with Save and Cancel, while recording continues."
         }
@@ -114,21 +114,21 @@
     },
     "screenshots": {
       "title": "More of the Mac app",
-      "subtitle": "Queue, daily document, playback, and projects.",
+      "subtitle": "Recordings, daily document, playback, and projects.",
       "items": [
         {
-          "src": "assets/screenshots/01_job_queue_full.png",
-          "caption": "Every recording, tracked in one clear queue, grouped by day.",
+          "src": "assets/screenshots/01_job_queue_full.png?v=20260801a",
+          "caption": "All your recordings summarized in one place, grouped by day. Click any row to review it in detail.",
           "ariaLabel": "The SpeakWith job queue: a day's recordings grouped by date, each row showing its transcription status."
         },
         {
           "src": "assets/screenshots/type-into-combo.png",
-          "caption": "One switch on, and SpeakWith types into whichever app has focus. No copy, no paste.",
+          "caption": "Use the recorder switch or a hotkey. Words appear in whichever app you are using.",
           "ariaLabel": "SpeakWith live dictation beside macOS Messages: the typing switch is on, and the same spoken lines appear as delivered iMessage bubbles."
         },
         {
-          "src": "assets/screenshots/markdown.png",
-          "caption": "Everything lands in one plain .md file, yours to open in any editor.",
+          "src": "assets/screenshots/markdown.png?v=20260801a",
+          "caption": "Everything lands in a plain .md file, ready to open in any editor.",
           "ariaLabel": "The day's dictation as a markdown file open in VS Code: a dated daily document of transcribed notes."
         },
         {
@@ -149,7 +149,7 @@
       ]
     },
     "moat": {
-      "title": "Your file. Your machine. Your AI.",
+      "title": "Your words stay on your Mac. Plain files, no account.",
       "items": [
         {
           "label": "Local.",
@@ -158,7 +158,7 @@
         },
         {
           "label": "Markdown.",
-          "body": "A plain <code>.md</code> file you own. Open it in VS Code, Obsidian, or any editor. Feed it to any tool.",
+          "body": "A plain <code>.md</code> file on disk. Open it in VS Code, Obsidian, or any editor. Feed it to any tool.",
           "isHtml": true
         },
         {
@@ -189,7 +189,7 @@
         },
         {
           "title": "Type into app",
-          "body": "Flip one switch and SpeakWith types each finished phrase into whichever app has focus. Available in the direct (Gumroad) Mac build.",
+          "body": "Turn on the switch in the live recorder, or set a hotkey in Settings. SpeakWith types each finished phrase into the app with focus. Available in the direct (Gumroad) Mac build.",
           "wide": false
         },
         {
@@ -213,7 +213,7 @@
       "eyebrow": "Work at twice the pace",
       "heading": "Like having an extra pair of hands",
       "p1Html": "Most tools force you to shift your focus from thinking to operating an application. SpeakWith removes <em>that</em> friction. Every recorder lives in the same application, and what you capture writes out to the project you have selected.",
-      "p2": "You can control SpeakWith with a remote microphone, so you never need to touch the keyboard, and there is no key to remember before you start recording. On the direct build, flip one switch and speak into the app you are already in."
+      "p2": "You can control SpeakWith with a remote microphone, so you never need to touch the keyboard, and there is no key to remember before you start recording. On the direct build, turn on the recorder switch or a hotkey and speak into the app you are already in."
     },
     "rhythm": {
       "eyebrow": "Practice, every time you speak",
@@ -256,7 +256,7 @@
         },
         {
           "q": "Can I dictate into other apps?",
-          "a": "Yes, on the direct (Gumroad) Mac build. Flip one switch and SpeakWith types each finished phrase into whichever app currently has keyboard focus. Your daily document still receives everything as usual. The sandboxed App Store build cannot do this; macOS does not allow cross-app typing from sandboxed apps."
+          "a": "Yes, on the direct (Gumroad) Mac build. Turn on the recorder switch, or set a hotkey in Settings. SpeakWith types each finished phrase into whichever app currently has keyboard focus. Your daily document still receives everything as usual. The sandboxed App Store build cannot do this; macOS does not allow cross-app typing from sandboxed apps."
         },
         {
           "q": "Is there an iOS app?",
@@ -466,7 +466,7 @@
   },
   "privacy": {
     "heading": "Privacy Policy",
-    "meta": "Last updated: June 2026",
+    "meta": "Last updated: August 2026",
     "intro": "SpeakWith is built around a simple principle: your words are yours. This policy explains what SpeakWith does and does not do with the recordings, transcripts, and documents you create.",
     "sections": [
       {
@@ -479,10 +479,14 @@
         ]
       },
       {
-        "heading": "No telemetry, analytics, or tracking",
+        "heading": "No telemetry, analytics, or tracking in the app",
         "paragraphs": [
           {
-            "text": "SpeakWith does not include usage analytics, advertising, or behavioural tracking. We do not collect a record of how you use the app, what you record, or what you search for. There are no third-party trackers in the application.",
+            "text": "The SpeakWith application does not include usage analytics, advertising, or behavioural tracking. We do not collect a record of how you use the app, what you record, or what you search for. There are no third-party trackers in the application.",
+            "isHtml": false
+          },
+          {
+            "text": "This is a statement about the app itself. This website, which is separate software running in your browser, measures anonymous visitor counts; that is described under “The support website” below. Nothing measured on the website is connected to the app, and the app never reports anything to us.",
             "isHtml": false
           }
         ]
@@ -509,7 +513,15 @@
         "heading": "The support website",
         "paragraphs": [
           {
-            "text": "This website is a static information site. It does not set tracking cookies and does not profile its visitors. Standard server request logs may exist at the hosting provider, as they do for any website.",
+            "text": "This website uses TelemetryDeck, a privacy-focused analytics service, to count page views and how often the download and pricing links are used. It tells us which pages people find useful. It is not used to profile you.",
+            "isHtml": false
+          },
+          {
+            "text": "No cookies are set for analytics and no advertising or cross-site tracking identifiers are used. Visits are identified only by a random value that lives in your browser tab and is discarded when you close it, and TelemetryDeck anonymises that value before storing it. We see aggregate counts — pages, referrers, campaign links, browser and country — never individual visitors, and never anything you type.",
+            "isHtml": false
+          },
+          {
+            "text": "Standard server request logs may exist at the hosting provider, as they do for any website.",
             "isHtml": false
           }
         ]

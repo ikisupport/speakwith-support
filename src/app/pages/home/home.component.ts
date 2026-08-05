@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { TelemetryService } from '../../services/telemetry.service';
 import COPY from '../../content/copy.json';
 
 /**
@@ -21,7 +22,8 @@ import COPY from '../../content/copy.json';
           <p class="hero__lead hero__lead--secondary">{{ copy.home.hero.leadSecondary }}</p>
         }
         <div class="hero__actions">
-          <a class="button button--primary" routerLink="/pricing">{{ copy.home.hero.ctaPrimary }}</a>
+          <a class="button button--primary" routerLink="/pricing"
+             (click)="telemetry.signal('cta.pricing', { placement: 'hero' })">{{ copy.home.hero.ctaPrimary }}</a>
           <span class="button button--coming-soon">{{ copy.home.hero.ctaSecondary }}</span>
           <a class="button button--ghost" href="#moments">{{ copy.home.hero.ctaGhost }}</a>
           <a class="button button--ghost" [href]="'#' + copy.home.typeIntoApp.id">{{ copy.home.hero.ctaDemo }}</a>
@@ -128,7 +130,7 @@ import COPY from '../../content/copy.json';
       </section>
     }
 
-    <!-- Your file. Your machine. Your AI. -->
+    <!-- Your words stay on your Mac. Plain files, no account. -->
     <section class="moat">
       <div class="container moat__inner">
         <h2 class="moat__title">{{ copy.home.moat.title }}</h2>
@@ -220,7 +222,8 @@ import COPY from '../../content/copy.json';
         <p>{{ copy.home.download.body }}</p>
         <div class="hero__actions">
           <a class="button button--primary" [href]="copy.links.buyMacGumroad"
-             target="_blank" rel="noopener noreferrer">{{ copy.home.download.ctaPrimary }}</a>
+             target="_blank" rel="noopener noreferrer"
+             (click)="telemetry.signal('cta.buy_gumroad', { placement: 'home_download' })">{{ copy.home.download.ctaPrimary }}</a>
           <span class="button button--coming-soon">{{ copy.home.download.ctaSecondary }}</span>
         </div>
         <p class="download__links">
@@ -550,7 +553,7 @@ import COPY from '../../content/copy.json';
       line-height: 1.5;
     }
 
-    /* Your file. Your machine. Your AI. */
+    /* Your words stay on your Mac. Plain files, no account. */
     .moat {
       background: var(--bg);
       border-bottom: 1px solid var(--rule);
@@ -783,6 +786,9 @@ import COPY from '../../content/copy.json';
 })
 export class HomeComponent {
   protected readonly copy = COPY;
+
+  constructor(protected readonly telemetry: TelemetryService) {}
+
   /** The gallery shows the three captured macOS frames under /assets/screenshots/
       (iOS shots are deferred and removed from copy.json). */
   protected readonly showScreenshots = true;

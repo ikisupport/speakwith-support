@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TelemetryService } from '../../services/telemetry.service';
 import COPY from '../../content/copy.json';
 
 /**
@@ -115,11 +116,13 @@ import COPY from '../../content/copy.json';
             <p>{{ ch.body }}</p>
             @if (ch.ctaUrl) {
               <a class="button button--primary channel-cta" [href]="ch.ctaUrl"
-                 target="_blank" rel="noopener noreferrer">{{ ch.ctaLabel }}</a>
+                 target="_blank" rel="noopener noreferrer"
+                 (click)="trackChannel(ch.ctaUrl, ch.lead)">{{ ch.ctaLabel }}</a>
             }
             @if (ch.ctaSecondaryUrl) {
               <a class="button button--ghost channel-cta channel-cta--secondary" [href]="ch.ctaSecondaryUrl"
-                 target="_blank" rel="noopener noreferrer">{{ ch.ctaSecondaryLabel }}</a>
+                 target="_blank" rel="noopener noreferrer"
+                 (click)="trackChannel(ch.ctaSecondaryUrl, ch.lead)">{{ ch.ctaSecondaryLabel }}</a>
             }
           </div>
         }
@@ -411,4 +414,27 @@ import COPY from '../../content/copy.json';
 })
 export class PricingComponent {
   protected readonly copy = COPY;
+
+  constructor(private readonly telemetry: TelemetryService) {}
+
+  /**
+   * Signal a distribution-channel CTA click.
+   *
+   * The channel cards are `@for`-rendered from `copy.pricing.channels.items`,
+   * so the signal name is derived from the destination rather than hardcoded
+   * per card: the two known Gumroad products get stable `cta.trial_gumroad` /
+   * `cta.buy_gumroad` names, anything else falls back to `cta.channel` with the
+   * card's lead as payload. Adding a storefront to `copy.json` therefore keeps
+   * reporting without a code change.
+   */
+  protected trackChannel(url: string, channel: string): void {
+    const type =
+      url === this.copy.links.trialMacGumroad
+        ? 'cta.trial_gumroad'
+        : url === this.copy.links.buyMacGumroad
+          ? 'cta.buy_gumroad'
+          : 'cta.channel';
+
+    this.telemetry.signal(type, { placement: 'pricing_channels', channel });
+  }
 }

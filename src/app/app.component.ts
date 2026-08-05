@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SeoService } from './services/seo.service';
+import { TelemetryService } from './services/telemetry.service';
 import COPY from './content/copy.json';
 
 /**
@@ -25,8 +26,10 @@ import COPY from './content/copy.json';
           <a routerLink="/automation">{{ copy.app.footer.links.automation }}</a>
           <a routerLink="/privacy">{{ copy.app.footer.links.privacy }}</a>
           <a routerLink="/terms">{{ copy.app.footer.links.terms }}</a>
-          <a [href]="copy.links.newsletter" target="_blank" rel="noopener noreferrer">{{ copy.app.footer.links.newsletter }}</a>
-          <a [href]="copy.links.x" target="_blank" rel="noopener noreferrer">{{ copy.app.footer.links.x }}</a>
+          <a [href]="copy.links.newsletter" target="_blank" rel="noopener noreferrer"
+             (click)="telemetry.signal('cta.newsletter', { placement: 'footer' })">{{ copy.app.footer.links.newsletter }}</a>
+          <a [href]="copy.links.x" target="_blank" rel="noopener noreferrer"
+             (click)="telemetry.signal('cta.x', { placement: 'footer' })">{{ copy.app.footer.links.x }}</a>
         </nav>
         <p>{{ copy.app.footer.tagline }}</p>
         <p class="footer__fine">{{ copyright }}</p>
@@ -91,7 +94,11 @@ export class AppComponent {
     String(new Date().getFullYear()),
   );
 
-  constructor(seo: SeoService) {
+  constructor(
+    seo: SeoService,
+    protected readonly telemetry: TelemetryService,
+  ) {
     seo.init();
+    telemetry.init();
   }
 }

@@ -20,7 +20,7 @@ export const routes: Routes = [
     title: 'Privacy Policy | SpeakWith',
     data: {
       description:
-        'Your words are yours. SpeakWith keeps recordings, transcripts, and documents on your device. No account, no tracking, no cloud upload.'
+        'Your words are yours. SpeakWith keeps recordings, transcripts, and documents on your device: no account, no tracking in the app, no cloud upload. This website counts anonymous visits only.'
     }
   },
   {
