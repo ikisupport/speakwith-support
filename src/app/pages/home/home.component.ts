@@ -37,8 +37,10 @@ import COPY from '../../content/copy.json';
       <div class="container heroshot__inner">
         <h2 class="heroshot__title">{{ copy.home.moments.title }}</h2>
         <figure class="heroshot__figure">
-          <img class="heroshot__image" [src]="copy.home.moments.heroImage"
-               [alt]="copy.home.moments.heroAlt" loading="lazy" />
+          <div class="heroshot__frame">
+            <img class="heroshot__image" [src]="copy.home.moments.heroImage"
+                 [alt]="copy.home.moments.heroAlt" loading="lazy" />
+          </div>
           <figcaption class="heroshot__caption">{{ copy.home.moments.heroCaption }}</figcaption>
         </figure>
       </div>
@@ -106,6 +108,39 @@ import COPY from '../../content/copy.json';
         </div>
       </div>
     </section>
+
+    <!-- Voice examples: record readings of a tricky term so it is easier to spot. -->
+    @if (showVoiceExamples) {
+      <section [id]="copy.home.voiceExamples.id" class="typedemo">
+        <div class="container liveedit__inner">
+          <p class="eyebrow eyebrow--accent">{{ copy.home.voiceExamples.eyebrow }}</p>
+          <h2 class="liveedit__title">{{ copy.home.voiceExamples.heading }}</h2>
+          <p class="liveedit__lead">{{ copy.home.voiceExamples.intro }}</p>
+          <div class="vemethods">
+            <div class="vemethod">
+              <h3 class="vemethod__title">{{ copy.home.voiceExamples.exampleTitle }}</h3>
+              <p class="vemethod__body">{{ copy.home.voiceExamples.lead }}</p>
+              <figure class="vemethod__figure">
+                <div class="liveedit__frame">
+                  <img
+                    class="liveedit__image"
+                    [src]="copy.home.voiceExamples.item.src"
+                    [alt]="copy.home.voiceExamples.item.ariaLabel"
+                    loading="lazy" />
+                </div>
+                <figcaption class="liveedit__caption">{{ copy.home.voiceExamples.item.caption }}</figcaption>
+              </figure>
+            </div>
+            @for (m of copy.home.voiceExamples.methods; track m.title) {
+              <div class="vemethod">
+                <h3 class="vemethod__title">{{ m.title }}</h3>
+                <p class="vemethod__body">{{ m.body }}</p>
+              </div>
+            }
+          </div>
+        </div>
+      </section>
+    }
 
     <!-- Screenshots gallery: the actual product, 16:10 composed frames.
          Phase 2: the five referenced images under /assets/screenshots/ are not
@@ -325,19 +360,33 @@ import COPY from '../../content/copy.json';
       margin: 0;
     }
 
-    /* Full 16:10 app screenshot, served from canonical_screenshots/hero.png
-       (public/canonical_screenshots → served at site root). object-fit: contain
-       shows the whole window, never clipped; the surface tone is the frame and
-       the fallback shown if the shot is missing. */
+    /* hero.png carries its own rounded corners in its alpha channel: a 48 px
+       transparent radius at 2880 wide, which scales with the rendered image.
+       A CSS border-radius here is a fixed px value, so it can only match that
+       curve at exactly one viewport width — everywhere else the frame's arc
+       cuts across the shot's transparent corner and the band shows through as
+       a light crescent. That mismatch IS the corner artifact. So the shot is
+       the shape: no radius, no border, no clip. drop-shadow follows the alpha
+       outline; box-shadow would trace the rect and reintroduce the arc. */
+    .heroshot__frame {
+      /* The window's own chrome is a single device pixel at the PNG's outer
+         edge; at the ~0.38x downscale the browser resamples it out of
+         existence. Redraw it at render resolution with 0-blur drop-shadows,
+         which follow the shot's alpha silhouette — a border or box-shadow
+         would trace the wrapper rect and re-cut the rounded corners. */
+      filter: drop-shadow(1px 0 0 var(--shot-edge)) drop-shadow(-1px 0 0 var(--shot-edge))
+        drop-shadow(0 1px 0 var(--shot-edge)) drop-shadow(0 -1px 0 var(--shot-edge))
+        drop-shadow(var(--shadow));
+    }
+
+    /* Full 16:10 shot from canonical_screenshots/hero.png (public/ → site root);
+       contain shows the whole window, never clipped. */
     .heroshot__image {
       display: block;
       width: 100%;
+      height: auto;
       aspect-ratio: 16 / 10;
       object-fit: contain;
-      border-radius: 0.9rem;
-      background: var(--surface-2);
-      box-shadow: var(--shadow);
-      border: 1px solid var(--rule);
     }
 
     .heroshot__caption {
@@ -452,6 +501,37 @@ import COPY from '../../content/copy.json';
       margin: 0 auto 2rem;
       max-width: 42rem;
     }
+    .vemethods {
+      margin-top: 2.4rem;
+      display: grid;
+      gap: 1.4rem;
+      text-align: left;
+      max-width: calc(42rem + 3.4rem);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .vemethod {
+      padding: 1.5rem 1.7rem;
+      border: 1px solid var(--rule);
+      border-radius: 0.9rem;
+      background: var(--surface-2);
+    }
+    .vemethod__title {
+      font-size: 1.08rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem;
+    }
+    .vemethod__figure {
+      margin: 1.2rem 0 0;
+      max-width: 42rem;
+    }
+    .vemethod__body {
+      color: var(--text-dim);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0;
+      max-width: 42rem;
+    }
     .liveedit__grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -467,6 +547,20 @@ import COPY from '../../content/copy.json';
       box-shadow: var(--shadow);
       border: 1px solid var(--rule);
       background: var(--surface-2);
+    }
+
+    /* voice-examples.png has the same baked-in alpha corners as hero.png, so
+       the same mismatch applies here. The corrections-grid PNGs are opaque and
+       still need the drawn frame, hence the instance-scoped override. */
+    .vemethod__figure .liveedit__frame {
+      border-radius: 0;
+      overflow: visible;
+      border: 0;
+      background: none;
+      box-shadow: none;
+      filter: drop-shadow(1px 0 0 var(--shot-edge)) drop-shadow(-1px 0 0 var(--shot-edge))
+        drop-shadow(0 1px 0 var(--shot-edge)) drop-shadow(0 -1px 0 var(--shot-edge))
+        drop-shadow(var(--shadow));
     }
     .liveedit__image {
       display: block;
@@ -792,4 +886,7 @@ export class HomeComponent {
   /** The gallery shows the three captured macOS frames under /assets/screenshots/
       (iOS shots are deferred and removed from copy.json). */
   protected readonly showScreenshots = true;
+
+  /** The Voice Examples band; its frame is assets/screenshots/voice-examples.png. */
+  protected readonly showVoiceExamples = true;
 }

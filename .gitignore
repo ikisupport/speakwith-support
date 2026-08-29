@@ -47,3 +47,4 @@ Thumbs.db
 
 # Private copy-generation tooling — kept in the monorepo, never published here
 /generate
+/.vscode

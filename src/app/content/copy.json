@@ -37,7 +37,7 @@
   "home": {
     "hero": {
       "eyebrow": "A voice-driven daily document",
-      "headline": "Speak Now. Refine Later.",
+      "headline": "Subtitles for your thoughts.",
       "lead": "Speak your day into a clean markdown file on Mac or iOS. Read it, edit it, share it. It works on its own, and it opens in VS Code, Obsidian, or any tool you point at it.",
       "leadSecondary": "Use the recorder switch or a hotkey. Talk, and the words land where the cursor is.",
       "ctaPrimary": "Try SpeakWith free",
@@ -48,9 +48,9 @@
     },
     "moments": {
       "title": "Your words appear. As you speak.",
-      "heroImage": "canonical_screenshots/hero.png?v=20260726a",
-      "heroAlt": "SpeakWith for Mac in live dictation: spoken words landing as transcribed lines under a live waveform, ready to type into another app.",
-      "heroCaption": "Speak, and watch the subtitles for your thoughts take shape before the idea slips away."
+      "heroImage": "canonical_screenshots/hero.png?v=20260827a",
+      "heroAlt": "SpeakWith for Mac in live dictation: spoken words landing as transcribed lines under a live waveform, with misheard names corrected in place and a session title suggested alongside.",
+      "heroCaption": "Speak, and watch the subtitles for your thoughts take shape before the idea slips away. Add your own OpenAI API key and press Generate new title to get a heading for the session."
     },
     "platforms": {
       "eyebrow": "Two apps, one voice",
@@ -97,7 +97,7 @@
     "liveEdit": {
       "id": "live-edit",
       "eyebrow": "Live dictation",
-      "heading": "Fix lines as they land.",
+      "heading": "Fix lines as they land",
       "lead": "Wrong word? Wrong line? Edit or remove it while you are still recording. No need to wait for a finished take.",
       "items": [
         {
@@ -112,9 +112,32 @@
         }
       ]
     },
+    "voiceExamples": {
+      "id": "voice-examples",
+      "eyebrow": "Corrections",
+      "heading": "Additional layers of control over what gets written",
+      "intro": "Recognition is never perfect, so SpeakWith adds a few of its own on top of the engine. Each one decides a little more of what actually reaches the page.",
+      "exampleTitle": "Teach tricky terms by voice.",
+      "lead": "Some terms come back wrong every time you say them, usually names and jargon. Record a few readings of one and SpeakWith keeps them as reference sound. Each example shows what the engine actually heard. That gives SpeakWith more ways to spot the word, and shows you whether one it keeps missing can be corrected at all.",
+      "item": {
+        "src": "assets/screenshots/voice-examples.png?v=20260828a",
+        "caption": "Add the term, record a few readings, and see what each one was heard as.",
+        "ariaLabel": "The SpeakWith Voice Examples pane: a list of special terms on the left, the term Nguyen selected on the right, each recorded example showing a Heard as line beneath it, and a Record Example button."
+      },
+      "methods": [
+        {
+          "title": "Special terms",
+          "body": "Some words are not spelled the way they sound. Worcestershire is one. List the names and jargon you rely on and live dictation watches for them, widening how each one can be matched so it survives more than one pronunciation. Others are harder still: Siobhan is spelled by Irish rules rather than English ones, so its letters do not map onto English sounds at all. For those you can point a spoken cue at the word instead and say Sierra Bravo to write it. Every substitution that fired is listed in a report."
+        },
+        {
+          "title": "Hallucination gate",
+          "body": "Voice detection on its own cannot always tell a breath from a word, and a recognizer handed one can return a word you never said, sometimes a Yeah or an Okay. The gate waits for the written text, then blocks activations that were never meant as speech. New filler goes on the block list as you meet it, so it stops reaching the page."
+        }
+      ]
+    },
     "screenshots": {
       "title": "More of the Mac app",
-      "subtitle": "Recordings, daily document, playback, and projects.",
+      "subtitle": "Recordings, daily document, playback, and projects",
       "items": [
         {
           "src": "assets/screenshots/01_job_queue_full.png?v=20260801a",
