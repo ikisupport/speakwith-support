@@ -442,11 +442,15 @@
         "heading": "Full command reference",
         "paragraphs": [
           {
-            "text": "Each recorder supports seven actions. The table below shows the Live dictation recorder. For the Live audio recorder, replace “live dictation” with “batch” in the AppleScript command, and “live-dictation” with “batch” in the URL — with one exception, noted under the table.",
+            "text": "Each recorder supports ten actions. The table below shows the Live dictation recorder. For the Live audio recorder, replace “live dictation” with “batch” in the AppleScript command, and “live-dictation” with “batch” in the URL, with one exception, noted under the table. Two further commands control typing into other apps and name no recorder at all; they have their own section below.",
             "isHtml": false
           },
           {
-            "text": "<table><thead><tr><th>Action</th><th>AppleScript command</th><th>URL scheme</th></tr></thead><tbody><tr><td>Power on (microphone only)</td><td><code>power on recorder live dictation</code></td><td><code>speakwith://live-dictation/power-on</code></td></tr><tr><td>Power off (release the microphone)</td><td><code>power off recorder live dictation</code></td><td><code>speakwith://live-dictation/power-off</code></td></tr><tr><td>Start a take</td><td><code>start recording recorder live dictation</code></td><td><code>speakwith://live-dictation/start</code></td></tr><tr><td>Start a take, keeping the words in SpeakWith</td><td><code>start recording in app recorder live dictation</code></td><td><code>speakwith://live-dictation/start-in-app</code></td></tr><tr><td>Stop a take</td><td><code>stop recording recorder live dictation</code></td><td><code>speakwith://live-dictation/stop</code></td></tr><tr><td>Set standby on / off</td><td><code>set standby recorder live dictation enabled true</code> (or <code>false</code>)</td><td><code>speakwith://live-dictation/standby?on=true</code> (or <code>false</code>)</td></tr><tr><td>Bring the app forward and show the recorder</td><td><code>focus recorder live dictation</code></td><td><code>speakwith://live-dictation/focus</code></td></tr></tbody></table>",
+            "text": "<table><thead><tr><th>Action</th><th>AppleScript command</th><th>URL scheme</th></tr></thead><tbody><tr><td>Power on (microphone only)</td><td><code>power on recorder live dictation</code></td><td><code>speakwith://live-dictation/power-on</code></td></tr><tr><td>Power off (release the microphone)</td><td><code>power off recorder live dictation</code></td><td><code>speakwith://live-dictation/power-off</code></td></tr><tr><td>Start a take</td><td><code>start recording recorder live dictation</code></td><td><code>speakwith://live-dictation/start</code></td></tr><tr><td>Start a take, keeping the words in SpeakWith</td><td><code>start recording in app recorder live dictation</code></td><td><code>speakwith://live-dictation/start-in-app</code></td></tr><tr><td>Stop a take</td><td><code>stop recording recorder live dictation</code></td><td><code>speakwith://live-dictation/stop</code></td></tr><tr><td>Set standby on / off</td><td><code>set standby recorder live dictation enabled true</code> (or <code>false</code>)</td><td><code>speakwith://live-dictation/standby?on=true</code> (or <code>false</code>)</td></tr><tr><td>Toggle power (flip the microphone)</td><td><code>toggle power recorder live dictation</code></td><td><code>speakwith://live-dictation/toggle-power</code></td></tr><tr><td>Toggle recording (flip the take, microphone stays on)</td><td><code>toggle recording recorder live dictation</code></td><td><code>speakwith://live-dictation/toggle</code></td></tr><tr><td>Toggle standby</td><td><code>toggle standby recorder live dictation</code></td><td><code>speakwith://live-dictation/toggle-standby</code></td></tr><tr><td>Bring the app forward and show the recorder</td><td><code>focus recorder live dictation</code></td><td><code>speakwith://live-dictation/focus</code></td></tr></tbody></table>",
+            "isHtml": true
+          },
+          {
+            "text": "<p><strong>The three toggle actions flip whatever the recorder is doing right now.</strong> They take no on or off argument: the recorder’s current state is the argument, read at the moment the command arrives. That is what lets a single hotkey mean both start and stop. They sit at different levels: <code>toggle power</code> holds or releases the microphone, <code>toggle recording</code> starts or ends a take with the microphone kept on, and <code>toggle standby</code> flips level mode.</p>",
             "isHtml": true
           },
           {
@@ -462,8 +466,37 @@
             "isHtml": true
           },
           {
-            "text": "A few things worth knowing: every command is safe to repeat — running “start” while already recording, or “power on” while already on, simply does nothing. Standby only affects the recorder that is currently powered on; it never powers a recorder on by itself.",
+            "text": "A few things worth knowing. The directional commands are safe to repeat: running “start” while already recording, or “power on” while already on, simply does nothing. The four toggle commands are the exception, and deliberately so: sending one twice returns you to where you started. Standby only affects the recorder that is currently powered on; it never powers a recorder on by itself.",
             "isHtml": false
+          }
+        ]
+      },
+      {
+        "heading": "Typing into other apps",
+        "paragraphs": [
+          {
+            "text": "Typing into other apps is the switch that sends what you say into whatever window is in front, instead of into SpeakWith. Two commands control it. Neither names a recorder: only Live dictation can type elsewhere, so there is nothing to choose.",
+            "isHtml": false
+          },
+          {
+            "text": "<table><thead><tr><th>Action</th><th>AppleScript command</th><th>URL scheme</th></tr></thead><tbody><tr><td>Toggle typing into other apps</td><td><code>toggle type into app</code></td><td><code>speakwith://dictation/toggle</code></td></tr><tr><td>Turn typing into other apps on</td><td><code>set type into app enabled true</code></td><td><code>speakwith://dictation/type-into-app?on=true</code></td></tr><tr><td>Turn typing into other apps off</td><td><code>set type into app enabled false</code></td><td><code>speakwith://dictation/type-into-app?on=false</code></td></tr></tbody></table>",
+            "isHtml": true
+          },
+          {
+            "text": "<p><strong>These do exactly what the in-app switch and the global hotkey do.</strong> That includes moving the recorder, not only the setting: turning typing on starts dictating (and if a take is already running, it begins a fresh recording from that point, so the dictated audio is its own file), and turning it off ends that take, unless you have asked SpeakWith to keep recording when typing stops.</p>",
+            "isHtml": true
+          },
+          {
+            "text": "<p><code>toggle</code> flips the switch, so sending it twice returns you to where you started. The two <code>set</code> commands are directional and idempotent: asking for a state you are already in does nothing at all, so a script can assert “typing off” on a timer without ever interrupting a take. Both <code>set</code> forms require you to say which way: <code>set type into app</code> with no <code>enabled</code>, or the URL without <code>?on=</code>, is refused rather than assumed to mean on.</p>",
+            "isHtml": true
+          },
+          {
+            "text": "<p><strong>Turning typing off is not the same as <code>start-in-app</code>.</strong> <code>set type into app enabled false</code> only turns the switch off. <code>start-in-app</code> turns it off <em>and</em> starts a take. Bind the first when you want your next words to stay in SpeakWith, the second when you want to start capturing right now.</p>",
+            "isHtml": true
+          },
+          {
+            "text": "<p>On builds that do not offer typing into other apps at all, such as the Mac App Store build, all three commands are accepted and do nothing.</p>",
+            "isHtml": true
           }
         ]
       },
@@ -497,6 +530,10 @@
           },
           {
             "text": "<p>If your launcher would otherwise need a separate “activate the app” step first, <code>focus</code> replaces it: the command brings SpeakWith forward on its own, and it leaves the microphone alone, so a macro can put the recorder in front of you without starting a take.</p><pre><code>open \"speakwith://live-dictation/focus\"</code></pre>",
+            "isHtml": true
+          },
+          {
+            "text": "<p>For push-to-dictate into whatever window is in front, bind the typing toggle. One key turns typing on and starts dictating; the same key turns it off again.</p><pre><code>open \"speakwith://dictation/toggle\"</code></pre>",
             "isHtml": true
           }
         ]
