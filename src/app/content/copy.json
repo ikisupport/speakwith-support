@@ -22,17 +22,19 @@
         "privacy": "Privacy",
         "terms": "Terms",
         "newsletter": "Substack",
-        "x": "X"
+        "x": "X",
+        "ikiSystems": "IKI Systems"
       },
       "tagline": "SpeakWith: your spoken ideas, captured as a daily document.",
-      "copyright": "© {{year}} IKI Systems. All rights reserved."
+      "copyrightHtml": "© {{year}} <a href=\"{{ikiSystemsHome}}\" target=\"_blank\" rel=\"noopener noreferrer\">IKI Systems</a>. All rights reserved."
     }
   },
   "links": {
     "buyMacGumroad": "https://ikisystems.gumroad.com/l/vozgsy",
     "trialMacGumroad": "https://ikisystems.gumroad.com/l/vkaxll",
     "newsletter": "https://ikisystems.substack.com/",
-    "x": "https://x.com/ikisystems"
+    "x": "https://x.com/ikisystems",
+    "ikiSystemsHome": "https://ikisystems.com/"
   },
   "home": {
     "hero": {
@@ -671,8 +673,8 @@
         "heading": "Limitation of liability",
         "paragraphs": [
           {
-            "text": "To the maximum extent permitted by law, SpeakWith and IKI Systems will not be liable for any indirect, incidental, special, or consequential damages, or for any loss of data, arising out of or related to your use of the application. Nothing in these terms excludes liability that cannot be excluded under applicable law.",
-            "isHtml": false
+            "text": "To the maximum extent permitted by law, SpeakWith and <a href=\"https://ikisystems.com/\" target=\"_blank\" rel=\"noopener noreferrer\">IKI Systems</a> will not be liable for any indirect, incidental, special, or consequential damages, or for any loss of data, arising out of or related to your use of the application. Nothing in these terms excludes liability that cannot be excluded under applicable law.",
+            "isHtml": true
           }
         ]
       },

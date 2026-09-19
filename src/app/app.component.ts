@@ -30,9 +30,10 @@ import COPY from './content/copy.json';
              (click)="telemetry.signal('cta.newsletter', { placement: 'footer' })">{{ copy.app.footer.links.newsletter }}</a>
           <a [href]="copy.links.x" target="_blank" rel="noopener noreferrer"
              (click)="telemetry.signal('cta.x', { placement: 'footer' })">{{ copy.app.footer.links.x }}</a>
+          <a [href]="copy.links.ikiSystemsHome" target="_blank" rel="noopener noreferrer">{{ copy.app.footer.links.ikiSystems }}</a>
         </nav>
         <p>{{ copy.app.footer.tagline }}</p>
-        <p class="footer__fine">{{ copyright }}</p>
+        <p class="footer__fine" [innerHTML]="copyright"></p>
       </div>
     </footer>
   `,
@@ -85,14 +86,23 @@ import COPY from './content/copy.json';
       font-size: 0.84rem;
       opacity: 0.8;
     }
+
+    .footer__fine ::ng-deep a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer__fine ::ng-deep a:hover {
+      color: var(--accent);
+    }
   `]
 })
 export class AppComponent {
   protected readonly copy = COPY;
-  protected readonly copyright = COPY.app.footer.copyright.replace(
-    '{{year}}',
-    String(new Date().getFullYear()),
-  );
+  protected readonly copyright = COPY.app.footer.copyrightHtml
+    .replace('{{year}}', String(new Date().getFullYear()))
+    .replace('{{ikiSystemsHome}}', COPY.links.ikiSystemsHome);
 
   constructor(
     seo: SeoService,
