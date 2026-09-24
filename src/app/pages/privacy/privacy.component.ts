@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import COPY from '../../content/copy.json';
+import { LocaleService } from '../../services/locale.service';
 
 /**
  * Privacy policy. SpeakWith's defining privacy property is that it does its
@@ -34,5 +34,9 @@ import COPY from '../../content/copy.json';
   `]
 })
 export class PrivacyComponent {
-  protected readonly copy = COPY;
+  protected get copy() {
+    return this.locale.copy();
+  }
+
+  constructor(private readonly locale: LocaleService) {}
 }

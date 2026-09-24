@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ThemeService } from '../../services/theme.service';
-import COPY from '../../content/copy.json';
+import { LocaleService } from '../../services/locale.service';
 
 /** Top navigation bar: SpeakWith wordmark, primary links, and a system-aware light/dark theme selector. Shown on every page via `AppComponent`. */
 @Component({
@@ -12,16 +12,16 @@ import COPY from '../../content/copy.json';
   template: `
     <header class="nav">
       <div class="container nav__inner">
-        <a class="wordmark" routerLink="/" aria-label="SpeakWith home">
+        <a class="wordmark" [routerLink]="locale.path('')" aria-label="SpeakWith home">
           <img class="wordmark__icon" src="brand-icon.svg" alt="" aria-hidden="true" width="44" height="44" />
           {{ copy.nav.wordmark }}
         </a>
 
         <nav class="nav__links" aria-label="Primary">
-          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{ copy.nav.links.home }}</a>
-          <a routerLink="/privacy" routerLinkActive="active">{{ copy.nav.links.privacy }}</a>
-          <a routerLink="/terms" routerLinkActive="active">{{ copy.nav.links.terms }}</a>
-          <a routerLink="/pricing" routerLinkActive="active">{{ copy.nav.links.pricing }}</a>
+          <a [routerLink]="locale.path('')" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{ copy.nav.links.home }}</a>
+          <a [routerLink]="locale.path('privacy')" routerLinkActive="active">{{ copy.nav.links.privacy }}</a>
+          <a [routerLink]="locale.path('terms')" routerLinkActive="active">{{ copy.nav.links.terms }}</a>
+          <a [routerLink]="locale.path('pricing')" routerLinkActive="active">{{ copy.nav.links.pricing }}</a>
         </nav>
 
         <label class="theme">
@@ -120,6 +120,12 @@ import COPY from '../../content/copy.json';
   `]
 })
 export class NavbarComponent {
-  protected readonly copy = COPY;
-  constructor(public theme: ThemeService) {}
+  protected get copy() {
+    return this.locale.copy();
+  }
+
+  constructor(
+    public theme: ThemeService,
+    protected readonly locale: LocaleService,
+  ) {}
 }

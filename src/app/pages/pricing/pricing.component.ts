@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TelemetryService } from '../../services/telemetry.service';
-import COPY from '../../content/copy.json';
+import { LocaleService } from '../../services/locale.service';
 
 /**
  * Pricing matrix: Free vs. Paid feature comparison, engine callout, and
@@ -123,6 +123,12 @@ import COPY from '../../content/copy.json';
               <a class="button button--ghost channel-cta channel-cta--secondary" [href]="ch.ctaSecondaryUrl"
                  target="_blank" rel="noopener noreferrer"
                  (click)="trackChannel(ch.ctaSecondaryUrl, ch.lead)">{{ ch.ctaSecondaryLabel }}</a>
+            }
+            @if (ch.ctaTertiaryUrl) {
+              <p class="channel-cta--tertiary">
+                <a [href]="ch.ctaTertiaryUrl" target="_blank" rel="noopener noreferrer"
+                   (click)="trackChannel(ch.ctaTertiaryUrl, ch.lead)">{{ ch.ctaTertiaryLabel }}</a>
+              </p>
             }
           </div>
         }
@@ -385,6 +391,11 @@ import COPY from '../../content/copy.json';
       margin-left: 0.6rem;
     }
 
+    .channel-grid .card .channel-cta--tertiary {
+      margin: 0.9rem 0 0;
+      font-size: 0.92rem;
+    }
+
     /* Fine print */
     .fineprint {
       margin-top: 2rem;
@@ -413,27 +424,34 @@ import COPY from '../../content/copy.json';
   `]
 })
 export class PricingComponent {
-  protected readonly copy = COPY;
+  protected get copy() {
+    return this.locale.copy();
+  }
 
-  constructor(private readonly telemetry: TelemetryService) {}
+  constructor(
+    private readonly telemetry: TelemetryService,
+    private readonly locale: LocaleService,
+  ) {}
 
   /**
    * Signal a distribution-channel CTA click.
    *
    * The channel cards are `@for`-rendered from `copy.pricing.channels.items`,
    * so the signal name is derived from the destination rather than hardcoded
-   * per card: the two known Gumroad products get stable `cta.trial_gumroad` /
-   * `cta.buy_gumroad` names, anything else falls back to `cta.channel` with the
+   * per card: the three known Gumroad products get stable `cta.subscribe_gumroad`
+   * / `cta.trial_gumroad` / `cta.buy_gumroad` names, anything else falls back to `cta.channel` with the
    * card's lead as payload. Adding a storefront to `copy.json` therefore keeps
    * reporting without a code change.
    */
   protected trackChannel(url: string, channel: string): void {
     const type =
-      url === this.copy.links.trialMacGumroad
-        ? 'cta.trial_gumroad'
-        : url === this.copy.links.buyMacGumroad
-          ? 'cta.buy_gumroad'
-          : 'cta.channel';
+      url === this.copy.links.subscribeMacGumroad
+        ? 'cta.subscribe_gumroad'
+        : url === this.copy.links.trialMacGumroad
+          ? 'cta.trial_gumroad'
+          : url === this.copy.links.buyMacGumroad
+            ? 'cta.buy_gumroad'
+            : 'cta.channel';
 
     this.telemetry.signal(type, { placement: 'pricing_channels', channel });
   }

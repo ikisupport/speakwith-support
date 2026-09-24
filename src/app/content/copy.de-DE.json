@@ -1,0 +1,568 @@
+{
+  "$comment": "German (de-DE) overlay for copy.json. Same key shape per section; sections not present here (privacy, terms) fall back to English on purpose (legal carve-out). LLM-drafted 2026-09-19, pending native review; asset paths, ids and URLs are pinned to English by scripts/check-copy-parity.mjs.",
+  "nav": {
+    "wordmark": "SpeakWith",
+    "links": {
+      "home": "Start",
+      "privacy": "Datenschutz",
+      "terms": "Nutzungsbedingungen",
+      "pricing": "Preise"
+    },
+    "theme": {
+      "label": "Erscheinungsbild",
+      "system": "System",
+      "light": "Hell",
+      "dark": "Dunkel"
+    }
+  },
+  "app": {
+    "footer": {
+      "links": {
+        "home": "Start",
+        "automation": "Automatisierung",
+        "privacy": "Datenschutz",
+        "terms": "Nutzungsbedingungen",
+        "newsletter": "Substack",
+        "x": "X",
+        "ikiSystems": "IKI Systems"
+      },
+      "tagline": "SpeakWith: deine gesprochenen Gedanken, festgehalten als Tagesdokument.",
+      "copyrightHtml": "© {{year}} <a href=\"{{ikiSystemsHome}}\" target=\"_blank\" rel=\"noopener noreferrer\">IKI Systems</a>. Alle Rechte vorbehalten."
+    },
+    "localeSwitcher": {
+      "label": "Sprache",
+      "legalNote": "Datenschutz und Nutzungsbedingungen sind nur auf Englisch veröffentlicht."
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "SpeakWith Support: Deine gesprochenen Gedanken, festgehalten als Tagesdokument",
+      "description": "SpeakWith ist ein lokaler Sprachrekorder für Mac und iOS, der tägliches Sprechen in ein durchsuchbares, geordnetes Tagesdokument verwandelt. Abgestimmt auf Sprache und Diktat, nicht auf Musik oder Umgebungsgeräusche."
+    },
+    "pricing": {
+      "title": "Preise | SpeakWith",
+      "description": "Starte mit dem eingebauten Diktat oder wechsle zu Pro für die Engines Whisper und Parakeet, Stapeltranskription und intelligente Absatzformatierung."
+    },
+    "automation": {
+      "title": "Automatisierung | SpeakWith",
+      "description": "Starte, stoppe und steuere die Aufnahme in SpeakWith aus der Kommandozeile, aus Kurzbefehlen, Automator oder per Hotkey, über das URL-Schema speakwith:// oder AppleScript."
+    },
+    "privacy": {
+      "title": "Privacy Policy | SpeakWith",
+      "description": "Your words are yours. SpeakWith keeps recordings, transcripts, and documents on your device: no account, no tracking in the app, no cloud upload. This website counts anonymous visits only."
+    },
+    "terms": {
+      "title": "Terms of Service | SpeakWith",
+      "description": "The terms of service for SpeakWith, the local-first voice recorder and transcription app for Mac and iOS."
+    },
+    "notFound": {
+      "title": "Seite nicht gefunden | SpeakWith"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Ein Tagesdokument, gesteuert mit der Stimme",
+      "headline": "Untertitel für deine Gedanken.",
+      "lead": "Sprich deinen Tag in eine saubere Markdown-Datei auf dem Mac oder unter iOS. Lies sie, bearbeite sie, teile sie. Sie funktioniert für sich allein und öffnet sich in VS Code, Obsidian oder jedem anderen Werkzeug, auf das du sie richtest.",
+      "leadSecondary": "Nutze den Rekorder-Schalter oder einen Hotkey. Sprich, und die Wörter landen dort, wo der Cursor steht.",
+      "ctaPrimary": "SpeakWith kostenlos testen",
+      "ctaSecondary": "iOS: Demnächst",
+      "ctaGhost": "So funktioniert es",
+      "note": "Läuft auf Mac und iOS. Deine Stimme verlässt dein Gerät nie. Kein Konto nötig.",
+      "ctaDemo": "Beim Tippen zusehen"
+    },
+    "moments": {
+      "title": "Deine Wörter erscheinen. Während du sprichst.",
+      "heroImage": "canonical_screenshots/hero.png?v=20260923c",
+      "heroAlt": "SpeakWith für Mac im Live-Diktat: gesprochene Wörter landen als transkribierte Zeilen unter einer Live-Wellenform, falsch verstandene Namen werden an Ort und Stelle korrigiert, und daneben wird ein Titel für die Sitzung vorgeschlagen.",
+      "heroCaption": "Sprich, und sieh zu, wie die Untertitel für deine Gedanken Gestalt annehmen, bevor die Idee entgleitet. Hinterlege deinen eigenen OpenAI-API-Schlüssel und drücke auf Neuen Titel erzeugen, um eine Überschrift für die Sitzung zu erhalten."
+    },
+    "platforms": {
+      "eyebrow": "Zwei Apps, eine Stimme",
+      "title": "Ein Rekorder für den Schreibtisch, ein Begleiter für alles andere",
+      "sub": "SpeakWith ist ein Sprachrekorder. Er ist auf Sprache und Diktat abgestimmt, so wie ein Mensch tatsächlich redet, nicht auf die Aufnahme von Musik oder Umgebungsgeräuschen.",
+      "items": [
+        {
+          "name": "SpeakWith für Mac",
+          "tag": "Das Studio",
+          "body": "Live- und Stapelrekorder, Import von Audio und Video und die Wahl zwischen mehreren Transkriptions-Engines: Apple auf dem Gerät, Whisper oder Parakeet. Jede Aufnahme landet in deinem Tagesdokument, mit einer Wiedergabe, in die du direkt hineinklicken kannst. Die Direktversion kann fertige Sätze außerdem in die App tippen, die du gerade benutzt.",
+          "points": [
+            "Live- und Stapelaufnahme",
+            "Freihändiger Bereitschaftsmodus, wenn du ihn willst",
+            "In App tippen (Direktversion)",
+            "Projekte mit getrennten Ordnern",
+            "Audio und Video importieren",
+            "Engines von Apple, Whisper und Parakeet"
+          ]
+        },
+        {
+          "name": "SpeakWith für iOS",
+          "tag": "Der Begleiter",
+          "body": "Ein Sprachrekorder für unterwegs, wenn du nicht am Schreibtisch bist. Live-Diktat, eine Diktattafel, die alles sammelt, was du aufnimmst, und deine Transkripte und Audiodateien immer griffbereit. Die Transkription läuft auf dem Gerät mit Apple Speech.",
+          "points": [
+            "Live-Diktat",
+            "Diktattafel",
+            "Transkripte und Audiodateien",
+            "Apple Speech auf dem Gerät",
+            "Heute Englisch, weitere Sprachen in Entwicklung"
+          ]
+        }
+      ]
+    },
+    "typeIntoApp": {
+      "id": "type-into-app",
+      "eyebrow": "In App tippen",
+      "heading": "Sprich. Die Wörter landen dort, wo der Cursor steht.",
+      "lead": "Schalte in der Direktversion für Mac den Rekorder-Schalter oder einen Hotkey ein. SpeakWith tippt fertige Sätze in die App, die gerade den Fokus hat.",
+      "videoSrc": "assets/demo/type-into-app.mp4?v=20260726d",
+      "posterSrc": "assets/demo/type-into-app-poster.jpg?v=20260726d",
+      "caption": "Eine echte Aufnahme: SpeakWith tippt in Nachrichten, sobald jede Äußerung feststeht.",
+      "ariaLabel": "Bildschirmaufnahme des Live-Diktats von SpeakWith mit eingeschaltetem Tipp-Schalter, die gesprochene Sätze in eine iMessage-Unterhaltung sendet."
+    },
+    "liveEdit": {
+      "id": "live-edit",
+      "eyebrow": "Live-Diktat",
+      "heading": "Zeilen korrigieren, sobald sie landen",
+      "lead": "Falsches Wort? Falsche Zeile? Bearbeite oder entferne sie, während du noch aufnimmst. Kein Warten auf die fertige Aufnahme.",
+      "items": [
+        {
+          "src": "assets/screenshots/live-edit-remove.png?v=20260801a",
+          "caption": "Eine Zeile, die nicht hierher gehört, mit dem Minus-Werkzeug streichen, noch mitten in der Sitzung.",
+          "ariaLabel": "Live-Diktat in SpeakWith mit einer zum Entfernen markierten Zeile: This line does not belong here, mit hervorgehobenem Minus-Steuerelement neben dem Zeitstempel."
+        },
+        {
+          "src": "assets/screenshots/live-edit-inline.png?v=20260801a",
+          "caption": "Zeile antippen, Wortlaut korrigieren, sichern. Die Aufnahme läuft weiter.",
+          "ariaLabel": "Live-Diktat in SpeakWith mit einer Zeile in der Inline-Bearbeitung: der Text The metering is at tree o'clock steht in einem Eingabefeld mit Sichern und Abbrechen, während die Aufnahme weiterläuft."
+        }
+      ]
+    },
+    "voiceExamples": {
+      "id": "voice-examples",
+      "eyebrow": "Korrekturen",
+      "heading": "Zusätzliche Kontrollebenen darüber, was geschrieben wird",
+      "intro": "Erkennung ist nie perfekt, deshalb legt SpeakWith einige eigene Ebenen über die Engine. Jede entscheidet ein Stück mehr darüber, was tatsächlich auf der Seite ankommt.",
+      "exampleTitle": "Schwierige Begriffe per Stimme beibringen.",
+      "lead": "Manche Begriffe kommen jedes Mal falsch zurück, wenn du sie sagst, meist Namen und Fachjargon. Nimm ein paar Lesungen eines Begriffs auf, und SpeakWith behält sie als Referenzklang. Jedes Beispiel zeigt, was die Engine tatsächlich gehört hat. Das gibt SpeakWith mehr Möglichkeiten, das Wort zu erkennen, und zeigt dir, ob ein Begriff, den es immer wieder verfehlt, überhaupt korrigiert werden kann.",
+      "item": {
+        "src": "assets/screenshots/voice-examples.png?v=20260828a",
+        "caption": "Begriff hinzufügen, ein paar Lesungen aufnehmen und sehen, als was jede davon gehört wurde.",
+        "ariaLabel": "Der Bereich Sprachbeispiele in SpeakWith: links eine Liste besonderer Begriffe, rechts der ausgewählte Begriff Nguyen, unter jedem aufgenommenen Beispiel eine Zeile Gehört als sowie eine Schaltfläche Beispiel aufnehmen."
+      },
+      "methods": [
+        {
+          "title": "Besondere Begriffe",
+          "body": "Manche Wörter werden nicht so geschrieben, wie sie klingen. Worcestershire ist so eines. Trage die Namen und den Fachjargon ein, auf die du angewiesen bist, und das Live-Diktat achtet darauf und weitet aus, wie jeder Begriff zugeordnet werden kann, damit er mehr als eine Aussprache übersteht. Andere sind noch schwieriger: Siobhan folgt irischen statt englischen Schreibregeln, sodass seine Buchstaben gar nicht auf englische Laute passen. Für solche Fälle kannst du stattdessen ein gesprochenes Stichwort auf das Wort richten und Sierra Bravo sagen, um es zu schreiben. Jede ausgelöste Ersetzung wird in einem Bericht aufgeführt."
+        },
+        {
+          "title": "Halluzinationssperre",
+          "body": "Die Spracherkennung allein kann einen Atemzug nicht immer von einem Wort unterscheiden, und ein Erkenner, dem man einen vorlegt, liefert manchmal ein Wort, das du nie gesagt hast, etwa ein Yeah oder ein Okay. Die Sperre wartet auf den geschriebenen Text und blockiert dann Auslösungen, die nie als Sprache gemeint waren. Neue Füllwörter kommen auf die Sperrliste, sobald sie dir begegnen, damit sie die Seite nicht mehr erreichen."
+        }
+      ]
+    },
+    "screenshots": {
+      "title": "Mehr aus der Mac-App",
+      "subtitle": "Aufnahmen, Tagesdokument, Wiedergabe und Projekte",
+      "items": [
+        {
+          "src": "assets/screenshots/type-into-combo.png",
+          "caption": "Nutze den Rekorder-Schalter oder einen Hotkey. Die Wörter erscheinen in der App, die du gerade benutzt.",
+          "ariaLabel": "Live-Diktat in SpeakWith neben macOS Nachrichten: der Tipp-Schalter ist eingeschaltet, und dieselben gesprochenen Zeilen erscheinen als zugestellte iMessage-Blasen."
+        },
+        {
+          "src": "assets/screenshots/markdown.png?v=20260801a",
+          "caption": "Alles landet in einer einfachen .md-Datei, bereit zum Öffnen in jedem Editor.",
+          "ariaLabel": "Das Diktat des Tages als Markdown-Datei in VS Code: ein datiertes Tagesdokument mit transkribierten Notizen."
+        },
+        {
+          "src": "assets/screenshots/click-in-transcript.png?v=20260923a",
+          "caption": "Alle Aufnahmen an einem Ort, nach Tagen gruppiert und zusammengefasst. Klicke auf eine Zeile, um zu dieser Stelle in der Originalaufnahme zu springen.",
+          "ariaLabel": "Eine fertige Aufnahme in SpeakWith: links die nach Tagen gruppierte Aktivitätsliste mit einer Zusammenfassung unter jeder Aufnahme, rechts die Transkriptsätze mit Zeitstempel und hervorgehobener aktueller Zeile, darunter eine Wellenform mit Wiedergabesteuerung."
+        },
+        {
+          "src": "assets/screenshots/projects-setup.png",
+          "caption": "Lege getrennte Projekte an und weise jedem seinen eigenen Ordner zu.",
+          "ariaLabel": "Die Einstellungen von SpeakWith mit mehreren benannten Projekten, jedes mit eigenem Transkript-Ordner und eigener Farbe."
+        },
+        {
+          "src": "assets/screenshots/projects-switcher.png",
+          "caption": "Wechsle mit einem Klick zwischen Projekten, damit neue Arbeit im richtigen Ordner landet.",
+          "ariaLabel": "Das geöffnete Projektmenü mit einer Liste von Projekten, das aktive abgehakt und farblich getönt."
+        }
+      ]
+    },
+    "moat": {
+      "title": "Deine Wörter bleiben auf deinem Mac. Einfache Dateien, kein Konto.",
+      "items": [
+        {
+          "label": "Lokal.",
+          "body": "Deine Aufnahmen verlassen deinen Rechner nie. Punkt.",
+          "isHtml": false
+        },
+        {
+          "label": "Markdown.",
+          "body": "Eine einfache <code>.md</code>-Datei auf der Festplatte. Öffne sie in VS Code, Obsidian oder jedem anderen Editor. Gib sie an jedes Werkzeug weiter.",
+          "isHtml": true
+        },
+        {
+          "label": "Kein Konto.",
+          "body": "Kein Login. Keine Abo-Cloud. Kein Handel mit Daten.",
+          "isHtml": false
+        },
+        {
+          "label": "Auf deinem Rechner.",
+          "body": "Transkription und Zusammenfassung laufen auf deinem Mac. Nichts wird hochgeladen. Niemals.",
+          "isHtml": false
+        }
+      ]
+    },
+    "inclusive": {
+      "eyebrow": "Auch für KI-Skeptiker",
+      "heading": "Du musst nicht mit einer KI reden, um das zu benutzen.",
+      "p1": "SpeakWith funktioniert für sich allein. Sprich, erhalte eine saubere Markdown-Datei, dann bearbeite sie, durchsuche ihren Text und teile sie. Lass es dabei, so lange du willst.",
+      "p2Html": "Die Datei kannst du auch einer KI übergeben, wenn <em>du</em> entscheidest, dass das nützlich ist. KI ist etwas, das die Datei kann, nicht etwas, das du tun musst."
+    },
+    "features": {
+      "title": "Was SpeakWith macht",
+      "items": [
+        {
+          "title": "Ein Dokument für jeden Tag",
+          "body": "Alles, was du an einem Tag aufnimmst oder tippst, fließt in ein einziges geordnetes Dokument, in der Reihenfolge, in der es passiert ist. Morgen beginnt ein neues.",
+          "wide": false
+        },
+        {
+          "title": "In App tippen",
+          "body": "Schalte den Schalter im Live-Rekorder ein oder lege in den Einstellungen einen Hotkey fest. SpeakWith tippt jeden fertigen Satz in die App mit Fokus. Verfügbar in der direkten Mac-Version (Gumroad).",
+          "wide": false
+        },
+        {
+          "title": "Audio und Video hereinholen",
+          "body": "Zieh ein Sprachmemo, einen aufgezeichneten Anruf oder eine Bildschirmaufnahme hinein. SpeakWith schreibt es aus und fügt es wie alles andere in dein Tagesdokument ein.",
+          "wide": false
+        },
+        {
+          "title": "Sprechen und weiterarbeiten",
+          "body": "Sprechen und Arbeiten wechseln sich nicht mehr ab. Dein Diktat fließt von selbst ins Dokument, sodass du gleichzeitig Abschnitte ordnen, Schnipsel einfügen oder etwas ganz anderes tippen kannst, ohne die Wörter zu unterbrechen, die du gerade festhältst.",
+          "wide": false
+        },
+        {
+          "title": "Sprechrhythmus, auf dem Bildschirm",
+          "body": "Eine Live-Anzeige zeigt die Pausen in dem, was du sagst. Mit der Zeit formt dieses stille Feedback, wie du sprichst: Du hältst ein Thema länger zusammen, und der Text am anderen Ende lässt sich leichter weiterverarbeiten.",
+          "wide": true
+        }
+      ]
+    },
+    "parallel": {
+      "eyebrow": "Doppelt so schnell arbeiten",
+      "heading": "Wie ein zusätzliches Paar Hände",
+      "p1Html": "Die meisten Werkzeuge zwingen dich, den Fokus vom Denken auf das Bedienen einer Anwendung zu verlagern. SpeakWith beseitigt <em>diese</em> Reibung. Jeder Rekorder lebt in derselben Anwendung, und was du aufnimmst, wird in das Projekt geschrieben, das du ausgewählt hast.",
+      "p2": "Du kannst SpeakWith mit einem entfernten Mikrofon steuern, musst also nie die Tastatur berühren, und es gibt keine Taste, die du dir vor dem Aufnehmen merken musst. In der Direktversion schaltest du den Rekorder-Schalter oder einen Hotkey ein und sprichst in die App, in der du gerade bist."
+    },
+    "rhythm": {
+      "eyebrow": "Übung, jedes Mal, wenn du sprichst",
+      "heading": "Je länger du es benutzt, desto besser sprichst du.",
+      "p1": "Während du aufnimmst, zeigt eine kleine Anzeige die Pausen in dem, was du sagst. Über Wochen summiert sich der Effekt. Du merkst, wenn ein Gedanke zu zerfallen beginnt, du bleibst einen Takt länger beim Thema, und beim nächsten Mal gelingt es dir ein wenig sauberer.",
+      "p2": "Auch der Text am anderen Ende verändert sich. Einzelne Themen kommen in zusammenhängenden Stücken an, und Absätze halten zusammen, sodass du dein Tagesdokument einer Person oder einem Werkzeug übergeben kannst, ohne es erst umzuformen."
+    },
+    "homebase": {
+      "eyebrow": "Gebaut für echte Arbeit",
+      "heading": "Die Basis, zu der dein Denken zurückkehrt",
+      "p1": "Echte Arbeit läuft parallel. Du startest etwas, das eine Weile braucht, bis es zurückkommt: einen langen Prozess, ein Werkzeug, das vor sich hin arbeitet, eine Aufgabe, die du abgegeben hast. Statt zu warten, beginnst du das Nächste, dann noch eines. Bald sind mehrere Dinge gleichzeitig in der Luft.",
+      "p2": "Werkzeuge kommen und gehen; dein Tagesdokument bleibt. Es ist der eine Ort, der jeden Faden in einer einzigen Datei hält, die dir gehört: wofür jeder da ist, wo du ihn liegen gelassen hast, was zu prüfen ist, wenn er landet. Du kannst viele Dinge gleichzeitig in Bewegung halten, weil du sie nicht alle im Kopf behalten musst."
+    },
+    "faq": {
+      "title": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Braucht SpeakWith eine Internetverbindung?",
+          "a": "Nein. Aufnahme, Transkription, das Ordnen deines Tagesdokuments und die Textsuche darin passieren alle auf deinem Mac. Seine Kernarbeit erledigt SpeakWith offline."
+        },
+        {
+          "q": "Wo werden meine Aufnahmen und Dokumente gespeichert?",
+          "a": "Als gewöhnliche Dateien auf deinem Mac. Du kannst sie mit jedem beliebigen Werkzeug öffnen, kopieren, sichern und löschen. Sie sind weder in der App eingeschlossen noch in einem Konto hinterlegt."
+        },
+        {
+          "q": "Wie genau ist die Transkription?",
+          "a": "Automatische Transkription ist sehr gut, aber nie perfekt. Namen und Fachbegriffe sind die üblichen Stellen, an denen kleine Fehler auftauchen. Dein Tagesdokument ist vollständig bearbeitbar, betrachte das Transkript also als ausgezeichneten ersten Entwurf, den du korrigieren kannst."
+        },
+        {
+          "q": "Verändert SpeakWith, wie ich spreche?",
+          "a": "Das kann es, durch stilles Feedback. Während du aufnimmst, zeigt eine kleine Anzeige die Pausen in dem, was du sagst, etwas, worauf du einen Blick werfen kannst, ohne den Faden zu verlieren. Über Wochen hältst du ein Thema vielleicht länger zusammen und lässt es in einem einzigen, zusammenhängenden Stück landen. Dein Tagesdokument wird leichter zu bearbeiten, und das kann auch für die Art gelten, wie du abseits des Bildschirms mit Menschen sprichst."
+        },
+        {
+          "q": "Kann ich Audio und Video importieren, das ich schon habe?",
+          "a": "Ja. Importiere ein Sprachmemo, ein aufgezeichnetes Meeting oder eine Bildschirmaufnahme, und SpeakWith schreibt es genauso aus wie eine Live-Aufnahme."
+        },
+        {
+          "q": "Kann ich weiterarbeiten, während eine Aufnahme ausgeschrieben wird?",
+          "a": "Ja. Das ist eine der besten Funktionen von SpeakWith. Tippe und füge in das Dokument des Tages ein, während das Diktat noch verarbeitet wird; am Ende steht alles in der richtigen zeitlichen Reihenfolge."
+        },
+        {
+          "q": "Kann ich in andere Apps diktieren?",
+          "a": "Ja, in der direkten Mac-Version (Gumroad). Schalte den Rekorder-Schalter ein oder lege in den Einstellungen einen Hotkey fest. SpeakWith tippt jeden fertigen Satz in die App, die gerade den Tastaturfokus hat. Dein Tagesdokument erhält weiterhin alles wie gewohnt. Die App-Store-Version in der Sandbox kann das nicht; macOS erlaubt Sandbox-Apps kein Tippen in andere Apps."
+        },
+        {
+          "q": "Gibt es eine iOS-App?",
+          "a": "Sie ist unterwegs und wird kostenlos sein. SpeakWith für iOS ist ein begleitender Sprachrekorder: Live-Diktat, eine Diktattafel, die alles sammelt, was du aufnimmst, und deine Transkripte und Audiodateien griffbereit. Die Transkription läuft auf dem Gerät mit Apple Speech, und die App arbeitet neben der Mac-App, statt sie zu ersetzen."
+        },
+        {
+          "q": "Unter iOS sagt die Berechtigungsabfrage, Sprache werde „an Apple gesendet“. Wird meine Stimme hochgeladen?",
+          "a": "Nein. Diese Zeile ist Apples Standardformulierung für die Spracherkennungsberechtigung und wird jeder App angezeigt, die danach fragt. SpeakWith transkribiert auf dem Gerät mit Apples eingebautem Diktat: Dein Audio wird auf deinem iPhone oder iPad in Text verwandelt. Das Einzige, was heruntergeladen wird, ist das Sprachmodell selbst, einmalig. Danach läuft die Transkription auf deinem Gerät."
+        },
+        {
+          "q": "Welche Sprachen unterstützt SpeakWith?",
+          "a": "Heute Englisch. Die Unterstützung weiterer Sprachen ist in Entwicklung, und sie erscheinen in Updates, sobald sie fertig sind."
+        },
+        {
+          "q": "Ist das ein Audiorekorder?",
+          "a": "Es ist ein Sprachrekorder. SpeakWith ist auf Sprache und Diktat abgestimmt, so wie ein Mensch tatsächlich redet, und leistet seine beste Arbeit mit der menschlichen Stimme. Für die Aufnahme von Musik oder Umgebungsgeräuschen ist es nicht gebaut."
+        }
+      ]
+    },
+    "download": {
+      "heading": "SpeakWith holen",
+      "body": "SpeakWith läuft auf Mac und iOS. Es braucht einen Mac mit Apple Silicon (M1 oder neuer) unter macOS 26 (Tahoe) oder neuer, oder ein iPhone mit iOS 26 oder neuer. Lade es herunter, erlaube den Mikrofonzugriff, und deine erste Aufnahme ist einen Klick entfernt.",
+      "ctaPrimary": "SpeakWith für Mac abonnieren",
+      "ctaSecondary": "iOS: Demnächst",
+      "ctaBuyOnce": "Lieber einmal kaufen? Hol dir stattdessen eine Einmallizenz."
+    }
+  },
+  "pricing": {
+    "header": {
+      "eyebrow": "Pläne & Funktionen",
+      "heading": "Wähle, wie SpeakWith für dich arbeitet",
+      "sub": "Starte mit dem eingebauten Diktat und rüste dann auf für erweiterte Engines, Stapeltranskription und intelligente Formatierung."
+    },
+    "table": {
+      "headers": {
+        "feature": "Funktion",
+        "freeName": "Free",
+        "freeTag": "Kostenlos",
+        "paidName": "Pro",
+        "paidTag": "Abo oder Einmalkauf"
+      },
+      "rows": {
+        "liveDictation": {
+          "feature": "Live-Diktat",
+          "subtitle": "Sprich und sieh deine Wörter sofort erscheinen"
+        },
+        "offline": {
+          "feature": "Vollständig offline & privat",
+          "subtitle": "Audio verlässt dein Gerät nie"
+        },
+        "engines": {
+          "feature": "Transkriptions-Engines",
+          "free": "Apple, eingebaut",
+          "paid": "Apple + Whisper + Parakeet"
+        },
+        "importMedia": {
+          "feature": "Audio- & Videodateien importieren",
+          "subtitle": "Transkribiere Aufnahmen, die du schon hast"
+        },
+        "batch": {
+          "feature": "Stapelrekorder",
+          "subtitle": "Jetzt aufnehmen, später ausgearbeiteten Text erhalten"
+        },
+        "formatting": {
+          "feature": "Intelligente Absatzformatierung",
+          "subtitle": "Gruppiert Gesprochenes automatisch in saubere Absätze"
+        },
+        "escalation": {
+          "feature": "Automatische Genauigkeitseskalation",
+          "subtitle": "Erkennt Audio mit geringer Konfidenz und lässt es erneut durch ein genaueres Modell laufen",
+          "paidPill": "Optionales Add-on"
+        },
+        "bestFor": {
+          "feature": "Am besten für",
+          "free": "Schnelle Notizen & Diktat",
+          "paid": "Ernsthafte Transkription & lange Aufnahmen"
+        },
+        "price": {
+          "feature": "Preis",
+          "freePrice": "Kostenlos",
+          "paidPrice": "Optionen ansehen ↓",
+          "paidPriceSub": "Abo oder Einmalkauf, siehe unten"
+        }
+      }
+    },
+    "engines": {
+      "heading": "Drei Engines, eine App",
+      "sub": "SpeakWith wählt das richtige Werkzeug für die Aufgabe. Das kann jede Engine besonders gut.",
+      "items": [
+        {
+          "badge": "Free & Pro",
+          "badgeKind": "free-paid",
+          "name": "Apple",
+          "body": "In macOS eingebaut. Sofort, offline und kostenlos. Perfekt für schnelles Diktat und alltägliche Notizen.",
+          "note": ""
+        },
+        {
+          "badge": "Pro",
+          "badgeKind": "paid",
+          "name": "Whisper",
+          "body": "Maximale Robustheit bei schwierigem Audio: Akzente, Hintergrundgeräusche, Durcheinanderreden. Wechselt von einem schnellen zu einem hochgenauen Modell, wenn es geringere Konfidenz bemerkt.",
+          "note": "Die automatische Eskalation setzt das optionale Genauigkeits-Add-on voraus."
+        },
+        {
+          "badge": "Pro",
+          "badgeKind": "paid",
+          "name": "Parakeet",
+          "body": "Der Geschwindigkeitschampion. Nahezu sofortige Transkription mit ausgezeichneter Genauigkeit bei sauberem Audio.",
+          "note": ""
+        }
+      ]
+    },
+    "channels": {
+      "heading": "Zwei Wege zu SpeakWith",
+      "sub": "Dieselbe App, zwei Vertriebswege. Nimm, was zu deiner Arbeitsweise passt.",
+      "items": [
+        {
+          "lead": "App Store",
+          "heading": "Demnächst im App Store",
+          "body": "Eine kostenlose Version, vollständig nach App-Store-Standards in der Sandbox, kommt in den App Store. Pro-Funktionen (erweiterte Engines, Import, Stapel und intelligente Formatierung) folgen als Abo.",
+          "ctaLabel": "",
+          "ctaUrl": "",
+          "ctaSecondaryLabel": "",
+          "ctaSecondaryUrl": "",
+          "ctaTertiaryLabel": "",
+          "ctaTertiaryUrl": ""
+        },
+        {
+          "lead": "Direkt (Gumroad)",
+          "heading": "Abonnieren oder einmal kaufen",
+          "body": "Die Direktversion wird mit einer monatlich abgerechneten Gumroad-Mitgliedschaft freigeschaltet, die du jederzeit kündigen kannst. Wer die App lieber dauerhaft besitzt, kann weiterhin eine Einmallizenz kaufen. In beiden Fällen bekommst du die vollständige Version von SpeakWith ohne Sandbox, einschließlich des Schalters, der dein Diktat in andere Anwendungen tippt. Noch unsicher? Starte mit einem kostenlosen 14-Tage-Test.",
+          "ctaLabel": "Abonnieren",
+          "ctaUrl": "https://ikisystems.gumroad.com/l/dcltnn",
+          "ctaSecondaryLabel": "Einmal kaufen",
+          "ctaSecondaryUrl": "https://ikisystems.gumroad.com/l/vozgsy",
+          "ctaTertiaryLabel": "Kostenlosen 14-Tage-Test starten",
+          "ctaTertiaryUrl": "https://ikisystems.gumroad.com/l/vkaxll"
+        }
+      ]
+    },
+    "finePrint": "Die App-Store-Version wird ein kostenloses, für sich vollständiges Produkt sein, für das Diktieren ist kein Kauf nötig, und sie kommt demnächst. Pro-Funktionen (erweiterte Engines, Audio- und Videoimport, Stapeltranskription und intelligente Formatierung) werden heute über eine Gumroad-Mitgliedschaft freigeschaltet, oder über einen Einmalkauf bei Gumroad, wenn du lieber einmal kaufst. Ein App-Store-Abo für Pro ist geplant, aber noch nicht verfügbar. Die Gumroad-Version enthält einen kostenlosen 14-Tage-Test, der sich nach 14 Tagen bis zum Abo oder Kauf sperrt, sowie einen Schalter, der dein Diktat in andere Anwendungen tippt. Die iOS-Begleit-App wird kostenlos sein."
+  },
+  "automation": {
+    "heading": "Automatisierung",
+    "intro": "SpeakWith hat zwei Rekorder, die du von außerhalb der App steuern kannst: Live-Diktat (in Echtzeit, bei jeder Pause abgeschlossen) und Live-Audio (sprachaktiviert). Du kannst beide aus der Kommandozeile, aus einem macOS-Kurzbefehl, aus Automator oder aus einem Hotkey-Launcher starten, stoppen und steuern, ganz ohne zusätzliche Einrichtung. Es gibt zwei gleichwertige Wege, einen Befehl zu senden: das URL-Schema speakwith:// (am einfachsten) und AppleScript (für Skriptumgebungen, die das bevorzugen).",
+    "sections": [
+      {
+        "heading": "Schnellstart: Aufnahme starten",
+        "paragraphs": [
+          {
+            "text": "<p>Der schnellste Weg, eine Aufnahme zu beginnen, ist das URL-Schema: eine Zeile, die jede Shell ausführen kann. Starte den Rekorder <strong>Live-Diktat</strong>:</p><pre><code>open \"speakwith://live-dictation/start\"</code></pre><p>Lieber AppleScript? Das macht dasselbe:</p><pre><code>osascript -e 'tell application \"SpeakWith\" to start recording recorder live dictation'</code></pre>",
+            "isHtml": true
+          },
+          {
+            "text": "<p>Starte stattdessen den Rekorder <strong>Live-Audio</strong> (sprachaktiviert):</p><pre><code>open \"speakwith://batch/start\"</code></pre>",
+            "isHtml": true
+          },
+          {
+            "text": "<p>Stoppe die laufende Aufnahme (das Mikrofon bleibt eingeschaltet, bereit für den nächsten Start):</p><pre><code>open \"speakwith://live-dictation/stop\"</code></pre>",
+            "isHtml": true
+          }
+        ]
+      },
+      {
+        "heading": "Vollständige Befehlsreferenz",
+        "paragraphs": [
+          {
+            "text": "Jeder Rekorder unterstützt zehn Aktionen. Die Tabelle unten zeigt den Rekorder Live-Diktat. Für den Rekorder Live-Audio ersetzt du im AppleScript-Befehl „live dictation“ durch „batch“ und in der URL „live-dictation“ durch „batch“, mit einer Ausnahme, die unter der Tabelle erklärt wird. Zwei weitere Befehle steuern das Tippen in andere Apps und nennen gar keinen Rekorder; sie haben unten einen eigenen Abschnitt.",
+            "isHtml": false
+          },
+          {
+            "text": "<table><thead><tr><th>Aktion</th><th>AppleScript-Befehl</th><th>URL-Schema</th></tr></thead><tbody><tr><td>Einschalten (nur Mikrofon)</td><td><code>power on recorder live dictation</code></td><td><code>speakwith://live-dictation/power-on</code></td></tr><tr><td>Ausschalten (Mikrofon freigeben)</td><td><code>power off recorder live dictation</code></td><td><code>speakwith://live-dictation/power-off</code></td></tr><tr><td>Aufnahme starten</td><td><code>start recording recorder live dictation</code></td><td><code>speakwith://live-dictation/start</code></td></tr><tr><td>Aufnahme starten, Wörter bleiben in SpeakWith</td><td><code>start recording in app recorder live dictation</code></td><td><code>speakwith://live-dictation/start-in-app</code></td></tr><tr><td>Aufnahme stoppen</td><td><code>stop recording recorder live dictation</code></td><td><code>speakwith://live-dictation/stop</code></td></tr><tr><td>Bereitschaft ein / aus</td><td><code>set standby recorder live dictation enabled true</code> (oder <code>false</code>)</td><td><code>speakwith://live-dictation/standby?on=true</code> (oder <code>false</code>)</td></tr><tr><td>Strom umschalten (Mikrofon kippen)</td><td><code>toggle power recorder live dictation</code></td><td><code>speakwith://live-dictation/toggle-power</code></td></tr><tr><td>Aufnahme umschalten (Aufnahme kippen, Mikrofon bleibt an)</td><td><code>toggle recording recorder live dictation</code></td><td><code>speakwith://live-dictation/toggle</code></td></tr><tr><td>Bereitschaft umschalten</td><td><code>toggle standby recorder live dictation</code></td><td><code>speakwith://live-dictation/toggle-standby</code></td></tr><tr><td>App nach vorn holen und den Rekorder zeigen</td><td><code>focus recorder live dictation</code></td><td><code>speakwith://live-dictation/focus</code></td></tr></tbody></table>",
+            "isHtml": true
+          },
+          {
+            "text": "<p><strong>Die drei Umschaltaktionen kippen das, was der Rekorder gerade tut.</strong> Sie nehmen kein Ein- oder Aus-Argument entgegen: Der aktuelle Zustand des Rekorders ist das Argument, gelesen in dem Moment, in dem der Befehl eintrifft. Genau das erlaubt einem einzigen Hotkey, sowohl Start als auch Stopp zu bedeuten. Sie wirken auf verschiedenen Ebenen: <code>toggle power</code> hält oder gibt das Mikrofon frei, <code>toggle recording</code> beginnt oder beendet eine Aufnahme bei eingeschaltetem Mikrofon, und <code>toggle standby</code> kippt den Pegelmodus.</p>",
+            "isHtml": true
+          },
+          {
+            "text": "<p><strong>„In app“ heißt in SpeakWith.</strong> Wenn du das Tippen in andere Apps eingeschaltet hast, schaltet <code>start-in-app</code> es vor Beginn der Aufnahme wieder aus, sodass deine Wörter in SpeakWith landen statt in dem Fenster, das gerade vorne liegt. Ein einfaches <code>start</code> lässt diese Einstellung genau so, wie du sie hinterlassen hast. Das ist die eine Aktion ohne Gegenstück bei Live-Audio: Der Rekorder Live-Audio tippt nie in andere Apps, also tut <code>speakwith://batch/start-in-app</code> einfach dasselbe wie <code>speakwith://batch/start</code>. Und auf jeder Version, die das Tippen in andere Apps gar nicht anbietet, etwa der Mac-App-Store-Version, sind die beiden ebenfalls identisch.</p>",
+            "isHtml": true
+          },
+          {
+            "text": "<p><strong>Focus rührt das Mikrofon nie an.</strong> <code>focus</code> holt SpeakWith nach vorn und öffnet den Bereich dieses Rekorders, und mehr tut es nicht: Es schaltet das Mikrofon nicht ein, startet keine Aufnahme und ändert den Schalter für das Tippen in andere Apps nicht. Binde es, wenn du den Rekorder vor dir haben willst, bevor du entscheidest, was als Nächstes passiert. Es erneut auszuführen, wenn SpeakWith schon vorne ist, ändert nichts.</p>",
+            "isHtml": true
+          },
+          {
+            "text": "<p>Jeder AppleScript-Befehl läuft innerhalb von <code>tell application \"SpeakWith\" to …</code>, zum Beispiel <code>osascript -e 'tell application \"SpeakWith\" to power off recorder batch'</code>.</p>",
+            "isHtml": true
+          },
+          {
+            "text": "Ein paar Dinge, die man wissen sollte. Die gerichteten Befehle lassen sich gefahrlos wiederholen: „start“ während einer laufenden Aufnahme oder „power on“ bei bereits eingeschaltetem Mikrofon tut einfach nichts. Die vier Umschaltbefehle sind die Ausnahme, und zwar absichtlich: Einen davon zweimal zu senden bringt dich zurück zum Ausgangspunkt. Bereitschaft wirkt nur auf den Rekorder, der gerade eingeschaltet ist; sie schaltet nie von sich aus einen Rekorder ein.",
+            "isHtml": false
+          }
+        ]
+      },
+      {
+        "heading": "Tippen in andere Apps",
+        "paragraphs": [
+          {
+            "text": "Tippen in andere Apps ist der Schalter, der das, was du sagst, in das Fenster schickt, das gerade vorne liegt, statt in SpeakWith. Zwei Befehle steuern ihn. Keiner nennt einen Rekorder: Nur Live-Diktat kann anderswo tippen, es gibt also nichts auszuwählen.",
+            "isHtml": false
+          },
+          {
+            "text": "<table><thead><tr><th>Aktion</th><th>AppleScript-Befehl</th><th>URL-Schema</th></tr></thead><tbody><tr><td>Tippen in andere Apps umschalten</td><td><code>toggle type into app</code></td><td><code>speakwith://dictation/toggle</code></td></tr><tr><td>Tippen in andere Apps einschalten</td><td><code>set type into app enabled true</code></td><td><code>speakwith://dictation/type-into-app?on=true</code></td></tr><tr><td>Tippen in andere Apps ausschalten</td><td><code>set type into app enabled false</code></td><td><code>speakwith://dictation/type-into-app?on=false</code></td></tr></tbody></table>",
+            "isHtml": true
+          },
+          {
+            "text": "<p><strong>Diese tun genau das, was der Schalter in der App und der globale Hotkey tun.</strong> Dazu gehört, den Rekorder zu bewegen, nicht nur die Einstellung: Tippen einzuschalten startet das Diktat (und wenn schon eine Aufnahme läuft, beginnt ab diesem Punkt eine neue Aufnahme, damit das diktierte Audio seine eigene Datei ist), und es auszuschalten beendet diese Aufnahme, es sei denn, du hast SpeakWith gebeten, weiter aufzunehmen, wenn das Tippen endet.</p>",
+            "isHtml": true
+          },
+          {
+            "text": "<p><code>toggle</code> kippt den Schalter, zweimal gesendet bringt es dich also zurück zum Ausgangspunkt. Die beiden <code>set</code>-Befehle sind gerichtet und idempotent: Einen Zustand anzufordern, in dem du dich schon befindest, tut überhaupt nichts, sodass ein Skript per Timer „Tippen aus“ erzwingen kann, ohne je eine Aufnahme zu unterbrechen. Beide <code>set</code>-Formen verlangen, dass du die Richtung angibst: <code>set type into app</code> ohne <code>enabled</code> oder die URL ohne <code>?on=</code> wird abgelehnt, statt als Ein gedeutet zu werden.</p>",
+            "isHtml": true
+          },
+          {
+            "text": "<p><strong>Tippen auszuschalten ist nicht dasselbe wie <code>start-in-app</code>.</strong> <code>set type into app enabled false</code> schaltet nur den Schalter aus. <code>start-in-app</code> schaltet ihn aus <em>und</em> startet eine Aufnahme. Binde den ersten, wenn deine nächsten Wörter in SpeakWith bleiben sollen, den zweiten, wenn du sofort mit dem Aufnehmen beginnen willst.</p>",
+            "isHtml": true
+          },
+          {
+            "text": "<p>Auf Versionen, die das Tippen in andere Apps gar nicht anbieten, etwa der Mac-App-Store-Version, werden alle drei Befehle angenommen und tun nichts.</p>",
+            "isHtml": true
+          }
+        ]
+      },
+      {
+        "heading": "Eine bestimmte Version ansprechen",
+        "paragraphs": [
+          {
+            "text": "Standardmäßig finden diese Befehle SpeakWith über den Namen. Wenn du mehr als eine SpeakWith-Version installiert hast, legst du die gewünschte über ihren Bundle-Identifier fest:",
+            "isHtml": false
+          },
+          {
+            "text": "<pre><code>osascript -e 'tell application id \"com.ikisystems.speakwith.macos.gumroad\" to start recording recorder live dictation'</code></pre>",
+            "isHtml": true
+          },
+          {
+            "text": "<p>Die ausgelieferten Bundle-Identifier sind <code>com.ikisystems.speakwith.macos.gumroad</code> (Gumroad), <code>com.ikisystems.speakwith.macos.appstore</code> (Mac App Store) und <code>com.ikisystems.speakwith.macos</code> (Developer-ID-Direktdownload).</p>",
+            "isHtml": true
+          }
+        ]
+      },
+      {
+        "heading": "Mit einem Hotkey verbinden",
+        "paragraphs": [
+          {
+            "text": "Weil das gewöhnliche Befehle und URLs sind, kannst du jeden davon schon heute in ein Tastaturkürzel verwandeln. Lege einen in einen macOS-Kurzbefehl, eine Automator-Aktion „Shell-Skript ausführen“ oder einen Launcher wie Raycast, Alfred oder Keyboard Maestro und gib ihm den Hotkey deiner Wahl.",
+            "isHtml": false
+          },
+          {
+            "text": "<p>Wenn der Hotkey dein Weg ist, mit dem Diktieren zu beginnen, ist <code>start-in-app</code> meist der richtige: Er bedeutet „das hier festhalten“, egal wie du den Schalter für das Tippen in andere Apps zuletzt hinterlassen hast.</p><pre><code>open \"speakwith://live-dictation/start-in-app\"</code></pre>",
+            "isHtml": true
+          },
+          {
+            "text": "<p>Wenn dein Launcher sonst erst einen eigenen Schritt „App aktivieren“ bräuchte, ersetzt <code>focus</code> ihn: Der Befehl holt SpeakWith von selbst nach vorn und lässt das Mikrofon in Ruhe, sodass ein Makro dir den Rekorder vor die Nase stellen kann, ohne eine Aufnahme zu starten.</p><pre><code>open \"speakwith://live-dictation/focus\"</code></pre>",
+            "isHtml": true
+          },
+          {
+            "text": "<p>Für Push-to-Dictate in das Fenster, das gerade vorne liegt, binde den Tipp-Umschalter. Eine Taste schaltet das Tippen ein und startet das Diktat; dieselbe Taste schaltet es wieder aus.</p><pre><code>open \"speakwith://dictation/toggle\"</code></pre>",
+            "isHtml": true
+          }
+        ]
+      }
+    ]
+  }
+}

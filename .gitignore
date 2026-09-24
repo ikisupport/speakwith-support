@@ -2,6 +2,9 @@
 
 # Compiled output
 /dist
+# Generated per-build (see scripts/resolve-locales.mjs, scripts/generate-sitemap.mjs)
+/src/app/content/locales.active.ts
+/public/sitemap.xml
 /tmp
 /out-tsc
 /bazel-out

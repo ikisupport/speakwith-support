@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import COPY from '../../content/copy.json';
+import { LocaleService } from '../../services/locale.service';
 
 /**
  * Terms of service. Includes the accuracy disclaimer: automatic
@@ -37,5 +37,9 @@ import COPY from '../../content/copy.json';
   `]
 })
 export class TermsComponent {
-  protected readonly copy = COPY;
+  protected get copy() {
+    return this.locale.copy();
+  }
+
+  constructor(private readonly locale: LocaleService) {}
 }

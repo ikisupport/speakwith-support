@@ -3,9 +3,16 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "prestart": "node scripts/resolve-locales.mjs",
     "start": "ng serve",
+    "prebuild": "node scripts/resolve-locales.mjs && node scripts/check-copy-parity.mjs && node scripts/generate-sitemap.mjs",
+    "locales": "node scripts/resolve-locales.mjs",
+    "sitemap": "node scripts/generate-sitemap.mjs",
+    "check:copy": "node scripts/check-copy-parity.mjs",
     "build": "ng build",
+    "prewatch": "node scripts/resolve-locales.mjs",
     "watch": "ng build --watch --configuration development",
+    "pretest": "node scripts/resolve-locales.mjs",
     "test": "ng test",
     "serve:ssr:speakwith-support": "node dist/speakwith-support/server/server.mjs"
   },

@@ -3,55 +3,79 @@ import { HomeComponent } from './pages/home/home.component';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { TermsComponent } from './pages/terms/terms.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { DEFAULT_LOCALE, LOCALES, LocaleDef, ROUTE_DEFS, copyFor } from './content/copy';
+
+/**
+ * Route table, generated per locale from `content/locales.json`.
+ *
+ * English stays unprefixed (`/pricing/`) so existing inbound links and the
+ * sitemap keep working; every other locale is mounted under its prefix
+ * (`/de/pricing/`). Pages flagged `localized: false` (Privacy, Terms) are
+ * registered for the default locale only; the locale switcher and the
+ * footer/nav links resolve them to their English URL.
+ *
+ * Every page route carries `data.locale`, `data.page` and `data.localized`,
+ * which `LocaleService` reads to pick the copy, and `SeoService` reads to emit
+ * `<html lang>`, `hreflang` alternates and a locale-correct canonical. Titles
+ * and descriptions come from the locale's `copy.seo`, so a translated file
+ * localizes the `<title>` and meta description as well.
+ *
+ * Prerender discovers the tree from this config, so no route list needs to be
+ * maintained in `angular.json`.
+ */
+function pageRoutes(locale: LocaleDef): Routes {
+  const copy = copyFor(locale.code);
+  const isDefault = locale.code === DEFAULT_LOCALE;
+
+  const meta = (path: string) => {
+    const def = ROUTE_DEFS.find(r => r.path === path)!;
+    const seo = copy.seo[def.seoKey] as { title: string; description?: string };
+    return {
+      title: seo.title,
+      data: {
+        description: seo.description,
+        locale: locale.code,
+        page: def.path,
+        localized: def.localized,
+      },
+    };
+  };
+
+  const routes: Routes = [
+    { path: '', component: HomeComponent, ...meta('') },
+    {
+      path: 'pricing',
+      loadComponent: () =>
+        import('./pages/pricing/pricing.component').then(m => m.PricingComponent),
+      ...meta('pricing'),
+    },
+    {
+      path: 'automation',
+      loadComponent: () =>
+        import('./pages/automation/automation.component').then(m => m.AutomationComponent),
+      ...meta('automation'),
+    },
+  ];
+
+  if (isDefault) {
+    routes.push(
+      { path: 'privacy', component: PrivacyComponent, ...meta('privacy') },
+      { path: 'terms', component: TermsComponent, ...meta('terms') },
+    );
+  }
+
+  return routes;
+}
+
+const defaultLocale = LOCALES.find(l => l.code === DEFAULT_LOCALE)!;
+const notFoundTitle = copyFor(DEFAULT_LOCALE).seo.notFound.title;
 
 export const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent,
-    title: 'SpeakWith Support: Your spoken ideas, captured as a daily document',
-    data: {
-      description:
-        'SpeakWith is a local-first voice recorder for Mac and iOS that turns daily speaking into a searchable, organised daily document. Tuned for speech and dictation, not music or ambient sound.'
-    }
-  },
-  {
-    path: 'privacy',
-    component: PrivacyComponent,
-    title: 'Privacy Policy | SpeakWith',
-    data: {
-      description:
-        'Your words are yours. SpeakWith keeps recordings, transcripts, and documents on your device: no account, no tracking in the app, no cloud upload. This website counts anonymous visits only.'
-    }
-  },
-  {
-    path: 'terms',
-    component: TermsComponent,
-    title: 'Terms of Service | SpeakWith',
-    data: {
-      description:
-        'The terms of service for SpeakWith, the local-first voice recorder and transcription app for Mac and iOS.'
-    }
-  },
-  {
-    path: 'pricing',
-    loadComponent: () =>
-      import('./pages/pricing/pricing.component').then(m => m.PricingComponent),
-    title: 'Pricing | SpeakWith',
-    data: {
-      description:
-        'Start with built-in dictation, or go Paid for Whisper and Parakeet engines, batch transcription, and smart paragraph formatting.'
-    }
-  },
-  {
-    path: 'automation',
-    loadComponent: () =>
-      import('./pages/automation/automation.component').then(m => m.AutomationComponent),
-    title: 'Automation | SpeakWith',
-    data: {
-      description:
-        'Start, stop, and control SpeakWith recording from the command line, Shortcuts, Automator, or a hotkey — via the speakwith:// URL scheme or AppleScript.'
-    }
-  },
-  { path: '404', component: NotFoundComponent, title: 'Page Not Found | SpeakWith' },
-  { path: '**', component: NotFoundComponent, title: 'Page Not Found | SpeakWith' },
+  ...pageRoutes(defaultLocale),
+  ...LOCALES.filter(l => l.prefix).map(locale => ({
+    path: locale.prefix,
+    children: pageRoutes(locale),
+  })),
+  { path: '404', component: NotFoundComponent, title: notFoundTitle },
+  { path: '**', component: NotFoundComponent, title: notFoundTitle },
 ];

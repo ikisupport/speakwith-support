@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TelemetryService } from '../../services/telemetry.service';
-import COPY from '../../content/copy.json';
+import { LocaleService } from '../../services/locale.service';
 
 /**
  * Home / landing page. Hero, moments strip, Type into app demo band,
@@ -22,9 +22,8 @@ import COPY from '../../content/copy.json';
           <p class="hero__lead hero__lead--secondary">{{ copy.home.hero.leadSecondary }}</p>
         }
         <div class="hero__actions">
-          <a class="button button--primary" routerLink="/pricing"
+          <a class="button button--primary" [routerLink]="locale.path('pricing')"
              (click)="telemetry.signal('cta.pricing', { placement: 'hero' })">{{ copy.home.hero.ctaPrimary }}</a>
-          <span class="button button--coming-soon">{{ copy.home.hero.ctaSecondary }}</span>
           <a class="button button--ghost" href="#moments">{{ copy.home.hero.ctaGhost }}</a>
           <a class="button button--ghost" [href]="'#' + copy.home.typeIntoApp.id">{{ copy.home.hero.ctaDemo }}</a>
         </div>
@@ -256,15 +255,18 @@ import COPY from '../../content/copy.json';
         <h2>{{ copy.home.download.heading }}</h2>
         <p>{{ copy.home.download.body }}</p>
         <div class="hero__actions">
-          <a class="button button--primary" [href]="copy.links.buyMacGumroad"
+          <a class="button button--primary" [href]="copy.links.subscribeMacGumroad"
              target="_blank" rel="noopener noreferrer"
-             (click)="telemetry.signal('cta.buy_gumroad', { placement: 'home_download' })">{{ copy.home.download.ctaPrimary }}</a>
-          <span class="button button--coming-soon">{{ copy.home.download.ctaSecondary }}</span>
+             (click)="telemetry.signal('cta.subscribe_gumroad', { placement: 'home_download' })">{{ copy.home.download.ctaPrimary }}</a>
         </div>
+        <p class="download__links download__buy-once">
+          <a [href]="copy.links.buyMacGumroad" target="_blank" rel="noopener noreferrer"
+             (click)="telemetry.signal('cta.buy_gumroad', { placement: 'home_download' })">{{ copy.home.download.ctaBuyOnce }}</a>
+        </p>
         <p class="download__links">
-          <a routerLink="/privacy">Privacy Policy</a>
+          <a [routerLink]="locale.path('privacy')">Privacy Policy</a>
           <span aria-hidden="true">·</span>
-          <a routerLink="/terms">Terms of Service</a>
+          <a [routerLink]="locale.path('terms')">Terms of Service</a>
         </p>
       </div>
     </section>
@@ -829,6 +831,11 @@ import COPY from '../../content/copy.json';
       font-size: 0.92rem;
     }
 
+    .download__buy-once {
+      margin-top: 1rem;
+      margin-bottom: 0;
+    }
+
     .download__links span {
       margin: 0 0.5rem;
       color: var(--text-dim);
@@ -879,9 +886,14 @@ import COPY from '../../content/copy.json';
   `]
 })
 export class HomeComponent {
-  protected readonly copy = COPY;
+  protected get copy() {
+    return this.locale.copy();
+  }
 
-  constructor(protected readonly telemetry: TelemetryService) {}
+  constructor(
+    protected readonly telemetry: TelemetryService,
+    protected readonly locale: LocaleService,
+  ) {}
 
   /** The gallery shows the three captured macOS frames under /assets/screenshots/
       (iOS shots are deferred and removed from copy.json). */

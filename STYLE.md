@@ -55,12 +55,23 @@ and they take no period even though every other `lead` on the site does.
 works for you`, `Fix lines as they land` are calls to action, not statements.
 Without this carve-out the rule would put a period on `Get SpeakWith`.
 
-**Deliberate staccato is allowed and must stay internally consistent.** A
-multi-sentence heading keeps its periods (`Your words appear. As you speak.`,
-`Your words stay on your Mac. Plain files, no account.`), and so does a set
-written as clipped one-word statements — the `home.moat.items.*.label` ledger
-(`Local.` / `Markdown.` / `No account.` / `On your computer.`) is a set, not an
-inconsistency. Change all four or none.
+**A heading is one sentence or one fragment, never clipped beats.** Do not
+split a heading into two short sentences for rhythm (`Your words appear. As you
+speak.` was retired for this: it reads as stock marketing cadence and names
+nothing the section shows). Say the concrete thing in one sentence
+(`Words land as you speak, and you can edit them live.`) or
+one imperative fragment (`Dictate into Messages, Mail, or any app with a
+cursor`). A heading that genuinely makes two claims may keep two sentences
+(`Your recordings stay on your Mac. Plain files, no account.`), but only when
+each half carries its own fact.
+
+**A labelled set changes together.** The `home.moat.items.*.label` set
+(`Local` / `Markdown` / `No account` / `On your computer`) is written as labels,
+so no period. Change all four or none.
+
+**No counted slogans.** `Three engines, one app` and `Two apps, one voice` are
+the `N things, one Z` chant; a heading names what the section shows instead
+(`Which engine does what`).
 
 **`subtitle` takes no period.** The six `pricing.table.rows.*.subtitle` values
 render as `<small>` fragments inside a feature cell, which sets the convention

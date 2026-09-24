@@ -3,6 +3,7 @@ import { DOCUMENT } from '@angular/common';
 import { Meta } from '@angular/platform-browser';
 import { Router, NavigationEnd, ActivatedRouteSnapshot } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { LocaleService } from './locale.service';
 
 /**
  * Route-aware SEO tags: canonical URL plus Open Graph and Twitter cards.
@@ -13,8 +14,14 @@ import { filter } from 'rxjs/operators';
  * prerendered page ships these tags in its static HTML; the same updates also
  * apply live in the browser as the user navigates between routes.
  *
- * Per-route copy lives in `app.routes.ts` (`title` + `data.description`); only
+ * Per-route copy lives in each locale's `copy.seo` and is attached to the
+ * route by the factory in `app.routes.ts` (`title` + `data.description`); only
  * the constant site-wide values live here.
+ *
+ * Localization: `<html lang>`, `og:locale`, the canonical URL and one
+ * `<link rel="alternate" hreflang>` per shipped locale (plus `x-default`) are
+ * derived from `LocaleService`, so `/de/pricing/` declares itself German and
+ * points at its siblings rather than at the English page.
  */
 @Injectable({ providedIn: 'root' })
 export class SeoService {
@@ -29,6 +36,7 @@ export class SeoService {
     private readonly router: Router,
     private readonly meta: Meta,
     @Inject(DOCUMENT) private readonly doc: Document,
+    private readonly locale: LocaleService,
   ) {}
 
   /** Begin reacting to route changes. Called once from the app shell. */
@@ -50,9 +58,12 @@ export class SeoService {
     const image = (snapshot.data['ogImage'] as string | undefined) ?? SeoService.DEFAULT_IMAGE;
     const ogType = (snapshot.data['ogType'] as string | undefined) ?? 'website';
     const canonical = this.canonicalUrl(url);
+    const locale = this.locale.locale();
 
+    this.doc.documentElement.setAttribute('lang', locale.htmlLang);
     this.meta.updateTag({ name: 'description', content: description });
     this.setCanonical(canonical);
+    this.setAlternates();
 
     this.meta.updateTag({ property: 'og:type', content: ogType });
     this.meta.updateTag({ property: 'og:site_name', content: SeoService.SITE_NAME });
@@ -63,7 +74,7 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:image:width', content: '1200' });
     this.meta.updateTag({ property: 'og:image:height', content: '630' });
     this.meta.updateTag({ property: 'og:image:alt', content: title });
-    this.meta.updateTag({ property: 'og:locale', content: 'en_US' });
+    this.meta.updateTag({ property: 'og:locale', content: locale.ogLocale });
 
     this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
     this.meta.updateTag({ name: 'twitter:title', content: title });
@@ -87,6 +98,24 @@ export class SeoService {
       return `${SeoService.ORIGIN}/`;
     }
     return `${SeoService.ORIGIN}${path.replace(/\/+$/, '')}/`;
+  }
+
+  /**
+   * Replace the `hreflang` alternates with the current page's set. Removing
+   * and re-adding keeps the list exact when navigating from a localized page
+   * to an English-only one, where the set is empty.
+   */
+  private setAlternates(): void {
+    this.doc.head
+      .querySelectorAll('link[rel="alternate"][hreflang]')
+      .forEach(link => link.remove());
+    for (const alt of this.locale.alternates()) {
+      const link = this.doc.createElement('link');
+      link.setAttribute('rel', 'alternate');
+      link.setAttribute('hreflang', alt.hreflang);
+      link.setAttribute('href', alt.href);
+      this.doc.head.appendChild(link);
+    }
   }
 
   private setCanonical(href: string): void {

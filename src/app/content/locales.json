@@ -1,0 +1,16 @@
+{
+  "$comment": "Single source of truth for the locale x route matrix. Read by scripts/resolve-locales.mjs, which writes the generated, git-ignored locales.active.ts that app.routes.ts / copy.ts / locale.service.ts import, and by scripts/generate-sitemap.mjs. FEATURE FLAGS: every non-default locale carries `enabled`, and the committed value is false, so a production build (GitHub Actions) ships English only: no /<prefix>/ routes, no switcher, no hreflang, no locale copy in the bundle. To work on a locale locally, set SPEAKWITH_LOCALES=de-DE (comma list, or `all`) in the environment or in the git-ignored .env; that override never reaches CI. Flip `enabled` to true here only when a locale is signed off for production. `prefix` is the URL segment ('' = unprefixed canonical English). Routes with `localized: false` (legal pages) ship English-canonical in every locale.",
+  "origin": "https://speakwith.ikisystems.com",
+  "defaultLocale": "en",
+  "locales": [
+    { "code": "en", "prefix": "", "htmlLang": "en", "ogLocale": "en_US", "endonym": "English" },
+    { "code": "de-DE", "enabled": false, "prefix": "de", "htmlLang": "de", "ogLocale": "de_DE", "endonym": "Deutsch" }
+  ],
+  "routes": [
+    { "path": "", "seoKey": "home", "localized": true, "priority": "1.0" },
+    { "path": "pricing", "seoKey": "pricing", "localized": true, "priority": "0.8" },
+    { "path": "automation", "seoKey": "automation", "localized": true, "priority": "0.6" },
+    { "path": "privacy", "seoKey": "privacy", "localized": false, "priority": "0.3" },
+    { "path": "terms", "seoKey": "terms", "localized": false, "priority": "0.3" }
+  ]
+}

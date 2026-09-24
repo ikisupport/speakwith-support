@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { LocaleService } from '../../services/locale.service';
 
 /** 404 page: wildcard route. Offers a clear path back home. */
 @Component({
@@ -15,7 +16,7 @@ import { RouterLink } from '@angular/router';
         link may be slightly off.
       </p>
       <div class="nf__actions">
-        <a class="button button--primary" routerLink="/">Back to home</a>
+        <a class="button button--primary" [routerLink]="locale.path('')">Back to home</a>
       </div>
     </section>
   `,
@@ -47,4 +48,6 @@ import { RouterLink } from '@angular/router';
     }
   `]
 })
-export class NotFoundComponent {}
+export class NotFoundComponent {
+  constructor(protected readonly locale: LocaleService) {}
+}

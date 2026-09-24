@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import COPY from '../../content/copy.json';
+import { LocaleService } from '../../services/locale.service';
 
 /**
  * Automation reference. SpeakWith's two recorders can be driven from outside the
@@ -82,5 +82,9 @@ import COPY from '../../content/copy.json';
   `]
 })
 export class AutomationComponent {
-  protected readonly copy = COPY;
+  protected get copy() {
+    return this.locale.copy();
+  }
+
+  constructor(private readonly locale: LocaleService) {}
 }

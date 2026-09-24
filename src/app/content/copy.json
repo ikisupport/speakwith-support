@@ -27,14 +27,44 @@
       },
       "tagline": "SpeakWith: your spoken ideas, captured as a daily document.",
       "copyrightHtml": "© {{year}} <a href=\"{{ikiSystemsHome}}\" target=\"_blank\" rel=\"noopener noreferrer\">IKI Systems</a>. All rights reserved."
+    },
+    "localeSwitcher": {
+      "label": "Language",
+      "legalNote": "Privacy and Terms are published in English only."
     }
   },
   "links": {
     "buyMacGumroad": "https://ikisystems.gumroad.com/l/vozgsy",
+    "subscribeMacGumroad": "https://ikisystems.gumroad.com/l/dcltnn",
     "trialMacGumroad": "https://ikisystems.gumroad.com/l/vkaxll",
     "newsletter": "https://ikisystems.substack.com/",
     "x": "https://x.com/ikisystems",
     "ikiSystemsHome": "https://ikisystems.com/"
+  },
+  "seo": {
+    "home": {
+      "title": "SpeakWith Support: Your spoken ideas, captured as a daily document",
+      "description": "SpeakWith is a local-first voice recorder for Mac and iOS that turns daily speaking into a searchable, organised daily document. Tuned for speech and dictation, not music or ambient sound."
+    },
+    "pricing": {
+      "title": "Pricing | SpeakWith",
+      "description": "Start with built-in dictation, or go Paid for Whisper and Parakeet engines, batch transcription, and smart paragraph formatting."
+    },
+    "automation": {
+      "title": "Automation | SpeakWith",
+      "description": "Start, stop, and control SpeakWith recording from the command line, Shortcuts, Automator, or a hotkey, via the speakwith:// URL scheme or AppleScript."
+    },
+    "privacy": {
+      "title": "Privacy Policy | SpeakWith",
+      "description": "Your words are yours. SpeakWith keeps recordings, transcripts, and documents on your device: no account, no tracking in the app, no cloud upload. This website counts anonymous visits only."
+    },
+    "terms": {
+      "title": "Terms of Service | SpeakWith",
+      "description": "The terms of service for SpeakWith, the local-first voice recorder and transcription app for Mac and iOS."
+    },
+    "notFound": {
+      "title": "Page Not Found | SpeakWith"
+    }
   },
   "home": {
     "hero": {
@@ -45,17 +75,17 @@
       "ctaPrimary": "Try SpeakWith free",
       "ctaSecondary": "iOS: Coming Soon",
       "ctaGhost": "See how it works",
-      "note": "Works on Mac and iOS. Your voice never leaves your device. No account required.",
+      "note": "Works on Mac and iOS. Recording and transcription happen on your device. No account required.",
       "ctaDemo": "Watch it type"
     },
     "moments": {
-      "title": "Your words appear. As you speak.",
-      "heroImage": "canonical_screenshots/hero.png?v=20260827a",
+      "title": "Words land as you speak, and you can edit them live.",
+      "heroImage": "canonical_screenshots/hero.png?v=20260923c",
       "heroAlt": "SpeakWith for Mac in live dictation: spoken words landing as transcribed lines under a live waveform, with misheard names corrected in place and a session title suggested alongside.",
       "heroCaption": "Speak, and watch the subtitles for your thoughts take shape before the idea slips away. Add your own OpenAI API key and press Generate new title to get a heading for the session."
     },
     "platforms": {
-      "eyebrow": "Two apps, one voice",
+      "eyebrow": "A mobile version is in the works",
       "title": "A recorder for the desk, a companion for everywhere else",
       "sub": "SpeakWith is a voice recorder. It is tuned for speech and dictation, the way a person actually talks, not for capturing music or ambient sound.",
       "items": [
@@ -89,7 +119,7 @@
     "typeIntoApp": {
       "id": "type-into-app",
       "eyebrow": "Type into app",
-      "heading": "Talk. The words land where the cursor is.",
+      "heading": "Dictate into Messages, Mail, or any app with a cursor",
       "lead": "On the direct Mac build, turn on the recorder switch or a hotkey. SpeakWith types finished phrases into whichever app has focus.",
       "videoSrc": "assets/demo/type-into-app.mp4?v=20260726d",
       "posterSrc": "assets/demo/type-into-app-poster.jpg?v=20260726d",
@@ -142,11 +172,6 @@
       "subtitle": "Recordings, daily document, playback, and projects",
       "items": [
         {
-          "src": "assets/screenshots/01_job_queue_full.png?v=20260801a",
-          "caption": "All your recordings summarized in one place, grouped by day. Click any row to review it in detail.",
-          "ariaLabel": "The SpeakWith job queue: a day's recordings grouped by date, each row showing its transcription status."
-        },
-        {
           "src": "assets/screenshots/type-into-combo.png",
           "caption": "Use the recorder switch or a hotkey. Words appear in whichever app you are using.",
           "ariaLabel": "SpeakWith live dictation beside macOS Messages: the typing switch is on, and the same spoken lines appear as delivered iMessage bubbles."
@@ -157,9 +182,9 @@
           "ariaLabel": "The day's dictation as a markdown file open in VS Code: a dated daily document of transcribed notes."
         },
         {
-          "src": "assets/screenshots/click-in-transcript.png",
-          "caption": "Click any line to jump straight to that moment in the recording.",
-          "ariaLabel": "A finished transcript open in SpeakWith: timestamped lines beside an audio player, ready to click a line and jump to that point in the recording."
+          "src": "assets/screenshots/click-in-transcript.png?v=20260923a",
+          "caption": "Every recording in one place, grouped by day and summarized. Click any line to jump to that moment in the original recording.",
+          "ariaLabel": "A finished recording open in SpeakWith: the Activity list on the left grouped by day with a summary under each recording, timestamped transcript sentences on the right with the current line highlighted, and a waveform with playback controls underneath."
         },
         {
           "src": "assets/screenshots/projects-setup.png",
@@ -174,25 +199,25 @@
       ]
     },
     "moat": {
-      "title": "Your words stay on your Mac. Plain files, no account.",
+      "title": "Your recordings stay on your Mac. Plain files, no account.",
       "items": [
         {
-          "label": "Local.",
-          "body": "Your recordings never leave your machine. Period.",
+          "label": "Local",
+          "body": "Your recordings never leave your Mac. The optional AI features, session titles and correction checks, use your own OpenAI key or a local Ollama model, and only when you switch them on.",
           "isHtml": false
         },
         {
-          "label": "Markdown.",
+          "label": "Markdown",
           "body": "A plain <code>.md</code> file on disk. Open it in VS Code, Obsidian, or any editor. Feed it to any tool.",
           "isHtml": true
         },
         {
-          "label": "No account.",
+          "label": "No account",
           "body": "No login. No subscription cloud. No data trade.",
           "isHtml": false
         },
         {
-          "label": "On your computer.",
+          "label": "On your computer",
           "body": "Transcription and summarization run on your Mac. Nothing is uploaded. Ever.",
           "isHtml": false
         }
@@ -304,8 +329,9 @@
     "download": {
       "heading": "Get SpeakWith",
       "body": "SpeakWith runs on Mac and iOS — it needs a Mac with Apple Silicon (M1 or later) running macOS 26 (Tahoe) or later, or an iPhone on iOS 26 or later. Download it, grant microphone access, and your first recording is a click away.",
-      "ctaPrimary": "Buy SpeakWith for Mac",
-      "ctaSecondary": "iOS: Coming Soon"
+      "ctaPrimary": "Subscribe to SpeakWith for Mac",
+      "ctaSecondary": "iOS: Coming Soon",
+      "ctaBuyOnce": "Prefer to buy once? Get a one-time license instead."
     }
   },
   "pricing": {
@@ -320,15 +346,15 @@
         "freeName": "Free",
         "freeTag": "No cost",
         "paidName": "Pro",
-        "paidTag": "Subscription or one-time"
+        "paidTag": "Subscription, or buy once"
       },
       "rows": {
         "liveDictation": {
           "feature": "Live dictation",
-          "subtitle": "Speak and watch your words appear instantly"
+          "subtitle": "Lines land as you talk, editable mid-take"
         },
         "offline": {
-          "feature": "Fully offline & private",
+          "feature": "Offline by default",
           "subtitle": "Audio never leaves your device"
         },
         "engines": {
@@ -362,12 +388,12 @@
           "feature": "Price",
           "freePrice": "Free",
           "paidPrice": "See options ↓",
-          "paidPriceSub": "subscription or one-time, see below"
+          "paidPriceSub": "subscription, or buy once, see below"
         }
       }
     },
     "engines": {
-      "heading": "Three engines, one app",
+      "heading": "Which engine does what",
       "sub": "SpeakWith picks the right tool for the job. Here's what each engine is great at.",
       "items": [
         {
@@ -404,20 +430,24 @@
           "ctaLabel": "",
           "ctaUrl": "",
           "ctaSecondaryLabel": "",
-          "ctaSecondaryUrl": ""
+          "ctaSecondaryUrl": "",
+          "ctaTertiaryLabel": "",
+          "ctaTertiaryUrl": ""
         },
         {
           "lead": "Direct (Gumroad)",
-          "heading": "14-day free trial, then buy once",
-          "body": "Try the full app free for 14 days. After that it unlocks with a single one-time purchase, no subscription. The direct build is the complete, unsandboxed version of SpeakWith, including the switch that types your dictation into other applications.",
-          "ctaLabel": "Start 14-day free trial",
-          "ctaUrl": "https://ikisystems.gumroad.com/l/vkaxll",
-          "ctaSecondaryLabel": "Buy the full license",
-          "ctaSecondaryUrl": "https://ikisystems.gumroad.com/l/vozgsy"
+          "heading": "Subscribe, or buy once",
+          "body": "The direct build unlocks with a Gumroad membership, billed monthly, that you can cancel any time. If you would rather own it outright, a one-time license is still available. Either way you get the complete, unsandboxed version of SpeakWith, including the switch that types your dictation into other applications. Not sure yet? Start with a 14-day free trial.",
+          "ctaLabel": "Subscribe",
+          "ctaUrl": "https://ikisystems.gumroad.com/l/dcltnn",
+          "ctaSecondaryLabel": "Buy once",
+          "ctaSecondaryUrl": "https://ikisystems.gumroad.com/l/vozgsy",
+          "ctaTertiaryLabel": "Start a 14-day free trial",
+          "ctaTertiaryUrl": "https://ikisystems.gumroad.com/l/vkaxll"
         }
       ]
     },
-    "finePrint": "The App Store version will be a free, complete product on its own, with no purchase required to dictate, and is coming soon. Pro features (advanced engines, audio and video import, batch transcription, and smart formatting) will unlock through an App Store subscription (also coming soon) or by buying once direct on Gumroad, available today. The Gumroad build includes a 14-day free trial that locks after 14 days until you buy, and a switch that types your dictation into other applications. The iOS companion app will be free."
+    "finePrint": "The App Store version will be a free, complete product on its own, with no purchase required to dictate, and is coming soon. Pro features (advanced engines, audio and video import, batch transcription, and smart formatting) unlock today through a Gumroad membership, or through a one-time Gumroad purchase if you prefer to buy once. An App Store subscription for Pro is planned but not yet available. The Gumroad build includes a 14-day free trial that locks after 14 days until you subscribe or buy, and a switch that types your dictation into other applications. The iOS companion app will be free."
   },
   "automation": {
     "heading": "Automation",
@@ -551,7 +581,11 @@
         "heading": "Your recordings are processed on your device",
         "paragraphs": [
           {
-            "text": "SpeakWith records, transcribes, organises, and searches entirely on your own device, whether that is your Mac or your iOS device. Turning speech into text, shaping it into your daily document, and answering your searches all happen locally. SpeakWith does not need an internet connection to do its core work, and it does not send your recordings or transcripts to a server to be processed.",
+            "text": "SpeakWith records, transcribes, organises, and searches entirely on your own device, whether that is your Mac or your iOS device. Turning speech into text, shaping it into your daily document, and answering your searches all happen locally. SpeakWith does not need an internet connection to do its core work, and it does not send your recordings to a server to be processed.",
+            "isHtml": false
+          },
+          {
+            "text": "Two optional features can send transcript text, never audio, to a language model: generating a session title and checking corrections. Both are off until you turn them on. You can point them at an OpenAI account using your own API key, or at an Ollama model running on your own machine, in which case nothing leaves it.",
             "isHtml": false
           }
         ]
