@@ -3,6 +3,7 @@
     "wordmark": "SpeakWith",
     "links": {
       "home": "Home",
+      "guides": "Guides",
       "privacy": "Privacy",
       "terms": "Terms",
       "pricing": "Pricing"
@@ -19,6 +20,7 @@
       "links": {
         "home": "Home",
         "automation": "Automation",
+        "guides": "Guides",
         "privacy": "Privacy",
         "terms": "Terms",
         "newsletter": "Substack",
@@ -53,6 +55,18 @@
     "automation": {
       "title": "Automation | SpeakWith",
       "description": "Start, stop, and control SpeakWith recording from the command line, Shortcuts, Automator, or a hotkey, via the speakwith:// URL scheme or AppleScript."
+    },
+    "guides": {
+      "title": "Guides | SpeakWith",
+      "description": "Reference guides for SpeakWith on the Mac: what the recorder shows you, and how to read it."
+    },
+    "guidesRecorderBadge": {
+      "title": "Reading the recorder badge | SpeakWith",
+      "description": "What the two lines at the left of the SpeakWith record bar mean: the build you are running, and your running tally of words, sentences, characters, and correction rates."
+    },
+    "guidesLiveTranscriptCorrections": {
+      "title": "Reading live transcript corrections | SpeakWith",
+      "description": "What the colors, underlines, and small badges on a live dictation line mean: the words you typed or spoke into it, the corrections SpeakWith made on its own, and the optional checks you can switch on."
     },
     "privacy": {
       "title": "Privacy Policy | SpeakWith",
@@ -165,7 +179,9 @@
           "title": "Hallucination gate",
           "body": "Voice detection on its own cannot always tell a breath from a word, and a recognizer handed one can return a word you never said, sometimes a Yeah or an Okay. The gate waits for the written text, then blocks activations that were never meant as speech. New filler goes on the block list as you meet it, so it stops reaching the page."
         }
-      ]
+      ],
+      "moreLabel": "See what each correction looks like on the line.",
+      "morePath": "guides/live-transcript-corrections"
     },
     "screenshots": {
       "title": "More of the Mac app",
@@ -290,7 +306,9 @@
         },
         {
           "q": "How accurate is the transcription?",
-          "a": "Automatic transcription is very good but never perfect. Names and specialist terms are the usual places small errors appear. Your daily document is fully editable, so treat the transcript as an excellent first draft you can correct."
+          "a": "Automatic transcription is very good but never perfect. Names and specialist terms are the usual places small errors appear. Your daily document is fully editable, so treat the transcript as an excellent first draft you can correct.",
+          "moreLabel": "See how the recorder reports your correction rate.",
+          "morePath": "guides/recorder-badge"
         },
         {
           "q": "Does using SpeakWith change how I speak?",
@@ -571,6 +589,156 @@
         ]
       }
     ]
+  },
+  "guides": {
+    "index": {
+      "eyebrow": "Guides",
+      "heading": "Reference guides",
+      "intro": "Short explanations of what SpeakWith shows you on screen. Each guide covers one part of the app and stays close to what you see.",
+      "cards": [
+        {
+          "title": "Reading the recorder badge",
+          "body": "The two lines at the left of the record bar: the build you are running, and a tally of your dictation over time.",
+          "path": "guides/recorder-badge",
+          "cta": "Read the guide"
+        },
+        {
+          "title": "Reading live transcript corrections",
+          "body": "The marks on a settled line of live dictation: which words you changed, which corrections SpeakWith made, and what its optional checks found.",
+          "path": "guides/live-transcript-corrections",
+          "cta": "Read the guide"
+        }
+      ]
+    },
+    "recorderBadge": {
+      "eyebrow": "Guides",
+      "heading": "Reading the recorder badge",
+      "intro": "At the left of the record bar on the Mac, SpeakWith shows two short lines in a small monospaced typeface. The first identifies the build you are running. The second tracks your dictation over time. The diagram below walks through each segment.",
+      "diagramDark": "assets/guides/recorder-status-badge-annotated.svg?v=20260923",
+      "diagramLight": "assets/guides/recorder-status-badge-annotated-light.svg?v=20260923",
+      "diagramAlt": "Annotated diagram of the SpeakWith recorder badge. Line one reads SpeakWith 2.14.0 Pro (app=eng 20260923.10): the app name, version, edition, and the build stamp shared by the app and its engine. Line two reads 9,834w, 1,770s, 51,368c, 0.7% wer, 0.1% st: words, sentences, and characters dictated since the last reset, then the share of words you corrected and the share your special terms corrected.",
+      "sections": [
+        {
+          "heading": "The first line: which build you are running",
+          "paragraphs": [
+            {
+              "text": "The line starts with the app name, its version, and the edition. The edition reads Pro on a direct download, or MAS if you installed SpeakWith from the Mac App Store."
+            },
+            {
+              "text": "The part in parentheses is the build stamp: the build date, then the build number for that day. The app and its transcription engine are stamped together, so they normally show one value. If they ever differ, the line shows both, which is the first thing to mention if you write in about a problem."
+            }
+          ]
+        },
+        {
+          "heading": "The second line: your dictation tally",
+          "paragraphs": [
+            {
+              "text": "The three counts are words, sentences, and characters you have dictated since the last reset, across all sessions. The s stands for sentences, not seconds."
+            },
+            {
+              "text": "The two percentages use the word count as their denominator. The corrected-word rate (wer) is the share of dictated words you went back and changed. It only counts corrections you actually made, so the true error rate may be higher. The special-terms rate (st) is the share of words that your own special terms corrected: names, terminology, and words you pronounce your own way, which the recognizer would otherwise get wrong."
+            }
+          ]
+        },
+        {
+          "heading": "Hiding, resetting, and reading more",
+          "paragraphs": [
+            {
+              "text": "There is no visible control on the badge itself; the space belongs to the Record, Flush, and Power buttons. Long-press anywhere on the badge to open the About window. About holds the switch that hides or shows the tally, the reset that starts the counts again from zero, and a correction rate measured on reviewed lines only."
+            },
+            {
+              "text": "In the app, hover over any segment of the badge to see the same explanation as a tooltip. The values in the diagram are sample values."
+            }
+          ]
+        }
+      ],
+      "seeAlso": {
+        "label": "See also: reading live transcript corrections, the marks on each line as it lands.",
+        "path": "guides/live-transcript-corrections"
+      }
+    },
+    "liveTranscriptCorrections": {
+      "eyebrow": "Guides",
+      "heading": "Reading live transcript corrections",
+      "intro": "Once a line of live dictation settles, SpeakWith can mark it in two ways. Inside the line, color and underlines show which words you changed yourself. After the line, small badges show what SpeakWith corrected on its own and, if you have switched them on, what its extra checks found. Most lines carry no marks at all. The diagram below shows one line with every kind of mark on it.",
+      "diagramDark": "assets/guides/live-transcript-corrections-annotated.svg?v=20260924",
+      "diagramLight": "assets/guides/live-transcript-corrections-annotated-light.svg?v=20260924",
+      "diagramAlt": "Annotated diagram of one settled live dictation line in SpeakWith, a portrait photographer's note between sittings. The line reads: Edit the first three headshots, then call Aaliyah before Okafor's sitting. The word first is struck through and faded because it was deleted. The word three is in the typed-words color over a pale band because it was typed in to replace tree. The words then call sit on a pale band with a dotted underline because they were dictated into the line. The word headshots is plain because the recognizer wrote it. Three badges trail the text: a Special Terms rewrite reading alia to Aaliyah, a Voice Examples correction reading Akheffer to Okafor, and a green check mark from the second pass.",
+      "sections": [
+        {
+          "heading": "Marks inside the line",
+          "paragraphs": [
+            {
+              "text": "The line you see is not always the line you spoke. You can open any settled line and fix it with the keyboard, or dictate a phrase straight into it, and the day document keeps the result. Playback, though, still plays the original audio. So each word is painted by where it came from, and the words the recognizer wrote stay plain.",
+              "isHtml": false
+            },
+            {
+              "text": "<table><thead><tr><th>Mark</th><th>What it means</th></tr></thead><tbody><tr><td>Typed words</td><td>Your typed-words color, over a pale band of the same hue. If you said <em>three headshots</em> and the line came back as <em>tree headshots</em>, opening it and typing <em>three</em> marks only <em>three</em>.</td></tr><tr><td>Dictated into a line</td><td>The text keeps its normal color, sits on a pale band of the spoken-into-line color, and takes a dotted underline in a complementary shade. Open a line, speak a phrase, and the phrase lands marked this way.</td></tr><tr><td>Deleted words</td><td>Still visible, struck through and faded, like tracked changes in a word processor. A line you removed entirely is struck through as a whole and dimmed.</td></tr><tr><td>Plain words</td><td>The recognizer wrote them and nobody changed them. No color, no band.</td></tr></tbody></table>",
+              "isHtml": true
+            },
+            {
+              "text": "Both colors are yours to choose under Settings, Playback: Typed words and Spoken-into-line. The band and the dotted underline are derived from the color you pick, so the two families stay distinct at a glance.",
+              "isHtml": false
+            },
+            {
+              "text": "Only your own edits are painted. When SpeakWith joins two spans into one sentence, or a second engine re-reads a line, those words were all spoken, so they stay plain.",
+              "isHtml": false
+            }
+          ]
+        },
+        {
+          "heading": "Badges after the line: corrections SpeakWith made",
+          "paragraphs": [
+            {
+              "text": "A badge trails the text of the line it belongs to. There is no reserved column, so a line with nothing to report looks exactly like every other line. When several corrections land on one line, they share a badge, separated by commas. Hover over any badge to read a full explanation.",
+              "isHtml": false
+            },
+            {
+              "text": "<table><thead><tr><th>Badge</th><th>Meaning</th></tr></thead><tbody><tr><td><code>↦ alia → Aaliyah</code></td><td>A rewrite from your Special Terms list. The first arrow marks the list, and the second reads heard, then written: the recognizer wrote <em>alia</em>, and your rule for the name Aaliyah replaced it. This layer is always on: the badge appears whenever a listed term was rewritten, whatever mode the recorder is in.</td></tr><tr><td><code>Akheffer → Okafor</code></td><td>The term spotter heard one of your special terms in the audio and corrected the line to match. The arrow means the text changed.</td></tr><tr><td><code>Nguyen</code></td><td>The spotter heard a term but the line was not changed: usually the term was already spelled correctly, or correcting is switched off. The tooltip says which.</td></tr><tr><td><code>⚡ Akheffer → Okafor</code></td><td>The match came from one of your Voice Examples, a recording of you saying the name, rather than from its spelling. The bolt is reserved for that. Okafor is the kind of name that earns one: no spelling rule covers how it is misheard.</td></tr></tbody></table>",
+              "isHtml": true
+            },
+            {
+              "text": "The spotter is set up under Settings, Corrections. Show spotted special terms hangs the badge on every line where a term was heard. Correct spotted special terms in the line lets the spotter change the text, and a badge with an arrow appears whenever it does, so a correction never lands silently.",
+              "isHtml": false
+            }
+          ]
+        },
+        {
+          "heading": "An optional second opinion",
+          "paragraphs": [
+            {
+              "text": "One more check can run on each line. It is off by default and lives under Settings, Debug, because it is for understanding the engines rather than for everyday dictation. When it is on, one more glyph trails the line.",
+              "isHtml": false
+            },
+            {
+              "text": "<p>The second pass re-reads short lines with a second engine and reports with a single character.</p><table><thead><tr><th>Glyph</th><th>Meaning</th></tr></thead><tbody><tr><td><code>…</code></td><td>Queued. The second engine reads the line again once the take stops.</td></tr><tr><td><code>✓</code></td><td>Green. The second engine heard the same words.</td></tr><tr><td><code>≠</code></td><td>The second engine heard something different. A row appears beneath the line with the other reading, so you can compare the two.</td></tr><tr><td><code>?</code></td><td>Orange. The second engine returned nothing, or could not read the audio. Its model may be missing or still loading.</td></tr></tbody></table>",
+              "isHtml": true
+            },
+            {
+              "text": "The switch is Show second-pass diagnostics. It never changes what is written. It only shows what happened.",
+              "isHtml": false
+            }
+          ]
+        },
+        {
+          "heading": "When nothing appears",
+          "paragraphs": [
+            {
+              "text": "An unmarked line is the normal case, and it can mean several things. The recognizer got the line right and nobody changed it. A special term was already spelled correctly, so there was nothing to correct. Or the second pass is simply switched off, so its glyph draws nothing.",
+              "isHtml": false
+            },
+            {
+              "text": "If you expected a correction and see no badge, check the two spotter switches under Settings, Corrections first, then that the term is in your Special Terms list or has a Voice Example.",
+              "isHtml": false
+            }
+          ]
+        }
+      ],
+      "seeAlso": {
+        "label": "See also: reading the recorder badge, which reports your correction rate over time.",
+        "path": "guides/recorder-badge"
+      }
+    }
   },
   "privacy": {
     "heading": "Privacy Policy",

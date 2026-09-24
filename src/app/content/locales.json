@@ -10,6 +10,9 @@
     { "path": "", "seoKey": "home", "localized": true, "priority": "1.0" },
     { "path": "pricing", "seoKey": "pricing", "localized": true, "priority": "0.8" },
     { "path": "automation", "seoKey": "automation", "localized": true, "priority": "0.6" },
+    { "path": "guides", "seoKey": "guides", "localized": true, "priority": "0.5" },
+    { "path": "guides/recorder-badge", "seoKey": "guidesRecorderBadge", "localized": true, "priority": "0.5" },
+    { "path": "guides/live-transcript-corrections", "seoKey": "guidesLiveTranscriptCorrections", "localized": true, "priority": "0.5" },
     { "path": "privacy", "seoKey": "privacy", "localized": false, "priority": "0.3" },
     { "path": "terms", "seoKey": "terms", "localized": false, "priority": "0.3" }
   ]

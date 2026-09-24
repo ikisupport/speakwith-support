@@ -19,6 +19,7 @@ import { LocaleService } from '../../services/locale.service';
 
         <nav class="nav__links" aria-label="Primary">
           <a [routerLink]="locale.path('')" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{ copy.nav.links.home }}</a>
+          <a [routerLink]="locale.path('guides')" routerLinkActive="active">{{ copy.nav.links.guides }}</a>
           <a [routerLink]="locale.path('privacy')" routerLinkActive="active">{{ copy.nav.links.privacy }}</a>
           <a [routerLink]="locale.path('terms')" routerLinkActive="active">{{ copy.nav.links.terms }}</a>
           <a [routerLink]="locale.path('pricing')" routerLinkActive="active">{{ copy.nav.links.pricing }}</a>

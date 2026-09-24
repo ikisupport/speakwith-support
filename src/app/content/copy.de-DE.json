@@ -4,6 +4,7 @@
     "wordmark": "SpeakWith",
     "links": {
       "home": "Start",
+      "guides": "Anleitungen",
       "privacy": "Datenschutz",
       "terms": "Nutzungsbedingungen",
       "pricing": "Preise"
@@ -20,6 +21,7 @@
       "links": {
         "home": "Start",
         "automation": "Automatisierung",
+        "guides": "Anleitungen",
         "privacy": "Datenschutz",
         "terms": "Nutzungsbedingungen",
         "newsletter": "Substack",
@@ -46,6 +48,18 @@
     "automation": {
       "title": "Automatisierung | SpeakWith",
       "description": "Starte, stoppe und steuere die Aufnahme in SpeakWith aus der Kommandozeile, aus Kurzbefehlen, Automator oder per Hotkey, über das URL-Schema speakwith:// oder AppleScript."
+    },
+    "guides": {
+      "title": "Anleitungen | SpeakWith",
+      "description": "Referenzanleitungen für SpeakWith auf dem Mac: was der Rekorder anzeigt und wie du es liest."
+    },
+    "guidesRecorderBadge": {
+      "title": "Das Rekorder-Badge lesen | SpeakWith",
+      "description": "Was die zwei Zeilen links in der Aufnahmeleiste von SpeakWith bedeuten: der Build, den du verwendest, und dein laufender Zähler für Wörter, Sätze, Zeichen und Korrekturraten."
+    },
+    "guidesLiveTranscriptCorrections": {
+      "title": "Live-Korrekturen im Transkript lesen | SpeakWith",
+      "description": "Was Farben, Unterstreichungen und die kleinen Badges an einer Zeile des Live-Diktats bedeuten: die Wörter, die du getippt oder hineingesprochen hast, die Korrekturen, die SpeakWith selbst vorgenommen hat, und die optionalen Prüfungen, die du einschalten kannst."
     },
     "privacy": {
       "title": "Privacy Policy | SpeakWith",
@@ -158,7 +172,9 @@
           "title": "Halluzinationssperre",
           "body": "Die Spracherkennung allein kann einen Atemzug nicht immer von einem Wort unterscheiden, und ein Erkenner, dem man einen vorlegt, liefert manchmal ein Wort, das du nie gesagt hast, etwa ein Yeah oder ein Okay. Die Sperre wartet auf den geschriebenen Text und blockiert dann Auslösungen, die nie als Sprache gemeint waren. Neue Füllwörter kommen auf die Sperrliste, sobald sie dir begegnen, damit sie die Seite nicht mehr erreichen."
         }
-      ]
+      ],
+      "moreLabel": "So sieht jede Korrektur in der Zeile aus.",
+      "morePath": "guides/live-transcript-corrections"
     },
     "screenshots": {
       "title": "Mehr aus der Mac-App",
@@ -283,7 +299,9 @@
         },
         {
           "q": "Wie genau ist die Transkription?",
-          "a": "Automatische Transkription ist sehr gut, aber nie perfekt. Namen und Fachbegriffe sind die üblichen Stellen, an denen kleine Fehler auftauchen. Dein Tagesdokument ist vollständig bearbeitbar, betrachte das Transkript also als ausgezeichneten ersten Entwurf, den du korrigieren kannst."
+          "a": "Automatische Transkription ist sehr gut, aber nie perfekt. Namen und Fachbegriffe sind die üblichen Stellen, an denen kleine Fehler auftauchen. Dein Tagesdokument ist vollständig bearbeitbar, betrachte das Transkript also als ausgezeichneten ersten Entwurf, den du korrigieren kannst.",
+          "moreLabel": "So meldet der Rekorder deine Korrekturrate.",
+          "morePath": "guides/recorder-badge"
         },
         {
           "q": "Verändert SpeakWith, wie ich spreche?",

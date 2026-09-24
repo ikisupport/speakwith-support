@@ -137,6 +137,9 @@ import { LocaleService } from '../../services/locale.service';
               </div>
             }
           </div>
+          <p class="liveedit__more">
+            <a [routerLink]="locale.path(copy.home.voiceExamples.morePath)">{{ copy.home.voiceExamples.moreLabel }}</a>
+          </p>
         </div>
       </section>
     }
@@ -244,6 +247,9 @@ import { LocaleService } from '../../services/locale.service';
           <details>
             <summary>{{ item.q }}</summary>
             <p>{{ item.a }}</p>
+            @if (item.morePath) {
+              <p><a [routerLink]="locale.path(item.morePath)">{{ item.moreLabel }}</a></p>
+            }
           </details>
         }
       </div>
@@ -502,6 +508,10 @@ import { LocaleService } from '../../services/locale.service';
       font-size: 1.06rem;
       margin: 0 auto 2rem;
       max-width: 42rem;
+    }
+    .liveedit__more {
+      margin: 1.6rem auto 0;
+      font-weight: 600;
     }
     .vemethods {
       margin-top: 2.4rem;

@@ -55,6 +55,26 @@ function pageRoutes(locale: LocaleDef): Routes {
         import('./pages/automation/automation.component').then(m => m.AutomationComponent),
       ...meta('automation'),
     },
+    {
+      path: 'guides',
+      loadComponent: () =>
+        import('./pages/guides/guides-index.component').then(m => m.GuidesIndexComponent),
+      ...meta('guides'),
+    },
+    {
+      path: 'guides/recorder-badge',
+      loadComponent: () =>
+        import('./pages/guides/recorder-badge-guide.component').then(m => m.RecorderBadgeGuideComponent),
+      ...meta('guides/recorder-badge'),
+    },
+    {
+      path: 'guides/live-transcript-corrections',
+      loadComponent: () =>
+        import('./pages/guides/live-transcript-corrections-guide.component').then(
+          m => m.LiveTranscriptCorrectionsGuideComponent,
+        ),
+      ...meta('guides/live-transcript-corrections'),
+    },
   ];
 
   if (isDefault) {

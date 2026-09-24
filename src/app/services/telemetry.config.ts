@@ -20,5 +20,15 @@ export const TELEMETRY_DECK_APP_ID = '83E0CDF5-9251-4B90-8169-5A0CE405F51C';
  * production traffic — local `ng serve` and any `*.local` bonjour name. Test
  * signals are only visible in the dashboard's Test Mode, so development never
  * pollutes the real numbers.
+ *
+ * The `support-websites` tmux environment serves this site on plain
+ * `localhost` (port 4201; the HeartBond support site gets 4202), so the
+ * `localhost` entry below already covers those previews — the port is not part
+ * of the hostname check, and no extra host needs listing per site.
  */
-export const TELEMETRY_TEST_HOSTS = ['localhost', '127.0.0.1', '[::1]', '0.0.0.0'];
+export const TELEMETRY_TEST_HOSTS = [
+  'localhost',
+  '127.0.0.1',
+  '[::1]',
+  '0.0.0.0',
+];

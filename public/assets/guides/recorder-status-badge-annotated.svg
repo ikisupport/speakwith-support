@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1220" viewBox="0 0 1600 1220" font-family="SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title>SpeakWith recorder status badge — annotated</title>
+  <desc>Vector recreation of the two-line RecorderBuildBadge on the SpeakWith record bar, with seven numbered callouts explaining each segment.</desc>
+  <!--
+    Maintainer note (not rendered; the poster is end-user facing):
+    - Edition on line 1 is the SKU label: Pro (engine build), DEBUG (dev build, line 1 drawn in red tint), MAS (App Store).
+    - Line 2 (the meter) is visible by default on Pro and DEBUG; the Synthetic profile hides it. About holds the toggle and reset.
+    - Sample values were taken from a Pro build on 2026-09-23 (SCR-20260923-kwie.png).
+    - Source of truth for strings: RecorderBuildBadge.swift, AppEngineBuildStamp.badgeLine, DictationStatisticsStore.
+  -->
+  <defs>
+    <style>
+      .field { fill: #1C1C1E; }
+      .chrome { fill: #2C2C2E; stroke: #3A3A3C; stroke-width: 2; }
+      .badge { font-family: "SF Mono", Menlo, "JetBrains Mono", monospace; font-size: 34px; fill: #8E8E93; white-space: pre; }
+      .title { font-size: 40px; font-weight: 700; fill: #F2F2F7; }
+      .subtitle { font-size: 22px; fill: #AEAEB2; }
+      .box { fill: #262628; stroke: #48484A; stroke-width: 1.5; }
+      .box-head { font-family: "SF Mono", Menlo, "JetBrains Mono", monospace; font-size: 22px; font-weight: 700; fill: #F2F2F7; }
+      .box-body { font-size: 18px; fill: #D1D1D6; }
+      .box-note { font-size: 16px; fill: #8E8E93; font-style: italic; }
+      .leader { stroke: #FF9F0A; stroke-width: 2.5; fill: none; }
+      .dot { fill: #FF9F0A; }
+      .pin { fill: #FF9F0A; }
+      .pin-num { font-size: 22px; font-weight: 700; fill: #1C1C1E; text-anchor: middle; }
+      .foot { font-size: 18px; fill: #8E8E93; }
+      .foot-b { font-size: 18px; fill: #AEAEB2; font-weight: 600; }
+    </style>
+  </defs>
+
+  <rect class="field" width="1600" height="1220"/>
+
+  <text class="title" x="80" y="82">Reading the recorder badge</text>
+  <text class="subtitle" x="80" y="118">Two lines at the left of the record bar. The first identifies the build you're running. The second tracks your dictation over time.</text>
+
+  <g id="callout-1">
+    <rect class="box" x="150" y="170" width="480" height="150" rx="10"/>
+    <text class="box-head" x="178" y="206">SpeakWith 2.14.0 Pro</text>
+    <text class="box-body" x="178" y="240">App name, version, and edition.</text>
+    <text class="box-body" x="178" y="266">The edition is Pro, or MAS if you installed</text>
+    <text class="box-body" x="178" y="292">SpeakWith from the Mac App Store.</text>
+    <path class="leader" d="M 505 320 L 505 405"/>
+    <circle class="pin" cx="505" cy="320" r="19"/>
+    <text class="pin-num" x="505" y="328">1</text>
+    <circle class="dot" cx="505" cy="405" r="5"/>
+  </g>
+  <g id="callout-2">
+    <rect class="box" x="720" y="170" width="560" height="150" rx="10"/>
+    <text class="box-head" x="748" y="206">(app=eng 20260923.10)</text>
+    <text class="box-body" x="748" y="240">The build stamp shared by the app and its engine:</text>
+    <text class="box-body" x="748" y="266">the build date, then the build number for that day.</text>
+    <text class="box-body" x="748" y="292">If the app and engine differ, this line shows both.</text>
+    <path class="leader" d="M 945 320 L 945 405"/>
+    <circle class="pin" cx="945" cy="320" r="19"/>
+    <text class="pin-num" x="945" y="328">2</text>
+    <circle class="dot" cx="945" cy="405" r="5"/>
+  </g>
+
+  <g id="badge">
+    <rect class="chrome" x="260" y="405" width="1080" height="150" rx="16"/>
+    <text class="badge" x="300" y="466" xml:space="preserve">SpeakWith 2.14.0 Pro (app=eng 20260923.10)</text>
+    <text class="badge" x="300" y="520" xml:space="preserve">9,834w · 1,770s · 51,368c · 0.7% wer · 0.1% st</text>
+  </g>
+
+  <g id="callout-3">
+    <path class="leader" d="M 361 555 L 361 600 L 260 600 L 260 650"/>
+    <circle class="dot" cx="361" cy="555" r="5"/>
+    <rect class="box" x="135" y="650" width="250" height="350" rx="10"/>
+    <circle class="pin" cx="260" cy="650" r="19"/>
+    <text class="pin-num" x="260" y="658">3</text>
+    <text class="box-head" x="160" y="700">9,834w</text>
+    <text class="box-body" x="160" y="734">Words you've dictated</text>
+    <text class="box-body" x="160" y="760">since the last reset.</text>
+    <text class="box-note" x="160" y="800">Counts across all</text>
+    <text class="box-note" x="160" y="824">sessions.</text>
+  </g>
+  <g id="callout-4">
+    <path class="leader" d="M 546 555 L 546 600 L 530 600 L 530 650"/>
+    <circle class="dot" cx="546" cy="555" r="5"/>
+    <rect class="box" x="405" y="650" width="250" height="350" rx="10"/>
+    <circle class="pin" cx="530" cy="650" r="19"/>
+    <text class="pin-num" x="530" y="658">4</text>
+    <text class="box-head" x="430" y="700">1,770s</text>
+    <text class="box-body" x="430" y="734">Sentences you've</text>
+    <text class="box-body" x="430" y="760">dictated since the</text>
+    <text class="box-body" x="430" y="786">last reset.</text>
+    <text class="box-note" x="430" y="826">The s stands for</text>
+    <text class="box-note" x="430" y="850">sentences, not seconds.</text>
+  </g>
+  <g id="callout-5">
+    <path class="leader" d="M 740 555 L 740 600 L 800 600 L 800 650"/>
+    <circle class="dot" cx="740" cy="555" r="5"/>
+    <rect class="box" x="675" y="650" width="250" height="350" rx="10"/>
+    <circle class="pin" cx="800" cy="650" r="19"/>
+    <text class="pin-num" x="800" y="658">5</text>
+    <text class="box-head" x="700" y="700">51,368c</text>
+    <text class="box-body" x="700" y="734">Characters you've</text>
+    <text class="box-body" x="700" y="760">dictated since the</text>
+    <text class="box-body" x="700" y="786">last reset.</text>
+    <text class="box-note" x="700" y="826">Same period as words</text>
+    <text class="box-note" x="700" y="850">and sentences.</text>
+  </g>
+  <g id="callout-6">
+    <path class="leader" d="M 955 555 L 955 600 L 1070 600 L 1070 650"/>
+    <circle class="dot" cx="955" cy="555" r="5"/>
+    <rect class="box" x="945" y="650" width="250" height="350" rx="10"/>
+    <circle class="pin" cx="1070" cy="650" r="19"/>
+    <text class="pin-num" x="1070" y="658">6</text>
+    <text class="box-head" x="970" y="700">0.7% wer</text>
+    <text class="box-body" x="970" y="734">Words you corrected,</text>
+    <text class="box-body" x="970" y="760">as a share of words</text>
+    <text class="box-body" x="970" y="786">dictated.</text>
+    <text class="box-note" x="970" y="826">Includes only the</text>
+    <text class="box-note" x="970" y="850">corrections you made,</text>
+    <text class="box-note" x="970" y="874">so the true rate may</text>
+    <text class="box-note" x="970" y="898">be higher.</text>
+  </g>
+  <g id="callout-7">
+    <path class="leader" d="M 1170 555 L 1170 600 L 1340 600 L 1340 650"/>
+    <circle class="dot" cx="1170" cy="555" r="5"/>
+    <rect class="box" x="1215" y="650" width="250" height="350" rx="10"/>
+    <circle class="pin" cx="1340" cy="650" r="19"/>
+    <text class="pin-num" x="1340" y="658">7</text>
+    <text class="box-head" x="1240" y="700">0.1% st</text>
+    <text class="box-body" x="1240" y="734">Words your special</text>
+    <text class="box-body" x="1240" y="760">terms corrected, as a</text>
+    <text class="box-body" x="1240" y="786">share of words dictated.</text>
+    <text class="box-note" x="1240" y="826">Special terms are words</text>
+    <text class="box-note" x="1240" y="850">you define: names,</text>
+    <text class="box-note" x="1240" y="874">terminology, and words</text>
+    <text class="box-note" x="1240" y="898">you pronounce your own</text>
+    <text class="box-note" x="1240" y="922">way. They correct for the</text>
+    <text class="box-note" x="1240" y="946">recognizer's biases so the</text>
+    <text class="box-note" x="1240" y="970">transcript matches what</text>
+    <text class="box-note" x="1240" y="994">you said.</text>
+  </g>
+
+  <line x1="80" y1="1050" x2="1520" y2="1050" stroke="#3A3A3C" stroke-width="1.5"/>
+  <text class="foot" x="80" y="1090"><tspan class="foot-b">Long-press the badge</tspan> to open About, where you can hide the tally, reset it, or see the correction rate measured on reviewed lines only.</text>
+  <text class="foot" x="80" y="1122">Both rates use the word count to their left as their denominator.</text>
+  <text class="foot" x="80" y="1154">Sample values shown. In the app, hover over any segment to see this explanation.</text>
+</svg>

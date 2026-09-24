@@ -31,6 +31,7 @@ import { LocaleService } from './services/locale.service';
         <nav class="footer__links" aria-label="Footer">
           <a [routerLink]="locale.path('')">{{ copy.app.footer.links.home }}</a>
           <a [routerLink]="locale.path('automation')">{{ copy.app.footer.links.automation }}</a>
+          <a [routerLink]="locale.path('guides')">{{ copy.app.footer.links.guides }}</a>
           <a [routerLink]="locale.path('privacy')">{{ copy.app.footer.links.privacy }}</a>
           <a [routerLink]="locale.path('terms')">{{ copy.app.footer.links.terms }}</a>
           <a [href]="copy.links.newsletter" target="_blank" rel="noopener noreferrer"

@@ -1,7 +1,10 @@
 -include .env
 export
 
-PORT     ?= 4200
+# 4201 matches the speakwith-web pane in the `support-websites` tmux
+# environment. Both support sites sit off Angular's default 4200 so a hand-run
+# `ng serve` never collides with a pane.
+PORT     ?= 4201
 
 .PHONY: install-deps start-local-support-website
 

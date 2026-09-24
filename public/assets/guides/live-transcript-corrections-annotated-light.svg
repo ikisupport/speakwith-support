@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1240" viewBox="0 0 1800 1240" font-family="SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title>SpeakWith live transcript corrections — annotated (light)</title>
+  <desc>Vector recreation of one settled live-dictation row in the SpeakWith recorder panel, with seven numbered callouts: the in-line marks for deleted, typed, dictated-in and plain words, and the three badges that trail the text.</desc>
+  <!--
+    Maintainer note (not rendered; the poster is end-user facing):
+    - In-line paint contract: TranscriptWordRuns.swift (typed = operator glyph color + same-hue wash;
+      spoken-into-line = body color + spoken-family wash + complementary dotted underline; deleted =
+      secondary + strikethrough + fade). Colors are the Playback prefs transcript_typed_text_color /
+      transcript_spoken_underline_color; the ones here are illustrative.
+    - Trailing badges, in render order: LiveDirectSpecialTermSubstitutionBadge (↦ from → to),
+      LiveDirectSpottedTermsBadge (⚡ heard → term), LiveDirectSecondPassPill (✓ agree). The judge marks
+      (✓· ✓̸ ↛) are deliberately not shown: the judge is not a marketed feature.
+      All in LiveDirectTranscriptItems.swift; render order in LiveDirectPanelView.settledRow.
+    - Label strings are pinned by LiveDirectTranscriptItemsTests.swift.
+    - Sample line, names and rules come from synthetic_corpus/ (prompts/special_terms.txt,
+      voice_exemplar_demo/, cast.yaml: Rachel Adler the portrait photographer); never private data.
+      The row is drawn wider than the app to fit every mark at once.
+  -->
+  <defs>
+    <style>
+      .field { fill: #F5F5F7; }
+      .chrome { fill: #FFFFFF; stroke: #C7C7CC; stroke-width: 2; }
+      .mono { font-family: "SF Mono", Menlo, "JetBrains Mono", monospace; white-space: pre; }
+      .row { font-size: 24px; fill: #1D1D1F; }
+      .badge { font-size: 18px; fill: #0071E3; }
+      .title { font-size: 40px; font-weight: 700; fill: #1D1D1F; }
+      .subtitle { font-size: 22px; fill: #515154; }
+      .box { fill: #FFFFFF; stroke: #D2D2D7; stroke-width: 1.5; }
+      .box-head { font-family: "SF Mono", Menlo, "JetBrains Mono", monospace; font-size: 22px; font-weight: 700; fill: #1D1D1F; }
+      .box-body { font-size: 18px; fill: #3A3A3C; }
+      .box-note { font-size: 16px; fill: #6E6E73; font-style: italic; }
+      .leader { stroke: #C93400; stroke-width: 2.5; fill: none; }
+      .dot { fill: #C93400; }
+      .pin { fill: #C93400; }
+      .pin-num { font-size: 22px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; }
+      .foot { font-size: 18px; fill: #515154; }
+      .foot-b { font-size: 18px; fill: #1D1D1F; font-weight: 600; }
+    </style>
+  </defs>
+
+  <rect class="field" width="1800" height="1240"/>
+
+  <text class="title" x="80" y="82">Reading live transcript corrections</text>
+  <text class="subtitle" x="80" y="118">One settled line of live dictation. Inside the line, color shows what you changed. After it, badges show what SpeakWith corrected and checked.</text>
+
+  <!-- In-line marks: callouts 1-3 above the row -->
+  <g id="callout-1">
+    <rect class="box" x="100" y="180" width="400" height="180" rx="10"/>
+    <text class="box-head" x="128" y="216">first</text>
+    <text class="box-body" x="128" y="250">A word you deleted. It stays visible,</text>
+    <text class="box-body" x="128" y="276">struck through and faded, like tracked</text>
+    <text class="box-body" x="128" y="302">changes in a word processor.</text>
+    <text class="box-note" x="128" y="340">A whole removed line is struck and dimmed.</text>
+    <path class="leader" d="M 300 360 L 300 420 L 295.6 420 L 295.6 590"/>
+    <circle class="pin" cx="300" cy="360" r="19"/>
+    <text class="pin-num" x="300" y="368">1</text>
+    <circle class="dot" cx="295.6" cy="590" r="5"/>
+  </g>
+  <g id="callout-2">
+    <rect class="box" x="540" y="180" width="400" height="180" rx="10"/>
+    <text class="box-head" x="568" y="216">three</text>
+    <text class="box-body" x="568" y="250">A word you typed in. It takes your</text>
+    <text class="box-body" x="568" y="276">typed-words color over a pale band of</text>
+    <text class="box-body" x="568" y="302">the same hue.</text>
+    <text class="box-note" x="568" y="340">Here it replaced the misheard "tree".</text>
+    <path class="leader" d="M 740 360 L 740 450 L 382 450 L 382 590"/>
+    <circle class="pin" cx="740" cy="360" r="19"/>
+    <text class="pin-num" x="740" y="368">2</text>
+    <circle class="dot" cx="382" cy="590" r="5"/>
+  </g>
+  <g id="callout-3">
+    <rect class="box" x="980" y="180" width="440" height="180" rx="10"/>
+    <text class="box-head" x="1008" y="216">then call</text>
+    <text class="box-body" x="1008" y="250">Words you dictated into the open line.</text>
+    <text class="box-body" x="1008" y="276">Normal text color, a pale band of the</text>
+    <text class="box-body" x="1008" y="302">spoken-into-line color, and a dotted</text>
+    <text class="box-body" x="1008" y="328">underline in a complementary shade.</text>
+    <path class="leader" d="M 1200 360 L 1200 480 L 655.5999999999999 480 L 655.5999999999999 590"/>
+    <circle class="pin" cx="1200" cy="360" r="19"/>
+    <text class="pin-num" x="1200" y="368">3</text>
+    <circle class="dot" cx="655.5999999999999" cy="590" r="5"/>
+  </g>
+
+  <!-- The settled row -->
+  <g id="row">
+    <rect class="chrome" x="100" y="560" width="1640" height="130" rx="16"/>
+    <rect x="343" y="605" width="78" height="34" rx="5" fill="#32ADE6" fill-opacity="0.22"/>
+    <rect x="587.8" y="605" width="135.6" height="34" rx="5" fill="#AF52DE" fill-opacity="0.2"/>
+    <line x1="590.8" y1="637" x2="720.4" y2="637" stroke="#C93400" stroke-width="2.5" stroke-dasharray="2 4" stroke-linecap="round"/>
+    <text class="mono row" x="130" y="630" textLength="1065.6000000000001" lengthAdjust="spacing" xml:space="preserve">Edit the <tspan fill="#8E8E93" fill-opacity="0.7" text-decoration="line-through">first</tspan> <tspan fill="#0A7EA4">three</tspan> headshots, then call Aaliyah before Okafor's sitting.</text>
+    <text class="mono badge" x="1235.6000000000001" y="630" textLength="172.8" lengthAdjust="spacing" xml:space="preserve">↦ alia → Aaliyah</text>
+    <text class="mono badge" x="1432.4" y="630" textLength="205.20000000000002" lengthAdjust="spacing" xml:space="preserve">⚡ Akheffer → Okafor</text>
+    <text class="mono badge" x="1661.6000000000001" y="630" fill="#248A3D" xml:space="preserve">✓</text>
+  </g>
+
+  <!-- Plain words + badges: callouts 4-7 below the row -->
+  <g id="callout-4">
+    <path class="leader" d="M 497.20000000000005 690 L 497.20000000000005 720 L 400 720 L 400 760"/>
+    <circle class="dot" cx="497.20000000000005" cy="690" r="5"/>
+    <rect class="box" x="220" y="760" width="360" height="290" rx="10"/>
+    <circle class="pin" cx="400" cy="760" r="19"/>
+    <text class="pin-num" x="400" y="768">4</text>
+    <text class="box-head" x="245" y="810">headshots</text>
+    <text class="box-body" x="245" y="844">A plain word. The recognizer</text>
+    <text class="box-body" x="245" y="870">wrote it and nobody changed it,</text>
+    <text class="box-body" x="245" y="896">so it carries no color or band.</text>
+    <text class="box-note" x="245" y="936">Most words on most lines</text>
+    <text class="box-note" x="245" y="960">look like this.</text>
+  </g>
+  <g id="callout-5">
+    <path class="leader" d="M 1322.0000000000002 690 L 1322.0000000000002 730 L 790 730 L 790 760"/>
+    <circle class="dot" cx="1322.0000000000002" cy="690" r="5"/>
+    <rect class="box" x="600" y="760" width="380" height="290" rx="10"/>
+    <circle class="pin" cx="790" cy="760" r="19"/>
+    <text class="pin-num" x="790" y="768">5</text>
+    <text class="box-head" x="645" y="810">↦ alia → Aaliyah</text>
+    <text class="box-body" x="645" y="844">A rewrite from your Special Terms</text>
+    <text class="box-body" x="645" y="870">list: what was heard, then the</text>
+    <text class="box-body" x="645" y="896">name you wrote a rule for.</text>
+    <text class="box-note" x="645" y="936">Always on. Appears whenever</text>
+    <text class="box-note" x="645" y="960">a listed term was rewritten,</text>
+    <text class="box-note" x="645" y="984">whatever mode the recorder is in.</text>
+  </g>
+  <g id="callout-6">
+    <path class="leader" d="M 1535 690 L 1535 740 L 1200 740 L 1200 760"/>
+    <circle class="dot" cx="1535" cy="690" r="5"/>
+    <rect class="box" x="1020" y="760" width="360" height="290" rx="10"/>
+    <circle class="pin" cx="1200" cy="760" r="19"/>
+    <text class="pin-num" x="1200" y="768">6</text>
+    <text class="box-head" x="1045" y="810">⚡ Akheffer → Okafor</text>
+    <text class="box-body" x="1045" y="844">Voice Examples matched the sound</text>
+    <text class="box-body" x="1045" y="870">of a name you recorded, and the</text>
+    <text class="box-body" x="1045" y="896">line was corrected to it.</text>
+    <text class="box-note" x="1045" y="936">Without the bolt, the match</text>
+    <text class="box-note" x="1045" y="960">came from the name's spelling.</text>
+  </g>
+  <g id="callout-7">
+    <path class="leader" d="M 1667.0000000000002 690 L 1667.0000000000002 750 L 1590 750 L 1590 760"/>
+    <circle class="dot" cx="1667.0000000000002" cy="690" r="5"/>
+    <rect class="box" x="1420" y="760" width="340" height="290" rx="10"/>
+    <circle class="pin" cx="1590" cy="760" r="19"/>
+    <text class="pin-num" x="1590" y="768">7</text>
+    <text class="box-head" x="1445" y="810">✓</text>
+    <text class="box-body" x="1445" y="844">The second pass: a second</text>
+    <text class="box-body" x="1445" y="870">engine re-read the line and</text>
+    <text class="box-body" x="1445" y="896">heard the same words.</text>
+    <text class="box-note" x="1445" y="936">Only with diagnostics on.</text>
+    <text class="box-note" x="1445" y="960">… queued, ≠ heard something</text>
+    <text class="box-note" x="1445" y="984">else, ? nothing came back.</text>
+  </g>
+
+  <line x1="80" y1="1100" x2="1720" y2="1100" stroke="#D2D2D7" stroke-width="1.5"/>
+  <text class="foot" x="80" y="1140"><tspan class="foot-b">Badges trail the text.</tspan> There is no reserved column, so a line with nothing to report looks exactly like every other line.</text>
+  <text class="foot" x="80" y="1172">Colors for typed and dictated-in words are yours to choose under Settings, Playback. The line is a sample; the app draws it narrower.</text>
+  <text class="foot" x="80" y="1204">In the app, hover over any badge to read the full explanation.</text>
+</svg>
