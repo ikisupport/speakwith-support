@@ -79,9 +79,17 @@ import { ThemeService } from '../../services/theme.service';
       font-weight: 600;
     }
 
-    .corr-html table {
-      display: block;
+    /* The wrapper owns the horizontal scroll so a wide row scrolls inside the
+       column, and the table keeps real table layout. min-width:0 keeps the
+       wrapper shrinkable if a flex or grid ancestor is ever introduced above. */
+    .corr-html {
       overflow-x: auto;
+      max-width: 100%;
+      min-width: 0;
+    }
+
+    .corr-html table {
+      display: table;
       width: 100%;
       border-collapse: collapse;
       margin: 0.4rem 0 1rem;
@@ -100,14 +108,11 @@ import { ThemeService } from '../../services/theme.service';
       font-weight: 700;
     }
 
-    .corr-html td:first-child {
-      white-space: nowrap;
-    }
-
     .corr-html code {
       font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
       font-size: 0.95em;
       color: var(--accent);
+      overflow-wrap: anywhere;
     }
 
     .corr-html p {

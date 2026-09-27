@@ -30,7 +30,7 @@
       .box-head { font-family: "SF Mono", Menlo, "JetBrains Mono", monospace; font-size: 22px; font-weight: 700; fill: #F2F2F7; }
       .box-body { font-size: 18px; fill: #D1D1D6; }
       .box-note { font-size: 16px; fill: #8E8E93; font-style: italic; }
-      .leader { stroke: #FF9F0A; stroke-width: 2.5; fill: none; }
+      .leader { stroke: #FF9F0A; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; opacity: 0.85; }
       .dot { fill: #FF9F0A; }
       .pin { fill: #FF9F0A; }
       .pin-num { font-size: 22px; font-weight: 700; fill: #1C1C1E; text-anchor: middle; }
@@ -52,7 +52,7 @@
     <text class="box-body" x="128" y="276">struck through and faded, like tracked</text>
     <text class="box-body" x="128" y="302">changes in a word processor.</text>
     <text class="box-note" x="128" y="340">A whole removed line is struck and dimmed.</text>
-    <path class="leader" d="M 300 360 L 300 420 L 295.6 420 L 295.6 590"/>
+    <path class="leader" d="M 300.0 360.0 L 300.0 417.8 Q 300.0 420.0 297.8 420.0 L 297.8 420.0 Q 295.6 420.0 295.6 422.2 L 295.6 590.0"/>
     <circle class="pin" cx="300" cy="360" r="19"/>
     <text class="pin-num" x="300" y="368">1</text>
     <circle class="dot" cx="295.6" cy="590" r="5"/>
@@ -64,7 +64,7 @@
     <text class="box-body" x="568" y="276">typed-words color over a pale band of</text>
     <text class="box-body" x="568" y="302">the same hue.</text>
     <text class="box-note" x="568" y="340">Here it replaced the misheard "tree".</text>
-    <path class="leader" d="M 740 360 L 740 450 L 382 450 L 382 590"/>
+    <path class="leader" d="M 740.0 360.0 L 740.0 432.0 Q 740.0 450.0 722.0 450.0 L 400.0 450.0 Q 382.0 450.0 382.0 468.0 L 382.0 590.0"/>
     <circle class="pin" cx="740" cy="360" r="19"/>
     <text class="pin-num" x="740" y="368">2</text>
     <circle class="dot" cx="382" cy="590" r="5"/>
@@ -76,7 +76,7 @@
     <text class="box-body" x="1008" y="276">Normal text color, a pale band of the</text>
     <text class="box-body" x="1008" y="302">spoken-into-line color, and a dotted</text>
     <text class="box-body" x="1008" y="328">underline in a complementary shade.</text>
-    <path class="leader" d="M 1200 360 L 1200 480 L 655.5999999999999 480 L 655.5999999999999 590"/>
+    <path class="leader" d="M 1200.0 360.0 L 1200.0 462.0 Q 1200.0 480.0 1182.0 480.0 L 673.6 480.0 Q 655.6 480.0 655.6 498.0 L 655.6 590.0"/>
     <circle class="pin" cx="1200" cy="360" r="19"/>
     <text class="pin-num" x="1200" y="368">3</text>
     <circle class="dot" cx="655.5999999999999" cy="590" r="5"/>
@@ -96,7 +96,7 @@
 
   <!-- Plain words + badges: callouts 4-7 below the row -->
   <g id="callout-4">
-    <path class="leader" d="M 497.20000000000005 690 L 497.20000000000005 720 L 400 720 L 400 760"/>
+    <path class="leader" d="M 497.2 690.0 L 497.2 705.0 Q 497.2 720.0 482.2 720.0 L 418.0 720.0 Q 400.0 720.0 400.0 738.0 L 400.0 760.0"/>
     <circle class="dot" cx="497.20000000000005" cy="690" r="5"/>
     <rect class="box" x="220" y="760" width="360" height="290" rx="10"/>
     <circle class="pin" cx="400" cy="760" r="19"/>
@@ -109,7 +109,7 @@
     <text class="box-note" x="245" y="960">look like this.</text>
   </g>
   <g id="callout-5">
-    <path class="leader" d="M 1322.0000000000002 690 L 1322.0000000000002 730 L 790 730 L 790 760"/>
+    <path class="leader" d="M 1322.0 690.0 L 1322.0 712.0 Q 1322.0 730.0 1304.0 730.0 L 805.0 730.0 Q 790.0 730.0 790.0 745.0 L 790.0 760.0"/>
     <circle class="dot" cx="1322.0000000000002" cy="690" r="5"/>
     <rect class="box" x="600" y="760" width="380" height="290" rx="10"/>
     <circle class="pin" cx="790" cy="760" r="19"/>
@@ -123,7 +123,7 @@
     <text class="box-note" x="645" y="984">whatever mode the recorder is in.</text>
   </g>
   <g id="callout-6">
-    <path class="leader" d="M 1535 690 L 1535 740 L 1200 740 L 1200 760"/>
+    <path class="leader" d="M 1535.0 690.0 L 1535.0 722.0 Q 1535.0 740.0 1517.0 740.0 L 1210.0 740.0 Q 1200.0 740.0 1200.0 750.0 L 1200.0 760.0"/>
     <circle class="dot" cx="1535" cy="690" r="5"/>
     <rect class="box" x="1020" y="760" width="360" height="290" rx="10"/>
     <circle class="pin" cx="1200" cy="760" r="19"/>
@@ -136,7 +136,7 @@
     <text class="box-note" x="1045" y="960">came from the name's spelling.</text>
   </g>
   <g id="callout-7">
-    <path class="leader" d="M 1667.0000000000002 690 L 1667.0000000000002 750 L 1590 750 L 1590 760"/>
+    <path class="leader" d="M 1667.0 690.0 L 1667.0 732.0 Q 1667.0 750.0 1649.0 750.0 L 1595.0 750.0 Q 1590.0 750.0 1590.0 755.0 L 1590.0 760.0"/>
     <circle class="dot" cx="1667.0000000000002" cy="690" r="5"/>
     <rect class="box" x="1420" y="760" width="340" height="290" rx="10"/>
     <circle class="pin" cx="1590" cy="760" r="19"/>

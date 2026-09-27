@@ -20,7 +20,7 @@
       .box-head { font-family: "SF Mono", Menlo, "JetBrains Mono", monospace; font-size: 22px; font-weight: 700; fill: #1D1D1F; }
       .box-body { font-size: 18px; fill: #3A3A3C; }
       .box-note { font-size: 16px; fill: #6E6E73; font-style: italic; }
-      .leader { stroke: #C93400; stroke-width: 2.5; fill: none; }
+      .leader { stroke: #C93400; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; opacity: 0.85; }
       .dot { fill: #C93400; }
       .pin { fill: #C93400; }
       .pin-num { font-size: 22px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; }
@@ -64,7 +64,7 @@
   </g>
 
   <g id="callout-3">
-    <path class="leader" d="M 361 555 L 361 600 L 260 600 L 260 650"/>
+    <path class="leader" d="M 361.0 555.0 L 361.0 582.0 Q 361.0 600.0 343.0 600.0 L 278.0 600.0 Q 260.0 600.0 260.0 618.0 L 260.0 650.0"/>
     <circle class="dot" cx="361" cy="555" r="5"/>
     <rect class="box" x="135" y="650" width="250" height="350" rx="10"/>
     <circle class="pin" cx="260" cy="650" r="19"/>
@@ -76,7 +76,7 @@
     <text class="box-note" x="160" y="824">sessions.</text>
   </g>
   <g id="callout-4">
-    <path class="leader" d="M 546 555 L 546 600 L 530 600 L 530 650"/>
+    <path class="leader" d="M 546.0 555.0 L 546.0 592.0 Q 546.0 600.0 538.0 600.0 L 538.0 600.0 Q 530.0 600.0 530.0 608.0 L 530.0 650.0"/>
     <circle class="dot" cx="546" cy="555" r="5"/>
     <rect class="box" x="405" y="650" width="250" height="350" rx="10"/>
     <circle class="pin" cx="530" cy="650" r="19"/>
@@ -89,7 +89,7 @@
     <text class="box-note" x="430" y="850">sentences, not seconds.</text>
   </g>
   <g id="callout-5">
-    <path class="leader" d="M 740 555 L 740 600 L 800 600 L 800 650"/>
+    <path class="leader" d="M 740.0 555.0 L 740.0 582.0 Q 740.0 600.0 758.0 600.0 L 782.0 600.0 Q 800.0 600.0 800.0 618.0 L 800.0 650.0"/>
     <circle class="dot" cx="740" cy="555" r="5"/>
     <rect class="box" x="675" y="650" width="250" height="350" rx="10"/>
     <circle class="pin" cx="800" cy="650" r="19"/>
@@ -102,7 +102,7 @@
     <text class="box-note" x="700" y="850">and sentences.</text>
   </g>
   <g id="callout-6">
-    <path class="leader" d="M 955 555 L 955 600 L 1070 600 L 1070 650"/>
+    <path class="leader" d="M 955.0 555.0 L 955.0 582.0 Q 955.0 600.0 973.0 600.0 L 1052.0 600.0 Q 1070.0 600.0 1070.0 618.0 L 1070.0 650.0"/>
     <circle class="dot" cx="955" cy="555" r="5"/>
     <rect class="box" x="945" y="650" width="250" height="350" rx="10"/>
     <circle class="pin" cx="1070" cy="650" r="19"/>
@@ -117,7 +117,7 @@
     <text class="box-note" x="970" y="898">be higher.</text>
   </g>
   <g id="callout-7">
-    <path class="leader" d="M 1170 555 L 1170 600 L 1340 600 L 1340 650"/>
+    <path class="leader" d="M 1170.0 555.0 L 1170.0 582.0 Q 1170.0 600.0 1188.0 600.0 L 1322.0 600.0 Q 1340.0 600.0 1340.0 618.0 L 1340.0 650.0"/>
     <circle class="dot" cx="1170" cy="555" r="5"/>
     <rect class="box" x="1215" y="650" width="250" height="350" rx="10"/>
     <circle class="pin" cx="1340" cy="650" r="19"/>

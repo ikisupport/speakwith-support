@@ -61,6 +61,10 @@
       "title": "Live-Korrekturen im Transkript lesen | SpeakWith",
       "description": "Was Farben, Unterstreichungen und die kleinen Badges an einer Zeile des Live-Diktats bedeuten: die Wörter, die du getippt oder hineingesprochen hast, die Korrekturen, die SpeakWith selbst vorgenommen hat, und die optionalen Prüfungen, die du einschalten kannst."
     },
+    "guidesStatusMonitor": {
+      "title": "Der schwebende Statusmonitor | SpeakWith",
+      "description": "Die kleine Pille, die SpeakWith beim Live-Diktat oben auf dem Bildschirm hält: was ihre fünf Modusfarben und Wörter bedeuten, warum sie weder Menüleiste noch Dock braucht, und wann das Dock-Badge als Ersatz dient."
+    },
     "privacy": {
       "title": "Privacy Policy | SpeakWith",
       "description": "Your words are yours. SpeakWith keeps recordings, transcripts, and documents on your device: no account, no tracking in the app, no cloud upload. This website counts anonymous visits only."

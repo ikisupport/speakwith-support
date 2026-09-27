@@ -68,6 +68,12 @@ function pageRoutes(locale: LocaleDef): Routes {
       ...meta('guides/recorder-badge'),
     },
     {
+      path: 'guides/status-monitor',
+      loadComponent: () =>
+        import('./pages/guides/status-monitor-guide.component').then(m => m.StatusMonitorGuideComponent),
+      ...meta('guides/status-monitor'),
+    },
+    {
       path: 'guides/live-transcript-corrections',
       loadComponent: () =>
         import('./pages/guides/live-transcript-corrections-guide.component').then(

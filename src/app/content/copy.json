@@ -68,6 +68,10 @@
       "title": "Reading live transcript corrections | SpeakWith",
       "description": "What the colors, underlines, and small badges on a live dictation line mean: the words you typed or spoke into it, the corrections SpeakWith made on its own, and the optional checks you can switch on."
     },
+    "guidesStatusMonitor": {
+      "title": "The floating status monitor | SpeakWith",
+      "description": "The small pill SpeakWith keeps on top while you dictate: what its five mode colors and words mean, why it needs neither the menu bar nor the Dock, and when the Dock badge stands in for it."
+    },
     "privacy": {
       "title": "Privacy Policy | SpeakWith",
       "description": "Your words are yours. SpeakWith keeps recordings, transcripts, and documents on your device: no account, no tracking in the app, no cloud upload. This website counts anonymous visits only."
@@ -607,6 +611,12 @@
           "body": "The marks on a settled line of live dictation: which words you changed, which corrections SpeakWith made, and what its optional checks found.",
           "path": "guides/live-transcript-corrections",
           "cta": "Read the guide"
+        },
+        {
+          "title": "The floating status monitor",
+          "body": "The small pill that stays on top while you dictate: which mode you are in, in a color and a word, with the menu bar and the Dock out of the way.",
+          "path": "guides/status-monitor",
+          "cta": "Read the guide"
         }
       ]
     },
@@ -614,8 +624,8 @@
       "eyebrow": "Guides",
       "heading": "Reading the recorder badge",
       "intro": "At the left of the record bar on the Mac, SpeakWith shows two short lines in a small monospaced typeface. The first identifies the build you are running. The second tracks your dictation over time. The diagram below walks through each segment.",
-      "diagramDark": "assets/guides/recorder-status-badge-annotated.svg?v=20260923",
-      "diagramLight": "assets/guides/recorder-status-badge-annotated-light.svg?v=20260923",
+      "diagramDark": "assets/guides/recorder-status-badge-annotated.svg?v=20260926",
+      "diagramLight": "assets/guides/recorder-status-badge-annotated-light.svg?v=20260926",
       "diagramAlt": "Annotated diagram of the SpeakWith recorder badge. Line one reads SpeakWith 2.14.0 Pro (app=eng 20260923.10): the app name, version, edition, and the build stamp shared by the app and its engine. Line two reads 9,834w, 1,770s, 51,368c, 0.7% wer, 0.1% st: words, sentences, and characters dictated since the last reset, then the share of words you corrected and the share your special terms corrected.",
       "sections": [
         {
@@ -657,12 +667,84 @@
         "path": "guides/live-transcript-corrections"
       }
     },
+    "statusMonitor": {
+      "eyebrow": "Guides",
+      "heading": "The floating status monitor",
+      "intro": "While the live-direct mic is held, SpeakWith can float a small pill above every other window. It shows one colored dot and one or two words: the mode you are in right now. You read it from across the room, or from the corner of your eye while you type in another app, without bringing SpeakWith forward. The diagram below shows the pill, its five modes, and the one thing it cannot replace.",
+      "diagramDark": "assets/guides/status-monitor-annotated.svg?v=20260926c",
+      "diagramLight": "assets/guides/status-monitor-annotated-light.svg?v=20260926c",
+      "diagramAlt": "Annotated diagram of the SpeakWith floating status monitor: a small rounded pill sitting over another app's window. It carries the SpeakWith mark, a blue dot, the words Type into app, and a smaller detail line reading Into open field. Below it, five smaller pills show the five modes with their colors: Recording in red, Type into app in blue, Voice pull in indigo, Listening in orange, and Monitoring in green, with a note that Listening is level mode and a hardware mute switch pauses and resumes it. A row of check marks reads Menu bar hidden, Dock hidden, SpeakWith in the background. At the bottom, three app icons carry small red Dock badges reading REC, TYPE, and a pause mark, captioned as the fallback.",
+      "sections": [
+        {
+          "heading": "What the pill shows",
+          "paragraphs": [
+            {
+              "text": "Four things, left to right. The SpeakWith mark, so you know whose badge it is when it is the only thing of ours on screen. A colored dot for the mode. The mode word beside the dot, because a color on its own is easy to misread and the word settles it. And, when there is something to add, a smaller detail line, for example when your words are going into an open text field."
+            },
+            {
+              "text": "The dot can pulse, fading in and out like the recording light in the sidebar: faster while recording or typing into another app, slower while listening. That is a separate switch, so you can keep the dot solid if a moving light in the corner of your eye is not what you want."
+            }
+          ]
+        },
+        {
+          "heading": "The five modes",
+          "paragraphs": [
+            {
+              "text": "Recording, in red: a take is running and going where it always goes, into your day document. Type into app, in blue: a take is running and being typed into whatever app is in front of you. Voice pull, in indigo: a take is running and a shell client is pulling the words instead. Listening, in orange: level mode standby, with the mic held and a take starting the moment you speak up. Monitoring, in green: the mic is held and metering, with no take running."
+            },
+            {
+              "text": "Blue against red is the comparison this pill exists to make easy. Before it, recording into your document and typing into another app looked the same from a distance, and finding out which one you were in meant switching to SpeakWith. Now a glance at the pill tells you whether your next sentence lands in your document or in the email you are looking at."
+            },
+            {
+              "text": "Listening is the mode to know about if your microphone has a hardware mute switch. Level mode watches the audio level rather than a button, so flipping the mute switch drops the level and pauses the recorder, and flipping it back resumes. No key, no click, no window to find: the orange dot tells you SpeakWith is waiting, and the pill going red tells you it heard you."
+            },
+            {
+              "text": "When more than one applies, the pill shows the one that matters most: Voice pull first, then Type into app, then Recording. It appears only in live-direct dictation. Batch capture, and the mic being off, show no pill at all."
+            }
+          ]
+        },
+        {
+          "heading": "Nothing else to keep on screen",
+          "paragraphs": [
+            {
+              "text": "The pill is its own small window. It takes no slot in the menu bar, needs no Dock, and never takes keyboard focus, so it cannot steal a keystroke from the app you are typing into. You can hide the menu bar and the Dock, put SpeakWith in the background, fill the screen with the app you are working in, and the pill is still there."
+            },
+            {
+              "text": "Drag it anywhere once and it stays put, on top of everything, until you power the mic off. Many people park it in a corner next to where their words are landing, so the mode and the text sit in one glance."
+            }
+          ]
+        },
+        {
+          "heading": "If you keep the Dock showing",
+          "paragraphs": [
+            {
+              "text": "The Dock badge is the fallback. SpeakWith's Dock icon reads REC while recording, TYPE while typing into another app, and a pause mark while listening in level mode. It is there whether or not the pill is, and it is enough if your Dock is always visible and you only need to know that a take is running."
+            },
+            {
+              "text": "What it cannot do is color-code the modes: macOS paints every Dock badge the same red, whatever the word inside it. That is the reason the floating monitor exists, and the reason it, not the badge, is the one to reach for when you type into other apps."
+            }
+          ]
+        },
+        {
+          "heading": "Turning it on",
+          "paragraphs": [
+            {
+              "text": "Settings, Dictation, under Type into app: Show mode indicator floats the pill; Pulse the mode indicator makes the dot breathe. Both are in the direct-download builds of SpeakWith. The Mac App Store build keeps the Dock badge."
+            }
+          ]
+        }
+      ],
+      "seeAlso": {
+        "label": "See also: reading the recorder badge, the two lines at the left of the record bar.",
+        "path": "guides/recorder-badge"
+      }
+    },
     "liveTranscriptCorrections": {
       "eyebrow": "Guides",
       "heading": "Reading live transcript corrections",
       "intro": "Once a line of live dictation settles, SpeakWith can mark it in two ways. Inside the line, color and underlines show which words you changed yourself. After the line, small badges show what SpeakWith corrected on its own and, if you have switched them on, what its extra checks found. Most lines carry no marks at all. The diagram below shows one line with every kind of mark on it.",
-      "diagramDark": "assets/guides/live-transcript-corrections-annotated.svg?v=20260924",
-      "diagramLight": "assets/guides/live-transcript-corrections-annotated-light.svg?v=20260924",
+      "diagramDark": "assets/guides/live-transcript-corrections-annotated.svg?v=20260926",
+      "diagramLight": "assets/guides/live-transcript-corrections-annotated-light.svg?v=20260926",
       "diagramAlt": "Annotated diagram of one settled live dictation line in SpeakWith, a portrait photographer's note between sittings. The line reads: Edit the first three headshots, then call Aaliyah before Okafor's sitting. The word first is struck through and faded because it was deleted. The word three is in the typed-words color over a pale band because it was typed in to replace tree. The words then call sit on a pale band with a dotted underline because they were dictated into the line. The word headshots is plain because the recognizer wrote it. Three badges trail the text: a Special Terms rewrite reading alia to Aaliyah, a Voice Examples correction reading Akheffer to Okafor, and a green check mark from the second pass.",
       "sections": [
         {
