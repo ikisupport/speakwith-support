@@ -183,3 +183,57 @@ p {
 .prose li {
   margin-bottom: 0.35rem;
 }
+
+/* Home page section layout (global — keeps home component under style budget) */
+app-home .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  margin-bottom: 0.7rem;
+}
+
+app-home .eyebrow--accent {
+  color: var(--accent);
+}
+
+app-home .home-band {
+  padding: 3.8rem 0 3.6rem;
+  max-width: 1100px;
+  width: min(94%, 1100px);
+}
+
+app-home .home-band--center {
+  text-align: center;
+}
+
+app-home .home-band--moat {
+  padding: 3.4rem 0;
+}
+
+app-home .shot-alpha {
+  filter: drop-shadow(1px 0 0 var(--shot-edge)) drop-shadow(-1px 0 0 var(--shot-edge))
+    drop-shadow(0 1px 0 var(--shot-edge)) drop-shadow(0 -1px 0 var(--shot-edge))
+    drop-shadow(var(--shadow));
+}
+
+app-home .home-narrow {
+  padding: 3.8rem 0;
+  max-width: 44rem;
+}
+
+app-home .home-narrow p {
+  color: var(--text-dim);
+  font-size: 1.06rem;
+}
+
+app-home .home-narrow h2 {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 620px) {
+  app-home .home-band {
+    padding: 2.8rem 0;
+  }
+}

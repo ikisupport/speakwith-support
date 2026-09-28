@@ -33,10 +33,10 @@ import { LocaleService } from '../../services/locale.service';
 
     <!-- Hero screenshot -->
     <section id="moments" class="heroshot">
-      <div class="container heroshot__inner">
+      <div class="container home-band home-band--center">
         <h2 class="heroshot__title">{{ copy.home.moments.title }}</h2>
         <figure class="heroshot__figure">
-          <div class="heroshot__frame">
+          <div class="shot-alpha">
             <img class="heroshot__image" [src]="copy.home.moments.heroImage"
                  [alt]="copy.home.moments.heroAlt" loading="lazy" />
           </div>
@@ -47,7 +47,7 @@ import { LocaleService } from '../../services/locale.service';
 
     <!-- Two apps band: Mac studio + iOS companion as peers -->
     <section id="platforms" class="platforms">
-      <div class="container platforms__inner">
+      <div class="container home-band home-band--center">
         <p class="eyebrow eyebrow--accent">{{ copy.home.platforms.eyebrow }}</p>
         <h2 class="platforms__title">{{ copy.home.platforms.title }}</h2>
         <p class="platforms__sub">{{ copy.home.platforms.sub }}</p>
@@ -70,7 +70,7 @@ import { LocaleService } from '../../services/locale.service';
 
     <!-- Type into app demo: separate band with stable #type-into-app anchor -->
     <section [id]="copy.home.typeIntoApp.id" class="typedemo">
-      <div class="container heroshot__inner">
+      <div class="container home-band home-band--center">
         <p class="eyebrow eyebrow--accent">{{ copy.home.typeIntoApp.eyebrow }}</p>
         <h2 class="heroshot__title">{{ copy.home.typeIntoApp.heading }}</h2>
         <p class="typedemo__lead">{{ copy.home.typeIntoApp.lead }}</p>
@@ -91,7 +91,7 @@ import { LocaleService } from '../../services/locale.service';
 
     <!-- Live edit: fix or remove lines while recording -->
     <section [id]="copy.home.liveEdit.id" class="liveedit">
-      <div class="container liveedit__inner">
+      <div class="container home-band home-band--center">
         <p class="eyebrow eyebrow--accent">{{ copy.home.liveEdit.eyebrow }}</p>
         <h2 class="liveedit__title">{{ copy.home.liveEdit.heading }}</h2>
         <p class="liveedit__lead">{{ copy.home.liveEdit.lead }}</p>
@@ -111,7 +111,7 @@ import { LocaleService } from '../../services/locale.service';
     <!-- Voice examples: record readings of a tricky term so it is easier to spot. -->
     @if (showVoiceExamples) {
       <section [id]="copy.home.voiceExamples.id" class="typedemo">
-        <div class="container liveedit__inner">
+        <div class="container home-band home-band--center">
           <p class="eyebrow eyebrow--accent">{{ copy.home.voiceExamples.eyebrow }}</p>
           <h2 class="liveedit__title">{{ copy.home.voiceExamples.heading }}</h2>
           <p class="liveedit__lead">{{ copy.home.voiceExamples.intro }}</p>
@@ -120,7 +120,7 @@ import { LocaleService } from '../../services/locale.service';
               <h3 class="vemethod__title">{{ copy.home.voiceExamples.exampleTitle }}</h3>
               <p class="vemethod__body">{{ copy.home.voiceExamples.lead }}</p>
               <figure class="vemethod__figure">
-                <div class="liveedit__frame">
+                <div class="shot-alpha">
                   <img
                     class="liveedit__image"
                     [src]="copy.home.voiceExamples.item.src"
@@ -150,7 +150,7 @@ import { LocaleService } from '../../services/locale.service';
          showScreenshots to true once the real shots are dropped in. -->
     @if (showScreenshots) {
       <section id="screenshots" class="shots">
-        <div class="container shots__inner">
+        <div class="container home-band">
           <h2 class="shots__title">{{ copy.home.screenshots.title }}</h2>
           <p class="shots__subtitle">{{ copy.home.screenshots.subtitle }}</p>
           <div class="shots__list">
@@ -169,7 +169,7 @@ import { LocaleService } from '../../services/locale.service';
 
     <!-- Your words stay on your Mac. Plain files, no account. -->
     <section class="moat">
-      <div class="container moat__inner">
+      <div class="container home-band home-band--moat">
         <h2 class="moat__title">{{ copy.home.moat.title }}</h2>
         <div class="moat__grid">
           @for (item of copy.home.moat.items; track item.label) {
@@ -188,7 +188,7 @@ import { LocaleService } from '../../services/locale.service';
 
     <!-- Inclusive band: you don't have to talk to AI -->
     <section class="band band--inclusive">
-      <div class="container band__inner">
+      <div class="container home-narrow">
         <p class="eyebrow eyebrow--accent">{{ copy.home.inclusive.eyebrow }}</p>
         <h2>{{ copy.home.inclusive.heading }}</h2>
         <p>{{ copy.home.inclusive.p1 }}</p>
@@ -211,7 +211,7 @@ import { LocaleService } from '../../services/locale.service';
 
     <!-- Parallel-input value prop (Part C) -->
     <section class="band">
-      <div class="container band__inner">
+      <div class="container home-narrow">
         <p class="eyebrow eyebrow--accent">{{ copy.home.parallel.eyebrow }}</p>
         <h2>{{ copy.home.parallel.heading }}</h2>
         <p [innerHTML]="copy.home.parallel.p1Html"></p>
@@ -221,7 +221,7 @@ import { LocaleService } from '../../services/locale.service';
 
     <!-- Speaking rhythm / training effect -->
     <section class="rhythm">
-      <div class="container rhythm__inner">
+      <div class="container home-narrow">
         <p class="eyebrow eyebrow--accent">{{ copy.home.rhythm.eyebrow }}</p>
         <h2>{{ copy.home.rhythm.heading }}</h2>
         <p>{{ copy.home.rhythm.p1 }}</p>
@@ -231,7 +231,7 @@ import { LocaleService } from '../../services/locale.service';
 
     <!-- Home base across parallel work -->
     <section class="band">
-      <div class="container band__inner">
+      <div class="container home-narrow">
         <p class="eyebrow eyebrow--accent">{{ copy.home.homebase.eyebrow }}</p>
         <h2>{{ copy.home.homebase.heading }}</h2>
         <p>{{ copy.home.homebase.p1 }}</p>
@@ -278,19 +278,6 @@ import { LocaleService } from '../../services/locale.service';
     </section>
   `,
   styles: [`
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.78rem;
-      font-weight: 700;
-      color: var(--text-dim);
-      margin-bottom: 0.7rem;
-    }
-
-    .eyebrow--accent {
-      color: var(--accent);
-    }
-
     /* Hero */
     .hero {
       background: var(--hero-grad);
@@ -328,35 +315,10 @@ import { LocaleService } from '../../services/locale.service';
       color: var(--text-dim);
     }
 
-    .button--coming-soon {
-      opacity: 0.5;
-      cursor: default;
-      pointer-events: none;
-    }
-
-    /* Secondary button: a filled peer to the primary, in a surface tone */
-    .button--secondary {
-      background: var(--surface-2);
-      color: var(--text);
-      border-color: var(--rule);
-    }
-
-    .button--secondary:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
     /* Hero screenshot — one big full-app frame */
     .heroshot {
       background: var(--surface);
       border-bottom: 1px solid var(--rule);
-    }
-
-    .heroshot__inner {
-      padding: 3.8rem 0 3.6rem;
-      max-width: 1100px;
-      width: min(94%, 1100px);
-      text-align: center;
     }
 
     .heroshot__title {
@@ -368,27 +330,7 @@ import { LocaleService } from '../../services/locale.service';
       margin: 0;
     }
 
-    /* hero.png carries its own rounded corners in its alpha channel: a 48 px
-       transparent radius at 2880 wide, which scales with the rendered image.
-       A CSS border-radius here is a fixed px value, so it can only match that
-       curve at exactly one viewport width — everywhere else the frame's arc
-       cuts across the shot's transparent corner and the band shows through as
-       a light crescent. That mismatch IS the corner artifact. So the shot is
-       the shape: no radius, no border, no clip. drop-shadow follows the alpha
-       outline; box-shadow would trace the rect and reintroduce the arc. */
-    .heroshot__frame {
-      /* The window's own chrome is a single device pixel at the PNG's outer
-         edge; at the ~0.38x downscale the browser resamples it out of
-         existence. Redraw it at render resolution with 0-blur drop-shadows,
-         which follow the shot's alpha silhouette — a border or box-shadow
-         would trace the wrapper rect and re-cut the rounded corners. */
-      filter: drop-shadow(1px 0 0 var(--shot-edge)) drop-shadow(-1px 0 0 var(--shot-edge))
-        drop-shadow(0 1px 0 var(--shot-edge)) drop-shadow(0 -1px 0 var(--shot-edge))
-        drop-shadow(var(--shadow));
-    }
-
-    /* Full 16:10 shot from canonical_screenshots/hero.png (public/ → site root);
-       contain shows the whole window, never clipped. */
+    /* Alpha-corner PNGs use .shot-alpha (global) — no CSS radius/border on the frame. */
     .heroshot__image {
       display: block;
       width: 100%;
@@ -409,13 +351,6 @@ import { LocaleService } from '../../services/locale.service';
     .platforms {
       background: var(--surface);
       border-bottom: 1px solid var(--rule);
-    }
-
-    .platforms__inner {
-      padding: 3.8rem 0 3.6rem;
-      max-width: 1100px;
-      width: min(94%, 1100px);
-      text-align: center;
     }
 
     .platforms__title {
@@ -494,12 +429,6 @@ import { LocaleService } from '../../services/locale.service';
       background: var(--surface);
       border-bottom: 1px solid var(--rule);
     }
-    .liveedit__inner {
-      padding: 3.8rem 0 3.6rem;
-      max-width: 1100px;
-      width: min(94%, 1100px);
-      text-align: center;
-    }
     .liveedit__title {
       margin-bottom: 0.6rem;
     }
@@ -561,19 +490,6 @@ import { LocaleService } from '../../services/locale.service';
       background: var(--surface-2);
     }
 
-    /* voice-examples.png has the same baked-in alpha corners as hero.png, so
-       the same mismatch applies here. The corrections-grid PNGs are opaque and
-       still need the drawn frame, hence the instance-scoped override. */
-    .vemethod__figure .liveedit__frame {
-      border-radius: 0;
-      overflow: visible;
-      border: 0;
-      background: none;
-      box-shadow: none;
-      filter: drop-shadow(1px 0 0 var(--shot-edge)) drop-shadow(-1px 0 0 var(--shot-edge))
-        drop-shadow(0 1px 0 var(--shot-edge)) drop-shadow(0 -1px 0 var(--shot-edge))
-        drop-shadow(var(--shadow));
-    }
     .liveedit__image {
       display: block;
       width: 100%;
@@ -592,12 +508,6 @@ import { LocaleService } from '../../services/locale.service';
     .shots {
       background: var(--surface);
       border-bottom: 1px solid var(--rule);
-    }
-
-    .shots__inner {
-      padding: 3.8rem 0 3.6rem;
-      max-width: 1100px;
-      width: min(94%, 1100px);
     }
 
     .shots__title {
@@ -663,12 +573,6 @@ import { LocaleService } from '../../services/locale.service';
     .moat {
       background: var(--bg);
       border-bottom: 1px solid var(--rule);
-    }
-
-    .moat__inner {
-      padding: 3.4rem 0 3.4rem;
-      max-width: 1100px;
-      width: min(94%, 1100px);
     }
 
     .moat__title {
@@ -748,38 +652,10 @@ import { LocaleService } from '../../services/locale.service';
       border-bottom: 1px solid var(--rule);
     }
 
-    .band__inner {
-      padding: 3.8rem 0;
-      max-width: 44rem;
-    }
-
-    .band__inner p {
-      color: var(--text-dim);
-      font-size: 1.06rem;
-    }
-
-    .band__inner h2 {
-      margin-bottom: 1rem;
-    }
-
     /* Speaking rhythm band */
     .rhythm {
       background: var(--bg);
       border-bottom: 1px solid var(--rule);
-    }
-
-    .rhythm__inner {
-      padding: 3.8rem 0;
-      max-width: 44rem;
-    }
-
-    .rhythm__inner h2 {
-      margin-bottom: 1rem;
-    }
-
-    .rhythm__inner p {
-      color: var(--text-dim);
-      font-size: 1.06rem;
     }
 
     /* FAQ */
@@ -885,12 +761,6 @@ import { LocaleService } from '../../services/locale.service';
       }
       .hero__inner {
         padding: 3rem 0 2.8rem;
-      }
-      .heroshot__inner,
-      .platforms__inner,
-      .liveedit__inner,
-      .moat__inner {
-        padding: 2.8rem 0;
       }
     }
   `]

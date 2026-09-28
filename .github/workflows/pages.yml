@@ -55,14 +55,8 @@ jobs:
           touch _site/.nojekyll
           ls -la _site
 
-      - name: Block disallowed attribution in published files
-        run: |
-          set -euo pipefail
-          if grep -RIn --include='*.html' --include='*.js' -E -i \
-            'made[[:space:]]+with[[:space:]]+cursor|built[[:space:]]+with[[:space:]]+cursor' _site; then
-            echo "::error::Published HTML/JS must not contain disallowed tooling attribution."
-            exit 1
-          fi
+      - name: Verify publish artifact (static site only)
+        run: node scripts/verify-publish-artifact.mjs _site
 
       - name: Push to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4

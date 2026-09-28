@@ -45,12 +45,17 @@ testem.log
 Thumbs.db
 /DO_NOT_COMMIT
 
-# Local environment
+# Local environment (never in the public repo or on the live site)
 .env
-
-# Private copy-generation tooling — kept in the monorepo, never published here
-/generate
-/.vscode
-/install_log
 /.env.example
+
+# Local dev orchestration — machine/tmux specifics; use npm scripts in CI and README
 /Makefile
+/install_log
+/.vscode
+
+# Private copy-generation tooling — monorepo-only; never committed or deployed
+/generate
+
+# CI publish staging (npm run check:publish)
+/_site

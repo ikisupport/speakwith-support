@@ -9,6 +9,7 @@
     "locales": "node scripts/resolve-locales.mjs",
     "sitemap": "node scripts/generate-sitemap.mjs",
     "check:copy": "node scripts/check-copy-parity.mjs",
+    "check:publish": "npm run build -- --base-href / && rm -rf _site && mkdir -p _site && cp -r dist/speakwith-support/browser/* _site/ && cp _site/404/index.html _site/404.html && touch _site/.nojekyll && node scripts/verify-publish-artifact.mjs _site",
     "build": "ng build",
     "prewatch": "node scripts/resolve-locales.mjs",
     "watch": "ng build --watch --configuration development",
