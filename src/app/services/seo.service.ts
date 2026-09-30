@@ -28,7 +28,7 @@ export class SeoService {
   private static readonly ORIGIN = 'https://speakwith.ikisystems.com';
   private static readonly SITE_NAME = 'SpeakWith';
   private static readonly DEFAULT_DESCRIPTION =
-    'SpeakWith is a local-first voice recorder for Mac and iOS that turns daily speaking into a searchable, organised daily document. Tuned for speech and dictation, not music or ambient sound.';
+    'SpeakWith is a local-first voice recorder for Mac that turns daily speaking into a searchable, organised daily document. Tuned for speech and dictation, not music or ambient sound. An iOS companion is on the way.';
   // Shared 1200x630 social card (public/og-image.png).
   private static readonly DEFAULT_IMAGE = `${SeoService.ORIGIN}/og-image.png`;
 

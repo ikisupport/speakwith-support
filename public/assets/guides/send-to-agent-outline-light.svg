@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="560" viewBox="0 0 1280 560" font-family="SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title>Outline topics for chapter 4</title>
+  <desc>Two Outline rows with filled circles, The storm scene and Names to keep, and one empty circle left out of the message.</desc>
+  <defs><style>
+      .title { font-size: 32px; font-weight: 700; fill: #1D1D1F; }
+      .sub { font-size: 18px; fill: #515154; }
+      .card { fill: #FFFFFF; stroke: #D2D2D7; stroke-width: 1.5; }
+      .head { font-size: 20px; font-weight: 650; fill: #1D1D1F; }
+      .lbl { font-size: 16px; fill: #515154; }
+      .val { font-size: 16px; fill: #1D1D1F; }
+      .strong { font-size: 17px; font-weight: 650; fill: #1D1D1F; }
+      .body { font-size: 15px; fill: #515154; }
+      .off { font-size: 17px; fill: #8E8E93; }
+      .offbody { font-size: 15px; fill: #8E8E93; }
+      .cap { font-size: 15px; fill: #6E6E73; }
+      .tile { fill: #F5F5F7; stroke: #E5E5EA; stroke-width: 1; }
+      .field { fill: #FFFFFF; stroke: #C7C7CC; stroke-width: 1.5; }
+      .box { fill: #FFFFFF; stroke: #D2D2D7; stroke-width: 1.5; }
+      .box-head { font-size: 18px; font-weight: 700; fill: #1D1D1F; }
+      .box-body { font-size: 16px; fill: #3A3A3C; }
+      .doc-h { font-size: 18px; font-weight: 700; fill: #1D1D1F; }
+      .doc { font-size: 16px; fill: #1D1D1F; }
+      .pin-num { font-size: 20px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; }
+      .mono { font-family: "SF Mono", ui-monospace, Menlo, monospace; font-size: 15px; fill: #1D1D1F; }
+      .mono-dim { font-family: "SF Mono", ui-monospace, Menlo, monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; fill: #6E6E73; }
+      .mono-prompt { font-family: "SF Mono", ui-monospace, Menlo, monospace; font-size: 15px; font-weight: 650; fill: #248A3D; }
+      .mono-h { font-family: "SF Mono", ui-monospace, Menlo, monospace; font-size: 15px; font-weight: 700; fill: #1D1D1F; }
+    </style></defs>
+  <rect width="1280" height="560" fill="#F5F5F7"/>
+  <text class="title" x="64" y="72">In the Outline</text>
+  <text class="sub" x="64" y="108">A filled circle is sent. An empty circle stays behind.</text>
+  <rect class="card" x="64" y="140" width="700" height="360" rx="12"/>
+  <text class="head" x="88" y="178">Outline</text>
+  <circle cx="112" cy="220" r="9" fill="#007AFF"/><path d="M 107.5 220 l 3 3.2 l 6.5 -7" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="strong" x="140" y="226">The storm scene</text>
+  <text class="body" x="140" y="252">The keeper hears the lantern glass crack. The light goes out.</text>
+  <circle cx="112" cy="310" r="9" fill="#007AFF"/><path d="M 107.5 310 l 3 3.2 l 6.5 -7" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="strong" x="140" y="316">Names to keep</text>
+  <text class="body" x="140" y="342">The keeper is Mara Voss. Her brother is Eli Voss.</text>
+  <circle cx="112" cy="400" r="8" fill="none" stroke="#8E8E93" stroke-width="1.6"/>
+  <text class="off" x="140" y="406">The lamp oil</text>
+  <text class="offbody" x="140" y="432">Dictated, but the circle is empty, so it is not sent.</text>
+  <g>
+    <rect class="box" x="820" y="168" width="400" height="96" rx="10"/>
+    <circle cx="842" cy="196" r="16" fill="#C93400"/>
+    <text x="842" y="203" class="pin-num">1</text>
+    <text class="box-head" x="868" y="202">Filled circle</text>
+    <text class="box-body" x="868" y="230">These two topics become the message.</text>
+  </g>
+  <g>
+    <rect class="box" x="820" y="300" width="400" height="96" rx="10"/>
+    <circle cx="842" cy="328" r="16" fill="#C93400"/>
+    <text x="842" y="335" class="pin-num">2</text>
+    <text class="box-head" x="868" y="334">Empty circle</text>
+    <text class="box-body" x="868" y="362">The lamp oil stays in the Outline.</text>
+  </g>
+</svg>

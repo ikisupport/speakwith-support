@@ -81,6 +81,18 @@ function pageRoutes(locale: LocaleDef): Routes {
         ),
       ...meta('guides/live-transcript-corrections'),
     },
+    {
+      path: 'guides/send-to-agent',
+      loadComponent: () =>
+        import('./pages/guides/send-to-agent-guide.component').then(m => m.SendToAgentGuideComponent),
+      ...meta('guides/send-to-agent'),
+    },
+    {
+      path: 'technical/agent-lists',
+      loadComponent: () =>
+        import('./pages/technical/agent-lists.component').then(m => m.AgentListsComponent),
+      ...meta('technical/agent-lists'),
+    },
   ];
 
   if (isDefault) {

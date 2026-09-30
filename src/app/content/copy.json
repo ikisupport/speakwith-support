@@ -46,7 +46,7 @@
   "seo": {
     "home": {
       "title": "SpeakWith Support: Your spoken ideas, captured as a daily document",
-      "description": "SpeakWith is a local-first voice recorder for Mac and iOS that turns daily speaking into a searchable, organised daily document. Tuned for speech and dictation, not music or ambient sound."
+      "description": "SpeakWith is a local-first voice recorder for Mac that turns daily speaking into a searchable, organised daily document. Tuned for speech and dictation, not music or ambient sound. An iOS companion is on the way."
     },
     "pricing": {
       "title": "Pricing | SpeakWith",
@@ -72,6 +72,14 @@
       "title": "The floating status monitor | SpeakWith",
       "description": "The small pill SpeakWith keeps on top while you dictate: what its five mode colors and words mean, why it needs neither the menu bar nor the Dock, and when the Dock badge stands in for it."
     },
+    "guidesSendToAgent": {
+      "title": "Send to agent | SpeakWith",
+      "description": "Where your checked Outline topics go when you press Send to agent: the Agent tab, from Destination through Send to agent, plus the Agent program, Arguments, and Project folder rows in Settings under Agent."
+    },
+    "technicalAgentLists": {
+      "title": "Project and model lists | SpeakWith",
+      "description": "How a program on your Mac fills the Project menu and the Model menu on the Agent tab of SpeakWith from Gumroad: one local call for the folders, and two ways to hand over the models."
+    },
     "privacy": {
       "title": "Privacy Policy | SpeakWith",
       "description": "Your words are yours. SpeakWith keeps recordings, transcripts, and documents on your device: no account, no tracking in the app, no cloud upload. This website counts anonymous visits only."
@@ -88,12 +96,12 @@
     "hero": {
       "eyebrow": "A voice-driven daily document",
       "headline": "Subtitles for your thoughts.",
-      "lead": "Speak your day into a clean markdown file on Mac or iOS. Read it, edit it, share it. It works on its own, and it opens in VS Code, Obsidian, or any tool you point at it.",
+      "lead": "Speak your day into a clean markdown file on your Mac. Read it, edit it, share it. It works on its own, and it opens in VS Code, Obsidian, or any tool you point at it.",
       "leadSecondary": "Use the recorder switch or a hotkey. Talk, and the words land where the cursor is.",
       "ctaPrimary": "Try SpeakWith free",
       "ctaSecondary": "iOS: Coming Soon",
       "ctaGhost": "See how it works",
-      "note": "Works on Mac and iOS. Recording and transcription happen on your device. No account required.",
+      "note": "Available on Mac today. An iOS companion is on the way. Recording and transcription happen on your device. No account required.",
       "ctaDemo": "Watch it type"
     },
     "moments": {
@@ -345,12 +353,16 @@
         {
           "q": "Is this an audio recorder?",
           "a": "It is a voice recorder. SpeakWith is tuned for speech and dictation, the way a person actually talks, so it does its best work on the human voice. It is not built for capturing music or ambient sound."
+        },
+        {
+          "q": "Is the Mac download signed and checked by Apple?",
+          "a": "Yes. The direct Mac download is signed with our Apple Developer ID, so the apps you install match the build we shipped. Before upload, Apple's notary service scans that submission for known malicious software and for code-signing problems, and we staple the ticket so Gatekeeper can check it. That scan is not an App Store review, and it is not a promise that the software is free of malware."
         }
       ]
     },
     "download": {
       "heading": "Get SpeakWith",
-      "body": "SpeakWith runs on Mac and iOS — it needs a Mac with Apple Silicon (M1 or later) running macOS 26 (Tahoe) or later, or an iPhone on iOS 26 or later. Download it, grant microphone access, and your first recording is a click away.",
+      "body": "SpeakWith runs on a Mac with Apple Silicon (M1 or later) and macOS 26 (Tahoe) or later. Download it, grant microphone access, and your first recording is a click away. An iOS companion for iPhone on iOS 26 or later is on the way.",
       "ctaPrimary": "Subscribe to SpeakWith for Mac",
       "ctaSecondary": "iOS: Coming Soon",
       "ctaBuyOnce": "Prefer to buy once? Get a one-time license instead."
@@ -459,7 +471,7 @@
         {
           "lead": "Direct (Gumroad)",
           "heading": "Subscribe, or buy once",
-          "body": "The direct build unlocks with a Gumroad membership, billed monthly, that you can cancel any time. If you would rather own it outright, a one-time license is still available. Either way you get the complete, unsandboxed version of SpeakWith, including the switch that types your dictation into other applications. Not sure yet? Start with a 14-day free trial.",
+          "body": "The direct build unlocks with a Gumroad membership, billed monthly, that you can cancel any time. If you would rather own it outright, a one-time license is still available. Either way you get the complete, unsandboxed version of SpeakWith, including the switch that types your dictation into other applications. Not sure yet? Start with a 14-day free trial. The Mac download is signed with our Developer ID and checked by Apple's notary service before we upload it.",
           "ctaLabel": "Subscribe",
           "ctaUrl": "https://ikisystems.gumroad.com/l/dcltnn",
           "ctaSecondaryLabel": "Buy once",
@@ -617,6 +629,18 @@
           "body": "The small pill that stays on top while you dictate: which mode you are in, in a color and a word, with the menu bar and the Dock out of the way.",
           "path": "guides/status-monitor",
           "cta": "Read the guide"
+        },
+        {
+          "title": "Send to agent",
+          "body": "Checked Outline topics leave from the Agent tab. Destination sits at the top, Send to agent follows it, and Settings holds a program you name yourself.",
+          "path": "guides/send-to-agent",
+          "cta": "Read the guide"
+        },
+        {
+          "title": "Project and model lists",
+          "body": "For people who write programs: how a program on your Mac fills the Project menu and the Model menu on the Agent tab, and what each choice looks like there.",
+          "path": "technical/agent-lists",
+          "cta": "Read the page"
         }
       ]
     },
@@ -819,6 +843,303 @@
       "seeAlso": {
         "label": "See also: reading the recorder badge, which reports your correction rate over time.",
         "path": "guides/recorder-badge"
+      }
+    },
+    "sendToAgent": {
+      "eyebrow": "Guides",
+      "heading": "Send to agent",
+      "intro": "Send to agent takes the topics you have checked in the Outline and hands them, as one message, to a coding agent running on your Mac. The agent is connected over ACP, the Agent Client Protocol, and that connection is what lets SpeakWith ask the agent which folder to work in and which model to use, so you choose both from a menu instead of typing them. This page follows one job from the Outline through to the message the agent receives.",
+      "examplesLabel": "In this job",
+      "diagramDark": "assets/guides/send-to-agent-annotated.svg?v=20260929a",
+      "diagramLight": "assets/guides/send-to-agent-annotated-light.svg?v=20260929a",
+      "diagramAlt": "Annotated diagram of the two panels behind Send to agent in SpeakWith. The upper panel is the Destination block from the Agent tab: three labelled rows reading Agent, Project, and Model, each with a pop-up menu, and an Add folder button beside Project. Beneath it the Project menu is shown opened, with a Recent section listing folders and when they were last used, and an All projects section listing the rest. The lower panel is the program block of Settings under Agent: an Agent program row showing a file path with a Change button and a small minus, an Arguments text field, and a Project folder row showing a folder path with the same Change button and minus. Numbered callouts name each control.",
+      "sections": [
+        {
+          "heading": "Before you start",
+          "paragraphs": [
+            {
+              "text": "You need one coding agent installed on this Mac, such as Claude Code, Cursor, Codex, or Gemini. If you use a session manager that publishes its projects to SpeakWith, have it running. That is all. If the agent you want is not one SpeakWith finds on its own, see Point SpeakWith at a program of your own, near the end of this page."
+            }
+          ],
+          "steps": []
+        },
+        {
+          "heading": "The job",
+          "paragraphs": [
+            {
+              "text": "This morning you dictated a session about chapter 4 of a book. The manuscript lives in a folder named lighthouse-book. Two Outline rows belong in that chapter. A third row, The lamp oil, stays unchecked."
+            }
+          ],
+          "figureDark": "assets/guides/send-to-agent-outline.svg?v=20260929b",
+          "figureLight": "assets/guides/send-to-agent-outline-light.svg?v=20260929b",
+          "figureAlt": "The Outline with three rows. The storm scene and Names to keep have filled circles. Names to keep says the keeper is Mara Voss. The lamp oil has an empty circle and is not sent.",
+          "figureWidth": 1280,
+          "figureHeight": 560,
+          "steps": []
+        },
+        {
+          "heading": "Send checked topics to an agent",
+          "paragraphs": [
+            {
+              "text": "Destination is already set in the figure at the top of this page. On that same tab, the two topics, the instruction, and Send to agent sit together."
+            }
+          ],
+          "figureDark": "assets/guides/send-to-agent-block.svg?v=20260929c",
+          "figureLight": "assets/guides/send-to-agent-block-light.svg?v=20260929c",
+          "figureAlt": "The Agent tab, ready to send. The status line reads Claude Code, lighthouse-book, default model. A caption says 2 topics will be sent as one prompt turn. Preview tiles show The storm scene and Names to keep. The instruction names chapters/04-the-storm.md and forbids a new character. A blue Send to agent button is under that box. Callouts name the status line, the caption, Optional instruction, and the button.",
+          "figureWidth": 1480,
+          "figureHeight": 860,
+          "steps": [
+            {
+              "title": "Check the topics.",
+              "text": "In the Outline, tick each topic you want the agent to see. Until at least one is checked, Send to agent stays disabled, and the Agent tab reads: Check topics in the Outline to preview what the agent will receive.",
+              "examples": [
+                "Tick The storm scene and Names to keep. Leave The lamp oil empty.",
+                "Clear every circle and Send to agent stays disabled."
+              ]
+            },
+            {
+              "title": "Open the Agent tab.",
+              "text": "In the sidebar, choose Agent, beside Session, Feedback, and Stores. Destination is at the top of that tab. Send to agent follows it.",
+              "examples": [
+                "Open Agent, beside Session, Feedback, and Stores. The tooltip reads: Hand the selected session to an agent."
+              ]
+            },
+            {
+              "title": "Pick an Agent.",
+              "text": "Open the Agent menu and choose who should receive the topics. The status line starts with that name, or reads not configured when nothing resolves.",
+              "examples": [
+                "Choose Claude Code. The status line on the Agent tab starts with that name, then lighthouse-book, then default model.",
+                "If nothing resolves, that same line reads not configured."
+              ]
+            },
+            {
+              "title": "Pick a Project.",
+              "text": "Open the Project menu and choose the folder the agent should work in, from Recent, All projects, or Add folder…. The middle of the status line should name that folder.",
+              "examples": [
+                "Choose lighthouse-book from Recent. It shows 2 h ago because the manuscript was open then.",
+                "field-notes is also on the poster at the top of this page. It is research, so it is the wrong folder.",
+                "If lighthouse-book is missing, Add folder… selects it. The middle of the status line should then read lighthouse-book."
+              ]
+            },
+            {
+              "title": "Leave Model alone, or choose one.",
+              "text": "Model stays on Agent default until the agent has reported its own list. The status line then ends in default model, so the agent picks for itself.",
+              "examples": [
+                "Leave Model on Agent default. The status line ends in default model, and Claude Code chooses.",
+                "Open the menu later only if you want a smaller model for a second pass on the same two topics."
+              ]
+            },
+            {
+              "title": "Add an instruction, if you like.",
+              "text": "On the Agent tab, the Optional instruction box is where you say what to do with the topics. Leave it empty and only the checked topics are sent.",
+              "examples": [
+                "The box on the Agent tab names chapters/04-the-storm.md and forbids a new character. The two topics do not say either of those things.",
+                "Leave the box empty and both topics still go, with no file to create."
+              ]
+            },
+            {
+              "title": "Press Send to agent.",
+              "text": "Nothing is handed over until this press. Read the topics caption on the Agent tab first, and treat that line as the confirmation.",
+              "examples": [
+                "The caption reads: 2 topics will be sent as one prompt turn. Press Send to agent only after you see that line. The next section is the message that press builds."
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "The message",
+          "paragraphs": [
+            {
+              "text": "With a session manager, that press builds one prompt. SpeakWith opens with a lead line, your instruction follows, then each checked topic under its own heading."
+            }
+          ],
+          "figureDark": "assets/guides/send-to-agent-message.svg?v=20260929b",
+          "figureLight": "assets/guides/send-to-agent-message-light.svg?v=20260929b",
+          "figureAlt": "The prompt handed to Claude Code. It opens with the SpeakWith lead line, then the instruction to write chapter 4 as chapters/04-the-storm.md, then The storm scene and Names to keep. Names to keep says the keeper is Mara Voss and the supply boat is Cormorant.",
+          "figureWidth": 1100,
+          "figureHeight": 760,
+          "steps": []
+        },
+        {
+          "heading": "The terminal",
+          "paragraphs": [
+            {
+              "text": "Open a session opens this window on lighthouse-book. Claude Code runs the prompt from the section above and writes chapters/04-the-storm.md in that folder."
+            }
+          ],
+          "figureDark": "assets/guides/send-to-agent-terminal.svg?v=20260929e",
+          "figureLight": "assets/guides/send-to-agent-terminal-light.svg?v=20260929e",
+          "figureAlt": "A terminal window titled lighthouse-book, Claude Code. It is running the SpeakWith prompt, then shows Wrote chapters/04-the-storm.md. The file contains the storm scene and the keeper Mara Voss, taken from the notes.",
+          "figureWidth": 1480,
+          "figureHeight": 840,
+          "steps": []
+        },
+        {
+          "heading": "Rows you may or may not see",
+          "paragraphs": [
+            {
+              "text": "Two more rows appear under Destination only when there is a choice to make."
+            }
+          ],
+          "steps": [
+            {
+              "title": "Terminal.",
+              "text": "This row is there only when this Mac has more than one terminal app. Choose which one should open.",
+              "examples": [
+                "This job needs a window you can watch. With one terminal app installed, Destination has no Terminal row, and that app is the one that opens on lighthouse-book.",
+                "With two terminal apps installed, pick the one that should show Claude Code creating chapters/04-the-storm.md."
+              ]
+            },
+            {
+              "title": "Runs in.",
+              "text": "You see Runs in only for SpeakWith's own bridge. Open a session watches a terminal window; Answer here puts the reply on the Agent tab.",
+              "examples": [
+                "Choose Open a session. The terminal figure is Claude Code writing the chapter in lighthouse-book.",
+                "Answer here would put the draft on the Agent tab instead. On that path SpeakWith declines a request to create chapters/04-the-storm.md."
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "If you press Send twice",
+          "paragraphs": [],
+          "steps": [
+            {
+              "title": "With your session manager chosen.",
+              "text": "A second press on the same topics is held: the Agent tab says they were already sent, and Send again repeats them. The Sent ledger, lower on that tab, keeps the list.",
+              "examples": [
+                "Three minutes later the same two topics are still checked. The Agent tab reads: Already sent 3 minutes ago. Send again is what would hand chapter 4 over a second time.",
+                "The Sent ledger, lower on the Agent tab, lists that send. Before the first press it read: Nothing sent yet from this tab."
+              ]
+            },
+            {
+              "title": "With any other agent chosen.",
+              "text": "Every press is a fresh message, with no hold. The Outline checkboxes are still what gets sent.",
+              "examples": [
+                "This job used the session manager, so the hold above applies. An agent that is not that manager does not hold.",
+                "On that other path, a second press sends The storm scene and Names to keep again. Uncheck Names to keep first if the repeat should carry only the scene."
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Point SpeakWith at a program of your own",
+          "paragraphs": [
+            {
+              "text": "Skip this section when Claude Code is already in the Agent menu. When the agent that should write the chapter is missing from that menu, Settings, under Agent, holds the three rows for a program of your own: Agent program, Arguments, and Project folder. How such a program fills the Project menu and the Model menu is on its own page."
+            }
+          ],
+          "linkLabel": "Read how a program fills the Project and Model lists.",
+          "linkPath": "technical/agent-lists",
+          "steps": []
+        },
+        {
+          "heading": "What the agent can and cannot do",
+          "paragraphs": [
+            {
+              "text": "In this job you chose Open a session, so Claude Code runs in a terminal in lighthouse-book and writes the chapter there. Answer here is the other choice: the draft comes back onto the Agent tab, and SpeakWith declines a request, made through that connection, to change files on the Mac."
+            }
+          ],
+          "steps": []
+        }
+      ],
+      "seeAlso": {
+        "label": "See also: Project and model lists, how a program of your own fills the Project menu and the Model menu.",
+        "path": "technical/agent-lists"
+      }
+    }
+  },
+  "technical": {
+    "agentLists": {
+      "eyebrow": "Technical",
+      "heading": "Project and model lists",
+      "intro": "On the Agent tab of SpeakWith from Gumroad, Destination has three menus: Agent, Project, and Model. SpeakWith does not go looking for folders or models on its own. A program on your Mac tells it what to list, over one local address, and this page shows what that program sends. It is written for people who write such a program. If you only use the Agent tab, the Send to agent guide is the page to read.",
+      "sections": [
+        {
+          "heading": "Before you start",
+          "paragraphs": [
+            {
+              "text": "The Engine that ships with SpeakWith from Gumroad keeps a small catalog service at http://127.0.0.1:9896. It starts with the Engine and stays up when you close the SpeakWith window, so a list pushed while the window is closed is there when it opens again. The service listens on this Mac only. Nothing on this page leaves the machine.",
+              "isHtml": false
+            },
+            {
+              "text": "<p>Check that it is listening before you write anything:</p><pre><code>curl http://127.0.0.1:9896/health</code></pre><p>The answer is <code>{\"ok\":true,\"role\":\"agent_catalog\"}</code>. Anything else means the Engine is not running, and every call on this page needs it. Start the Engine and try again.</p>",
+              "isHtml": true
+            }
+          ]
+        },
+        {
+          "heading": "Projects",
+          "paragraphs": [
+            {
+              "text": "The Project menu is filled by one call. It replaces the list you sent last time with the one you send now, so send everything you want listed, every time.",
+              "isHtml": false
+            },
+            {
+              "text": "<p>Send the folders you know, whole, under a name of your own as the publisher:</p><pre><code>curl -X PUT http://127.0.0.1:9896/catalog/menus \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"v\": 1,\n    \"publisher\": \"my-session-manager\",\n    \"projects\": [\n      {\n        \"id\": \"lighthouse-book\",\n        \"path\": \"/Users/you/Writing/lighthouse-book\",\n        \"label\": \"lighthouse-book\",\n        \"last\": 1790720000,\n        \"section\": \"recent\"\n      },\n      {\n        \"id\": \"field-notes\",\n        \"path\": \"/Users/you/Research/field-notes\",\n        \"label\": \"field-notes\",\n        \"section\": \"other\"\n      }\n    ]\n  }'</code></pre><p>Each row has an <code>id</code>, a <code>path</code>, and a <code>label</code>. The label is the text in the menu. Two fields are optional: <code>last</code> is the Unix time, in seconds, the folder was last worked in, and <code>section</code> is <code>recent</code> or <code>other</code>.</p>",
+              "isHtml": true
+            },
+            {
+              "text": "What you see on the Agent tab: rows marked recent, with a last time, appear under Recent, each with how long ago that was, such as 2 h ago. Every other row appears under All projects. When nothing was picked before, the first row is picked for you. A pick that is still in the new list stays picked.",
+              "isHtml": false
+            },
+            {
+              "text": "A folder someone adds from the app, through Add folder… under Project, is not yours to replace.",
+              "isHtml": false
+            },
+            {
+              "text": "<p>SpeakWith sends that folder as one call of its own and marks the row manual, so your next menus push leaves it in the list. You can make the same call yourself. The folder has to exist on this Mac.</p><pre><code>curl -X POST http://127.0.0.1:9896/catalog/projects \\\n  -H 'Content-Type: application/json' \\\n  -d '{ \"path\": \"/Users/you/Writing/lighthouse-book\", \"label\": \"lighthouse-book\" }'</code></pre>",
+              "isHtml": true
+            },
+            {
+              "text": "The menus push replaces your projects and your own model rows. If you send destinations, it replaces those as a whole. It does not touch model rows another agent advertised, and it never changes a pick that is still a row.",
+              "isHtml": false
+            }
+          ]
+        },
+        {
+          "heading": "Models",
+          "paragraphs": [
+            {
+              "text": "The Model menu reads Agent default until some list arrives. There are two ways to hand one over. Use the first when your program is the one filling the Project menu anyway. Use the second when your program is the agent itself, connected over ACP.",
+              "isHtml": false
+            },
+            {
+              "text": "<p><strong>On the same menus push.</strong></p>",
+              "isHtml": true
+            },
+            {
+              "text": "<p>Add a <code>models</code> list to the menus push above. Each row has an <code>id</code>, the value your program understands when the pick is handed back, and a <code>label</code>, the text in the menu. A <code>description</code> is optional.</p><pre><code>\"models\": [\n  { \"id\": \"claude-opus-5-5\", \"label\": \"Opus 5.5\" },\n  { \"id\": \"claude-sonnet-5-5\", \"label\": \"Sonnet 5.5\", \"description\": \"Faster, for a second pass\" }\n]</code></pre><p>Rows sent this way are filed under your publisher. Your next push replaces them and leaves the rows other agents advertised alone.</p>",
+              "isHtml": true
+            },
+            {
+              "text": "<p><strong>On session/new.</strong></p>",
+              "isHtml": true
+            },
+            {
+              "text": "<p>An agent connected over ACP answers <code>session/new</code>. Put the models in that answer as a <code>configOptions</code> entry whose <code>category</code> is <code>model</code>. SpeakWith reads it and stores the list under that agent with <code>PUT /catalog/models/{agent}</code>. Your program never calls the catalog for models at all.</p><pre><code>{\n  \"sessionId\": \"s-1\",\n  \"configOptions\": [\n    {\n      \"id\": \"model\",\n      \"category\": \"model\",\n      \"currentValue\": \"claude-opus-5-5\",\n      \"options\": [\n        { \"value\": \"claude-opus-5-5\", \"name\": \"Opus 5.5\", \"description\": \"Most capable\" },\n        { \"value\": \"claude-sonnet-5-5\", \"name\": \"Sonnet 5.5\" }\n      ]\n    }\n  ]\n}</code></pre><p>Each <code>value</code> becomes the model id and each <code>name</code> the label; leave <code>name</code> out and the value is shown. <code>currentValue</code> names the row the agent is on right now. SpeakWith also reads the older <code>models.availableModels</code> shape, but when an answer carries both, the <code>configOptions</code> entry wins.</p>",
+              "isHtml": true
+            },
+            {
+              "text": "What you see on the Agent tab: with the first way, the Model menu fills as soon as your push lands, before any agent has been contacted. With the second, it fills once that agent has answered session/new, which happens when a session is opened with it. Either way the status line ends in default model until someone picks a row, and a pick that is still in the list stays picked across pushes.",
+              "isHtml": false
+            }
+          ]
+        },
+        {
+          "heading": "Reading it back",
+          "paragraphs": [
+            {
+              "text": "<p>Every write answers with the whole catalog as it now stands, so you never need a second call to see what your change settled to. You can also read it at any time, and the answer includes the current pick as <code>selection</code>, with <code>agent</code>, <code>projectPath</code>, and <code>modelId</code>:</p><pre><code>curl http://127.0.0.1:9896/catalog</code></pre><p>To be told when something changes, open <code>http://127.0.0.1:9896/events</code>. It is a server-sent event stream with one <code>catalog</code> event per change. The event carries no detail; read the catalog again when it arrives.</p>",
+              "isHtml": true
+            }
+          ]
+        }
+      ],
+      "seeAlso": {
+        "label": "See also: Send to agent, the guide that follows one job from the Outline to the message the agent receives.",
+        "path": "guides/send-to-agent"
       }
     }
   },

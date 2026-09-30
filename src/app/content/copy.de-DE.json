@@ -39,7 +39,7 @@
   "seo": {
     "home": {
       "title": "SpeakWith Support: Deine gesprochenen Gedanken, festgehalten als Tagesdokument",
-      "description": "SpeakWith ist ein lokaler Sprachrekorder für Mac und iOS, der tägliches Sprechen in ein durchsuchbares, geordnetes Tagesdokument verwandelt. Abgestimmt auf Sprache und Diktat, nicht auf Musik oder Umgebungsgeräusche."
+      "description": "SpeakWith ist ein lokaler Sprachrekorder für den Mac, der tägliches Sprechen in ein durchsuchbares, geordnetes Tagesdokument verwandelt. Abgestimmt auf Sprache und Diktat, nicht auf Musik oder Umgebungsgeräusche. Eine iOS-Begleit-App ist in Arbeit."
     },
     "pricing": {
       "title": "Preise | SpeakWith",
@@ -65,6 +65,14 @@
       "title": "Der schwebende Statusmonitor | SpeakWith",
       "description": "Die kleine Pille, die SpeakWith beim Live-Diktat oben auf dem Bildschirm hält: was ihre fünf Modusfarben und Wörter bedeuten, warum sie weder Menüleiste noch Dock braucht, und wann das Dock-Badge als Ersatz dient."
     },
+    "guidesSendToAgent": {
+      "title": "An den Agenten senden | SpeakWith",
+      "description": "Wohin deine markierten Gliederungsthemen gehen, wenn du „An den Agenten senden“ drückst: die Menüs Agent, Projekt und Modell der Zielkarte im Agent-Tab, und die Zeilen Agent-Programm, Argumente und Projektordner in den Einstellungen unter Integrationen."
+    },
+    "technicalAgentLists": {
+      "title": "Projekt- und Modelllisten | SpeakWith",
+      "description": "Wie ein Programm auf deinem Mac das Projektmenü und das Modellmenü im Agent-Tab von SpeakWith von Gumroad füllt: ein lokaler Aufruf für die Ordner und zwei Wege, die Modelle zu übergeben."
+    },
     "privacy": {
       "title": "Privacy Policy | SpeakWith",
       "description": "Your words are yours. SpeakWith keeps recordings, transcripts, and documents on your device: no account, no tracking in the app, no cloud upload. This website counts anonymous visits only."
@@ -81,12 +89,12 @@
     "hero": {
       "eyebrow": "Ein Tagesdokument, gesteuert mit der Stimme",
       "headline": "Untertitel für deine Gedanken.",
-      "lead": "Sprich deinen Tag in eine saubere Markdown-Datei auf dem Mac oder unter iOS. Lies sie, bearbeite sie, teile sie. Sie funktioniert für sich allein und öffnet sich in VS Code, Obsidian oder jedem anderen Werkzeug, auf das du sie richtest.",
+      "lead": "Sprich deinen Tag in eine saubere Markdown-Datei auf deinem Mac. Lies sie, bearbeite sie, teile sie. Sie funktioniert für sich allein und öffnet sich in VS Code, Obsidian oder jedem anderen Werkzeug, auf das du sie richtest.",
       "leadSecondary": "Nutze den Rekorder-Schalter oder einen Hotkey. Sprich, und die Wörter landen dort, wo der Cursor steht.",
       "ctaPrimary": "SpeakWith kostenlos testen",
       "ctaSecondary": "iOS: Demnächst",
       "ctaGhost": "So funktioniert es",
-      "note": "Läuft auf Mac und iOS. Deine Stimme verlässt dein Gerät nie. Kein Konto nötig.",
+      "note": "Heute auf dem Mac verfügbar. Eine iOS-Begleit-App ist in Arbeit. Aufnahme und Transkription passieren auf deinem Gerät. Kein Konto nötig.",
       "ctaDemo": "Beim Tippen zusehen"
     },
     "moments": {
@@ -338,12 +346,16 @@
         {
           "q": "Ist das ein Audiorekorder?",
           "a": "Es ist ein Sprachrekorder. SpeakWith ist auf Sprache und Diktat abgestimmt, so wie ein Mensch tatsächlich redet, und leistet seine beste Arbeit mit der menschlichen Stimme. Für die Aufnahme von Musik oder Umgebungsgeräuschen ist es nicht gebaut."
+        },
+        {
+          "q": "Ist der Mac-Download signiert und von Apple geprüft?",
+          "a": "Ja. Der direkte Mac-Download ist mit unserer Apple Developer ID signiert, sodass die installierten Apps dem Build entsprechen, den wir ausgeliefert haben. Vor dem Upload prüft Apples Notary-Dienst diese Einreichung auf bekannte Schadsoftware und auf Probleme mit der Code-Signatur, und wir heften das Ticket an, damit Gatekeeper es prüfen kann. Diese Prüfung ist keine App-Store-Review und kein Versprechen, dass die Software frei von Schadsoftware ist."
         }
       ]
     },
     "download": {
       "heading": "SpeakWith holen",
-      "body": "SpeakWith läuft auf Mac und iOS. Es braucht einen Mac mit Apple Silicon (M1 oder neuer) unter macOS 26 (Tahoe) oder neuer, oder ein iPhone mit iOS 26 oder neuer. Lade es herunter, erlaube den Mikrofonzugriff, und deine erste Aufnahme ist einen Klick entfernt.",
+      "body": "SpeakWith läuft auf einem Mac mit Apple Silicon (M1 oder neuer) unter macOS 26 (Tahoe) oder neuer. Lade es herunter, erlaube den Mikrofonzugriff, und deine erste Aufnahme ist einen Klick entfernt. Eine iOS-Begleit-App für das iPhone mit iOS 26 oder neuer ist in Arbeit.",
       "ctaPrimary": "SpeakWith für Mac abonnieren",
       "ctaSecondary": "iOS: Demnächst",
       "ctaBuyOnce": "Lieber einmal kaufen? Hol dir stattdessen eine Einmallizenz."
