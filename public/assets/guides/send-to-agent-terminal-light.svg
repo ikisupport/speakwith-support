@@ -28,11 +28,12 @@
       .mono-h { font-family: "SF Mono", ui-monospace, Menlo, monospace; font-size: 15px; font-weight: 700; fill: #1D1D1F; }
     </style></defs>
   <rect width="1480" height="840" fill="#F5F5F7"/>
+  <rect x="1.5" y="1.5" width="1477" height="837" rx="24.9" fill="none" stroke="#B0B0B8" stroke-width="3"/>
   <text class="title" x="64" y="72">In the terminal</text>
   <text class="sub" x="64" y="108">Open a session. Claude Code writes the chapter in lighthouse-book.</text>
   <defs><clipPath id="termwin"><rect x="64" y="140" width="820" height="640" rx="12"/></clipPath></defs>
   <g clip-path="url(#termwin)">
-  <rect x="64" y="140" width="820" height="640" fill="#FFFFFF"/>
+  <rect x="64" y="140" width="820" height="640" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1.5"/>
   <rect x="64" y="140" width="820" height="44" fill="#E8E8ED"/>
   <line x1="64" y1="184" x2="884" y2="184" stroke="#D2D2D7" stroke-width="1"/>
   <circle cx="88" cy="166" r="6" fill="#FF5F57"/>

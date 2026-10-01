@@ -30,6 +30,7 @@
   </defs>
 
   <rect class="field" width="1600" height="1220"/>
+  <rect x="1.5" y="1.5" width="1597" height="1217" rx="26.9" fill="none" stroke="#54545A" stroke-width="3"/>
 
   <text class="title" x="80" y="82">Reading the recorder badge</text>
   <text class="subtitle" x="80" y="118">Two lines at the left of the record bar. The first identifies the build you're running. The second tracks your dictation over time.</text>

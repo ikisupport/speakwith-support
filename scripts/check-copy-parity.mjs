@@ -24,7 +24,7 @@ const matrix = JSON.parse(readFileSync(resolve(dir, 'locales.json'), 'utf8'));
 
 // Leaf keys whose values are not prose and must stay identical to English.
 const PINNED_KEYS = new Set([
-  'id', 'src', 'videoSrc', 'posterSrc', 'heroImage', 'isHtml', 'wide', 'badgeKind',
+  'id', 'src', 'videoSrc', 'posterSrc', 'heroImageDark', 'heroImageLight', 'isHtml', 'wide', 'badgeKind',
   'ctaUrl', 'ctaSecondaryUrl', 'ctaTertiaryUrl', 'diagramDark', 'diagramLight',
   'figureDark', 'figureLight', 'figureWidth', 'figureHeight', 'path', 'morePath',
 ]);

@@ -34,6 +34,7 @@
     </style>
   </defs>
   <rect width="1600" height="1220" fill="#1C1C1E"/>
+  <rect x="1.5" y="1.5" width="1597" height="1217" rx="26.9" fill="none" stroke="#54545A" stroke-width="3"/>
 
   <text class="title" x="80" y="82">The floating status monitor</text>
   <text class="subtitle" x="80" y="118">A small pill that stays on top while the live-direct mic is held. It tells you the mode at a glance, from anywhere on the screen.</text>

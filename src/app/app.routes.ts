@@ -88,6 +88,12 @@ function pageRoutes(locale: LocaleDef): Routes {
       ...meta('guides/send-to-agent'),
     },
     {
+      path: 'guides/outline',
+      loadComponent: () =>
+        import('./pages/guides/outline-guide.component').then(m => m.OutlineGuideComponent),
+      ...meta('guides/outline'),
+    },
+    {
       path: 'technical/agent-lists',
       loadComponent: () =>
         import('./pages/technical/agent-lists.component').then(m => m.AgentListsComponent),

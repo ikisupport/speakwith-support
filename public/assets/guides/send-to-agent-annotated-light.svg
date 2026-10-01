@@ -34,6 +34,7 @@
     </style>
   </defs>
   <rect width="1600" height="1220" fill="#F5F5F7"/>
+  <rect x="1.5" y="1.5" width="1597" height="1217" rx="26.9" fill="none" stroke="#B0B0B8" stroke-width="3"/>
 
   <text class="title" x="80" y="82">Send to agent</text>
   <text class="subtitle" x="80" y="118">Where your checked Outline topics go: one card in the Agent tab, and one Settings pane for a program of your own.</text>

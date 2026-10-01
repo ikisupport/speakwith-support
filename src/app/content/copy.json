@@ -76,6 +76,10 @@
       "title": "Send to agent | SpeakWith",
       "description": "Where your checked Outline topics go when you press Send to agent: the Agent tab, from Destination through Send to agent, plus the Agent program, Arguments, and Project folder rows in Settings under Agent."
     },
+    "guidesOutline": {
+      "title": "Draft by voice, arrange afterwards | SpeakWith",
+      "description": "Talk in whatever order the ideas come, then drag the recordings into the order the document needs. Two before and after figures of the same five recordings, kept as plain markdown you can use anywhere."
+    },
     "technicalAgentLists": {
       "title": "Project and model lists | SpeakWith",
       "description": "How a program on your Mac fills the Project menu and the Model menu on the Agent tab of SpeakWith from Gumroad: one local call for the folders, and two ways to hand over the models."
@@ -106,9 +110,10 @@
     },
     "moments": {
       "title": "Words land as you speak, and you can edit them live.",
-      "heroImage": "canonical_screenshots/hero.png?v=20260923c",
+      "heroImageDark": "canonical_screenshots/hero.png?v=20260930c",
+      "heroImageLight": "canonical_screenshots/hero-light.png?v=20260930c",
       "heroAlt": "SpeakWith for Mac in live dictation: spoken words landing as transcribed lines under a live waveform, with misheard names corrected in place and a session title suggested alongside.",
-      "heroCaption": "Speak, and watch the subtitles for your thoughts take shape before the idea slips away. Add your own OpenAI API key and press Generate new title to get a heading for the session."
+      "heroCaption": "Speak, and watch the subtitles for your thoughts take shape before the idea slips away. Optional session titles can use your OpenAI key or a local Ollama model on your Mac. Press Generate new title when you want a heading."
     },
     "platforms": {
       "eyebrow": "A mobile version is in the works",
@@ -231,7 +236,7 @@
       "items": [
         {
           "label": "Local",
-          "body": "Your recordings never leave your Mac. The optional AI features, session titles and correction checks, use your own OpenAI key or a local Ollama model, and only when you switch them on.",
+          "body": "Your recordings never leave your Mac. Optional session titles can run on a local Ollama model or your own OpenAI key, and only when you switch them on. A separate optional correction check can ask OpenAI to vet flagged lines.",
           "isHtml": false
         },
         {
@@ -276,6 +281,11 @@
           "wide": false
         },
         {
+          "title": "Session titles, local or cloud",
+          "body": "Name each dictation session from its transcript. Pick OpenAI or a local Ollama model under Settings, Session AI. Generate stays in the AI sidebar when you want a heading.",
+          "wide": false
+        },
+        {
           "title": "Speak and keep working",
           "body": "Speaking and working no longer take turns. Your dictation flows into the document on its own, so you can organise sections, paste in snippets, or type something completely different at the same time, without interrupting the words you're capturing.",
           "wide": false
@@ -311,6 +321,10 @@
         {
           "q": "Does SpeakWith need an internet connection?",
           "a": "No. Recording, transcription, organising your daily document, and searching its text all happen on your Mac. SpeakWith does its core work offline."
+        },
+        {
+          "q": "Can the optional AI features run locally?",
+          "a": "Session titles can. Choose Ollama under Settings, Session AI, and titles stay on your Mac. Correction checks, if you enable them, use your OpenAI key. Core recording and transcription never need the network."
         },
         {
           "q": "Where are my recordings and documents stored?",
@@ -614,31 +628,37 @@
       "cards": [
         {
           "title": "Reading the recorder badge",
-          "body": "The two lines at the left of the record bar: the build you are running, and a tally of your dictation over time.",
+          "body": "The two lines at the left of the record bar show the build you are running and a tally of your dictation, including your correction rate, a personal stand-in for WER (Word Error Rate).",
           "path": "guides/recorder-badge",
           "cta": "Read the guide"
         },
         {
           "title": "Reading live transcript corrections",
-          "body": "The marks on a settled line of live dictation: which words you changed, which corrections SpeakWith made, and what its optional checks found.",
+          "body": "The marks on a settled line of live dictation: your edits, SpeakWith's corrections, and what its optional checks found.",
           "path": "guides/live-transcript-corrections",
           "cta": "Read the guide"
         },
         {
           "title": "The floating status monitor",
-          "body": "The small pill that stays on top while you dictate: which mode you are in, in a color and a word, with the menu bar and the Dock out of the way.",
+          "body": "The small pill that stays on top while you dictate: your mode in a color and a word, with the menu bar and the Dock out of the way.",
           "path": "guides/status-monitor",
           "cta": "Read the guide"
         },
         {
           "title": "Send to agent",
-          "body": "Checked Outline topics leave from the Agent tab. Destination sits at the top, Send to agent follows it, and Settings holds a program you name yourself.",
+          "body": "Tick topics in the Outline, pick an agent, project, and model on the Agent tab, then send them as one message to a coding agent on your Mac.",
           "path": "guides/send-to-agent",
           "cta": "Read the guide"
         },
         {
+          "title": "Draft by voice, arrange afterwards",
+          "body": "Talk in whatever order the ideas come. Then drag the recordings into the order the document needs, nested where they belong, and keep the result as plain markdown.",
+          "path": "guides/outline",
+          "cta": "Read the guide"
+        },
+        {
           "title": "Project and model lists",
-          "body": "For people who write programs: how a program on your Mac fills the Project menu and the Model menu on the Agent tab, and what each choice looks like there.",
+          "body": "For people who write programs: how a program on your Mac fills the Project and Model menus on the Agent tab.",
           "path": "technical/agent-lists",
           "cta": "Read the page"
         }
@@ -648,8 +668,8 @@
       "eyebrow": "Guides",
       "heading": "Reading the recorder badge",
       "intro": "At the left of the record bar on the Mac, SpeakWith shows two short lines in a small monospaced typeface. The first identifies the build you are running. The second tracks your dictation over time. The diagram below walks through each segment.",
-      "diagramDark": "assets/guides/recorder-status-badge-annotated.svg?v=20260926",
-      "diagramLight": "assets/guides/recorder-status-badge-annotated-light.svg?v=20260926",
+      "diagramDark": "assets/guides/recorder-status-badge-annotated.svg?v=20260929g",
+      "diagramLight": "assets/guides/recorder-status-badge-annotated-light.svg?v=20260929g",
       "diagramAlt": "Annotated diagram of the SpeakWith recorder badge. Line one reads SpeakWith 2.14.0 Pro (app=eng 20260923.10): the app name, version, edition, and the build stamp shared by the app and its engine. Line two reads 9,834w, 1,770s, 51,368c, 0.7% wer, 0.1% st: words, sentences, and characters dictated since the last reset, then the share of words you corrected and the share your special terms corrected.",
       "sections": [
         {
@@ -670,7 +690,7 @@
               "text": "The three counts are words, sentences, and characters you have dictated since the last reset, across all sessions. The s stands for sentences, not seconds."
             },
             {
-              "text": "The two percentages use the word count as their denominator. The corrected-word rate (wer) is the share of dictated words you went back and changed. It only counts corrections you actually made, so the true error rate may be higher. The special-terms rate (st) is the share of words that your own special terms corrected: names, terminology, and words you pronounce your own way, which the recognizer would otherwise get wrong."
+              "text": "The two percentages use the word count as their denominator. The correction rate (wer) is the share of dictated words you went back and changed, a personal stand-in for WER (Word Error Rate). It only counts corrections you actually made, so the true error rate may be higher. The special-terms rate (st) is the share of words that your own special terms corrected: names, terminology, and words you pronounce your own way, which the recognizer would otherwise get wrong."
             }
           ]
         },
@@ -695,8 +715,8 @@
       "eyebrow": "Guides",
       "heading": "The floating status monitor",
       "intro": "While the live-direct mic is held, SpeakWith can float a small pill above every other window. It shows one colored dot and one or two words: the mode you are in right now. You read it from across the room, or from the corner of your eye while you type in another app, without bringing SpeakWith forward. The diagram below shows the pill, its five modes, and the one thing it cannot replace.",
-      "diagramDark": "assets/guides/status-monitor-annotated.svg?v=20260926c",
-      "diagramLight": "assets/guides/status-monitor-annotated-light.svg?v=20260926c",
+      "diagramDark": "assets/guides/status-monitor-annotated.svg?v=20260929g",
+      "diagramLight": "assets/guides/status-monitor-annotated-light.svg?v=20260929g",
       "diagramAlt": "Annotated diagram of the SpeakWith floating status monitor: a small rounded pill sitting over another app's window. It carries the SpeakWith mark, a blue dot, the words Type into app, and a smaller detail line reading Into open field. Below it, five smaller pills show the five modes with their colors: Recording in red, Type into app in blue, Voice pull in indigo, Listening in orange, and Monitoring in green, with a note that Listening is level mode and a hardware mute switch pauses and resumes it. A row of check marks reads Menu bar hidden, Dock hidden, SpeakWith in the background. At the bottom, three app icons carry small red Dock badges reading REC, TYPE, and a pause mark, captioned as the fallback.",
       "sections": [
         {
@@ -767,8 +787,8 @@
       "eyebrow": "Guides",
       "heading": "Reading live transcript corrections",
       "intro": "Once a line of live dictation settles, SpeakWith can mark it in two ways. Inside the line, color and underlines show which words you changed yourself. After the line, small badges show what SpeakWith corrected on its own and, if you have switched them on, what its extra checks found. Most lines carry no marks at all. The diagram below shows one line with every kind of mark on it.",
-      "diagramDark": "assets/guides/live-transcript-corrections-annotated.svg?v=20260926",
-      "diagramLight": "assets/guides/live-transcript-corrections-annotated-light.svg?v=20260926",
+      "diagramDark": "assets/guides/live-transcript-corrections-annotated.svg?v=20260929g",
+      "diagramLight": "assets/guides/live-transcript-corrections-annotated-light.svg?v=20260929g",
       "diagramAlt": "Annotated diagram of one settled live dictation line in SpeakWith, a portrait photographer's note between sittings. The line reads: Edit the first three headshots, then call Aaliyah before Okafor's sitting. The word first is struck through and faded because it was deleted. The word three is in the typed-words color over a pale band because it was typed in to replace tree. The words then call sit on a pale band with a dotted underline because they were dictated into the line. The word headshots is plain because the recognizer wrote it. Three badges trail the text: a Special Terms rewrite reading alia to Aaliyah, a Voice Examples correction reading Akheffer to Okafor, and a green check mark from the second pass.",
       "sections": [
         {
@@ -850,8 +870,8 @@
       "heading": "Send to agent",
       "intro": "Send to agent takes the topics you have checked in the Outline and hands them, as one message, to a coding agent running on your Mac. The agent is connected over ACP, the Agent Client Protocol, and that connection is what lets SpeakWith ask the agent which folder to work in and which model to use, so you choose both from a menu instead of typing them. This page follows one job from the Outline through to the message the agent receives.",
       "examplesLabel": "In this job",
-      "diagramDark": "assets/guides/send-to-agent-annotated.svg?v=20260929a",
-      "diagramLight": "assets/guides/send-to-agent-annotated-light.svg?v=20260929a",
+      "diagramDark": "assets/guides/send-to-agent-annotated.svg?v=20260929g",
+      "diagramLight": "assets/guides/send-to-agent-annotated-light.svg?v=20260929g",
       "diagramAlt": "Annotated diagram of the two panels behind Send to agent in SpeakWith. The upper panel is the Destination block from the Agent tab: three labelled rows reading Agent, Project, and Model, each with a pop-up menu, and an Add folder button beside Project. Beneath it the Project menu is shown opened, with a Recent section listing folders and when they were last used, and an All projects section listing the rest. The lower panel is the program block of Settings under Agent: an Agent program row showing a file path with a Change button and a small minus, an Arguments text field, and a Project folder row showing a folder path with the same Change button and minus. Numbered callouts name each control.",
       "sections": [
         {
@@ -870,8 +890,8 @@
               "text": "This morning you dictated a session about chapter 4 of a book. The manuscript lives in a folder named lighthouse-book. Two Outline rows belong in that chapter. A third row, The lamp oil, stays unchecked."
             }
           ],
-          "figureDark": "assets/guides/send-to-agent-outline.svg?v=20260929b",
-          "figureLight": "assets/guides/send-to-agent-outline-light.svg?v=20260929b",
+          "figureDark": "assets/guides/send-to-agent-outline.svg?v=20260929g",
+          "figureLight": "assets/guides/send-to-agent-outline-light.svg?v=20260929g",
           "figureAlt": "The Outline with three rows. The storm scene and Names to keep have filled circles. Names to keep says the keeper is Mara Voss. The lamp oil has an empty circle and is not sent.",
           "figureWidth": 1280,
           "figureHeight": 560,
@@ -884,8 +904,8 @@
               "text": "Destination is already set in the figure at the top of this page. On that same tab, the two topics, the instruction, and Send to agent sit together."
             }
           ],
-          "figureDark": "assets/guides/send-to-agent-block.svg?v=20260929c",
-          "figureLight": "assets/guides/send-to-agent-block-light.svg?v=20260929c",
+          "figureDark": "assets/guides/send-to-agent-block.svg?v=20260929g",
+          "figureLight": "assets/guides/send-to-agent-block-light.svg?v=20260929g",
           "figureAlt": "The Agent tab, ready to send. The status line reads Claude Code, lighthouse-book, default model. A caption says 2 topics will be sent as one prompt turn. Preview tiles show The storm scene and Names to keep. The instruction names chapters/04-the-storm.md and forbids a new character. A blue Send to agent button is under that box. Callouts name the status line, the caption, Optional instruction, and the button.",
           "figureWidth": 1480,
           "figureHeight": 860,
@@ -954,8 +974,8 @@
               "text": "With a session manager, that press builds one prompt. SpeakWith opens with a lead line, your instruction follows, then each checked topic under its own heading."
             }
           ],
-          "figureDark": "assets/guides/send-to-agent-message.svg?v=20260929b",
-          "figureLight": "assets/guides/send-to-agent-message-light.svg?v=20260929b",
+          "figureDark": "assets/guides/send-to-agent-message.svg?v=20260929g",
+          "figureLight": "assets/guides/send-to-agent-message-light.svg?v=20260929g",
           "figureAlt": "The prompt handed to Claude Code. It opens with the SpeakWith lead line, then the instruction to write chapter 4 as chapters/04-the-storm.md, then The storm scene and Names to keep. Names to keep says the keeper is Mara Voss and the supply boat is Cormorant.",
           "figureWidth": 1100,
           "figureHeight": 760,
@@ -968,8 +988,8 @@
               "text": "Open a session opens this window on lighthouse-book. Claude Code runs the prompt from the section above and writes chapters/04-the-storm.md in that folder."
             }
           ],
-          "figureDark": "assets/guides/send-to-agent-terminal.svg?v=20260929e",
-          "figureLight": "assets/guides/send-to-agent-terminal-light.svg?v=20260929e",
+          "figureDark": "assets/guides/send-to-agent-terminal.svg?v=20260929g",
+          "figureLight": "assets/guides/send-to-agent-terminal-light.svg?v=20260929g",
           "figureAlt": "A terminal window titled lighthouse-book, Claude Code. It is running the SpeakWith prompt, then shows Wrote chapters/04-the-storm.md. The file contains the storm scene and the keeper Mara Voss, taken from the notes.",
           "figureWidth": 1480,
           "figureHeight": 840,
@@ -1047,6 +1067,62 @@
       "seeAlso": {
         "label": "See also: Project and model lists, how a program of your own fills the Project menu and the Model menu.",
         "path": "technical/agent-lists"
+      }
+    },
+    "outline": {
+      "eyebrow": "Guides",
+      "heading": "Draft by voice, arrange afterwards",
+      "intro": "You do not have to know where everything goes before you start talking. Record each idea as it comes, in any order. Every recording lands in the day document as its own section, and the Outline lets you drag those sections into the order the document needs, nested where they belong. The words stay exactly what you said, and the result is plain markdown, so the draft is already in a form every editor can open. This page shows the two moves a drag can make, an indent and a reorder, each as a before and after of the same five recordings.",
+      "diagramDark": "assets/guides/outline-feature-annotated.svg?v=20260930c",
+      "diagramLight": "assets/guides/outline-feature-annotated-light.svg?v=20260930c",
+      "diagramAlt": "SpeakWith Outline poster. The wordmark is at the top right and on each figure. Two before and after figures of the same five recorded text blocks. Each block shows a recorded time, a short heading, and one or two lines of spoken words. A curved arrow runs from the moved block on the left to its new place on the right. Figure 1: the second recording is nested one step under the first, a dashed outline marks where it sat, and the order is unchanged. Figure 2: the fifth recording has moved up between the second and the third, and nothing is indented. The words are the same on both sides.",
+      "captions": [
+        {
+          "label": "Figure 1. Indent.",
+          "text": "The second recording is nested under the first. The spoken order is unchanged, and so is every time."
+        },
+        {
+          "label": "Figure 2. Reorder.",
+          "text": "The fifth recording moves up between the second and the third. Nothing is indented."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Record first, arrange second",
+          "paragraphs": [
+            {
+              "text": "Spoken ideas arrive in time order. A finished document is in topic order. The Outline is the bridge between the two: every row is one recording, with the time you started speaking and the words you said, and a drag changes neither. It changes only where the recording sits in the day document: under another recording, or earlier or later in the day. Keep each recording to one idea and you will have more to arrange."
+            }
+          ]
+        },
+        {
+          "heading": "Indent",
+          "paragraphs": [
+            {
+              "text": "Drop a row toward the right edge of the row above it and it nests one step under that row. Figure 1 nests the second recording under the first. The spoken order is unchanged, and so is every time. A row nests one step at a time; a drop that would skip a level is refused."
+            }
+          ]
+        },
+        {
+          "heading": "Reorder",
+          "paragraphs": [
+            {
+              "text": "Drop a row between two others and it moves there, still at the same level. Figure 2 moves the fifth recording up between the second and the third. Nothing is indented. The day document keeps a recording's time marker only where the times still read in order, so a recording moved ahead of earlier ones drops its marker there. The words are untouched."
+            }
+          ]
+        },
+        {
+          "heading": "Apply and Undo",
+          "paragraphs": [
+            {
+              "text": "A drop is a preview. The Outline shows the new arrangement at once, but nothing on disk changes until you press Apply, which writes the arrangement to the day document. Undo takes back the last drag. Drops you never apply change nothing."
+            }
+          ]
+        }
+      ],
+      "seeAlso": {
+        "label": "See also: Send to agent, which takes the Outline rows you have checked to a coding agent on your Mac.",
+        "path": "guides/send-to-agent"
       }
     }
   },
@@ -1156,7 +1232,7 @@
             "isHtml": false
           },
           {
-            "text": "Two optional features can send transcript text, never audio, to a language model: generating a session title and checking corrections. Both are off until you turn them on. You can point them at an OpenAI account using your own API key, or at an Ollama model running on your own machine, in which case nothing leaves it.",
+            "text": "Two optional features can send transcript text, never audio, to a language model: generating a session title and checking corrections. Both are off until you turn them on. Session titles can use your OpenAI API key or a local Ollama model on your Mac, so nothing leaves your machine when you choose Ollama. Correction checks, if you enable them, use your OpenAI key.",
             "isHtml": false
           }
         ]

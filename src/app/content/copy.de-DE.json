@@ -69,6 +69,10 @@
       "title": "An den Agenten senden | SpeakWith",
       "description": "Wohin deine markierten Gliederungsthemen gehen, wenn du „An den Agenten senden“ drückst: die Menüs Agent, Projekt und Modell der Zielkarte im Agent-Tab, und die Zeilen Agent-Programm, Argumente und Projektordner in den Einstellungen unter Integrationen."
     },
+    "guidesOutline": {
+      "title": "Aufnahmen in der Gliederung umordnen | SpeakWith",
+      "description": "Aufnahmen des Tages per Ziehen in der Gliederung einrücken oder umordnen: zwei Vorher-nachher-Abbildungen derselben fünf Aufnahmen und was Anwenden und Widerrufen tun."
+    },
     "technicalAgentLists": {
       "title": "Projekt- und Modelllisten | SpeakWith",
       "description": "Wie ein Programm auf deinem Mac das Projektmenü und das Modellmenü im Agent-Tab von SpeakWith von Gumroad füllt: ein lokaler Aufruf für die Ordner und zwei Wege, die Modelle zu übergeben."
@@ -99,7 +103,8 @@
     },
     "moments": {
       "title": "Deine Wörter erscheinen. Während du sprichst.",
-      "heroImage": "canonical_screenshots/hero.png?v=20260923c",
+      "heroImageDark": "canonical_screenshots/hero.png?v=20260930c",
+      "heroImageLight": "canonical_screenshots/hero-light.png?v=20260930c",
       "heroAlt": "SpeakWith für Mac im Live-Diktat: gesprochene Wörter landen als transkribierte Zeilen unter einer Live-Wellenform, falsch verstandene Namen werden an Ort und Stelle korrigiert, und daneben wird ein Titel für die Sitzung vorgeschlagen.",
       "heroCaption": "Sprich, und sieh zu, wie die Untertitel für deine Gedanken Gestalt annehmen, bevor die Idee entgleitet. Hinterlege deinen eigenen OpenAI-API-Schlüssel und drücke auf Neuen Titel erzeugen, um eine Überschrift für die Sitzung zu erhalten."
     },
@@ -269,6 +274,11 @@
           "wide": false
         },
         {
+          "title": "Sitzungstitel, lokal oder in der Cloud",
+          "body": "Benenne jede Diktatsitzung anhand ihres Transkripts. Wähle unter Einstellungen, Session-KI, OpenAI oder ein lokales Ollama-Modell. „Generieren“ bleibt in der KI-Seitenleiste, wenn du eine Überschrift möchtest.",
+          "wide": false
+        },
+        {
           "title": "Sprechen und weiterarbeiten",
           "body": "Sprechen und Arbeiten wechseln sich nicht mehr ab. Dein Diktat fließt von selbst ins Dokument, sodass du gleichzeitig Abschnitte ordnen, Schnipsel einfügen oder etwas ganz anderes tippen kannst, ohne die Wörter zu unterbrechen, die du gerade festhältst.",
           "wide": false
@@ -304,6 +314,10 @@
         {
           "q": "Braucht SpeakWith eine Internetverbindung?",
           "a": "Nein. Aufnahme, Transkription, das Ordnen deines Tagesdokuments und die Textsuche darin passieren alle auf deinem Mac. Seine Kernarbeit erledigt SpeakWith offline."
+        },
+        {
+          "q": "Können die optionalen KI-Funktionen lokal laufen?",
+          "a": "Sitzungstitel können das. Wähle Ollama unter Einstellungen, Session-KI, und Titel bleiben auf deinem Mac. Korrekturprüfungen, wenn du sie aktivierst, nutzen deinen OpenAI-Schlüssel. Kernaufnahme und Transkription brauchen niemals das Netzwerk."
         },
         {
           "q": "Wo werden meine Aufnahmen und Dokumente gespeichert?",

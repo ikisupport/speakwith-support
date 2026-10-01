@@ -28,6 +28,7 @@
       .mono-h { font-family: "SF Mono", ui-monospace, Menlo, monospace; font-size: 15px; font-weight: 700; fill: #1D1D1F; }
     </style></defs>
   <rect width="1100" height="760" fill="#F5F5F7"/>
+  <rect x="1.5" y="1.5" width="1097" height="757" rx="18.5" fill="none" stroke="#B0B0B8" stroke-width="3"/>
   <text class="title" x="64" y="72">The message</text>
   <text class="sub" x="64" y="108">What the session manager hands to Claude Code, as one prompt.</text>
   <rect class="card" x="64" y="140" width="972" height="560" rx="12"/>

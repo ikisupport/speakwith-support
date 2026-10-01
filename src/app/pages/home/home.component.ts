@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, computed, Inject, PLATFORM_ID, signal } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TelemetryService } from '../../services/telemetry.service';
 import { LocaleService } from '../../services/locale.service';
+import { ThemeService } from '../../services/theme.service';
 
 /**
  * Home / landing page. Hero, moments strip, Type into app demo band,
  * live-edit frames, platforms, technical-moat row, feature blocks, value-prop bands, FAQ, download CTA.
+ *
+ * The moments hero ships dark and light captures; the page follows the site
+ * theme the same way the guide pages do. Prerender emits the dark frame.
  */
 @Component({
   selector: 'app-home',
@@ -37,7 +42,7 @@ import { LocaleService } from '../../services/locale.service';
         <h2 class="heroshot__title">{{ copy.home.moments.title }}</h2>
         <figure class="heroshot__figure">
           <div class="shot-alpha">
-            <img class="heroshot__image" [src]="copy.home.moments.heroImage"
+            <img class="heroshot__image" [src]="heroImageSrc()"
                  [alt]="copy.home.moments.heroAlt" loading="lazy" />
           </div>
           <figcaption class="heroshot__caption">{{ copy.home.moments.heroCaption }}</figcaption>
@@ -766,6 +771,16 @@ import { LocaleService } from '../../services/locale.service';
   `]
 })
 export class HomeComponent {
+  /** OS preference, tracked live so `system` follows a daytime switch. */
+  private readonly prefersLight = signal(false);
+
+  protected readonly heroImageSrc = computed(() => {
+    const moments = this.copy.home.moments;
+    const light = this.theme.themeChoice() === 'light'
+      || (this.theme.themeChoice() === 'system' && this.prefersLight());
+    return light ? moments.heroImageLight : moments.heroImageDark;
+  });
+
   protected get copy() {
     return this.locale.copy();
   }
@@ -773,7 +788,15 @@ export class HomeComponent {
   constructor(
     protected readonly telemetry: TelemetryService,
     protected readonly locale: LocaleService,
-  ) {}
+    private readonly theme: ThemeService,
+    @Inject(PLATFORM_ID) platformId: object,
+  ) {
+    if (isPlatformBrowser(platformId)) {
+      const media = window.matchMedia('(prefers-color-scheme: light)');
+      this.prefersLight.set(media.matches);
+      media.addEventListener('change', e => this.prefersLight.set(e.matches));
+    }
+  }
 
   /** The gallery shows the three captured macOS frames under /assets/screenshots/
       (iOS shots are deferred and removed from copy.json). */

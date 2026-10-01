@@ -28,6 +28,7 @@
       .mono-h { font-family: "SF Mono", ui-monospace, Menlo, monospace; font-size: 15px; font-weight: 700; fill: #1D1D1F; }
     </style></defs>
   <rect width="1480" height="860" fill="#F5F5F7"/>
+  <rect x="1.5" y="1.5" width="1477" height="857" rx="24.9" fill="none" stroke="#B0B0B8" stroke-width="3"/>
   <text class="title" x="64" y="72">In the Agent tab</text>
   <text class="sub" x="64" y="108">Destination is already set. The send controls are on this tab, just before the press.</text>
   <rect class="card" x="64" y="140" width="760" height="660" rx="12"/>

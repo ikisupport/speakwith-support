@@ -28,6 +28,7 @@
       .mono-h { font-family: "SF Mono", ui-monospace, Menlo, monospace; font-size: 15px; font-weight: 700; fill: #F2F2F7; }
     </style></defs>
   <rect width="1280" height="560" fill="#1C1C1E"/>
+  <rect x="1.5" y="1.5" width="1277" height="557" rx="21.6" fill="none" stroke="#54545A" stroke-width="3"/>
   <text class="title" x="64" y="72">In the Outline</text>
   <text class="sub" x="64" y="108">A filled circle is sent. An empty circle stays behind.</text>
   <rect class="card" x="64" y="140" width="700" height="360" rx="12"/>
