@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1220" viewBox="0 0 1600 1220" font-family="SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title>SpeakWith Send to agent — the Destination card and the Agent settings</title>
+  <desc>Vector recreation of the two places that decide where Send to agent lands: the Destination card in the AI sidebar's Agent tab, with its Agent, Project, and Model menus and the Add folder button, and Settings, Agent, with the Agent program, Arguments, and Project folder rows. Callouts name each control.</desc>
+  <!--
+    Maintainer note (not rendered):
+    - Destination card: AISidebarAgentSection.swift, overwatchScoutSection (Agent / Project / Add folder… / Model).
+    - Project menu sections "Recent" and "All projects": same view; recent rows carry a last-used time.
+    - Settings panel: IntegrationsAgentSection.swift (Agent program / Arguments / Project folder, Choose… / Change…, minus clears).
+    - Regenerate with guide_design/send_to_agent_feature/gen_send_to_agent.py <outdir> (dark).
+  -->
+  <defs>
+    <style>
+      .title { font-size: 40px; font-weight: 700; fill: #F2F2F7; }
+      .subtitle { font-size: 22px; fill: #AEAEB2; }
+      .h2 { font-size: 26px; font-weight: 700; fill: #F2F2F7; }
+      .card { fill: #232325; stroke: #3A3A3C; stroke-width: 1.5; }
+      .card-head { font-size: 21px; font-weight: 600; fill: #F2F2F7; }
+      .lbl { font-size: 18px; fill: #F2F2F7; }
+      .cap { font-size: 15px; fill: #AEAEB2; }
+      .mono { font-size: 16px; font-family: SF Mono, Menlo, Consolas, monospace; fill: #E5E5EA; }
+      .ctl { fill: #2C2C2E; stroke: #48484A; stroke-width: 1.5; }
+      .ctl-t { font-size: 18px; }
+      .menu { fill: #2C2C2E; stroke: #48484A; stroke-width: 1.5; }
+      .menu-h { font-size: 14px; font-weight: 600; fill: #8E8E93; }
+      .menu-t { font-size: 18px; fill: #F2F2F7; }
+      .menu-s { font-size: 16px; fill: #AEAEB2; }
+      .box { fill: #262628; stroke: #48484A; stroke-width: 1.5; }
+      .box-head { font-size: 20px; font-weight: 700; fill: #F2F2F7; }
+      .box-body { font-size: 17px; fill: #D1D1D6; }
+      .note { font-size: 16px; fill: #8E8E93; font-style: italic; }
+      .leader { stroke: #FF9F0A; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; opacity: 0.85; }
+      .pin-num { font-size: 22px; font-weight: 700; fill: #1C1C1E; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect width="1600" height="1220" fill="#1C1C1E"/>
+  <rect x="1.5" y="1.5" width="1597" height="1217" rx="26.9" fill="none" stroke="#54545A" stroke-width="3"/>
+
+  <text class="title" x="80" y="82">Send to agent</text>
+  <text class="subtitle" x="80" y="118">Where your checked Outline topics go: one card in the Agent tab, and one Settings pane for a program of your own.</text>
+  <text class="h2" x="80" y="160">In the Agent tab</text>
+  <rect class="card" x="80" y="180" width="620" height="225" rx="10"/>
+  <text class="card-head" x="100" y="216">Destination</text>
+  <text class="lbl" x="100" y="266">Agent</text>
+  <g>
+    <rect class="ctl" x="210" y="245" width="470" height="30" rx="7"/>
+    <text class="ctl-t" x="222" y="266.5" fill="#F2F2F7">Claude Code</text>
+    <rect x="650" y="250" width="24" height="20" rx="5" fill="#0A84FF"/>
+    <path d="M 657 257.0 l 5 -5 l 5 5 M 657 263.0 l 5 5 l 5 -5" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text class="lbl" x="100" y="316">Project</text>
+  <g>
+    <rect class="ctl" x="210" y="295" width="330" height="30" rx="7"/>
+    <text class="ctl-t" x="222" y="316.5" fill="#F2F2F7">lighthouse-book</text>
+    <rect x="510" y="300" width="24" height="20" rx="5" fill="#0A84FF"/>
+    <path d="M 517 307.0 l 5 -5 l 5 5 M 517 313.0 l 5 5 l 5 -5" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g>
+    <rect class="ctl" x="552" y="295" width="128" height="30" rx="7"/>
+    <text x="616.0" y="315.4" font-size="15" fill="#F2F2F7" text-anchor="middle">Add folder…</text>
+  </g>
+  <text class="lbl" x="100" y="366">Model</text>
+  <g>
+    <rect class="ctl" x="210" y="345" width="470" height="30" rx="7"/>
+    <text class="ctl-t" x="222" y="366.5" fill="#F2F2F7">Agent default</text>
+    <rect x="650" y="350" width="24" height="20" rx="5" fill="#0A84FF"/>
+    <path d="M 657 357.0 l 5 -5 l 5 5 M 657 363.0 l 5 5 l 5 -5" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text class="note" x="80" y="430">The Send to agent press itself is on the Agent card below this one. This card only answers where.</text>
+  <text class="cap" x="210" y="455">The Project menu, opened</text>
+  <rect class="menu" x="210" y="465" width="330" height="196" rx="9"/>
+  <text class="menu-h" x="224" y="490">Recent</text>
+  <rect x="216" y="499" width="318" height="28" rx="6" fill="#3A3A3C"/>
+  <path d="M 226 513 l 5 5 l 10 -11" fill="none" stroke="#F2F2F7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="menu-t" x="248" y="519">lighthouse-book</text>
+  <text class="menu-s" x="391" y="519">2 h ago</text>
+  <text class="menu-t" x="248" y="549">field-notes</text>
+  <text class="menu-s" x="357" y="549">yesterday</text>
+  <line x1="220" y1="563" x2="530" y2="563" stroke="#3A3A3C" stroke-width="1"/>
+  <text class="menu-h" x="224" y="586">All projects</text>
+  <text class="menu-t" x="248" y="615">portfolio-site</text>
+  <text class="menu-t" x="248" y="645">thesis</text>
+  <g id="callout-1">
+    <rect class="box" x="1120" y="170" width="400" height="78" rx="10"/>
+    <text class="box-head" x="1168" y="196">Agent</text>
+    <text class="box-body" x="1168" y="218">Which agent takes the send. Only agents</text>
+    <text class="box-body" x="1168" y="238">found on this Mac are listed here.</text>
+    <path class="leader" d="M 1120.0 209.0 L 1105.0 209.0 Q 1090.0 209.0 1090.0 224.0 L 1090.0 242.0 Q 1090.0 260.0 1072.0 260.0 L 682.0 260.0"/>
+    <circle cx="682" cy="260" r="5" fill="#FF9F0A"/>
+    <circle cx="1142" cy="209" r="19" fill="#FF9F0A"/><text x="1142" y="217" class="pin-num">1</text>
+  </g>
+  <g id="callout-2">
+    <rect class="box" x="1120" y="262" width="400" height="78" rx="10"/>
+    <text class="box-head" x="1168" y="288">Add folder…</text>
+    <text class="box-body" x="1168" y="310">Puts any folder on the Project menu</text>
+    <text class="box-body" x="1168" y="330">and selects it, in one step.</text>
+    <path class="leader" d="M 1120.0 301.0 L 1094.5 301.0 Q 1090.0 301.0 1090.0 305.5 L 1090.0 305.5 Q 1090.0 310.0 1085.5 310.0 L 682.0 310.0"/>
+    <circle cx="682" cy="310" r="5" fill="#FF9F0A"/>
+    <circle cx="1142" cy="301" r="19" fill="#FF9F0A"/><text x="1142" y="309" class="pin-num">2</text>
+  </g>
+  <g id="callout-3">
+    <rect class="box" x="1120" y="354" width="400" height="78" rx="10"/>
+    <text class="box-head" x="1168" y="380">Model</text>
+    <text class="box-body" x="1168" y="402">The agent's own list, once it has run.</text>
+    <text class="box-body" x="1168" y="422">Before that: Agent default.</text>
+    <path class="leader" d="M 1120.0 393.0 L 1105.0 393.0 Q 1090.0 393.0 1090.0 378.0 L 1090.0 376.5 Q 1090.0 360.0 1073.5 360.0 L 682.0 360.0"/>
+    <circle cx="682" cy="360" r="5" fill="#FF9F0A"/>
+    <circle cx="1142" cy="393" r="19" fill="#FF9F0A"/><text x="1142" y="401" class="pin-num">3</text>
+  </g>
+  <g id="callout-4">
+    <rect class="box" x="1120" y="446" width="400" height="78" rx="10"/>
+    <text class="box-head" x="1168" y="472">Project</text>
+    <text class="box-body" x="1168" y="494">Recent folders first, with when you last</text>
+    <text class="box-body" x="1168" y="514">used them, then every project it knows.</text>
+    <path class="leader" d="M 1120.0 485.0 L 1105.0 485.0 Q 1090.0 485.0 1090.0 500.0 L 1090.0 507.0 Q 1090.0 525.0 1072.0 525.0 L 542.0 525.0"/>
+    <circle cx="542" cy="525" r="5" fill="#FF9F0A"/>
+    <circle cx="1142" cy="485" r="19" fill="#FF9F0A"/><text x="1142" y="493" class="pin-num">4</text>
+  </g>
+  <text class="h2" x="80" y="731">In Settings, under Agent</text>
+  <rect class="card" x="80" y="751" width="620" height="330" rx="10"/>
+  <text class="card-head" x="100" y="787">Agent</text>
+  <text class="lbl" x="100" y="831">Agent program</text>
+  <text class="mono" x="270" y="831">/Users/you/Tools/agent-acp</text>
+  <circle cx="670" cy="825" r="9" fill="none" stroke="#AEAEB2" stroke-width="1.8"/><line x1="665.5" y1="825" x2="674.5" y2="825" stroke="#AEAEB2" stroke-width="1.8" stroke-linecap="round"/>
+  <g>
+    <rect class="ctl" x="270" y="845" width="96" height="28" rx="7"/>
+    <text x="318.0" y="864.4" font-size="15" fill="#F2F2F7" text-anchor="middle">Change…</text>
+  </g>
+  <text class="lbl" x="100" y="921">Arguments</text>
+  <g>
+    <rect class="ctl" x="270" y="900" width="410" height="30" rx="6"/>
+    <text class="ctl-t" x="280" y="921.5" fill="#F2F2F7">acp</text>
+  </g>
+  <text class="lbl" x="100" y="991">Project folder</text>
+  <text class="mono" x="270" y="991">/Users/you/Projects/lighthouse-book</text>
+  <circle cx="670" cy="985" r="9" fill="none" stroke="#AEAEB2" stroke-width="1.8"/><line x1="665.5" y1="985" x2="674.5" y2="985" stroke="#AEAEB2" stroke-width="1.8" stroke-linecap="round"/>
+  <g>
+    <rect class="ctl" x="270" y="1005" width="96" height="28" rx="7"/>
+    <text x="318.0" y="1024.4" font-size="15" fill="#F2F2F7" text-anchor="middle">Change…</text>
+  </g>
+  <text class="cap" x="100" y="1059">Choose both a program and a project folder before Send to agent will run.</text>
+  <g id="callout-5">
+    <rect class="box" x="1120" y="777" width="400" height="78" rx="10"/>
+    <text class="box-head" x="1168" y="803">Agent program</text>
+    <text class="box-body" x="1168" y="825">The executable itself, picked in a file</text>
+    <text class="box-body" x="1168" y="845">panel. Change… swaps it; minus clears it.</text>
+    <path class="leader" d="M 1120.0 816.0 L 1094.5 816.0 Q 1090.0 816.0 1090.0 820.5 L 1090.0 820.5 Q 1090.0 825.0 1085.5 825.0 L 682.0 825.0"/>
+    <circle cx="682" cy="825" r="5" fill="#FF9F0A"/>
+    <circle cx="1142" cy="816" r="19" fill="#FF9F0A"/><text x="1142" y="824" class="pin-num">5</text>
+  </g>
+  <g id="callout-6">
+    <rect class="box" x="1120" y="869" width="400" height="78" rx="10"/>
+    <text class="box-head" x="1168" y="895">Arguments</text>
+    <text class="box-body" x="1168" y="917">Split on spaces, no shell in between.</text>
+    <text class="box-body" x="1168" y="937">Quote a value that contains one.</text>
+    <path class="leader" d="M 1120.0 908.0 L 1093.5 908.0 Q 1090.0 908.0 1090.0 911.5 L 1090.0 911.5 Q 1090.0 915.0 1086.5 915.0 L 682.0 915.0"/>
+    <circle cx="682" cy="915" r="5" fill="#FF9F0A"/>
+    <circle cx="1142" cy="908" r="19" fill="#FF9F0A"/><text x="1142" y="916" class="pin-num">6</text>
+  </g>
+  <g id="callout-7">
+    <rect class="box" x="1120" y="961" width="400" height="78" rx="10"/>
+    <text class="box-head" x="1168" y="987">Project folder</text>
+    <text class="box-body" x="1168" y="1009">The agent's working directory: your</text>
+    <text class="box-body" x="1168" y="1029">project, not your transcripts folder.</text>
+    <path class="leader" d="M 1120.0 1000.0 L 1097.5 1000.0 Q 1090.0 1000.0 1090.0 992.5 L 1090.0 992.5 Q 1090.0 985.0 1082.5 985.0 L 682.0 985.0"/>
+    <circle cx="682" cy="985" r="5" fill="#FF9F0A"/>
+    <circle cx="1142" cy="1000" r="19" fill="#FF9F0A"/><text x="1142" y="1008" class="pin-num">7</text>
+  </g>
+  <text class="note" x="80" y="1125">The Destination card lists what it finds on this Mac. This pane is for a program you point SpeakWith at yourself, picked as a file, never searched for.</text>
+  <text class="note" x="80" y="1151">Nothing is sent until you press Send to agent. The checked topics go as one prompt turn, each attached as a markdown resource.</text>
+</svg>
