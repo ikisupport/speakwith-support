@@ -73,6 +73,10 @@
       "title": "Aufnahmen in der Gliederung umordnen | SpeakWith",
       "description": "Aufnahmen des Tages per Ziehen in der Gliederung einrücken oder umordnen: zwei Vorher-nachher-Abbildungen derselben fünf Aufnahmen und was Anwenden und Widerrufen tun."
     },
+    "guidesContextAwareInsertion": {
+      "title": "Wie diktierte Wörter ihren Abstand finden | SpeakWith",
+      "description": "SpeakWith liest vor dem Eintippen eines Satzes in eine andere App je ein Zeichen links und rechts vom Cursor. Die Abstandsregel, die sechs Arten von Eingabefeld und was nie gelesen wird."
+    },
     "technicalAgentLists": {
       "title": "Projekt- und Modelllisten | SpeakWith",
       "description": "Wie ein Programm auf deinem Mac das Projektmenü und das Modellmenü im Agent-Tab von SpeakWith von Gumroad füllt: ein lokaler Aufruf für die Ordner und zwei Wege, die Modelle zu übergeben."
@@ -106,7 +110,7 @@
       "heroImageDark": "canonical_screenshots/hero.png?v=20260930c",
       "heroImageLight": "canonical_screenshots/hero-light.png?v=20260930c",
       "heroAlt": "SpeakWith für Mac im Live-Diktat: gesprochene Wörter landen als transkribierte Zeilen unter einer Live-Wellenform, falsch verstandene Namen werden an Ort und Stelle korrigiert, und daneben wird ein Titel für die Sitzung vorgeschlagen.",
-      "heroCaption": "Sprich, und sieh zu, wie die Untertitel für deine Gedanken Gestalt annehmen, bevor die Idee entgleitet. Hinterlege deinen eigenen OpenAI-API-Schlüssel und drücke auf Neuen Titel erzeugen, um eine Überschrift für die Sitzung zu erhalten."
+      "heroCaption": "Sprich, und sieh zu, wie die Untertitel für deine Gedanken Gestalt annehmen, bevor die Idee entgleitet. Optionale Sitzungstitel können deinen OpenAI-Schlüssel oder ein lokales Ollama-Modell auf deinem Mac nutzen. Erzeuge einen Titel oder schreib deinen eigenen."
     },
     "platforms": {
       "eyebrow": "Zwei Apps, eine Stimme",

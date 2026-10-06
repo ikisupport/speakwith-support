@@ -80,6 +80,10 @@
       "title": "Draft by voice, arrange afterwards | SpeakWith",
       "description": "Talk in whatever order the ideas come, then drag the recordings into the order the document needs. Two before and after figures of the same five recordings, kept as plain markdown you can use anywhere."
     },
+    "guidesContextAwareInsertion": {
+      "title": "How typed-in words find their spacing | SpeakWith",
+      "description": "SpeakWith reads one character on each side of the cursor before it types a phrase into another app. The spacing rule, the six kinds of field it meets, and what it never reads."
+    },
     "technicalAgentLists": {
       "title": "Project and model lists | SpeakWith",
       "description": "How a program on your Mac fills the Project menu and the Model menu on the Agent tab of SpeakWith from Gumroad: one local call for the folders, and two ways to hand over the models."
@@ -113,7 +117,7 @@
       "heroImageDark": "canonical_screenshots/hero.png?v=20260930c",
       "heroImageLight": "canonical_screenshots/hero-light.png?v=20260930c",
       "heroAlt": "SpeakWith for Mac in live dictation: spoken words landing as transcribed lines under a live waveform, with misheard names corrected in place and a session title suggested alongside.",
-      "heroCaption": "Speak, and watch the subtitles for your thoughts take shape before the idea slips away. Optional session titles can use your OpenAI key or a local Ollama model on your Mac. Press Generate new title when you want a heading."
+      "heroCaption": "Speak, and watch the subtitles for your thoughts take shape before the idea slips away. Optional session titles can use your OpenAI key or a local Ollama model on your Mac. Generate a title, or write your own."
     },
     "platforms": {
       "eyebrow": "A mobile version is in the works",
@@ -657,6 +661,12 @@
           "cta": "Read the guide"
         },
         {
+          "title": "How typed-in words find their spacing",
+          "body": "Before SpeakWith types a phrase into another app, it reads one character on each side of the cursor. The rule it applies, and the six ways a field can answer.",
+          "path": "guides/context-aware-insertion",
+          "cta": "Read the guide"
+        },
+        {
           "title": "Project and model lists",
           "body": "For people who write programs: how a program on your Mac fills the Project and Model menus on the Agent tab.",
           "path": "technical/agent-lists",
@@ -1123,6 +1133,91 @@
       "seeAlso": {
         "label": "See also: Send to agent, which takes the Outline rows you have checked to a coding agent on your Mac.",
         "path": "guides/send-to-agent"
+      }
+    },
+    "contextAwareInsertion": {
+      "eyebrow": "Guides",
+      "heading": "How typed-in words find their spacing",
+      "intro": "A phrase typed into another app sometimes lands with no space before it, or with two. SpeakWith avoids both by looking at the two characters around the cursor before it types, and this page explains that look: what it reads, what it decides, and the six ways a field can answer, from a field that reports everything to one that collapses spacing after the fact.",
+      "diagramDark": "assets/guides/context-aware-insertion-annotated.svg?v=20261005a",
+      "diagramLight": "assets/guides/context-aware-insertion-annotated-light.svg?v=20261005a",
+      "diagramAlt": "SpeakWith poster in two figures. Figure A, what it looks at: four rows, each a text field with a cursor, the same spoken word, and the result. The one character before the cursor and the one after it are circled and joined by thin leader lines to a label that reads one before, one after. Row one, cursor after a word: one space is added. Row two, cursor after a space: no space is added. Row three, cursor before a period: the word goes in with no space on either side. Row four, a selected word: the spoken word replaces it and the spacing comes from the characters outside the selection. Figure B, when the field will not say: four panels. Legible, Opaque, and Silent each show two phrases landing in the same field with the spacing each kind of field gets. Trimming shows a leading space pasted and eaten, then the same space typed as a keystroke and kept.",
+      "captions": [
+        {
+          "label": "Figure A. What it looks at.",
+          "text": "One character before the cursor, one after. Against a word, one space. Against a space, an edge, or closing punctuation, none. A selection is read from its outside."
+        },
+        {
+          "label": "Figure B. When the field will not say.",
+          "text": "A legible field gets the full rule. An opaque or silent field gets start-of-field spacing plus the join space between phrases. A trimming field keeps its space because the space is typed, not pasted."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "What it looks at",
+          "paragraphs": [
+            {
+              "text": "Before SpeakWith types a finished phrase, it asks the app in front for two characters: the one immediately before the cursor and the one immediately after. Nothing else is read. From those two it decides the spacing, and the rule is short. If the character before is part of a word, the phrase gets one space in front. If it is a space, nothing is added. If there is nothing before the cursor at all, nothing is added either. The same applies after the phrase: one space if a word follows, none if a space or closing punctuation follows, so a phrase typed in front of a period sits snugly against it."
+            },
+            {
+              "text": "Two details matter more than they look. First, the start of a field and a field that could not be read are treated the same way, on purpose: in both cases SpeakWith adds nothing in front and lets the phrase itself carry its spacing, so a read that fails never turns into a stray space. Second, a hyphen or an underscore before the cursor counts as already joined, so a field that ends in well- gets well-known, not well- known. If you select a word before you speak, the phrase replaces the selection and the two characters are read from outside it, as Figure A shows in its last row."
+            }
+          ]
+        },
+        {
+          "heading": "Why it is one space, never two",
+          "paragraphs": [
+            {
+              "text": "With Punctuation off, each phrase SpeakWith types ends in one space, so consecutive phrases read as running prose. That join space exists because, for a long time, typing into another app could not see the field at all. When the field can be read, the join space is dropped and the two-character rule decides instead, since keeping both would put two spaces at the seam. When the field cannot be read, the join space is kept, and the next phrase lands after it exactly as it always did. With Punctuation on, your spoken periods and question marks do the separating, and no join space is added."
+            }
+          ]
+        },
+        {
+          "heading": "The six kinds of field",
+          "paragraphs": [
+            {
+              "text": "Every app answers the two-character question in its own way, and the answer, not the app, decides what SpeakWith does. There are six kinds. The first three cover how a field reports its text, the next two cover how it accepts text, and the last one is out of reach."
+            },
+            {
+              "text": "Legible. The field reports its text and the cursor honestly. The phrase gets the full rule: one space against a word, none against a space or an edge, and the spacing is right on both sides."
+            },
+            {
+              "text": "Opaque. The field answers, but reports no text at all. An empty answer is just as likely to be an editor that hides its contents as a field that is actually empty, and the two are indistinguishable, so SpeakWith deliberately treats this as unreadable. Believing it would drop the join space and glue phrases together. The phrase lands with no space in front and the join space after, so prose still separates, and as soon as the field shows any text the next phrase gets the full rule. The first phrase into a field that reports nothing can still land against a word with no space."
+            },
+            {
+              "text": "Silent. The field does not answer, because it has no text to report or because the app is busy. SpeakWith uses the same fallback as an opaque field. Your words are never dropped for want of an answer."
+            },
+            {
+              "text": "Write-shy. The field reports its cursor but refuses a direct write. SpeakWith re-reads the field after each attempt. If the text is unchanged, it falls back to the clipboard and a paste. If it cannot tell what happened, it stops and says so rather than pasting twice."
+            },
+            {
+              "text": "Trimming. The field accepts the paste but strips the leading space from pasted text, so phrases run together even though the read was honest. SpeakWith types the one leading space as a keystroke and pastes the rest. A keystroke is not pasted text, so no trimming applies to it, and in a field that keeps leading spaces the result is identical."
+            },
+            {
+              "text": "Normalizing. The field collapses whitespace later, usually when a message is sent. Spacing that was right at the moment of typing is rewritten afterwards by the app. No way of inserting text can change this; the words still arrive, and the app decides how they are spaced on the way out."
+            }
+          ]
+        },
+        {
+          "heading": "What it reads, and what it never reads",
+          "paragraphs": [
+            {
+              "text": "The read is two characters, the one before the insertion point and the one after. SpeakWith does not read the document, the rest of the field, or what was on the clipboard before. When a phrase has to go through the clipboard, it is flagged so clipboard managers skip it, and the clipboard is put back afterwards if nothing else wrote to it in the meantime. A password field is detected before anything is written, and SpeakWith refuses to type into it, so a password never passes through the clipboard."
+            }
+          ]
+        },
+        {
+          "heading": "Where this applies",
+          "paragraphs": [
+            {
+              "text": "Typing into other apps is a feature of the direct Mac build. The App Store build is sandboxed, and macOS does not allow a sandboxed app to type into another one, so none of this page applies there. Your day document receives every phrase either way."
+            }
+          ]
+        }
+      ],
+      "seeAlso": {
+        "label": "See also: Reading live transcript corrections, for the marks SpeakWith puts on a settled line in its own window.",
+        "path": "guides/live-transcript-corrections"
       }
     }
   },

@@ -16,6 +16,7 @@
     { "path": "guides/status-monitor", "seoKey": "guidesStatusMonitor", "localized": true, "priority": "0.5" },
     { "path": "guides/send-to-agent", "seoKey": "guidesSendToAgent", "localized": true, "priority": "0.5" },
     { "path": "guides/outline", "seoKey": "guidesOutline", "localized": true, "priority": "0.5" },
+    { "path": "guides/context-aware-insertion", "seoKey": "guidesContextAwareInsertion", "localized": true, "priority": "0.5" },
     { "path": "technical/agent-lists", "seoKey": "technicalAgentLists", "localized": true, "priority": "0.4" },
     { "path": "privacy", "seoKey": "privacy", "localized": false, "priority": "0.3" },
     { "path": "terms", "seoKey": "terms", "localized": false, "priority": "0.3" }

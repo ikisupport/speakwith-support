@@ -94,6 +94,14 @@ function pageRoutes(locale: LocaleDef): Routes {
       ...meta('guides/outline'),
     },
     {
+      path: 'guides/context-aware-insertion',
+      loadComponent: () =>
+        import('./pages/guides/context-aware-insertion-guide.component').then(
+          m => m.ContextAwareInsertionGuideComponent,
+        ),
+      ...meta('guides/context-aware-insertion'),
+    },
+    {
       path: 'technical/agent-lists',
       loadComponent: () =>
         import('./pages/technical/agent-lists.component').then(m => m.AgentListsComponent),
