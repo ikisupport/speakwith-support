@@ -58,15 +58,23 @@ import { ThemeService } from '../../services/theme.service';
         <p class="platforms__sub">{{ copy.home.platforms.sub }}</p>
         <div class="platforms__grid">
           @for (p of copy.home.platforms.items; track p.name) {
-            <article class="card platform">
-              <p class="platform__tag">{{ p.tag }}</p>
-              <h3 class="platform__name">{{ p.name }}</h3>
-              <p class="platform__body">{{ p.body }}</p>
-              <ul class="platform__points">
-                @for (point of p.points; track point) {
-                  <li>{{ point }}</li>
-                }
-              </ul>
+            <article class="card platform" [class.platform--shot]="!!p.src">
+              <div class="platform__text">
+                <p class="platform__tag">{{ p.tag }}</p>
+                <h3 class="platform__name">{{ p.name }}</h3>
+                <p class="platform__body">{{ p.body }}</p>
+                <ul class="platform__points">
+                  @for (point of p.points; track point) {
+                    <li>{{ point }}</li>
+                  }
+                </ul>
+              </div>
+              @if (p.src) {
+                <figure class="platform__figure">
+                  <img class="platform__image" [src]="p.src" [alt]="p.ariaLabel"
+                       width="660" height="1434" loading="lazy" />
+                </figure>
+              }
             </article>
           }
         </div>
@@ -172,7 +180,7 @@ import { ThemeService } from '../../services/theme.service';
       </section>
     }
 
-    <!-- Your words stay on your Mac. Plain files, no account. -->
+    <!-- Your recordings stay on your Mac. -->
     <section class="moat">
       <div class="container home-band home-band--moat">
         <h2 class="moat__title">{{ copy.home.moat.title }}</h2>
@@ -374,6 +382,7 @@ import { ThemeService } from '../../services/theme.service';
       grid-template-columns: repeat(2, 1fr);
       gap: 1.4rem;
       text-align: left;
+      align-items: start;
     }
 
     .platform__tag {
@@ -405,6 +414,30 @@ import { ThemeService } from '../../services/theme.service';
       color: var(--text-dim);
       font-size: 0.95rem;
       margin-bottom: 0.5rem;
+    }
+
+    /* Phone capture beside the iOS card's text; the Mac card has none (src: "").
+       Side by side keeps the two cards close in height, so the Mac card is not
+       stretched around a tall portrait frame. */
+    .platform--shot {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 7.5rem;
+      gap: 1.4rem;
+      align-items: start;
+    }
+
+    .platform__figure {
+      margin: 0;
+    }
+
+    .platform__image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 1.2rem;
+      border: 1px solid var(--rule);
+      box-shadow: var(--shadow);
+      background: var(--surface-2);
     }
 
     /* Type into app demo band (layout reused from .heroshot) */
@@ -574,7 +607,7 @@ import { ThemeService } from '../../services/theme.service';
       line-height: 1.5;
     }
 
-    /* Your words stay on your Mac. Plain files, no account. */
+    /* Your recordings stay on your Mac. */
     .moat {
       background: var(--bg);
       border-bottom: 1px solid var(--rule);
@@ -587,7 +620,7 @@ import { ThemeService } from '../../services/theme.service';
 
     .moat__grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.1rem;
     }
 
@@ -736,6 +769,9 @@ import { ThemeService } from '../../services/theme.service';
       .platforms__grid {
         grid-template-columns: 1fr;
       }
+      .platform--shot {
+        grid-template-columns: minmax(0, 1fr) 8.5rem;
+      }
       .moat__grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -760,6 +796,13 @@ import { ThemeService } from '../../services/theme.service';
     @media (max-width: 620px) {
       .features {
         grid-template-columns: 1fr;
+      }
+      .platform--shot {
+        grid-template-columns: 1fr;
+      }
+      .platform__figure {
+        max-width: 160px;
+        margin: 0 auto;
       }
       .moat__grid {
         grid-template-columns: 1fr;

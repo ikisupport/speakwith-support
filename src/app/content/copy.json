@@ -90,7 +90,7 @@
     },
     "privacy": {
       "title": "Privacy Policy | SpeakWith",
-      "description": "Your words are yours. SpeakWith keeps recordings, transcripts, and documents on your device: no account, no tracking in the app, no cloud upload. This website counts anonymous visits only."
+      "description": "Your words are yours. SpeakWith keeps recordings, transcripts, and documents on your device, with no tracking in the app. This website counts anonymous visits only."
     },
     "terms": {
       "title": "Terms of Service | SpeakWith",
@@ -109,12 +109,12 @@
       "ctaPrimary": "Try SpeakWith free",
       "ctaSecondary": "iOS: Coming Soon",
       "ctaGhost": "See how it works",
-      "note": "Available on Mac today. An iOS companion is on the way. Recording and transcription happen on your device. No account required.",
+      "note": "Available on Mac today. An iOS companion is on the way. Recording and transcription happen on your device.",
       "ctaDemo": "Watch it type"
     },
     "moments": {
       "title": "Words land as you speak, and you can edit them live.",
-      "heroImageDark": "canonical_screenshots/hero.png?v=20260930c",
+      "heroImageDark": "canonical_screenshots/hero.png?v=20261012b",
       "heroImageLight": "canonical_screenshots/hero-light.png?v=20260930c",
       "heroAlt": "SpeakWith for Mac in live dictation: spoken words landing as transcribed lines under a live waveform, with misheard names corrected in place and a session title suggested alongside.",
       "heroCaption": "Speak, and watch the subtitles for your thoughts take shape before the idea slips away. Optional session titles can use your OpenAI key or a local Ollama model on your Mac. Generate a title, or write your own."
@@ -135,19 +135,24 @@
             "Projects with separate folders",
             "Import audio and video",
             "Apple, Whisper, and Parakeet engines"
-          ]
+          ],
+          "src": "",
+          "ariaLabel": ""
         },
         {
           "name": "SpeakWith for iOS",
           "tag": "The companion",
-          "body": "A voice recorder for when you are away from the desk. Live dictation, a dictation board that collects what you capture, and your transcripts and audio files kept close. Transcription runs on-device with Apple Speech.",
+          "body": "A voice recorder for when you are away from the desk. Dictate live, give the session a title and tap Use to keep it, or polish a take into clean paragraphs with your own OpenAI key. Your transcripts come along, organised by day, transcribed on-device with Apple Speech.",
           "points": [
             "Live dictation",
-            "Dictation board",
-            "Transcripts and audio files",
+            "Automatic titles, when you want them",
+            "Automatic polish, too",
+            "Browse and search transcripts by day",
             "On-device Apple Speech",
             "English today, more languages in development"
-          ]
+          ],
+          "src": "assets/screenshots/ios-live-polish.png",
+          "ariaLabel": "SpeakWith for iOS mid-recording: live dictation lines above a generated session title, The stairs, and three calls at nine, with a Use button, then a Polish tab showing the same take as two clean paragraphs with Copy polish and Apply to day document."
         }
       ]
     },
@@ -236,11 +241,11 @@
       ]
     },
     "moat": {
-      "title": "Your recordings stay on your Mac. Plain files, no account.",
+      "title": "Your recordings stay on your Mac.",
       "items": [
         {
           "label": "Local",
-          "body": "Your recordings never leave your Mac. Optional session titles can run on a local Ollama model or your own OpenAI key, and only when you switch them on. A separate optional correction check can ask OpenAI to vet flagged lines.",
+          "body": "Your recordings never leave your Mac. Optional session titles can run on a local Ollama model or your own OpenAI key, and only when you switch them on. On iPhone, titles and polish use your OpenAI key alone. A separate optional correction check can ask OpenAI to vet flagged lines.",
           "isHtml": false
         },
         {
@@ -249,13 +254,8 @@
           "isHtml": true
         },
         {
-          "label": "No account",
-          "body": "No login. No subscription cloud. No data trade.",
-          "isHtml": false
-        },
-        {
           "label": "On your computer",
-          "body": "Transcription and summarization run on your Mac. Nothing is uploaded. Ever.",
+          "body": "Transcription and summarization run on your Mac. A key you bring for optional AI sends the text for that step.",
           "isHtml": false
         }
       ]
@@ -328,11 +328,11 @@
         },
         {
           "q": "Can the optional AI features run locally?",
-          "a": "Session titles can. Choose Ollama under Settings, Session AI, and titles stay on your Mac. Correction checks, if you enable them, use your OpenAI key. Core recording and transcription never need the network."
+          "a": "Session titles can, on the Mac. Choose Ollama under Settings, Session AI, and titles stay on your Mac. On iPhone and iPad, session titles and polish use your own OpenAI key, so they are optional but not local. Correction checks, if you enable them, use your OpenAI key. Core recording and transcription never need the network."
         },
         {
           "q": "Where are my recordings and documents stored?",
-          "a": "As ordinary files on your Mac. You can open, copy, back up, and delete them with any tool you like. They are not locked inside the app or held in an account."
+          "a": "As ordinary files on your Mac. Open, copy, back up, or delete them with any tool you like."
         },
         {
           "q": "How accurate is the transcription?",
@@ -358,7 +358,7 @@
         },
         {
           "q": "Is there an iOS app?",
-          "a": "It's on the way, and it will be free. SpeakWith for iOS is a companion voice recorder: live dictation, a dictation board that collects what you capture, and your transcripts and audio files on hand. It transcribes on-device with Apple Speech, and it works alongside the Mac app rather than replacing it."
+          "a": "It's on the way, and it will be free. SpeakWith for iOS is a companion voice recorder: live dictation, optional session titles and polish with your own OpenAI key, and your transcripts on hand, organised by day. It transcribes on-device with Apple Speech, and it works alongside the Mac app rather than replacing it."
         },
         {
           "q": "On iOS, the permission prompt says speech is \"sent to Apple\". Is my voice uploaded?",
@@ -1327,7 +1327,7 @@
             "isHtml": false
           },
           {
-            "text": "Two optional features can send transcript text, never audio, to a language model: generating a session title and checking corrections. Both are off until you turn them on. Session titles can use your OpenAI API key or a local Ollama model on your Mac, so nothing leaves your machine when you choose Ollama. Correction checks, if you enable them, use your OpenAI key.",
+            "text": "Three optional features can send transcript text, never audio, to a language model: generating a session title, polishing a take, and checking corrections. All of them are off until you turn them on. On the Mac, session titles can use your OpenAI API key or a local Ollama model, so nothing leaves your machine when you choose Ollama. On iPhone and iPad, session titles and polish use your own OpenAI key, and without a key nothing leaves the device. Correction checks, if you enable them, use your OpenAI key.",
             "isHtml": false
           }
         ]
@@ -1349,7 +1349,7 @@
         "heading": "Your files belong to you",
         "paragraphs": [
           {
-            "text": "Everything SpeakWith produces (your recordings, transcripts, and daily documents) is stored as ordinary files on your device. You can open, copy, move, back up, and delete them with any tool you like. They are not locked inside a proprietary store, and they are not held in an account that we control.",
+            "text": "Everything SpeakWith produces (your recordings, transcripts, and daily documents) is stored as ordinary files on your device. Open, copy, move, back up, or delete them with any tool you like.",
             "isHtml": false
           }
         ]

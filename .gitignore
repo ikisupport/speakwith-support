@@ -59,3 +59,4 @@ Thumbs.db
 
 # CI publish staging (npm run check:publish)
 /_site
+/STYLE.md

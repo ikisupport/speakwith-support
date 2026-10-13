@@ -83,7 +83,7 @@
     },
     "privacy": {
       "title": "Privacy Policy | SpeakWith",
-      "description": "Your words are yours. SpeakWith keeps recordings, transcripts, and documents on your device: no account, no tracking in the app, no cloud upload. This website counts anonymous visits only."
+      "description": "Your words are yours. SpeakWith keeps recordings, transcripts, and documents on your device, with no tracking in the app. This website counts anonymous visits only."
     },
     "terms": {
       "title": "Terms of Service | SpeakWith",
@@ -102,12 +102,12 @@
       "ctaPrimary": "SpeakWith kostenlos testen",
       "ctaSecondary": "iOS: Demnächst",
       "ctaGhost": "So funktioniert es",
-      "note": "Heute auf dem Mac verfügbar. Eine iOS-Begleit-App ist in Arbeit. Aufnahme und Transkription passieren auf deinem Gerät. Kein Konto nötig.",
+      "note": "Heute für den Mac verfügbar. Eine iOS-Begleitapp kommt. Aufnahme und Transkription finden auf deinem Gerät statt.",
       "ctaDemo": "Beim Tippen zusehen"
     },
     "moments": {
       "title": "Deine Wörter erscheinen. Während du sprichst.",
-      "heroImageDark": "canonical_screenshots/hero.png?v=20260930c",
+      "heroImageDark": "canonical_screenshots/hero.png?v=20261012b",
       "heroImageLight": "canonical_screenshots/hero-light.png?v=20260930c",
       "heroAlt": "SpeakWith für Mac im Live-Diktat: gesprochene Wörter landen als transkribierte Zeilen unter einer Live-Wellenform, falsch verstandene Namen werden an Ort und Stelle korrigiert, und daneben wird ein Titel für die Sitzung vorgeschlagen.",
       "heroCaption": "Sprich, und sieh zu, wie die Untertitel für deine Gedanken Gestalt annehmen, bevor die Idee entgleitet. Optionale Sitzungstitel können deinen OpenAI-Schlüssel oder ein lokales Ollama-Modell auf deinem Mac nutzen. Erzeuge einen Titel oder schreib deinen eigenen."
@@ -128,19 +128,24 @@
             "Projekte mit getrennten Ordnern",
             "Audio und Video importieren",
             "Engines von Apple, Whisper und Parakeet"
-          ]
+          ],
+          "src": "",
+          "ariaLabel": ""
         },
         {
           "name": "SpeakWith für iOS",
           "tag": "Der Begleiter",
-          "body": "Ein Sprachrekorder für unterwegs, wenn du nicht am Schreibtisch bist. Live-Diktat, eine Diktattafel, die alles sammelt, was du aufnimmst, und deine Transkripte und Audiodateien immer griffbereit. Die Transkription läuft auf dem Gerät mit Apple Speech.",
+          "body": "Ein Sprachrekorder für unterwegs, wenn du nicht am Schreibtisch bist. Diktiere live, gib der Sitzung einen Titel und tippe auf „Verwenden“, um ihn zu behalten, oder poliere eine Aufnahme mit deinem eigenen OpenAI-Schlüssel zu sauberen Absätzen. Deine Transkripte sind dabei, nach Tagen geordnet, auf dem Gerät mit Apple Speech transkribiert.",
           "points": [
             "Live-Diktat",
-            "Diktattafel",
-            "Transkripte und Audiodateien",
+            "Automatische Titel, wenn du sie willst",
+            "Automatische Politur, auch das",
+            "Transkripte nach Tagen durchsuchen",
             "Apple Speech auf dem Gerät",
             "Heute Englisch, weitere Sprachen in Entwicklung"
-          ]
+          ],
+          "src": "assets/screenshots/ios-live-polish.png",
+          "ariaLabel": "SpeakWith für iOS während einer Aufnahme: Zeilen des Live-Diktats über einem erzeugten Sitzungstitel, The stairs, and three calls at nine, mit einer Schaltfläche Use, darunter der Tab Polish mit derselben Aufnahme als zwei saubere Absätze sowie Copy polish und Apply to day document."
         }
       ]
     },
@@ -229,7 +234,7 @@
       ]
     },
     "moat": {
-      "title": "Deine Wörter bleiben auf deinem Mac. Einfache Dateien, kein Konto.",
+      "title": "Deine Aufnahmen bleiben auf deinem Mac.",
       "items": [
         {
           "label": "Lokal.",
@@ -242,13 +247,8 @@
           "isHtml": true
         },
         {
-          "label": "Kein Konto.",
-          "body": "Kein Login. Keine Abo-Cloud. Kein Handel mit Daten.",
-          "isHtml": false
-        },
-        {
           "label": "Auf deinem Rechner.",
-          "body": "Transkription und Zusammenfassung laufen auf deinem Mac. Nichts wird hochgeladen. Niemals.",
+          "body": "Transkription und Zusammenfassung laufen auf deinem Mac. Ein Schlüssel, den du für optionale KI mitbringst, sendet den Text für diesen Schritt.",
           "isHtml": false
         }
       ]
@@ -321,11 +321,11 @@
         },
         {
           "q": "Können die optionalen KI-Funktionen lokal laufen?",
-          "a": "Sitzungstitel können das. Wähle Ollama unter Einstellungen, Session-KI, und Titel bleiben auf deinem Mac. Korrekturprüfungen, wenn du sie aktivierst, nutzen deinen OpenAI-Schlüssel. Kernaufnahme und Transkription brauchen niemals das Netzwerk."
+          "a": "Sitzungstitel können das, auf dem Mac. Wähle Ollama unter Einstellungen, Session-KI, und Titel bleiben auf deinem Mac. Auf iPhone und iPad nutzen Sitzungstitel und Politur deinen eigenen OpenAI-Schlüssel, sie sind also optional, aber nicht lokal. Korrekturprüfungen, wenn du sie aktivierst, nutzen deinen OpenAI-Schlüssel. Kernaufnahme und Transkription brauchen niemals das Netzwerk."
         },
         {
           "q": "Wo werden meine Aufnahmen und Dokumente gespeichert?",
-          "a": "Als gewöhnliche Dateien auf deinem Mac. Du kannst sie mit jedem beliebigen Werkzeug öffnen, kopieren, sichern und löschen. Sie sind weder in der App eingeschlossen noch in einem Konto hinterlegt."
+          "a": "Als ganz normale Dateien auf deinem Mac. Öffne, kopiere, sichere oder lösche sie mit jedem Werkzeug, das du magst."
         },
         {
           "q": "Wie genau ist die Transkription?",
@@ -351,7 +351,7 @@
         },
         {
           "q": "Gibt es eine iOS-App?",
-          "a": "Sie ist unterwegs und wird kostenlos sein. SpeakWith für iOS ist ein begleitender Sprachrekorder: Live-Diktat, eine Diktattafel, die alles sammelt, was du aufnimmst, und deine Transkripte und Audiodateien griffbereit. Die Transkription läuft auf dem Gerät mit Apple Speech, und die App arbeitet neben der Mac-App, statt sie zu ersetzen."
+          "a": "Sie ist unterwegs und wird kostenlos sein. SpeakWith für iOS ist ein begleitender Sprachrekorder: Live-Diktat, optionale Sitzungstitel und Politur mit deinem eigenen OpenAI-Schlüssel, und deine Transkripte griffbereit, nach Tagen geordnet. Die Transkription läuft auf dem Gerät mit Apple Speech, und die App arbeitet neben der Mac-App, statt sie zu ersetzen."
         },
         {
           "q": "Unter iOS sagt die Berechtigungsabfrage, Sprache werde „an Apple gesendet“. Wird meine Stimme hochgeladen?",
