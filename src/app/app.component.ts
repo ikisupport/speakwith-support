@@ -73,6 +73,14 @@ import { LocaleService } from './services/locale.service';
         </details>
         }
 
+        <p class="footer__credits">
+          <span class="footer__credits-label">{{ copy.app.footer.builtOn.label }}</span>
+          {{ copy.app.footer.builtOn.components }}
+        </p>
+        <p class="footer__credits">
+          <span class="footer__credits-label">{{ copy.app.footer.builtOn.researchLabel }}</span>
+          <a [href]="copy.app.footer.builtOn.ctaUrl" target="_blank" rel="noopener noreferrer">{{ copy.app.footer.builtOn.citation }}</a>
+        </p>
         <p class="footer__fine" [innerHTML]="copyright"></p>
       </div>
     </footer>
@@ -122,9 +130,29 @@ import { LocaleService } from './services/locale.service';
       margin-bottom: 0.25rem;
     }
 
+    .footer__credits {
+      margin: 0.35rem 0;
+      font-size: 0.88rem;
+    }
+
+    .footer__credits-label {
+      font-weight: 700;
+      margin-right: 0.4rem;
+    }
+
+    .footer__credits a {
+      color: var(--text-dim);
+      font-weight: 600;
+    }
+
+    .footer__credits a:hover {
+      color: var(--accent);
+    }
+
     .footer__fine {
       font-size: 0.84rem;
       opacity: 0.8;
+      margin-top: 0.8rem;
     }
 
     .locale {

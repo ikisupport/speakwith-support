@@ -28,6 +28,13 @@
         "ikiSystems": "IKI Systems"
       },
       "tagline": "SpeakWith: your spoken ideas, captured as a daily document.",
+      "builtOn": {
+        "label": "Built on",
+        "components": "Apple Speech · Whisper · Parakeet · wav2vec2 · Silero",
+        "researchLabel": "Research",
+        "citation": "Ruan et al., ACM IMWUT (2017)",
+        "ctaUrl": "https://doi.org/10.1145/3161187"
+      },
       "copyrightHtml": "© {{year}} <a href=\"{{ikiSystemsHome}}\" target=\"_blank\" rel=\"noopener noreferrer\">IKI Systems</a>. All rights reserved."
     },
     "localeSwitcher": {
@@ -62,7 +69,7 @@
     },
     "guidesRecorderBadge": {
       "title": "Reading the recorder badge | SpeakWith",
-      "description": "What the two lines at the left of the SpeakWith record bar mean: the build you are running, and your running tally of words, sentences, characters, and correction rates."
+      "description": "What the two lines at the left of the SpeakWith record bar mean: the build you are running, and your running tally of words, sentences, correction rates, and speaking pace."
     },
     "guidesLiveTranscriptCorrections": {
       "title": "Reading live transcript corrections | SpeakWith",
@@ -117,7 +124,7 @@
       "heroImageDark": "canonical_screenshots/hero.png?v=20261012b",
       "heroImageLight": "canonical_screenshots/hero-light.png?v=20260930c",
       "heroAlt": "SpeakWith for Mac in live dictation: spoken words landing as transcribed lines under a live waveform, with misheard names corrected in place and a session title suggested alongside.",
-      "heroCaption": "Speak, and watch the subtitles for your thoughts take shape before the idea slips away. Optional session titles can use your OpenAI key or a local Ollama model on your Mac. Generate a title, or write your own."
+      "heroCaption": "Speak, and watch the subtitles for your thoughts take shape before the idea slips away. Optional polish tidies the finished take and shows what it touched before you apply it. Session titles are optional too: use your OpenAI key or a local Ollama model on your Mac, or write your own."
     },
     "platforms": {
       "eyebrow": "A mobile version is in the works",
@@ -142,7 +149,7 @@
         {
           "name": "SpeakWith for iOS",
           "tag": "The companion",
-          "body": "A voice recorder for when you are away from the desk. Dictate live, give the session a title and tap Use to keep it, or polish a take into clean paragraphs with your own OpenAI key. Your transcripts come along, organised by day, transcribed on-device with Apple Speech.",
+          "body": "A voice recorder for when you are away from the desk. Dictate live, generate a title and tap Use to keep it, or polish a take into clean paragraphs with your own OpenAI key. Your transcripts come along, organised by day, transcribed on-device with Apple Speech.",
           "points": [
             "Live dictation",
             "Automatic titles, when you want them",
@@ -318,6 +325,38 @@
       "heading": "The home base your thinking returns to",
       "p1": "Real work runs in parallel. You start something that takes time to come back: a long process, a tool working away, a task you've handed off. Instead of waiting, you begin the next thing, then another. Before long, several are in flight at once.",
       "p2": "Tools come and go; your daily document stays. It is the one place that holds every thread in a single file that is yours: what each one is for, where you left it, what to check when it lands. You can keep many things moving at once because you are not holding them all in your head."
+    },
+    "metrics": {
+      "eyebrow": "On the recorder",
+      "heading": "What the badge is counting",
+      "leadHtml": "Speech is faster than typing, and the research is specific about how much. Ruan et al., ACM IMWUT (2017), measured speech about 3x faster than an iPhone keyboard for short messages: 153 words per minute spoken against 52 typed, counting the time spent fixing mistakes. <em>A desktop keyboard is faster than a phone keyboard, so read that multiple as the phone case.</em>",
+      "items": [
+        {
+          "title": "Correction rate",
+          "body": "The share of dictated words you went back and changed. <em>It only counts corrections you actually made, so the true error rate may be higher.</em>",
+          "isHtml": true
+        },
+        {
+          "title": "Special terms",
+          "body": "The share of words your special terms corrected. Names, terminology, and words you pronounce your own way. The denominator is the words you dictated, the same count the correction rate uses.",
+          "isHtml": false
+        },
+        {
+          "title": "Speaking pace",
+          "body": "Your words per minute of actual speech. <em>The pauses while you think are in neither half of the figure, so this is how fast you talk and not how much you get down in an hour.</em>",
+          "isHtml": true
+        },
+        {
+          "title": "Audio quality",
+          "body": "A score for how well the recognizer is hearing you, on your own audio. <em>How it is measured depends on the engine you run, and the guide explains each.</em>",
+          "isHtml": true
+        }
+      ],
+      "totals": "Words, sentences and characters since you last reset the count: everything you said instead of typing it.",
+      "guide": {
+        "label": "Read the recorder badge guide",
+        "path": "guides/recorder-badge"
+      }
     },
     "faq": {
       "title": "Frequently asked questions",
@@ -632,7 +671,7 @@
       "cards": [
         {
           "title": "Reading the recorder badge",
-          "body": "The two lines at the left of the record bar show the build you are running and a tally of your dictation, including your correction rate, a personal stand-in for WER (Word Error Rate).",
+          "body": "The two lines at the left of the record bar show the build you are running and a tally of your dictation: your correction rate, your special terms, and your speaking pace.",
           "path": "guides/recorder-badge",
           "cta": "Read the guide"
         },
@@ -678,9 +717,9 @@
       "eyebrow": "Guides",
       "heading": "Reading the recorder badge",
       "intro": "At the left of the record bar on the Mac, SpeakWith shows two short lines in a small monospaced typeface. The first identifies the build you are running. The second tracks your dictation over time. The diagram below walks through each segment.",
-      "diagramDark": "assets/guides/recorder-status-badge-annotated.svg?v=20260929g",
-      "diagramLight": "assets/guides/recorder-status-badge-annotated-light.svg?v=20260929g",
-      "diagramAlt": "Annotated diagram of the SpeakWith recorder badge. Line one reads SpeakWith 2.14.0 Pro (app=eng 20260923.10): the app name, version, edition, and the build stamp shared by the app and its engine. Line two reads 9,834w, 1,770s, 51,368c, 0.7% wer, 0.1% st: words, sentences, and characters dictated since the last reset, then the share of words you corrected and the share your special terms corrected.",
+      "diagramDark": "assets/guides/recorder-status-badge-annotated.svg?v=20261014a",
+      "diagramLight": "assets/guides/recorder-status-badge-annotated-light.svg?v=20261014a",
+      "diagramAlt": "Annotated diagram of the SpeakWith recorder badge. Line one reads SpeakWith 2.14.0 Pro (app=eng 20260923.10): the app name, version, edition, and the build stamp shared by the app and its engine. Line two reads 9,834w · 1,770s · 0.7% wer · 0.1% st · 148 wpm: words and sentences dictated since the last reset, the share of words you corrected, the share your special terms corrected, and your speaking pace.",
       "sections": [
         {
           "heading": "The first line: which build you are running",
@@ -697,10 +736,47 @@
           "heading": "The second line: your dictation tally",
           "paragraphs": [
             {
-              "text": "The three counts are words, sentences, and characters you have dictated since the last reset, across all sessions. The s stands for sentences, not seconds."
+              "text": "The counts are words and sentences you have dictated since the last reset, across all sessions. The s stands for sentences, not seconds. The character count used to sit on this line. It now lives in About, under Totals."
             },
             {
               "text": "The two percentages use the word count as their denominator. The correction rate (wer) is the share of dictated words you went back and changed, a personal stand-in for WER (Word Error Rate). It only counts corrections you actually made, so the true error rate may be higher. The special-terms rate (st) is the share of words that your own special terms corrected: names, terminology, and words you pronounce your own way, which the recognizer would otherwise get wrong."
+            },
+            {
+              "text": "The last figure is your speaking pace, in words per minute of speech. The pauses while you think sit in neither half of the ratio, so this is how fast you talk. It is not how much you get down in an hour, and it is not a typing speed. The badge never divides your pace by a typing figure."
+            }
+          ]
+        },
+        {
+          "heading": "The panel header: this session",
+          "paragraphs": [
+            {
+              "text": "Live dictation adds a line for the session you are in. It counts settled utterances, the words in them, and the time you were actually speaking. When a score exists it adds the audio quality check, and it ends with a pace for this session. A sample line reads: 12 settled · 840 words · 6m speech · support 94.2% · ~148 wpm."
+            },
+            {
+              "text": "That session pace and the badge pace use different clocks, and a gap is expected. The badge covers every session since the last reset, as words over speech time. The header covers this session, from the start of one utterance to the start of the next. On the same audio the header usually reads about a tenth higher."
+            },
+            {
+              "text": "The session pace has three states. Before there is enough speech, you see a dash and then wpm. While the figure is still settling, a tilde sits in front of it (~148 wpm). Once the session has enough speech, the tilde drops off and the number stands alone."
+            },
+            {
+              "text": "The support percentage joins the line only after a real score exists. If the checker is not installed, that segment is left off the line."
+            }
+          ]
+        },
+        {
+          "heading": "The audio quality check",
+          "paragraphs": [
+            {
+              "text": "Settings calls this the audio quality check. On the header it appears as support followed by a percentage: a score for how well the recognizer is hearing you, on your own audio. The engine you are running decides how that percentage is measured."
+            },
+            {
+              "text": "On Whisper batch jobs, and on Parakeet live dictation, the percentage is an independent listener's agreement with the transcript. The listener compares phonemes, the sounds of the words, with what was written down. From strongest to weakest the bands are Strong, High, Moderate, Weak, Minimal, and None."
+            },
+            {
+              "text": "Apple Speech reports the recognizer's own confidence under the same label. Its bands are High, Moderate, and Low. The names overlap and the cutoffs do not: 0.85 is High on Apple Speech and only Moderate for the phoneme listener. This guide prints no single band table for both, because one table would mix two scales."
+            },
+            {
+              "text": "On a Whisper batch job, a low score can send the audio to the larger model. That step needs the optional accuracy add-on. The bundled checker is English only. When no score exists yet, the percentage stays off the line. Live dictation waits until the checker is installed and a first utterance has been scored."
             }
           ]
         },
