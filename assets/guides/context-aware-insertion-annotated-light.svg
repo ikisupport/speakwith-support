@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1500" viewBox="0 0 1600 1500" font-family="SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title>SpeakWith: how a typed-in phrase finds its spacing</title>
+  <desc>Two figures. Figure A, what it looks at: four rows, each a text field with a cursor, the same spoken word, and the field afterwards. The one character before the cursor and the one after it are circled and joined by leader lines to a label. After a word, one space is added. After a space, none. Before a period, one space in front and none after. A selected word is replaced and the spacing is read from outside the selection. Figure B, when the field will not say: four panels. Legible, opaque, and silent fields each receive the same two phrases, with the spacing each kind of field gets. A trimming field eats a pasted leading space and keeps a typed one.</desc>
+  <!--
+    Maintainer note (not rendered):
+    - Figure A is DictationSpacing.edges(before:after:) (macos/SpeakWith/SpeakWith/TCA/SystemDictation/DictationSpacing.swift):
+      one space against a word, none against whitespace, an edge, closing punctuation, or a joiner.
+      nil on either side means an edge OR a context that could not be read; both are spaced the same way.
+    - Figure B panels are the behaviour classes TextInjectionClient.inject meets: a legible field gets the full
+      rule; an empty kAXValue is distrusted (FocusedFieldRead.context == .emptyValue) and a missing one is
+      .unavailable, both falling back to start-of-field spacing plus the Punctuation-off join space; a field
+      that trims pasted leading whitespace is handled by typing the one leading space as a keystroke
+      (typesLeadingSpace) and pasting the rest.
+    - No destination app is named anywhere in this poster, by design.
+    - Regenerate with guide_design/context_aware_insertion/gen_context_aware_insertion.py <outdir> (light).
+  -->
+  <defs>
+    <style>
+      .title { font-size: 40px; font-weight: 700; fill: #1D1D1F; }
+      .subtitle { font-size: 22px; fill: #515154; }
+      .fig-letter { font-size: 26px; font-weight: 800; fill: #C93400; }
+      .fig-head { font-size: 24px; font-weight: 700; fill: #1D1D1F; }
+      .mono { font-size: 20px; font-family: Menlo, SF Mono, Consolas, monospace; fill: #1D1D1F; white-space: pre; }
+      .space { fill: #C93400; }
+      .eaten { fill: #C0392B; }
+      .sel-text { fill: #1D1D1F; }
+      .pill { font-size: 18px; font-weight: 700; text-anchor: middle; font-family: Menlo, SF Mono, Consolas, monospace; }
+      .row-cap { font-size: 17px; fill: #3A3A3C; }
+      .read-label { font-size: 17px; font-weight: 650; fill: #C93400; }
+      .leader { stroke: #C93400; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; opacity: 0.85; }
+      .panel-head { font-size: 22px; font-weight: 700; fill: #1D1D1F; }
+      .panel-sub { font-size: 16px; fill: #3A3A3C; }
+      .line-label { font-size: 15px; fill: #6E6E73; }
+      .caption { font-size: 20px; fill: #515154; }
+      .caption-n { font-weight: 700; fill: #1D1D1F; }
+      .caption-lead { font-weight: 700; fill: #1D1D1F; }
+      .note { font-size: 16px; fill: #6E6E73; font-style: italic; }
+      .brand { font-size: 22px; font-weight: 700; fill: #1D1D1F; text-anchor: end; letter-spacing: 0.01em; }
+    </style>
+  </defs>
+  <rect width="1600" height="1500" fill="#F5F5F7"/>
+  <rect x="1.5" y="1.5" width="1597" height="1497" rx="26.9" fill="none" stroke="#B0B0B8" stroke-width="3"/>
+
+  <text class="title" x="80" y="82">How typed-in words find their spacing</text>
+  <text class="brand" x="1520" y="82">SpeakWith</text>
+  <text class="subtitle" x="80" y="118">Before a phrase is typed into another app, two characters are read around the cursor. Marked spaces are the ones the rule added.</text>
+  <text class="fig-letter" x="80" y="200">A</text>
+  <text class="fig-head" x="116" y="200">What it looks at</text>
+  <text class="brand" x="1520" y="200">SpeakWith</text>
+  <rect x="80" y="240" width="520" height="64" rx="10" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1.5"/>
+  <text class="mono" x="98" y="280" xml:space="preserve">the total</text>
+  <rect x="205.35999999999999" y="260" width="2.5" height="28" fill="#1D1D1F"/>
+  <rect x="624" y="255.0" width="128" height="34" rx="17" fill="#C93400"/>
+  <text class="pill" x="688" y="278.0" fill="#FFFFFF">+ ninety</text>
+  <path d="M 768.0 272.0 L 844 272.0" stroke="#6E6E73" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 834 265.0 L 844 272.0 L 834 279.0" fill="none" stroke="#6E6E73" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="860" y="240" width="660" height="64" rx="10" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1.5"/>
+  <text class="mono" x="878" y="280" xml:space="preserve">the total ninety</text>
+  <rect x="987.86" y="285" width="9.0" height="3" rx="1.5" fill="#C93400"/>
+  <text class="row-cap" x="80" y="332">After a word: one space in front, none after, because nothing follows.</text>
+  <rect x="80" y="360" width="520" height="64" rx="10" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1.5"/>
+  <text class="mono" x="98" y="400" xml:space="preserve">the total </text>
+  <rect x="217.39999999999998" y="380" width="2.5" height="28" fill="#1D1D1F"/>
+  <rect x="207.85999999999999" y="405" width="9.0" height="3" rx="1.5" fill="#C93400"/>
+  <rect x="624" y="375.0" width="128" height="34" rx="17" fill="#C93400"/>
+  <text class="pill" x="688" y="398.0" fill="#FFFFFF">+ ninety</text>
+  <path d="M 768.0 392.0 L 844 392.0" stroke="#6E6E73" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 834 385.0 L 844 392.0 L 834 399.0" fill="none" stroke="#6E6E73" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="860" y="360" width="660" height="64" rx="10" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1.5"/>
+  <text class="mono" x="878" y="400" xml:space="preserve">the total ninety</text>
+  <text class="row-cap" x="80" y="452">After a space: nothing is added, so there is still one space.</text>
+  <rect x="80" y="480" width="520" height="64" rx="10" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1.5"/>
+  <text class="mono" x="98" y="520" xml:space="preserve">the total.</text>
+  <rect x="205.35999999999999" y="500" width="2.5" height="28" fill="#1D1D1F"/>
+  <rect x="624" y="495.0" width="128" height="34" rx="17" fill="#C93400"/>
+  <text class="pill" x="688" y="518.0" fill="#FFFFFF">+ ninety</text>
+  <path d="M 768.0 512.0 L 844 512.0" stroke="#6E6E73" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 834 505.0 L 844 512.0 L 834 519.0" fill="none" stroke="#6E6E73" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="860" y="480" width="660" height="64" rx="10" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1.5"/>
+  <text class="mono" x="878" y="520" xml:space="preserve">the total ninety.</text>
+  <rect x="987.86" y="525" width="9.0" height="3" rx="1.5" fill="#C93400"/>
+  <text class="row-cap" x="80" y="572">Before a period: one space in front, none after. The word sits against the period.</text>
+  <rect x="194.3" y="500" width="12.0" height="28" rx="4" fill="#C93400" fill-opacity="0.22" stroke="#C93400" stroke-width="1.5"/>
+  <rect x="206.4" y="500" width="12.0" height="28" rx="4" fill="#C93400" fill-opacity="0.22" stroke="#C93400" stroke-width="1.5"/>
+  <rect x="80" y="600" width="520" height="64" rx="10" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1.5"/>
+  <rect x="144.2" y="616" width="40.1" height="32" rx="4" fill="#BBD3F5"/>
+  <text class="mono" x="98" y="640" xml:space="preserve">one <tspan class="sel-text">two</tspan> three</text>
+  <rect x="624" y="615.0" width="128" height="34" rx="17" fill="#C93400"/>
+  <text class="pill" x="688" y="638.0" fill="#FFFFFF">+ ninety</text>
+  <path d="M 768.0 632.0 L 844 632.0" stroke="#6E6E73" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 834 625.0 L 844 632.0 L 834 639.0" fill="none" stroke="#6E6E73" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="860" y="600" width="660" height="64" rx="10" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1.5"/>
+  <text class="mono" x="878" y="640" xml:space="preserve">one ninety three</text>
+  <text class="row-cap" x="80" y="692">A selected word is replaced. Spaces already sit on both sides of it, so none is added.</text>
+  <text class="read-label" x="874" y="472">one before, one after: the only two characters it reads</text>
+  <path class="leader" d="M 200.3 500.0 L 200.3 483.0 Q 200.3 466.0 217.3 466.0 L 860.0 466.0"/>
+  <path class="leader" d="M 212.4 500.0 L 212.4 483.0 Q 212.4 466.0 229.4 466.0 L 860.0 466.0"/>
+  <circle cx="860" cy="466" r="4" fill="#C93400"/>
+  <text class="caption" x="80" y="724"><tspan class="caption-n">Figure A.</tspan> <tspan class="caption-lead">What it looks at.</tspan> One character before the cursor, one after. Against a word, one space. Against a space, an edge, or closing punctuation, none.</text>
+  <line x1="80" y1="774" x2="1520" y2="774" stroke="#E5E5EA" stroke-width="1.5"/>
+  <text class="fig-letter" x="80" y="844">B</text>
+  <text class="fig-head" x="116" y="844">When the field will not say</text>
+  <text class="brand" x="1520" y="844">SpeakWith</text>
+  <rect x="80" y="880" width="700" height="236" rx="14" fill="none" stroke="#E5E5EA" stroke-width="1.5"/>
+  <text class="panel-head" x="104" y="918">Legible</text>
+  <text class="panel-sub" x="104" y="944">Reports its text and cursor. Full rule: one space at the seam.</text>
+  <text class="line-label" x="104" y="988">1st phrase</text>
+  <rect x="192" y="966" width="564" height="46" rx="10" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1.5"/>
+  <text class="mono" x="206" y="997" xml:space="preserve">Ask Okafor about the ferry</text>
+  <text class="line-label" x="104" y="1050">2nd phrase</text>
+  <rect x="192" y="1028" width="564" height="46" rx="10" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1.5"/>
+  <text class="mono" x="206" y="1059" xml:space="preserve">Ask Okafor about the ferry<tspan class="space"> </tspan>the oil is late</text>
+  <rect x="520.54" y="1064" width="9.0" height="3" rx="1.5" fill="#C93400"/>
+  <rect x="820" y="880" width="700" height="236" rx="14" fill="none" stroke="#E5E5EA" stroke-width="1.5"/>
+  <text class="panel-head" x="844" y="918">Opaque</text>
+  <text class="panel-sub" x="844" y="944">Answers, but reports no text. Treated as unreadable, on purpose.</text>
+  <text class="line-label" x="844" y="988">1st phrase</text>
+  <rect x="932" y="966" width="564" height="46" rx="10" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1.5"/>
+  <text class="mono" x="946" y="997" xml:space="preserve">Ask Okafor about the ferry<tspan class="space"> </tspan></text>
+  <rect x="1260.54" y="1002" width="9.0" height="3" rx="1.5" fill="#C93400"/>
+  <text class="line-label" x="844" y="1050">2nd phrase</text>
+  <rect x="932" y="1028" width="564" height="46" rx="10" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1.5"/>
+  <text class="mono" x="946" y="1059" xml:space="preserve">Ask Okafor about the ferry<tspan class="space"> </tspan>the oil is late<tspan class="space"> </tspan></text>
+  <rect x="1260.54" y="1064" width="9.0" height="3" rx="1.5" fill="#C93400"/>
+  <rect x="1453.1799999999998" y="1064" width="9.0" height="3" rx="1.5" fill="#C93400"/>
+  <rect x="80" y="1144" width="700" height="236" rx="14" fill="none" stroke="#E5E5EA" stroke-width="1.5"/>
+  <text class="panel-head" x="104" y="1182">Silent</text>
+  <text class="panel-sub" x="104" y="1208">Does not answer. Same fallback; the words are never dropped.</text>
+  <text class="line-label" x="104" y="1252">1st phrase</text>
+  <rect x="192" y="1230" width="564" height="46" rx="10" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1.5"/>
+  <text class="mono" x="206" y="1261" xml:space="preserve">Ask Okafor about the ferry<tspan class="space"> </tspan></text>
+  <rect x="520.54" y="1266" width="9.0" height="3" rx="1.5" fill="#C93400"/>
+  <text class="line-label" x="104" y="1314">2nd phrase</text>
+  <rect x="192" y="1292" width="564" height="46" rx="10" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1.5"/>
+  <text class="mono" x="206" y="1323" xml:space="preserve">Ask Okafor about the ferry<tspan class="space"> </tspan>the oil is late<tspan class="space"> </tspan></text>
+  <rect x="520.54" y="1328" width="9.0" height="3" rx="1.5" fill="#C93400"/>
+  <rect x="713.18" y="1328" width="9.0" height="3" rx="1.5" fill="#C93400"/>
+  <rect x="820" y="1144" width="700" height="236" rx="14" fill="none" stroke="#E5E5EA" stroke-width="1.5"/>
+  <text class="panel-head" x="844" y="1182">Trimming</text>
+  <text class="panel-sub" x="844" y="1208">Accepts the paste, eats its leading space. So the space is typed.</text>
+  <text class="line-label" x="844" y="1252">paste only</text>
+  <rect x="932" y="1230" width="564" height="46" rx="10" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1.5"/>
+  <text class="mono" x="946" y="1261" xml:space="preserve">Ask Okafor about the ferry<tspan class="eaten">the oil is late</tspan></text>
+  <text class="line-label" x="844" y="1314">type, paste</text>
+  <rect x="932" y="1292" width="564" height="46" rx="10" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1.5"/>
+  <text class="mono" x="946" y="1323" xml:space="preserve">Ask Okafor about the ferry<tspan class="space"> </tspan>the oil is late</text>
+  <rect x="1260.54" y="1328" width="9.0" height="3" rx="1.5" fill="#C93400"/>
+  <text class="caption" x="80" y="1430"><tspan class="caption-n">Figure B.</tspan> <tspan class="caption-lead">When the field will not say.</tspan> Opaque and silent fields get the join space. A trimming field keeps its space because it is typed, not pasted.</text>
+  <text class="note" x="80" y="1474">Typing into other apps is a feature of the direct Mac build. A field that rewrites spacing when a message is sent is out of reach for any insertion.</text>
+</svg>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="760" viewBox="0 0 1100 760" font-family="SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title>The message Claude Code receives for chapter 4</title>
+  <desc>The session-manager message: a lead line, the instruction, then The storm scene and Names to keep.</desc>
+  <defs><style>
+      .title { font-size: 32px; font-weight: 700; fill: #F2F2F7; }
+      .sub { font-size: 18px; fill: #AEAEB2; }
+      .card { fill: #232325; stroke: #3A3A3C; stroke-width: 1.5; }
+      .head { font-size: 20px; font-weight: 650; fill: #F2F2F7; }
+      .lbl { font-size: 16px; fill: #AEAEB2; }
+      .val { font-size: 16px; fill: #F2F2F7; }
+      .strong { font-size: 17px; font-weight: 650; fill: #F2F2F7; }
+      .body { font-size: 15px; fill: #AEAEB2; }
+      .off { font-size: 17px; fill: #636366; }
+      .offbody { font-size: 15px; fill: #636366; }
+      .cap { font-size: 15px; fill: #8E8E93; }
+      .tile { fill: #2C2C2E; stroke: #3A3A3C; stroke-width: 1; }
+      .field { fill: #2C2C2E; stroke: #48484A; stroke-width: 1.5; }
+      .box { fill: #262628; stroke: #48484A; stroke-width: 1.5; }
+      .box-head { font-size: 18px; font-weight: 700; fill: #F2F2F7; }
+      .box-body { font-size: 16px; fill: #D1D1D6; }
+      .doc-h { font-size: 18px; font-weight: 700; fill: #F2F2F7; }
+      .doc { font-size: 16px; fill: #F2F2F7; }
+      .pin-num { font-size: 20px; font-weight: 700; fill: #1C1C1E; text-anchor: middle; }
+      .mono { font-family: "SF Mono", ui-monospace, Menlo, monospace; font-size: 15px; fill: #F2F2F7; }
+      .mono-dim { font-family: "SF Mono", ui-monospace, Menlo, monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; fill: #8E8E93; }
+      .mono-prompt { font-family: "SF Mono", ui-monospace, Menlo, monospace; font-size: 15px; font-weight: 650; fill: #32D74B; }
+      .mono-h { font-family: "SF Mono", ui-monospace, Menlo, monospace; font-size: 15px; font-weight: 700; fill: #F2F2F7; }
+    </style></defs>
+  <rect width="1100" height="760" fill="#1C1C1E"/>
+  <rect x="1.5" y="1.5" width="1097" height="757" rx="18.5" fill="none" stroke="#54545A" stroke-width="3"/>
+  <text class="title" x="64" y="72">The message</text>
+  <text class="sub" x="64" y="108">What the session manager hands to Claude Code, as one prompt.</text>
+  <rect class="card" x="64" y="140" width="972" height="560" rx="12"/>
+  <text class="doc" x="96" y="188">The following are topics from my day document in SpeakWith.</text>
+  <text class="doc" x="96" y="214">Work on them in this project.</text>
+  <text class="doc" x="96" y="262">Write chapter 4 from these notes only, as chapters/04-the-storm.md.</text>
+  <text class="doc" x="96" y="288">Keep every name as written. Do not add a character.</text>
+  <text class="doc-h" x="96" y="340">The storm scene</text>
+  <text class="doc" x="96" y="372">The keeper hears the lantern glass crack. The light goes out.</text>
+  <text class="doc" x="96" y="398">She counts thirty seconds of dark before the backup lamp catches.</text>
+  <text class="doc-h" x="96" y="450">Names to keep</text>
+  <text class="doc" x="96" y="482">The keeper is Mara Voss. Her brother, still on the mainland, is Eli Voss.</text>
+  <text class="doc" x="96" y="508">The supply boat is called Cormorant.</text>
+  <text class="cap" x="96" y="660">One press. Both topics. The instruction sits above them.</text>
+</svg>
