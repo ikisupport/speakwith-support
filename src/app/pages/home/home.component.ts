@@ -252,6 +252,29 @@ import { ThemeService } from '../../services/theme.service';
       </div>
     </section>
 
+    <!-- Speech metrics: four denominators, then the volume totals. -->
+    <section class="container section">
+      <p class="eyebrow eyebrow--accent">{{ copy.home.metrics.eyebrow }}</p>
+      <h2>{{ copy.home.metrics.heading }}</h2>
+      <p class="metrics__lead" [innerHTML]="copy.home.metrics.leadHtml"></p>
+      <div class="features">
+        @for (item of copy.home.metrics.items; track item.title) {
+          <article class="card feature">
+            <h3>{{ item.title }}</h3>
+            @if (item.isHtml) {
+              <p [innerHTML]="item.body"></p>
+            } @else {
+              <p>{{ item.body }}</p>
+            }
+          </article>
+        }
+      </div>
+      <p class="metrics__totals">{{ copy.home.metrics.totals }}</p>
+      <p class="metrics__more">
+        <a [routerLink]="locale.path(copy.home.metrics.guide.path)">{{ copy.home.metrics.guide.label }}</a>
+      </p>
+    </section>
+
     <!-- FAQ -->
     <section class="container section">
       <h2 class="section__title">{{ copy.home.faq.title }}</h2>
@@ -681,6 +704,27 @@ import { ThemeService } from '../../services/theme.service';
 
     .feature--wide {
       grid-column: 1 / -1;
+    }
+
+    .metrics__lead {
+      max-width: 44rem;
+      color: var(--text-dim);
+    }
+
+    .metrics__lead em,
+    .feature em {
+      font-style: italic;
+    }
+
+    .metrics__totals {
+      max-width: 44rem;
+      margin-top: 1.4rem;
+      color: var(--text-dim);
+    }
+
+    .metrics__more {
+      margin-top: 0.6rem;
+      font-weight: 600;
     }
 
     /* Value-prop band */

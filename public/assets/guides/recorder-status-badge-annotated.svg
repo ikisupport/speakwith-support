@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1220" viewBox="0 0 1600 1220" font-family="SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif">
-  <title>SpeakWith recorder status badge — annotated</title>
+  <title>SpeakWith recorder status badge, annotated</title>
   <desc>Vector recreation of the two-line RecorderBuildBadge on the SpeakWith record bar, with seven numbered callouts explaining each segment.</desc>
   <!--
     Maintainer note (not rendered; the poster is end-user facing):
     - Edition on line 1 is the SKU label: Pro (engine build), DEBUG (dev build, line 1 drawn in red tint), MAS (App Store).
     - Line 2 (the meter) is visible by default on Pro and DEBUG; the Synthetic profile hides it. About holds the toggle and reset.
-    - Sample values were taken from a Pro build on 2026-09-23 (SCR-20260923-kwie.png).
+    - Line 2 order matches RecorderBuildBadge.statisticsRow: words, sentences, wer, st, wpm. Characters live in About.
     - Source of truth for strings: RecorderBuildBadge.swift, AppEngineBuildStamp.badgeLine, DictationStatisticsStore.
   -->
   <defs>
@@ -61,7 +61,7 @@
   <g id="badge">
     <rect class="chrome" x="260" y="405" width="1080" height="150" rx="16"/>
     <text class="badge" x="300" y="466" xml:space="preserve">SpeakWith 2.14.0 Pro (app=eng 20260923.10)</text>
-    <text class="badge" x="300" y="520" xml:space="preserve">9,834w · 1,770s · 51,368c · 0.7% wer · 0.1% st</text>
+    <text class="badge" x="300" y="520" xml:space="preserve">9,834w · 1,770s · 0.7% wer · 0.1% st · 148 wpm</text>
   </g>
 
   <g id="callout-3">
@@ -90,55 +90,53 @@
     <text class="box-note" x="430" y="850">sentences, not seconds.</text>
   </g>
   <g id="callout-5">
-    <path class="leader" d="M 740.0 555.0 L 740.0 582.0 Q 740.0 600.0 758.0 600.0 L 782.0 600.0 Q 800.0 600.0 800.0 618.0 L 800.0 650.0"/>
-    <circle class="dot" cx="740" cy="555" r="5"/>
+    <path class="leader" d="M 747.0 555.0 L 747.0 582.0 Q 747.0 600.0 758.0 600.0 L 782.0 600.0 Q 800.0 600.0 800.0 618.0 L 800.0 650.0"/>
+    <circle class="dot" cx="747" cy="555" r="5"/>
     <rect class="box" x="675" y="650" width="250" height="350" rx="10"/>
     <circle class="pin" cx="800" cy="650" r="19"/>
     <text class="pin-num" x="800" y="658">5</text>
-    <text class="box-head" x="700" y="700">51,368c</text>
-    <text class="box-body" x="700" y="734">Characters you've</text>
-    <text class="box-body" x="700" y="760">dictated since the</text>
-    <text class="box-body" x="700" y="786">last reset.</text>
-    <text class="box-note" x="700" y="826">Same period as words</text>
-    <text class="box-note" x="700" y="850">and sentences.</text>
+    <text class="box-head" x="700" y="700">0.7% wer</text>
+    <text class="box-body" x="700" y="734">Words you corrected,</text>
+    <text class="box-body" x="700" y="760">as a share of words</text>
+    <text class="box-body" x="700" y="786">dictated.</text>
+    <text class="box-note" x="700" y="826">Includes only the</text>
+    <text class="box-note" x="700" y="850">corrections you made,</text>
+    <text class="box-note" x="700" y="874">so the true rate may</text>
+    <text class="box-note" x="700" y="898">be higher.</text>
   </g>
   <g id="callout-6">
-    <path class="leader" d="M 955.0 555.0 L 955.0 582.0 Q 955.0 600.0 973.0 600.0 L 1052.0 600.0 Q 1070.0 600.0 1070.0 618.0 L 1070.0 650.0"/>
-    <circle class="dot" cx="955" cy="555" r="5"/>
+    <path class="leader" d="M 961.0 555.0 L 961.0 582.0 Q 961.0 600.0 973.0 600.0 L 1052.0 600.0 Q 1070.0 600.0 1070.0 618.0 L 1070.0 650.0"/>
+    <circle class="dot" cx="961" cy="555" r="5"/>
     <rect class="box" x="945" y="650" width="250" height="350" rx="10"/>
     <circle class="pin" cx="1070" cy="650" r="19"/>
     <text class="pin-num" x="1070" y="658">6</text>
-    <text class="box-head" x="970" y="700">0.7% wer</text>
-    <text class="box-body" x="970" y="734">Words you corrected,</text>
-    <text class="box-body" x="970" y="760">as a share of words</text>
-    <text class="box-body" x="970" y="786">dictated.</text>
-    <text class="box-note" x="970" y="826">Includes only the</text>
-    <text class="box-note" x="970" y="850">corrections you made,</text>
-    <text class="box-note" x="970" y="874">so the true rate may</text>
-    <text class="box-note" x="970" y="898">be higher.</text>
+    <text class="box-head" x="970" y="700">0.1% st</text>
+    <text class="box-body" x="970" y="734">Words your special</text>
+    <text class="box-body" x="970" y="760">terms corrected, as a</text>
+    <text class="box-body" x="970" y="786">share of words dictated.</text>
+    <text class="box-note" x="970" y="826">Special terms are words</text>
+    <text class="box-note" x="970" y="850">you define: names,</text>
+    <text class="box-note" x="970" y="874">terminology, and words</text>
+    <text class="box-note" x="970" y="898">you pronounce your own</text>
+    <text class="box-note" x="970" y="922">way.</text>
   </g>
   <g id="callout-7">
-    <path class="leader" d="M 1170.0 555.0 L 1170.0 582.0 Q 1170.0 600.0 1188.0 600.0 L 1322.0 600.0 Q 1340.0 600.0 1340.0 618.0 L 1340.0 650.0"/>
-    <circle class="dot" cx="1170" cy="555" r="5"/>
+    <path class="leader" d="M 1164.0 555.0 L 1164.0 582.0 Q 1164.0 600.0 1188.0 600.0 L 1322.0 600.0 Q 1340.0 600.0 1340.0 618.0 L 1340.0 650.0"/>
+    <circle class="dot" cx="1164" cy="555" r="5"/>
     <rect class="box" x="1215" y="650" width="250" height="350" rx="10"/>
     <circle class="pin" cx="1340" cy="650" r="19"/>
     <text class="pin-num" x="1340" y="658">7</text>
-    <text class="box-head" x="1240" y="700">0.1% st</text>
-    <text class="box-body" x="1240" y="734">Words your special</text>
-    <text class="box-body" x="1240" y="760">terms corrected, as a</text>
-    <text class="box-body" x="1240" y="786">share of words dictated.</text>
-    <text class="box-note" x="1240" y="826">Special terms are words</text>
-    <text class="box-note" x="1240" y="850">you define: names,</text>
-    <text class="box-note" x="1240" y="874">terminology, and words</text>
-    <text class="box-note" x="1240" y="898">you pronounce your own</text>
-    <text class="box-note" x="1240" y="922">way. They correct for the</text>
-    <text class="box-note" x="1240" y="946">recognizer's biases so the</text>
-    <text class="box-note" x="1240" y="970">transcript matches what</text>
-    <text class="box-note" x="1240" y="994">you said.</text>
+    <text class="box-head" x="1240" y="700">148 wpm</text>
+    <text class="box-body" x="1240" y="734">Words per minute of</text>
+    <text class="box-body" x="1240" y="760">actual speech.</text>
+    <text class="box-note" x="1240" y="800">Pauses sit in neither</text>
+    <text class="box-note" x="1240" y="824">half. This is how fast</text>
+    <text class="box-note" x="1240" y="848">you talk, not a typing</text>
+    <text class="box-note" x="1240" y="872">speed.</text>
   </g>
 
   <line x1="80" y1="1050" x2="1520" y2="1050" stroke="#3A3A3C" stroke-width="1.5"/>
   <text class="foot" x="80" y="1090"><tspan class="foot-b">Long-press the badge</tspan> to open About, where you can hide the tally, reset it, or see the correction rate measured on reviewed lines only.</text>
-  <text class="foot" x="80" y="1122">Both rates use the word count to their left as their denominator.</text>
+  <text class="foot" x="80" y="1122">Rates use the word count. Pace is words per minute of speech, and pauses sit in neither half. Characters live in About, under Totals.</text>
   <text class="foot" x="80" y="1154">Sample values shown. In the app, hover over any segment to see this explanation.</text>
 </svg>

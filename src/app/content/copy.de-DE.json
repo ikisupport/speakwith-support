@@ -29,6 +29,13 @@
         "ikiSystems": "IKI Systems"
       },
       "tagline": "SpeakWith: deine gesprochenen Gedanken, festgehalten als Tagesdokument.",
+      "builtOn": {
+        "label": "Basiert auf",
+        "components": "Apple Speech · Whisper · Parakeet · wav2vec2 · Silero",
+        "researchLabel": "Forschung",
+        "citation": "Ruan et al., ACM IMWUT (2017)",
+        "ctaUrl": "https://doi.org/10.1145/3161187"
+      },
       "copyrightHtml": "© {{year}} <a href=\"{{ikiSystemsHome}}\" target=\"_blank\" rel=\"noopener noreferrer\">IKI Systems</a>. Alle Rechte vorbehalten."
     },
     "localeSwitcher": {
@@ -55,7 +62,7 @@
     },
     "guidesRecorderBadge": {
       "title": "Das Rekorder-Badge lesen | SpeakWith",
-      "description": "Was die zwei Zeilen links in der Aufnahmeleiste von SpeakWith bedeuten: der Build, den du verwendest, und dein laufender Zähler für Wörter, Sätze, Zeichen und Korrekturraten."
+      "description": "Was die beiden Zeilen links an der SpeakWith-Aufnahmeleiste bedeuten: der Build, den du verwendest, und deine fortlaufende Zählung von Wörtern, Sätzen, Korrekturraten und Sprechtempo."
     },
     "guidesLiveTranscriptCorrections": {
       "title": "Live-Korrekturen im Transkript lesen | SpeakWith",
@@ -110,7 +117,7 @@
       "heroImageDark": "canonical_screenshots/hero.png?v=20261012b",
       "heroImageLight": "canonical_screenshots/hero-light.png?v=20260930c",
       "heroAlt": "SpeakWith für Mac im Live-Diktat: gesprochene Wörter landen als transkribierte Zeilen unter einer Live-Wellenform, falsch verstandene Namen werden an Ort und Stelle korrigiert, und daneben wird ein Titel für die Sitzung vorgeschlagen.",
-      "heroCaption": "Sprich, und sieh zu, wie die Untertitel für deine Gedanken Gestalt annehmen, bevor die Idee entgleitet. Optionale Sitzungstitel können deinen OpenAI-Schlüssel oder ein lokales Ollama-Modell auf deinem Mac nutzen. Erzeuge einen Titel oder schreib deinen eigenen."
+      "heroCaption": "Sprich, und sieh zu, wie die Untertitel für deine Gedanken Gestalt annehmen, bevor die Idee entgleitet. Die optionale Politur bringt die fertige Aufnahme in Ordnung und zeigt, was sie verändert hat, bevor du sie anwendest. Sitzungstitel sind ebenfalls optional: Nutze deinen OpenAI-Schlüssel oder ein lokales Ollama-Modell auf deinem Mac, oder schreib sie selbst."
     },
     "platforms": {
       "eyebrow": "Zwei Apps, eine Stimme",
@@ -135,7 +142,7 @@
         {
           "name": "SpeakWith für iOS",
           "tag": "Der Begleiter",
-          "body": "Ein Sprachrekorder für unterwegs, wenn du nicht am Schreibtisch bist. Diktiere live, gib der Sitzung einen Titel und tippe auf „Verwenden“, um ihn zu behalten, oder poliere eine Aufnahme mit deinem eigenen OpenAI-Schlüssel zu sauberen Absätzen. Deine Transkripte sind dabei, nach Tagen geordnet, auf dem Gerät mit Apple Speech transkribiert.",
+          "body": "Ein Sprachrekorder für unterwegs, wenn du nicht am Schreibtisch bist. Diktiere live, gib der Sitzung einen Titel und tippe auf „Verwenden“, um ihn zu behalten, oder poliere eine Aufnahme mit deinem eigenen OpenAI-Schlüssel zu sauberen Absätzen. Politur markiert jedes Wort, das sie geändert hat, damit du die Bearbeitung prüfen kannst, bevor du sie anwendest. Deine Transkripte sind dabei, nach Tagen geordnet, auf dem Gerät mit Apple Speech transkribiert.",
           "points": [
             "Live-Diktat",
             "Automatische Titel, wenn du sie willst",
@@ -144,8 +151,8 @@
             "Apple Speech auf dem Gerät",
             "Heute Englisch, weitere Sprachen in Entwicklung"
           ],
-          "src": "assets/screenshots/ios-live-polish.png",
-          "ariaLabel": "SpeakWith für iOS während einer Aufnahme: Zeilen des Live-Diktats über einem erzeugten Sitzungstitel, The stairs, and three calls at nine, mit einer Schaltfläche Use, darunter der Tab Polish mit derselben Aufnahme als zwei saubere Absätze sowie Copy polish und Apply to day document."
+          "src": "assets/screenshots/ios-live-polish.png?v=20261021a",
+          "ariaLabel": "SpeakWith für iOS mitten in der Aufnahme: ein erzeugter Sitzungstitel, The readout, then Dad, mit einer Use-Schaltfläche, darunter die diktierten Zeilen in der Leseansicht unter einer Session-Trennlinie, dann eine Revisionskarte mit dem Text 4 words changed: read out to readout, dropped ‘ha it’, mit angehaktem Kontrollkästchen Show changes, die alten Wörter durchgestrichen neben den neuen, und eine Apply-Schaltfläche."
         }
       ]
     },
@@ -311,6 +318,38 @@
       "heading": "Die Basis, zu der dein Denken zurückkehrt",
       "p1": "Echte Arbeit läuft parallel. Du startest etwas, das eine Weile braucht, bis es zurückkommt: einen langen Prozess, ein Werkzeug, das vor sich hin arbeitet, eine Aufgabe, die du abgegeben hast. Statt zu warten, beginnst du das Nächste, dann noch eines. Bald sind mehrere Dinge gleichzeitig in der Luft.",
       "p2": "Werkzeuge kommen und gehen; dein Tagesdokument bleibt. Es ist der eine Ort, der jeden Faden in einer einzigen Datei hält, die dir gehört: wofür jeder da ist, wo du ihn liegen gelassen hast, was zu prüfen ist, wenn er landet. Du kannst viele Dinge gleichzeitig in Bewegung halten, weil du sie nicht alle im Kopf behalten musst."
+    },
+    "metrics": {
+      "eyebrow": "Am Rekorder",
+      "heading": "Was das Badge zählt",
+      "leadHtml": "Sprechen ist schneller als Tippen, und die Forschung sagt genau, um wie viel. Ruan et al., ACM IMWUT (2017), haben bei kurzen Nachrichten gemessen, dass Sprache etwa dreimal so schnell ist wie eine iPhone-Tastatur: 153 Wörter pro Minute gesprochen gegenüber 52 getippt, die Zeit zum Korrigieren von Fehlern mitgezählt. <em>Eine Desktoptastatur ist schneller als eine Telefontastatur, lies dieses Vielfache also als den Fall fürs Telefon.</em>",
+      "items": [
+        {
+          "title": "Korrekturrate",
+          "body": "Der Anteil der diktierten Wörter, die du nachträglich geändert hast. <em>Gezählt werden nur Korrekturen, die du tatsächlich gemacht hast, die wahre Fehlerrate kann also höher liegen.</em>",
+          "isHtml": true
+        },
+        {
+          "title": "Sonderbegriffe",
+          "body": "Der Anteil der Wörter, die deine Sonderbegriffe korrigiert haben. Namen, Terminologie und Wörter, die du auf deine eigene Weise aussprichst. Der Nenner sind die Wörter, die du diktiert hast, dieselbe Anzahl, die die Korrekturrate verwendet.",
+          "isHtml": false
+        },
+        {
+          "title": "Sprechtempo",
+          "body": "Deine Wörter pro Minute tatsächlicher Sprache. <em>Die Pausen, während du nachdenkst, stecken in keiner Hälfte der Zahl, das ist also, wie schnell du sprichst, und nicht, wie viel du in einer Stunde festhältst.</em>",
+          "isHtml": true
+        },
+        {
+          "title": "Audioqualität",
+          "body": "Ein Wert dafür, wie gut der Erkenner dich hört, an deinem eigenen Audio. <em>Wie gemessen wird, hängt von der Engine ab, die du laufen lässt, und die Anleitung erklärt jede.</em>",
+          "isHtml": true
+        }
+      ],
+      "totals": "Wörter, Sätze und Zeichen, seit du die Zählung zuletzt zurückgesetzt hast: alles, was du gesagt hast, statt es zu tippen.",
+      "guide": {
+        "label": "Lies die Anleitung zum Rekorder-Badge",
+        "path": "guides/recorder-badge"
+      }
     },
     "faq": {
       "title": "Häufige Fragen",
