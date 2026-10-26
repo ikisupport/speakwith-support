@@ -1,0 +1,16 @@
+/* Was `:host` + the bare `main` rule in app.component.ts. Angular scoped both
+   to the shell component; here they are anchored on a wrapper class so the
+   `main` rule cannot leak onto any other page's markup.
+
+   This class rides on the <app-root> element, which styles.css also styles by
+   tag name (display: block). A class beats an element selector, so flex wins
+   here exactly as Angular's :host beat the same rule there. */
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.shell > main {
+  flex: 1 0 auto;
+}

@@ -1,0 +1,41 @@
+/* From context-aware-insertion-guide.component.ts's `styles` block. */
+.eyebrow {
+  margin: 0 0 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.diagram {
+  margin: 1.6rem 0 2rem;
+}
+
+.diagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+  border: 1px solid var(--rule);
+  box-shadow: var(--shadow);
+}
+
+.diagram figcaption {
+  margin-top: 0.9rem;
+  color: var(--muted, #6b7280);
+  font-size: 0.95rem;
+}
+
+.diagram figcaption p {
+  margin: 0 0 0.35rem;
+}
+
+.diagram figcaption p:last-child {
+  margin-bottom: 0;
+}
+
+.see-also {
+  margin-top: 2rem;
+  font-weight: 600;
+}

@@ -1,0 +1,75 @@
+/* From send-to-agent-guide.component.ts's `styles` block. */
+.eyebrow {
+  margin: 0 0 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.diagram {
+  margin: 1.6rem 0 2rem;
+}
+
+.steps {
+  margin: 0.4rem 0 1.6rem;
+  padding-left: 1.4rem;
+}
+
+.steps li {
+  margin: 0 0 0.9rem;
+  padding-left: 0.3rem;
+}
+
+.steps li::marker {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.steps strong {
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.examples {
+  margin: 0.55rem 0 0;
+  padding: 0.55rem 0.8rem;
+  border-left: 3px solid var(--rule, #e5e7eb);
+  color: var(--muted, #6b7280);
+}
+
+.examples-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.examples p {
+  margin: 0 0 0.45rem;
+  white-space: pre-wrap;
+}
+
+.examples p:last-child {
+  margin-bottom: 0;
+}
+
+.section-link {
+  font-weight: 600;
+}
+
+.see-also {
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.diagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+  border: 1px solid var(--rule);
+  box-shadow: var(--shadow);
+}

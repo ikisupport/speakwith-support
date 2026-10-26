@@ -1,0 +1,58 @@
+/* From automation.component.ts's `styles` block. */
+.prose__html :is(pre) {
+  overflow-x: auto;
+  padding: 0.85rem 1rem;
+  border-radius: 0.6rem;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.prose__html :is(code) {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  /* A 39-character bundle identifier in a paragraph set the min-content
+     width and panned the whole page below ~350 px. anywhere is inert
+     inside a pre block, where white-space: pre leaves no wrap
+     opportunity, so code blocks keep their own horizontal scroller. */
+  overflow-wrap: anywhere;
+}
+
+.prose__html :is(p) > code {
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.35rem;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  font-size: 0.88em;
+}
+
+/* The wrapper owns the horizontal scroll,
+app-automation so a wide row scrolls inside the
+   column and the table keeps real table layout. min-width:0 keeps the
+   wrapper shrinkable if a flex or grid ancestor is ever introduced above.
+   Mirrors the .corr-html fix on the live-transcript guide. */
+.prose__html {
+  overflow-x: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.prose__html table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.4rem 0 1rem;
+  font-size: 0.92rem;
+}
+
+.prose__html :is(th, td) {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--rule);
+}
+
+.prose__html th {
+  background: var(--surface);
+  font-weight: 700;
+}

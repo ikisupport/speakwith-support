@@ -1,0 +1,36 @@
+/* From agent-lists.component.ts's `styles` block. */
+:global(.prose) .eyebrow {
+  margin: 0 0 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+:global(.prose) .see-also {
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.prose__html :is(pre) {
+  overflow-x: auto;
+  padding: 0.85rem 1rem;
+  border-radius: 0.6rem;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.prose__html :is(code) {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.prose__html :is(p) > code {
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.35rem;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  font-size: 0.88em;
+}

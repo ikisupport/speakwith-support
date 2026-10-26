@@ -1,0 +1,27 @@
+/* From status-monitor-guide.component.ts's `styles` block. */
+.eyebrow {
+  margin: 0 0 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.diagram {
+  margin: 1.6rem 0 2rem;
+}
+
+.see-also {
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.diagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+  border: 1px solid var(--rule);
+  box-shadow: var(--shadow);
+}

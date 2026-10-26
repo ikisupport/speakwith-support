@@ -1,0 +1,68 @@
+/* From live-transcript-corrections-guide.component.ts's `styles` block. */
+.corr__eyebrow {
+  margin: 0 0 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.corr__diagram {
+  margin: 1.6rem 0 2rem;
+}
+
+.corr__diagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+  border: 1px solid var(--rule);
+  box-shadow: var(--shadow);
+}
+
+.corr__see-also {
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+/* The wrapper owns the horizontal scroll so a wide row scrolls inside the
+   column,
+app-live-transcript-corrections-guide and the table keeps real table layout. min-width:0 keeps the
+   wrapper shrinkable if a flex or grid ancestor is ever introduced above. */
+.corr-html {
+  overflow-x: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.corr-html table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.4rem 0 1rem;
+  font-size: 0.92rem;
+}
+
+.corr-html :is(th, td) {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--rule);
+}
+
+.corr-html th {
+  background: var(--surface);
+  font-weight: 700;
+}
+
+.corr-html code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.95em;
+  color: var(--accent);
+  overflow-wrap: anywhere;
+}
+
+.corr-html p {
+  margin: 0.8rem 0 0.4rem;
+}

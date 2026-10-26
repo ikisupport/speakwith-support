@@ -1,0 +1,284 @@
+/* From pricing.component.ts's `styles` block. */
+:host {
+  --clr-check: #1f9d57;
+}
+:host-context(html[data-theme='dark']) {
+  --clr-check: #22c55e;
+}
+
+.pricing-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+}
+
+.pricing-head {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.sub {
+  font-size: 1.06rem;
+  color: var(--text-dim);
+  margin-bottom: 0;
+}
+
+/* Comparison table */
+.table-wrap {
+  border: 1px solid var(--rule);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-bottom: 0;
+}
+
+app-pricing table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+app-pricing th,
+app-pricing td {
+  text-align: left;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: middle;
+}
+
+app-pricing thead th {
+  background: var(--surface);
+  font-size: 0.82rem;
+}
+
+.plan-col {
+  text-align: center;
+  width: 26%;
+}
+
+.plan-name {
+  font-size: 1rem;
+  font-weight: 700;
+  display: block;
+}
+
+.plan-name--free { color: var(--text); }
+.plan-name--paid { color: var(--accent); }
+
+.plan-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  display: block;
+  margin-top: 2px;
+}
+
+app-pricing tbody td.feat {
+  font-weight: 600;
+}
+
+app-pricing tbody td.feat small {
+  display: block;
+  font-weight: 400;
+  color: var(--text-dim);
+  font-size: 0.82rem;
+  margin-top: 2px;
+}
+
+app-pricing tbody td.cell {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.875rem;
+}
+
+app-pricing tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.check {
+  color: var(--clr-check);
+  font-weight: 700;
+  font-size: 1.12rem;
+}
+
+.dash {
+  color: var(--text-dim);
+  font-size: 1.12rem;
+}
+
+.pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.addon {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent-strong);
+}
+
+.val {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.price-row td {
+  background: var(--surface);
+}
+
+.price-free {
+  color: var(--text);
+  font-weight: 800;
+  font-size: 1.12rem;
+}
+
+.coming-soon {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent-strong);
+}
+
+/* Section headings */
+.section-title {
+  font-size: 1.38rem;
+  margin: 3.5rem 0 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.section-sub {
+  color: var(--text-dim);
+  margin: 0 0 1.5rem;
+  font-size: 0.94rem;
+}
+
+/* Engine grid: global :global(.card) handles background/border/shadow */
+.engine-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.engine-grid :global(.card) h3 {
+  margin-bottom: 0.4rem;
+}
+
+.engine-grid :global(.card) p {
+  margin-bottom: 0;
+  color: var(--text-dim);
+  font-size: 0.875rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.69rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.badge--free-paid {
+  background: color-mix(in srgb, var(--clr-check) 14%, transparent);
+  color: var(--clr-check);
+}
+
+.badge--paid {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent-strong);
+}
+
+.engine-note {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--accent-strong);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  padding: 8px 10px;
+  border-radius: 0.5rem;
+}
+
+/* Channel grid: global :global(.card) handles background/border/shadow */
+.channel-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.channel-grid :global(.card) h3 {
+  margin-bottom: 0.5rem;
+}
+
+.channel-grid :global(.card) p {
+  margin-bottom: 0;
+  color: var(--text-dim);
+  font-size: 0.875rem;
+}
+
+.channel-lead {
+  font-weight: 700;
+  color: var(--text-dim);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+/* CTA buttons inside the channel cards */
+.channel-grid :global(.card) .channel-cta {
+  margin-top: 1rem;
+}
+
+.channel-grid :global(.card) .channel-cta--secondary {
+  margin-top: 0.6rem;
+  margin-left: 0.6rem;
+}
+
+.channel-grid :global(.card) .channel-cta--tertiary {
+  margin: 0.9rem 0 0;
+  font-size: 0.92rem;
+}
+
+/* Fine print */
+.fineprint {
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  text-align: center;
+  max-width: 680px;
+}
+
+@media (max-width: 760px) {
+  .engine-grid {
+    grid-template-columns: 1fr;
+  }
+  .channel-grid {
+    grid-template-columns: 1fr;
+  }
+  app-pricing th,
+app-pricing td {
+    padding: 13px 12px;
+  }
+  .plan-tag {
+    display: none;
+  }
+}
