@@ -27,6 +27,7 @@ declare module 'react' {
       'app-automation': Host;
       'app-guides-index': Host;
       'app-recorder-badge-guide': Host;
+      'app-language-learning-guide': Host;
       'app-status-monitor-guide': Host;
       'app-live-transcript-corrections-guide': Host;
       'app-send-to-agent-guide': Host;

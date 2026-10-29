@@ -106,6 +106,9 @@ p {
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
+  /* Form controls do not inherit the page face, and the error page's Reload is
+     a real <button>. Inert for every <a class="button">, which already does. */
+  font-family: inherit;
   font-weight: 600;
   font-size: 1rem;
   padding: 0.8rem 1.7rem;

@@ -60,8 +60,14 @@ export function useChunkErrorRecovery(): void {
   }, []);
 }
 
-/** Heuristic match for a dynamic-import / lazy-chunk load failure across browsers. */
-function isChunkLoadError(error: unknown): boolean {
+/**
+ * Heuristic match for a dynamic-import / lazy-chunk load failure across browsers.
+ *
+ * Exported because `ErrorBoundary` needs it too: the boundary replaces `App`,
+ * so `useChunkErrorRecovery`'s listeners are unmounted by the time an error
+ * page renders and cannot classify the error that produced it.
+ */
+export function isChunkLoadError(error: unknown): boolean {
   if (error && (error as { name?: string }).name === 'ChunkLoadError') {
     return true;
   }

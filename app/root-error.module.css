@@ -1,0 +1,56 @@
+/* Error-page styling, deliberately a sibling of routes/not-found.module.css:
+   the two pages are the same shape (one centred column, no chrome) and must
+   not drift apart. Every colour is a theme token — the palette lives only in
+   src/theme-tokens.css. */
+.err {
+  text-align: center;
+  padding: 5rem 0 6rem;
+}
+
+.err__mark {
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.err__lead {
+  color: var(--text-dim);
+  max-width: 34rem;
+  margin: 0.6rem auto 1.8rem;
+}
+
+.err__actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+/* Collapsed by default, and DEV-only — see the ErrorBoundary. */
+.err__details {
+  margin: 2.5rem auto 0;
+  max-width: 44rem;
+  text-align: left;
+  color: var(--text-dim);
+  border-top: 1px solid var(--rule);
+  padding-top: 1rem;
+}
+
+.err__details summary {
+  cursor: pointer;
+  color: var(--text);
+}
+
+.err__trace {
+  margin-top: 0.8rem;
+  padding: 0.8rem;
+  background: var(--surface-2);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}

@@ -1,4 +1,5 @@
 import {
+  Link,
   Links,
   Meta,
   Outlet,
@@ -13,11 +14,14 @@ import { THEME_PREPAINT_JS, THEME_TOKENS_CSS } from './generated/theme-prelude';
 import { resolveRoute } from './lib/route-resolve';
 import { ThemeProvider } from './lib/theme';
 import { useTelemetry } from './lib/telemetry';
-import { useChunkErrorRecovery } from './lib/chunk-recovery';
+import { isChunkLoadError, useChunkErrorRecovery } from './lib/chunk-recovery';
+import { useLocaleApi } from './lib/locale';
+import { cx } from './lib/cx';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import '@site/styles.css';
 import shell from './root.module.css';
+import err from './root-error.module.css';
 
 export const links: LinksFunction = () => [
   { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg?v=20260925b' },
@@ -103,19 +107,69 @@ function useHashScroll() {
 }
 
 export function ErrorBoundary({ error }: { error: unknown }) {
-  const message = isRouteErrorResponse(error)
-    ? `${error.status} ${error.statusText}`
-    : error instanceof Error
-      ? error.message
-      : 'Unknown error';
+  return (
+    // The boundary replaces `App`, so `ThemeProvider` is mounted here too.
+    // Without it React's re-render drops the `data-theme` attribute the
+    // pre-paint script set, `:root`'s light default takes over, and a visitor
+    // on a dark system gets a light page whose meta-theme-color still says
+    // dark. (Measured: data-theme=null, body #faf7f0 under colorScheme=dark.)
+    // Navbar and Footer stay out on purpose: if one of those is what threw,
+    // rendering it again re-throws and React Router drops to its own bare
+    // fallback instead of this page.
+    <ThemeProvider>
+      <ErrorPage error={error} />
+    </ThemeProvider>
+  );
+}
+
+function ErrorPage({ error }: { error: unknown }) {
+  // `useLocaleApi` needs only `useLocation()`, and `Layout` wraps the
+  // boundary, so router context — and with it a locale-correct home link — is
+  // available here. A bare href="/" would throw a `/de/…` visitor to English.
+  const locale = useLocaleApi();
+  const t = locale.copy.error;
+  const routeError = isRouteErrorResponse(error) ? error : null;
+  const staleChunk = isChunkLoadError(error);
+
+  // A route error names its own status; everything else gets the generic line.
+  const heading = routeError ? `${routeError.status} ${routeError.statusText}` : t.heading;
+  const lead = staleChunk ? t.leadStaleChunk : routeError ? t.leadRequest : t.lead;
 
   return (
-    <div className="container" style={{ padding: '4rem 0' }}>
-      <h1>Something went wrong</h1>
-      <p>{message}</p>
-      <p>
-        <a href="/">Back to the home page</a>
-      </p>
-    </div>
+    <main>
+      <section className={cx('container', err.err)}>
+        <p className={err.err__mark} aria-hidden="true">
+          &#9888;
+        </p>
+        <h1>{heading}</h1>
+        <p className={err.err__lead}>{lead}</p>
+        <div className={err.err__actions}>
+          {/* A button, not an automatic reload: the loop guard that makes
+              `useChunkErrorRecovery` safe is private to that hook, and an
+              unguarded reload here would spin forever when a chunk is
+              genuinely gone. */}
+          <button
+            type="button"
+            className="button button--primary"
+            onClick={() => location.reload()}
+          >
+            {t.reload}
+          </button>
+          <Link className="button button--ghost" to={locale.path('')}>
+            {t.home}
+          </Link>
+        </div>
+        {import.meta.env.DEV && (
+          <details className={err.err__details}>
+            <summary>Technical details (development build only)</summary>
+            <pre className={err.err__trace}>
+              {error instanceof Error
+                ? `${error.message}\n\n${error.stack ?? '(no stack)'}`
+                : String(error)}
+            </pre>
+          </details>
+        )}
+      </section>
+    </main>
   );
 }

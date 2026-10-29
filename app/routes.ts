@@ -28,6 +28,7 @@ const MODULES: Record<string, string> = {
   'guides/send-to-agent': 'routes/guides.send-to-agent.tsx',
   'guides/outline': 'routes/guides.outline.tsx',
   'guides/context-aware-insertion': 'routes/guides.context-aware-insertion.tsx',
+  'guides/language-learning': 'routes/guides.language-learning.tsx',
   'technical/agent-lists': 'routes/technical.agent-lists.tsx',
   privacy: 'routes/privacy.tsx',
   terms: 'routes/terms.tsx',
@@ -48,6 +49,17 @@ export default (async () => {
     const id = `${entry.locale.code}/${entry.routePath || 'home'}`;
 
     routes.push(path === '' ? index(module, { id }) : route(path, module, { id }));
+  }
+
+  // Dev-only page index: the states no link leads to (the root ErrorBoundary
+  // above all). Gated so it never reaches the published bundle — the dev
+  // server sets NODE_ENV=development, and SPEAKWITH_DEV_PAGES=1 opts a local
+  // production build in, which is how the strip is proven with a positive
+  // control. These are deliberately absent from locales.json's route matrix,
+  // so they get no prerendered HTML, no sitemap entry and no asset check.
+  if (process.env.NODE_ENV !== 'production' || process.env.SPEAKWITH_DEV_PAGES === '1') {
+    routes.push(route('dev', 'routes/dev.tsx', { id: 'dev-pages' }));
+    routes.push(route('dev/boom', 'routes/dev.boom.tsx', { id: 'dev-boom' }));
   }
 
   // Prerendered to /404/index.html, which the publish step also copies to

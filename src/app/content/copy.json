@@ -30,7 +30,7 @@
       "tagline": "SpeakWith: your spoken ideas, captured as a daily document.",
       "builtOn": {
         "label": "Built on",
-        "components": "Apple Speech · Whisper · Parakeet · wav2vec2 · Silero",
+        "components": "Apple Speech · Whisper · Parakeet · Nemotron · wav2vec2 · Silero",
         "researchLabel": "Research",
         "citation": "Ruan et al., ACM IMWUT (2017)",
         "ctaUrl": "https://doi.org/10.1145/3161187"
@@ -57,7 +57,7 @@
     },
     "pricing": {
       "title": "Pricing | SpeakWith",
-      "description": "Start with built-in dictation, or go Paid for Whisper and Parakeet engines, batch transcription, and smart paragraph formatting."
+      "description": "Start with built-in dictation, or go Paid for Whisper, Parakeet, and Nemotron engines, batch transcription, and smart paragraph formatting."
     },
     "automation": {
       "title": "Automation | SpeakWith",
@@ -90,6 +90,10 @@
     "guidesContextAwareInsertion": {
       "title": "How typed-in words find their spacing | SpeakWith",
       "description": "SpeakWith reads one character on each side of the cursor before it types a phrase into another app. The spacing rule, the six kinds of field it meets, and what it never reads."
+    },
+    "guidesLanguageLearning": {
+      "title": "Practise a language aloud | SpeakWith",
+      "description": "Dictate in the language you are learning and read the translation under your own words: the master switch, the two language settings, and the three limits."
     },
     "technicalAgentLists": {
       "title": "Project and model lists | SpeakWith",
@@ -134,14 +138,14 @@
         {
           "name": "SpeakWith for Mac",
           "tag": "The studio",
-          "body": "Live and batch recorders, audio and video import, and a choice of transcription engines: Apple on-device, Whisper, or Parakeet. Every recording lands in your daily document, with playback you can click straight into. The direct build can also type finished phrases into the app you are already using.",
+          "body": "Live and batch recorders, audio and video import, and a choice of transcription engines: Apple on-device, Whisper, Parakeet, or Nemotron for languages beyond English. Every recording lands in your daily document, with playback you can click straight into. The direct build can also type finished phrases into the app you are already using.",
           "points": [
             "Live and batch recording",
             "Hands-free standby when you want it",
             "Type into app (direct build)",
             "Projects with separate folders",
             "Import audio and video",
-            "Apple, Whisper, and Parakeet engines"
+            "Apple, Whisper, Parakeet, and Nemotron engines"
           ],
           "src": "",
           "ariaLabel": ""
@@ -156,7 +160,7 @@
             "Automatic polish, too",
             "Browse and search transcripts by day",
             "On-device Apple Speech",
-            "English today, more languages in development"
+            "Dictate in an input language, translate to an output language"
           ],
           "src": "assets/screenshots/ios-live-polish.png?v=20261025b",
           "srcLight": "assets/screenshots/ios-live-polish-light.png?v=20261025b",
@@ -329,7 +333,7 @@
     },
     "metrics": {
       "eyebrow": "On the recorder",
-      "heading": "What the badge is counting",
+      "heading": "Measure your effectiveness",
       "leadHtml": "Speech is faster than typing, and the research is specific about how much. Ruan et al., ACM IMWUT (2017), measured speech about 3x faster than an iPhone keyboard for short messages: 153 words per minute spoken against 52 typed, counting the time spent fixing mistakes. <em>A desktop keyboard is faster than a phone keyboard, so read that multiple as the phone case.</em>",
       "items": [
         {
@@ -406,7 +410,7 @@
         },
         {
           "q": "What languages does SpeakWith support?",
-          "a": "English today. Support for more languages is in development, and they will arrive in updates as they are ready."
+          "a": "English on every build, and other languages in the direct Mac download and the iPhone app. On both they are off by default behind the switch Enable multilingual dictation: in Settings under Engine on the Mac, and in Settings under Live Dictation on the iPhone. The Mac App Store build does not have them."
         },
         {
           "q": "Is this an audio recorder?",
@@ -452,7 +456,7 @@
         "engines": {
           "feature": "Transcription engines",
           "free": "Apple built-in",
-          "paid": "Apple + Whisper + Parakeet"
+          "paid": "Apple + Whisper + Parakeet + Nemotron"
         },
         "importMedia": {
           "feature": "Import audio & video files",
@@ -507,6 +511,13 @@
           "badgeKind": "paid",
           "name": "Parakeet",
           "body": "The speed champion. Near-instant transcription with excellent accuracy on clean audio.",
+          "note": ""
+        },
+        {
+          "badge": "Pro",
+          "badgeKind": "paid",
+          "name": "Nemotron",
+          "body": "Live dictation in around 40 languages. Choose it when you dictate in German or another language besides English; on English, Parakeet stays a little sharper.",
           "note": ""
         }
       ]
@@ -684,7 +695,7 @@
         },
         {
           "title": "The floating status monitor",
-          "body": "The small pill that stays on top while you dictate: your mode in a color and a word, with the menu bar and the Dock out of the way.",
+          "body": "The small pill that stays on top while you dictate: your mode in a color and a word, an optional waveform showing the mic is still hearing you, and no menu bar or Dock to keep on screen.",
           "path": "guides/status-monitor",
           "cta": "Read the guide"
         },
@@ -704,6 +715,12 @@
           "title": "How typed-in words find their spacing",
           "body": "Before SpeakWith types a phrase into another app, it reads one character on each side of the cursor. The rule it applies, and the six ways a field can answer.",
           "path": "guides/context-aware-insertion",
+          "cta": "Read the guide"
+        },
+        {
+          "title": "Practise a language aloud",
+          "body": "Dictate in the language you are learning and read the translation under your own words. Where the switch is, how the two language settings pair up, and what the feature cannot do yet.",
+          "path": "guides/language-learning",
           "cta": "Read the guide"
         },
         {
@@ -801,16 +818,19 @@
     "statusMonitor": {
       "eyebrow": "Guides",
       "heading": "The floating status monitor",
-      "intro": "While the live-direct mic is held, SpeakWith can float a small pill above every other window. It shows one colored dot and one or two words: the mode you are in right now. You read it from across the room, or from the corner of your eye while you type in another app, without bringing SpeakWith forward. The diagram below shows the pill, its five modes, and the one thing it cannot replace.",
-      "diagramDark": "assets/guides/status-monitor-annotated.svg?v=20260929g",
-      "diagramLight": "assets/guides/status-monitor-annotated-light.svg?v=20260929g",
-      "diagramAlt": "Annotated diagram of the SpeakWith floating status monitor: a small rounded pill sitting over another app's window. It carries the SpeakWith mark, a blue dot, the words Type into app, and a smaller detail line reading Into open field. Below it, five smaller pills show the five modes with their colors: Recording in red, Type into app in blue, Voice pull in indigo, Listening in orange, and Monitoring in green, with a note that Listening is level mode and a hardware mute switch pauses and resumes it. A row of check marks reads Menu bar hidden, Dock hidden, SpeakWith in the background. At the bottom, three app icons carry small red Dock badges reading REC, TYPE, and a pause mark, captioned as the fallback.",
+      "intro": "While the live-direct mic is held, SpeakWith can float a small pill above every other window. It shows one colored dot and one or two words: the mode you are in right now. It can also carry a small live waveform, so the same glance tells you the mic is still hearing you. You read it from across the room, or from the corner of your eye while you type in another app, without bringing SpeakWith forward. The diagram below shows the pill, its five modes, and the one thing it cannot replace.",
+      "diagramDark": "assets/guides/status-monitor-annotated.svg?v=20261027a",
+      "diagramLight": "assets/guides/status-monitor-annotated-light.svg?v=20261027a",
+      "diagramAlt": "Annotated diagram of the SpeakWith floating status monitor: a small rounded badge sitting over another app's window. Its top row carries the SpeakWith mark, a blue dot, the words Type into app, and a smaller detail line reading Into open field. Under that row runs a live waveform strip, its bars rising and falling with speech and flattening to a line across a quiet stretch in the middle. Five numbered callouts name the mark, the mode color, the mode word, the detail line, and the waveform. Below the badge, five smaller pills show the five modes with their colors: Recording in red, Type into app in blue, Voice pull in indigo, Listening in orange, and Monitoring in green, with a note that Listening is level mode and a hardware mute switch pauses and resumes it. A row of check marks reads Menu bar hidden, Dock hidden, SpeakWith in the background. At the bottom, three app icons carry small red Dock badges reading REC, TYPE, and a pause mark, captioned as the fallback.",
       "sections": [
         {
           "heading": "What the pill shows",
           "paragraphs": [
             {
-              "text": "Four things, left to right. The SpeakWith mark, so you know whose badge it is when it is the only thing of ours on screen. A colored dot for the mode. The mode word beside the dot, because a color on its own is easy to misread and the word settles it. And, when there is something to add, a smaller detail line, for example when your words are going into an open text field."
+              "text": "Four things across the top row, left to right. The SpeakWith mark, so you know whose badge it is when it is the only thing of ours on screen. A colored dot for the mode. The mode word beside the dot, because a color on its own is easy to misread and the word settles it. And, when there is something to add, a smaller detail line, for example when your words are going into an open text field."
+            },
+            {
+              "text": "The fifth thing sits under that row: a small live waveform, the same one that scrolls inside SpeakWith's own window. The dot and the word say what dictation is doing. The waveform answers the other question, the one that comes up when a take has gone quiet and SpeakWith is hidden behind the app you are typing into: is the mic hearing me? The bars rise with your voice and fall to a flat line in silence, so there is nothing to misread. The pill grows a little taller to make room, and never wider."
             },
             {
               "text": "The dot can pulse, fading in and out like the recording light in the sidebar: faster while recording or typing into another app, slower while listening. That is a separate switch, so you can keep the dot solid if a moving light in the corner of your eye is not what you want."
@@ -860,7 +880,7 @@
           "heading": "Turning it on",
           "paragraphs": [
             {
-              "text": "Settings, Dictation, under Type into app: Show mode indicator floats the pill; Pulse the mode indicator makes the dot breathe. Both are in the direct-download builds of SpeakWith. The Mac App Store build keeps the Dock badge."
+              "text": "Settings, Dictation, under Type into app: Show mode indicator floats the pill; Pulse the mode indicator makes the dot breathe; Waveform in the mode indicator draws the strip. The waveform is on to begin with, so switching it off is what gets you the short pill back, exactly as it was. It greys out when Show mode indicator is off, because there is no badge to draw it in. All three are in the direct-download builds of SpeakWith. The Mac App Store build keeps the Dock badge."
             }
           ]
         }
@@ -1296,6 +1316,111 @@
         "label": "See also: Reading live transcript corrections, for the marks SpeakWith puts on a settled line in its own window.",
         "path": "guides/live-transcript-corrections"
       }
+    },
+    "languageLearning": {
+      "eyebrow": "Guides",
+      "heading": "Practise a language aloud",
+      "intro": "Dictate in the language you are learning, and SpeakWith writes a translation under your own words. Your sentence stays where you said it, so you can read the pair together and see what you got right. This guide covers the switch that turns the feature on, the two language settings it needs, what the recorder shows you while it works, and the three things it cannot do yet.",
+      "diagramDark": "assets/guides/language-learning-annotated.svg?v=20261028a",
+      "diagramLight": "assets/guides/language-learning-annotated-light.svg?v=20261028a",
+      "diagramAlt": "Annotated diagram of multilingual dictation in SpeakWith, in four recreated panels with six numbered callouts. Settings under Engine shows the Dictation language section, with Enable multilingual dictation switched on and Spoken input language set to Deutsch. The live recorder header reads Recording, then Language: Deutsch. The AI sidebar shows the Polish heading with two chips beside it, Auto and a translate chip reading de to en. Settings under Session AI shows Translate polish into set to English, and In the day document set to Both versions. At the foot, a day document holds one dictated German line with its English translation written as a block beneath it, reading: I want to try something this week.",
+      "sections": [
+        {
+          "heading": "Which builds have it",
+          "paragraphs": [
+            {
+              "text": "Multilingual dictation is pre-release. It is in the direct download of the Mac app (the Gumroad build, with its own engine) and in the iPhone app, which has not reached the App Store yet. The Mac App Store build does not have it. If you installed SpeakWith from the Mac App Store, none of the settings on this page are there."
+            }
+          ]
+        },
+        {
+          "heading": "Turn on the master switch first",
+          "paragraphs": [
+            {
+              "text": "Everything on this page sits behind one switch, and it is off by default on both the Mac and the iPhone. The walkthrough that follows is written for the Mac; the iPhone has its own section further down. On the Mac, open Settings, choose Engine, and in the section Dictation language the first row is Enable multilingual dictation. While it is off, no other language setting is read: the engine listens in English, and a polish is an ordinary polish, whatever the language rows below it say."
+            },
+            {
+              "text": "This is the most common confusion. If you have picked a language and nothing changed, this switch is the first thing to check."
+            }
+          ]
+        },
+        {
+          "heading": "Choose the two languages as a pair",
+          "paragraphs": [
+            {
+              "text": "There are two language settings, and they are deliberately not the same list. Spoken input language, in Settings under Engine on the Mac, is the language the engine listens in. It is set per project, so one project can sit in German while another stays in English. Translate polish into, in Settings under Session AI in the section Feedback and polish, is the language a polish writes. Leave it empty and a polish does not translate."
+            },
+            {
+              "text": "Think of them as a source and a target. Both directions work: dictate in German and read it in English, or dictate in English and read it in German. To practise a language, set the spoken input to the language you are learning and the translation to the one you know, then say your sentence."
+            },
+            {
+              "text": "If the menus are longer than you need, Settings under Languages has two tick lists, Spoken input and Translate into. They only decide which rows the two menus draw, not what you dictate in or translate into. Your current pick always stays in its menu, even when you untick it."
+            }
+          ]
+        },
+        {
+          "heading": "What the panel and the chip tell you",
+          "paragraphs": [
+            {
+              "text": "On the Mac, while you record, the live panel header shows Language: and the language the engine will actually use. It reports what the engine will do, not what the setting says. It can name a specific language, read Automatic when the engine detects the language itself, or read English on an engine that transcribes English alone, where there is nothing to choose."
+            },
+            {
+              "text": "In the Mac's AI sidebar, the Polish heading carries a small chip that says whether this polish will translate. When translation is off it reads Translate: Off. When it is on, it shows the pair as a source and a target. The chip is there even when translate is off, and even when the master switch is off, because knowing that it will not translate is an answer you need too. Press it and the same settings open in one place. The chip is a Mac feature; the iPhone does not have it."
+            }
+          ]
+        },
+        {
+          "heading": "What lands in the day document",
+          "paragraphs": [
+            {
+              "text": "Settings under Session AI has a row called In the day document, with two choices. Both versions is the default: your dictation stays where it landed, and the translation is written as a new block under it. This is the shape that makes the pair readable when you are learning a language, and it is the one this guide recommends. Say your sentence in the language you are practising, and the page keeps it with the translation beneath. In the figure above, that translation reads: I want to try something this week."
+            },
+            {
+              "text": "Translation only clears your own words and leaves the translation standing alone. This is lossy. Your original is gone from the page, and a regenerate afterwards will refuse, because the app finds your original by its words and the words are no longer there. Choose it only when you want the translation and nothing else."
+            },
+            {
+              "text": "Translating the same take a second time replaces the first translation. It does not stack a second one under it."
+            }
+          ]
+        },
+        {
+          "heading": "On the iPhone",
+          "paragraphs": [
+            {
+              "text": "The iPhone app has the same switch and the same pair of languages, in its own places. Open Settings and choose Live Dictation: the first row is Enable multilingual dictation, and the row Spoken input is the language the recorder listens in. Translate polish into is in Settings under Session AI, and the tick lists that shorten the menus are in Settings under Languages. The day document choice, Both versions or Translation only, works the same as on the Mac."
+            },
+            {
+              "text": "Some things differ. The phone transcribes with Apple Speech on the device, and its recorder has its own language menu rather than a Language: line in a panel header. There is no translate chip on the Polish heading, so the settings rows are the place to check whether a polish will translate. The translation goes to your own OpenAI key; there is no Ollama option on the phone."
+            }
+          ]
+        },
+        {
+          "heading": "What it cannot do yet",
+          "paragraphs": [
+            {
+              "text": "On the Mac, not every engine can hear every language. An engine that transcribes English only stays in English whatever the setting says, and the panel header tells you so by reading English."
+            },
+            {
+              "text": "On the Mac and the iPhone alike, the first take in a new language pauses while the on-device model for that language downloads over the network. It is slow the first time and instant afterwards. The pause is the download, not the app hanging."
+            },
+            {
+              "text": "On the Mac, dictating in a language other than English turns the live second pass off, because the second pass decodes English only."
+            }
+          ]
+        },
+        {
+          "heading": "Where the translation happens",
+          "paragraphs": [
+            {
+              "text": "Transcription happens on your device. The translation does not. It is a language-model call, like the other optional AI features, and it goes to your own OpenAI key. On the Mac it can go instead to a local Ollama model you run yourself; the iPhone uses your OpenAI key only."
+            }
+          ]
+        }
+      ],
+      "seeAlso": {
+        "path": "guides/recorder-badge",
+        "label": "See also: reading the recorder badge, the other lines the live panel header shows."
+      }
     }
   },
   "technical": {
@@ -1554,5 +1679,13 @@
         ]
       }
     ]
+  },
+  "error": {
+    "heading": "Something went wrong",
+    "lead": "This page hit an error. Reloading usually clears it.",
+    "leadRequest": "That request could not be completed. Reloading usually clears it.",
+    "leadStaleChunk": "The site was updated while this page was open, so part of it could no longer be loaded. Reloading picks up the new version.",
+    "reload": "Reload",
+    "home": "Back to home"
   }
 }

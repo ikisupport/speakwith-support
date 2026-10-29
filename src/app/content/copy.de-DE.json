@@ -84,6 +84,10 @@
       "title": "Wie diktierte Wörter ihren Abstand finden | SpeakWith",
       "description": "SpeakWith liest vor dem Eintippen eines Satzes in eine andere App je ein Zeichen links und rechts vom Cursor. Die Abstandsregel, die sechs Arten von Eingabefeld und was nie gelesen wird."
     },
+    "guidesLanguageLearning": {
+      "title": "Übe eine Sprache laut | SpeakWith",
+      "description": "Diktiere in der Sprache, die du lernst, und lies die Übersetzung unter deinen eigenen Worten: der Hauptschalter, die beiden Spracheinstellungen und die drei Grenzen."
+    },
     "technicalAgentLists": {
       "title": "Projekt- und Modelllisten | SpeakWith",
       "description": "Wie ein Programm auf deinem Mac das Projektmenü und das Modellmenü im Agent-Tab von SpeakWith von Gumroad füllt: ein lokaler Aufruf für die Ordner und zwei Wege, die Modelle zu übergeben."
@@ -149,7 +153,7 @@
             "Automatische Politur, auch das",
             "Transkripte nach Tagen durchsuchen",
             "Apple Speech auf dem Gerät",
-            "Heute Englisch, weitere Sprachen in Entwicklung"
+            "Diktiere in anderen Sprachen, mit einer Übersetzung darunter"
           ],
           "src": "assets/screenshots/ios-live-polish.png?v=20261025b",
           "srcLight": "assets/screenshots/ios-live-polish-light.png?v=20261025b",
@@ -399,7 +403,7 @@
         },
         {
           "q": "Welche Sprachen unterstützt SpeakWith?",
-          "a": "Heute Englisch. Die Unterstützung weiterer Sprachen ist in Entwicklung, und sie erscheinen in Updates, sobald sie fertig sind."
+          "a": "Englisch in jedem Build, und weitere Sprachen im direkten Mac-Download und in der iPhone-App. Auf beiden sind sie standardmäßig aus, hinter dem Schalter Enable multilingual dictation: in Settings unter Engine auf dem Mac, und in Settings unter Live Dictation auf dem iPhone. Der Build im Mac App Store enthält sie nicht."
         },
         {
           "q": "Ist das ein Audiorekorder?",
@@ -500,6 +504,13 @@
           "badgeKind": "paid",
           "name": "Parakeet",
           "body": "Der Geschwindigkeitschampion. Nahezu sofortige Transkription mit ausgezeichneter Genauigkeit bei sauberem Audio.",
+          "note": ""
+        },
+        {
+          "badge": "Pro",
+          "badgeKind": "paid",
+          "name": "Nemotron",
+          "body": "Live dictation in around 40 languages. Choose it when you dictate in German or another language besides English; on English, Parakeet stays a little sharper.",
           "note": ""
         }
       ]
@@ -656,5 +667,13 @@
         ]
       }
     ]
+  },
+  "error": {
+    "heading": "Etwas ist schiefgelaufen",
+    "lead": "Auf dieser Seite ist ein Fehler aufgetreten. Neuladen behebt ihn meist.",
+    "leadRequest": "Diese Anfrage konnte nicht abgeschlossen werden. Neuladen behebt das meist.",
+    "leadStaleChunk": "Die Website wurde aktualisiert, während diese Seite geöffnet war, deshalb ließ sich ein Teil nicht mehr laden. Beim Neuladen wird die neue Version geladen.",
+    "reload": "Neu laden",
+    "home": "Zurück zur Startseite"
   }
 }

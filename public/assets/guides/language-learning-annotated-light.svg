@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1420" viewBox="0 0 1600 1420" font-family="SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title>Practising a language aloud with SpeakWith, annotated (light)</title>
+  <desc>Vector recreation of the SpeakWith settings rows, live recorder header, polish chip and day document that make up spoken input language and translating polish, with six numbered callouts.</desc>
+  <defs>
+    <style>
+      .field { fill: #F5F5F7; }
+      .chrome { fill: #E5E5EA; stroke: #C7C7CC; stroke-width: 2; }
+      .title { font-size: 40px; font-weight: 700; fill: #1D1D1F; }
+      .subtitle { font-size: 22px; fill: #515154; }
+      .panel-tag { font-size: 17px; font-weight: 700; letter-spacing: 0.08em; fill: #6E6E73; }
+      .sec { font-size: 18px; font-weight: 700; fill: #515154; }
+      .row-label { font-size: 23px; fill: #1D1D1F; }
+      .row-value { font-size: 23px; fill: #515154; text-anchor: end; }
+      .chip { fill: #E8E8ED; stroke: #C7C7CC; stroke-width: 1.5; }
+      .chip-text { font-size: 20px; font-weight: 600; fill: #1D1D1F; text-anchor: middle; }
+      .badge { font-family: "SF Mono", Menlo, "JetBrains Mono", monospace; font-size: 30px; fill: #6E6E73; white-space: pre; }
+      .box { fill: #FFFFFF; stroke: #D2D2D7; stroke-width: 1.5; }
+      .box-head { font-size: 22px; font-weight: 700; fill: #1D1D1F; }
+      .box-body { font-size: 18px; fill: #3A3A3C; }
+      .box-note { font-size: 16px; fill: #6E6E73; font-style: italic; }
+      .leader { stroke: #C77700; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; opacity: 0.85; }
+      .dot { fill: #C77700; }
+      .pin { fill: #C77700; }
+      .pin-num { font-size: 22px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; }
+      .doc { fill: #FFFFFF; stroke: #D2D2D7; stroke-width: 1.5; }
+      .doc-head { font-family: "SF Mono", Menlo, "JetBrains Mono", monospace; font-size: 22px; font-weight: 700; fill: #1D1D1F; }
+      .doc-body { font-size: 24px; fill: #3A3A3C; }
+      .doc-trans { font-size: 24px; fill: #0B5FA5; }
+      .stamp { font-family: "SF Mono", Menlo, "JetBrains Mono", monospace; font-size: 15px; fill: #8E8E93; }
+      .foot { font-size: 18px; fill: #6E6E73; }
+      .foot-b { font-size: 18px; fill: #515154; font-weight: 600; }
+    </style>
+  </defs>
+
+  <rect class="field" width="1600" height="1420"/>
+  <rect x="1.5" y="1.5" width="1597" height="1417" rx="26.9" fill="none" stroke="#C7C7CC" stroke-width="3"/>
+
+  <text class="title" x="90" y="82">Practise a language aloud</text>
+  <text class="subtitle" x="90" y="122">Dictate in the language you are learning, and read the translation under your own words.</text>
+  <g id="settings-engine">
+    <rect class="chrome" x="90" y="175" width="690" height="230" rx="16"/>
+    <text class="panel-tag" x="118" y="211">SETTINGS · ENGINE</text>
+    <text class="sec" x="118" y="248">Dictation language</text>
+    <text class="row-label" x="118" y="310">Enable multilingual dictation</text>
+    <text class="row-value" x="662" y="310"></text>
+    <rect x="690" y="292" width="62" height="34" rx="17" fill="#248A3D"/>
+    <circle cx="735" cy="309" r="14" fill="#FFFFFF"/>
+    <text class="row-label" x="118" y="372">Spoken input language</text>
+    <text class="row-value" x="752" y="372">Deutsch  ⌄</text>
+  </g>
+  <g id="recorder-header">
+    <rect class="chrome" x="90" y="455" width="690" height="150" rx="16"/>
+    <text class="panel-tag" x="118" y="491">LIVE RECORDER</text>
+    <circle cx="134" cy="540" r="11" fill="#C77700"/>
+    <text class="badge" x="160" y="550">Recording</text>
+    <text class="badge" x="390" y="550">Language: Deutsch</text>
+  </g>
+  <g id="polish-chip">
+    <rect class="chrome" x="90" y="655" width="690" height="140" rx="16"/>
+    <text class="panel-tag" x="118" y="691">AI SIDEBAR</text>
+    <text class="row-label" x="118" y="748" font-size="27" font-weight="700">Polish</text>
+    <rect class="chip" x="490" y="722" width="104" height="38" rx="19"/>
+    <text class="chip-text" x="542" y="748">Auto</text>
+    <rect class="chip" x="610" y="722" width="140" height="38" rx="19"/>
+    <text class="chip-text" x="680" y="748">de→en  ⌄</text>
+  </g>
+  <g id="settings-session-ai">
+    <rect class="chrome" x="90" y="845" width="690" height="230" rx="16"/>
+    <text class="panel-tag" x="118" y="881">SETTINGS · SESSION AI</text>
+    <text class="sec" x="118" y="918">Feedback and polish</text>
+    <text class="row-label" x="118" y="980">Translate polish into</text>
+    <text class="row-value" x="752" y="980">English  ⌄</text>
+    <text class="row-label" x="118" y="1042">In the day document</text>
+    <text class="row-value" x="752" y="1042">Both versions  ⌄</text>
+  </g>
+  <g id="callout-1">
+    <rect class="box" x="860" y="175" width="650" height="170" rx="10"/>
+    <circle class="pin" cx="860" cy="209" r="19"/>
+    <text class="pin-num" x="860" y="217">1</text>
+    <text class="box-head" x="904" y="217">The master switch, first</text>
+    <text class="box-body" x="904" y="255">Settings, Engine, under Dictation language.</text>
+    <text class="box-body" x="904" y="281">It is off by default. While it is off, nothing</text>
+    <text class="box-body" x="904" y="307">reads either language: the engine listens in</text>
+    <text class="box-body" x="904" y="333">English and a polish is an ordinary polish.</text>
+    <path class="leader" d="M 780.0 310.0 L 802.0 310.0 Q 820.0 310.0 820.0 292.0 L 820.0 227.0 Q 820.0 209.0 838.0 209.0 L 860.0 209.0"/>
+    <circle class="dot" cx="780" cy="310" r="5"/>
+  </g>
+  <g id="callout-2">
+    <rect class="box" x="860" y="375" width="650" height="170" rx="10"/>
+    <circle class="pin" cx="860" cy="409" r="19"/>
+    <text class="pin-num" x="860" y="417">2</text>
+    <text class="box-head" x="904" y="417">What the engine listens in</text>
+    <text class="box-body" x="904" y="455">The source half of the pair, and a property of</text>
+    <text class="box-body" x="904" y="481">the project, so two projects can sit in two</text>
+    <text class="box-body" x="904" y="507">languages. Shorten the menu on Settings,</text>
+    <text class="box-body" x="904" y="533">Languages, under Spoken input.</text>
+    <path class="leader" d="M 780.0 372.0 L 802.0 372.0 Q 820.0 372.0 820.0 390.0 L 820.0 391.0 Q 820.0 409.0 838.0 409.0 L 860.0 409.0"/>
+    <circle class="dot" cx="780" cy="372" r="5"/>
+  </g>
+  <g id="callout-3">
+    <rect class="box" x="860" y="565" width="650" height="175" rx="10"/>
+    <circle class="pin" cx="860" cy="599" r="19"/>
+    <text class="pin-num" x="860" y="607">3</text>
+    <text class="box-head" x="904" y="607">What the engine will actually do</text>
+    <text class="box-body" x="904" y="645">The header reports the language the take will</text>
+    <text class="box-body" x="904" y="671">really use, not the one the setting holds. It can</text>
+    <text class="box-body" x="904" y="697">also read Automatic, or English only on an</text>
+    <text class="box-body" x="904" y="723">engine that transcribes English alone.</text>
+    <path class="leader" d="M 780.0 540.0 L 802.0 540.0 Q 820.0 540.0 820.0 558.0 L 820.0 581.0 Q 820.0 599.0 838.0 599.0 L 860.0 599.0"/>
+    <circle class="dot" cx="780" cy="540" r="5"/>
+  </g>
+  <g id="callout-4">
+    <rect class="box" x="860" y="750" width="650" height="175" rx="10"/>
+    <circle class="pin" cx="860" cy="784" r="19"/>
+    <text class="pin-num" x="860" y="792">4</text>
+    <text class="box-head" x="904" y="792">The chip answers it in the negative too</text>
+    <text class="box-body" x="904" y="830">On the Polish heading, showing the pair as a</text>
+    <text class="box-body" x="904" y="856">source and a target. With translation off it</text>
+    <text class="box-body" x="904" y="882">reads Translate: Off, so the question is always</text>
+    <text class="box-body" x="904" y="908">answered. Press it to change either half.</text>
+    <path class="leader" d="M 780.0 741.0 L 802.0 741.0 Q 820.0 741.0 820.0 759.0 L 820.0 766.0 Q 820.0 784.0 838.0 784.0 L 860.0 784.0"/>
+    <circle class="dot" cx="780" cy="741" r="5"/>
+  </g>
+  <g id="callout-5">
+    <rect class="box" x="860" y="935" width="650" height="180" rx="10"/>
+    <circle class="pin" cx="860" cy="969" r="19"/>
+    <text class="pin-num" x="860" y="977">5</text>
+    <text class="box-head" x="904" y="977">What the polish writes, and what it keeps</text>
+    <text class="box-body" x="904" y="1015">Translate polish into is the target half. Off is</text>
+    <text class="box-body" x="904" y="1041">the default. In the day document decides</text>
+    <text class="box-body" x="904" y="1067">whether your own words stay above the</text>
+    <text class="box-body" x="904" y="1093">translation, or are cleared and replaced.</text>
+    <path class="leader" d="M 780.0 980.0 L 814.5 980.0 Q 820.0 980.0 820.0 974.5 L 820.0 974.5 Q 820.0 969.0 825.5 969.0 L 860.0 969.0"/>
+    <circle class="dot" cx="780" cy="980" r="5"/>
+  </g>
+  <g id="day-document">
+    <rect class="doc" x="90" y="1150" width="1420" height="170" rx="14"/>
+    <text class="doc-head" x="122" y="1192">## 07:05  Morning practice</text>
+    <text class="doc-body" x="122" y="1240">Ich möchte diese Woche etwas ausprobieren.</text>
+    <text class="doc-trans" x="122" y="1286">I want to try something this week.</text>
+    <text class="stamp" x="1478" y="1286" text-anchor="end">translation</text>
+    <circle class="pin" cx="90" cy="1150" r="19"/>
+    <text class="pin-num" x="90" y="1158">6</text>
+    <text class="box-head" x="122" y="1150" dy="-18">Both versions keeps your line, and writes the translation under it</text>
+  </g>
+  <line x1="90" y1="1352" x2="1510" y2="1352" stroke="#D2D2D7" stroke-width="1.5"/>
+  <text class="foot" x="90" y="1390"><tspan class="foot-b">Pre-release.</tspan> In the direct Mac download and the iPhone app, off until you turn it on. The Mac App Store build does not have it. Sample values shown.</text>
+</svg>

@@ -151,6 +151,18 @@ if (jsBlob.includes('Automatisierung | SpeakWith')) {
   errors.push('disabled de-DE copy appears in published JavaScript');
 }
 
+// The dev page index (app/routes/dev.tsx) is registered only when NODE_ENV is
+// not production or SPEAKWITH_DEV_PAGES=1. Checking for a /dev/ directory
+// would prove nothing: those routes are absent from locales.json's matrix, so
+// they never get prerendered HTML whether the gate holds or not. If the gate
+// fails open the leak is the route MODULE inside a JS chunk, which is what
+// these literals catch. Both are unique to those two files.
+for (const literal of ['Dev pages \u00b7 SpeakWith', 'Deliberate test error from the dev page index.']) {
+  if (jsBlob.includes(literal)) {
+    errors.push(`dev-only page index appears in published JavaScript (${literal})`);
+  }
+}
+
 if (!existsSync(join(siteDir, 'index.html'))) {
   errors.push('missing index.html');
 }
