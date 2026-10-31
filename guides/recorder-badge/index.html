@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/brand-icon.svg"/><meta name="theme-color" content="#131418" id="meta-theme-color"/><title>Reading the recorder badge | SpeakWith</title><meta name="description" content="What the two lines at the left of the SpeakWith record bar mean: the build you are running, and your running tally of words, sentences, correction rates, and speaking pace."/><link rel="canonical" href="https://speakwith.ikisystems.com/guides/recorder-badge/"/><meta property="og:type" content="website"/><meta property="og:site_name" content="SpeakWith"/><meta property="og:title" content="Reading the recorder badge | SpeakWith"/><meta property="og:description" content="What the two lines at the left of the SpeakWith record bar mean: the build you are running, and your running tally of words, sentences, correction rates, and speaking pace."/><meta property="og:url" content="https://speakwith.ikisystems.com/guides/recorder-badge/"/><meta property="og:image" content="https://speakwith.ikisystems.com/og-image.png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content="Reading the recorder badge | SpeakWith"/><meta property="og:locale" content="en_US"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Reading the recorder badge | SpeakWith"/><meta name="twitter:description" content="What the two lines at the left of the SpeakWith record bar mean: the build you are running, and your running tally of words, sentences, correction rates, and speaking pace."/><meta name="twitter:image:alt" content="Reading the recorder badge | SpeakWith"/><meta name="twitter:image" content="https://speakwith.ikisystems.com/og-image.png"/><link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260925b"/><link rel="icon" type="image/png" href="/favicon-32.png?v=20260925b" sizes="32x32"/><link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20260925b"/><link rel="modulepreload" href="/assets/manifest-b7cb41c6.js"/><link rel="modulepreload" href="/assets/entry.client-CXCBEhj1.js"/><link rel="modulepreload" href="/assets/jsx-runtime-F7w9VrsA.js"/><link rel="modulepreload" href="/assets/root-KPeEKpAC.js"/><link rel="modulepreload" href="/assets/locale-DQO1phFi.js"/><link rel="modulepreload" href="/assets/theme-DrWVvHAC.js"/><link rel="modulepreload" href="/assets/telemetry-Dk5cjo1t.js"/><link rel="modulepreload" href="/assets/cx-2dOUpm6k.js"/><link rel="modulepreload" href="/assets/guides.recorder-badge-qaNxNJoH.js"/><link rel="modulepreload" href="/assets/head-BBhFgQbQ.js"/><link rel="modulepreload" href="/assets/asset-C-rVqAQZ.js"/><style id="theme-tokens">/* The palette. Inlined into every page's <head> before the deferred
+   stylesheet loads, which is what stops a light flash on dark systems.
+   styles.css only consumes these via var(--*); this file is the one place
+   a colour is defined. Build step: scripts/extract-theme-prelude.mjs. */
+:root,
+html[data-theme="light"] {
+  color-scheme: light;
+  --bg: #faf7f0;
+  --surface: #fffefb;
+  --surface-2: #f2ece0;
+  --text: #2b2620;
+  --text-dim: #6b6056;
+  --accent: #9a5b34;
+  --accent-strong: #7f4622;
+  --on-accent: #fdf8ee;
+  --rule: rgba(43, 38, 32, 0.12);
+  --shadow: 0 2px 20px rgba(43, 38, 32, 0.07);
+  --shot-edge: rgba(43, 38, 32, 0.28);
+  --hero-grad: linear-gradient(160deg, #f2ece0 0%, #faf7f0 60%);
+  --max-width: 760px;
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #131418;
+  --surface: #1c2025;
+  --surface-2: #252a30;
+  --text: #f1efe9;
+  --text-dim: #a8a399;
+  --accent: #f3b54a;
+  --accent-strong: #f6c163;
+  --on-accent: #15171a;
+  --rule: rgba(241, 239, 233, 0.15);
+  --shadow: 0 4px 22px rgba(0, 0, 0, 0.30);
+  --shot-edge: rgba(255, 255, 255, 0.18);
+  --hero-grad: linear-gradient(160deg, #1c2025 0%, #131418 65%);
+}
+</style><script>// Resolve and apply the saved theme before first paint, so the page never
+// flashes the wrong palette. Inlined into every page's <head> verbatim by
+// scripts/extract-theme-prelude.mjs, ahead of any React code: it must run
+// synchronously and cannot be a module.
+(function () {
+  var choice = "system";
+  try {
+    var key = "speakwith-theme";
+    var raw = localStorage.getItem(key);
+    if (raw == null) {
+      var legacy = localStorage.getItem("lifebond-theme");
+      if (legacy != null) {
+        localStorage.setItem(key, legacy);
+        localStorage.removeItem("lifebond-theme");
+        raw = legacy;
+      }
+    }
+    if (raw === "system" || raw === "light" || raw === "dark") {
+      choice = raw;
+    }
+  } catch (e) {}
+  var resolved = choice === "system"
+    ? (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+    : choice;
+  document.documentElement.setAttribute("data-theme", resolved);
+})();
+</script><link rel="stylesheet" href="/assets/root-66fJ256p.css"/><link rel="stylesheet" href="/assets/guides-BfZ_F9Xh.css"/></head><body><app-root class="_shell_ypk7l_8"><header class="_nav_v6nbp_4"><div class="container _nav__inner_v6nbp_13"><a class="_wordmark_v6nbp_21" aria-label="SpeakWith home" href="/" data-discover="true"><img class="_wordmark__icon_v6nbp_32" src="/brand-icon.svg" alt="" aria-hidden="true" width="44" height="44"/>SpeakWith</a><nav class="_nav__links_v6nbp_48" aria-label="Primary"><a href="/" data-discover="true">Home</a><a class="_active_v6nbp_65" aria-current="page" href="/guides/" data-discover="true">Guides</a><a href="/privacy/" data-discover="true">Privacy</a><a href="/terms/" data-discover="true">Terms</a><a href="/pricing/" data-discover="true">Pricing</a></nav><label class="_theme_v6nbp_70"><span class="visually-hidden">Appearance</span><select aria-label="Appearance"><option value="system" selected="">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label></div></header><main><app-recorder-badge-guide><article class="container prose"><p class="_eyebrow_fpg1f_2">Guides</p><h1>Reading the recorder badge</h1><p>At the left of the record bar on the Mac, SpeakWith shows two short lines in a small monospaced typeface. The first identifies the build you are running. The second tracks your dictation over time. The diagram below walks through each segment.</p><figure class="_diagram_fpg1f_11"><img src="/assets/guides/recorder-status-badge-annotated.svg?v=20261014a" alt="Annotated diagram of the SpeakWith recorder badge. Line one reads SpeakWith 2.14.0 Pro (app=eng 20260923.10): the app name, version, edition, and the build stamp shared by the app and its engine. Line two reads 9,834w · 1,770s · 0.7% wer · 0.1% st · 148 wpm: words and sentences dictated since the last reset, the share of words you corrected, the share your special terms corrected, and your speaking pace." width="1600" height="1220" loading="lazy" decoding="async"/></figure><h2>The first line: which build you are running</h2><p>The line starts with the app name, its version, and the edition. The edition reads Pro on a direct download, or MAS if you installed SpeakWith from the Mac App Store.</p><p>The part in parentheses is the build stamp: the build date, then the build number for that day. The app and its transcription engine are stamped together, so they normally show one value. If they ever differ, the line shows both, which is the first thing to mention if you write in about a problem.</p><h2>The second line: your dictation tally</h2><p>The counts are words and sentences you have dictated since the last reset, across all sessions. The s stands for sentences, not seconds. The character count used to sit on this line. It now lives in About, under Totals.</p><p>The two percentages use the word count as their denominator. The correction rate (wer) is the share of dictated words you went back and changed, a personal stand-in for WER (Word Error Rate). It only counts corrections you actually made, so the true error rate may be higher. The special-terms rate (st) is the share of words that your own special terms corrected: names, terminology, and words you pronounce your own way, which the recognizer would otherwise get wrong.</p><p>The last figure is your speaking pace, in words per minute of speech. The pauses while you think sit in neither half of the ratio, so this is how fast you talk. It is not how much you get down in an hour, and it is not a typing speed. The badge never divides your pace by a typing figure.</p><h2>The panel header: this session</h2><p>Live dictation adds a line for the session you are in. It counts settled utterances, the words in them, and the time you were actually speaking. When a score exists it adds the audio quality check, and it ends with a pace for this session. A sample line reads: 12 settled · 840 words · 6m speech · support 94.2% · ~148 wpm.</p><p>That session pace and the badge pace use different clocks, and a gap is expected. The badge covers every session since the last reset, as words over speech time. The header covers this session, from the start of one utterance to the start of the next. On the same audio the header usually reads about a tenth higher.</p><p>The session pace has three states. Before there is enough speech, you see a dash and then wpm. While the figure is still settling, a tilde sits in front of it (~148 wpm). Once the session has enough speech, the tilde drops off and the number stands alone.</p><p>The support percentage joins the line only after a real score exists. If the checker is not installed, that segment is left off the line.</p><h2>The audio quality check</h2><p>Settings calls this the audio quality check. On the header it appears as support followed by a percentage: a score for how well the recognizer is hearing you, on your own audio. The engine you are running decides how that percentage is measured.</p><p>On Whisper batch jobs, and on Parakeet live dictation, the percentage is an independent listener&#x27;s agreement with the transcript. The listener compares phonemes, the sounds of the words, with what was written down. From strongest to weakest the bands are Strong, High, Moderate, Weak, Minimal, and None.</p><p>Apple Speech reports the recognizer&#x27;s own confidence under the same label. Its bands are High, Moderate, and Low. The names overlap and the cutoffs do not: 0.85 is High on Apple Speech and only Moderate for the phoneme listener. This guide prints no single band table for both, because one table would mix two scales.</p><p>On a Whisper batch job, a low score can send the audio to the larger model. That step needs the optional accuracy add-on. The bundled checker is English only. When no score exists yet, the percentage stays off the line. Live dictation waits until the checker is installed and a first utterance has been scored.</p><h2>Hiding, resetting, and reading more</h2><p>There is no visible control on the badge itself; the space belongs to the Record, Flush, and Power buttons. Long-press anywhere on the badge to open the About window. About holds the switch that hides or shows the tally, the reset that starts the counts again from zero, and a correction rate measured on reviewed lines only.</p><p>In the app, hover over any segment of the badge to see the same explanation as a tooltip. The values in the diagram are sample values.</p><p class="_see-also_fpg1f_15"><a href="/guides/live-transcript-corrections/" data-discover="true">See also: reading live transcript corrections, the marks on each line as it lands.</a></p></article></app-recorder-badge-guide></main><footer class="_footer_1wi85_2"><div class="container _footer__inner_1wi85_9"><nav class="_footer__links_1wi85_14" aria-label="Footer"><a href="/" data-discover="true">Home</a><a href="/automation/" data-discover="true">Automation</a><a href="/guides/" data-discover="true">Guides</a><a href="/privacy/" data-discover="true">Privacy</a><a href="/terms/" data-discover="true">Terms</a><a href="https://ikisystems.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a><a href="https://x.com/ikisystems" target="_blank" rel="noopener noreferrer">X</a><a href="https://ikisystems.com/" target="_blank" rel="noopener noreferrer">IKI Systems</a></nav><p>SpeakWith: your spoken ideas, captured as a daily document.</p><p class="_footer__credits_1wi85_37"><span class="_footer__credits-label_1wi85_42">Built on</span>Apple Speech · Whisper · Parakeet · Nemotron · wav2vec2 · Silero</p><p class="_footer__credits_1wi85_37"><span class="_footer__credits-label_1wi85_42">Research</span><a href="https://doi.org/10.1145/3161187" target="_blank" rel="noopener noreferrer">Ruan et al., ACM IMWUT (2017)</a></p><p class="_footer__fine_1wi85_56">© 2026 <a href="https://ikisystems.com/" target="_blank" rel="noopener noreferrer">IKI Systems</a>. All rights reserved.</p></div></footer></app-root><script>((storageKey2, restoreKey) => {
+    if (!window.history.state || !window.history.state.key) {
+      let key = Math.random().toString(32).slice(2);
+      window.history.replaceState({ key }, "");
+    }
+    try {
+      let positions = JSON.parse(sessionStorage.getItem(storageKey2) || "{}");
+      let storedY = positions[restoreKey || window.history.state.key];
+      if (typeof storedY === "number") {
+        window.scrollTo(0, storedY);
+      }
+    } catch (error) {
+      console.error(error);
+      sessionStorage.removeItem(storageKey2);
+    }
+  })("react-router-scroll-positions", null)</script><script>window.__reactRouterContext = {"basename":"/","future":{"unstable_optimizeDeps":false,"v8_passThroughRequests":false,"v8_trailingSlashAwareDataRequests":false,"unstable_previewServerPrerendering":false,"v8_middleware":false,"v8_splitRouteModules":false,"v8_viteEnvironmentApi":false},"routeDiscovery":{"mode":"initial"},"ssr":true,"isSpaMode":false};window.__reactRouterContext.stream = new ReadableStream({start(controller){window.__reactRouterContext.streamController = controller;}}).pipeThrough(new TextEncoderStream());</script><script type="module" async="">import "/assets/manifest-b7cb41c6.js";
+import * as route0 from "/assets/root-KPeEKpAC.js";
+import * as route1 from "/assets/guides.recorder-badge-qaNxNJoH.js";
+  
+  window.__reactRouterRouteModules = {"root":route0,"en/guides/recorder-badge":route1};
+
+import("/assets/entry.client-CXCBEhj1.js");</script><!--$?--><template id="B:0"></template><!--/$--><script id="_R_">requestAnimationFrame(function(){$RT=performance.now()});</script><div hidden id="S:0"><script>window.__reactRouterContext.streamController.enqueue("[{\"_1\":2,\"_3\":-5,\"_4\":-5},\"loaderData\",{},\"actionData\",\"errors\"]\n");</script><!--$?--><template id="B:1"></template><!--/$--></div><script>$RB=[];$RV=function(a){$RT=performance.now();for(var b=0;b<a.length;b+=2){var c=a[b],e=a[b+1];null!==e.parentNode&&e.parentNode.removeChild(e);var f=c.parentNode;if(f){var g=c.previousSibling,h=0;do{if(c&&8===c.nodeType){var d=c.data;if("/$"===d||"/&"===d)if(0===h)break;else h--;else"$"!==d&&"$?"!==d&&"$~"!==d&&"$!"!==d&&"&"!==d||h++}d=c.nextSibling;f.removeChild(c);c=d}while(c);for(;e.firstChild;)f.insertBefore(e.firstChild,c);g.data="$";g._reactRetry&&requestAnimationFrame(g._reactRetry)}}a.length=0};
+$RC=function(a,b){if(b=document.getElementById(b))(a=document.getElementById(a))?(a.previousSibling.data="$~",$RB.push(a,b),2===$RB.length&&("number"!==typeof $RT?requestAnimationFrame($RV.bind(null,$RB)):(a=performance.now(),setTimeout($RV.bind(null,$RB),2300>a&&2E3<a?2300-a:$RT+300-a)))):b.parentNode.removeChild(b)};$RC("B:0","S:0")</script><div hidden id="S:1"><script>window.__reactRouterContext.streamController.close();</script></div><script>$RC("B:1","S:1")</script></body></html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/brand-icon.svg"/><meta name="theme-color" content="#131418" id="meta-theme-color"/><title>The floating status monitor | SpeakWith</title><meta name="description" content="The small pill SpeakWith keeps on top while you dictate: what its five mode colors and words mean, why it needs neither the menu bar nor the Dock, and when the Dock badge stands in for it."/><link rel="canonical" href="https://speakwith.ikisystems.com/guides/status-monitor/"/><meta property="og:type" content="website"/><meta property="og:site_name" content="SpeakWith"/><meta property="og:title" content="The floating status monitor | SpeakWith"/><meta property="og:description" content="The small pill SpeakWith keeps on top while you dictate: what its five mode colors and words mean, why it needs neither the menu bar nor the Dock, and when the Dock badge stands in for it."/><meta property="og:url" content="https://speakwith.ikisystems.com/guides/status-monitor/"/><meta property="og:image" content="https://speakwith.ikisystems.com/og-image.png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content="The floating status monitor | SpeakWith"/><meta property="og:locale" content="en_US"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The floating status monitor | SpeakWith"/><meta name="twitter:description" content="The small pill SpeakWith keeps on top while you dictate: what its five mode colors and words mean, why it needs neither the menu bar nor the Dock, and when the Dock badge stands in for it."/><meta name="twitter:image:alt" content="The floating status monitor | SpeakWith"/><meta name="twitter:image" content="https://speakwith.ikisystems.com/og-image.png"/><link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260925b"/><link rel="icon" type="image/png" href="/favicon-32.png?v=20260925b" sizes="32x32"/><link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20260925b"/><link rel="modulepreload" href="/assets/manifest-b7cb41c6.js"/><link rel="modulepreload" href="/assets/entry.client-CXCBEhj1.js"/><link rel="modulepreload" href="/assets/jsx-runtime-F7w9VrsA.js"/><link rel="modulepreload" href="/assets/root-KPeEKpAC.js"/><link rel="modulepreload" href="/assets/locale-DQO1phFi.js"/><link rel="modulepreload" href="/assets/theme-DrWVvHAC.js"/><link rel="modulepreload" href="/assets/telemetry-Dk5cjo1t.js"/><link rel="modulepreload" href="/assets/cx-2dOUpm6k.js"/><link rel="modulepreload" href="/assets/guides.status-monitor-CVwtqn0z.js"/><link rel="modulepreload" href="/assets/head-BBhFgQbQ.js"/><link rel="modulepreload" href="/assets/asset-C-rVqAQZ.js"/><style id="theme-tokens">/* The palette. Inlined into every page's <head> before the deferred
+   stylesheet loads, which is what stops a light flash on dark systems.
+   styles.css only consumes these via var(--*); this file is the one place
+   a colour is defined. Build step: scripts/extract-theme-prelude.mjs. */
+:root,
+html[data-theme="light"] {
+  color-scheme: light;
+  --bg: #faf7f0;
+  --surface: #fffefb;
+  --surface-2: #f2ece0;
+  --text: #2b2620;
+  --text-dim: #6b6056;
+  --accent: #9a5b34;
+  --accent-strong: #7f4622;
+  --on-accent: #fdf8ee;
+  --rule: rgba(43, 38, 32, 0.12);
+  --shadow: 0 2px 20px rgba(43, 38, 32, 0.07);
+  --shot-edge: rgba(43, 38, 32, 0.28);
+  --hero-grad: linear-gradient(160deg, #f2ece0 0%, #faf7f0 60%);
+  --max-width: 760px;
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #131418;
+  --surface: #1c2025;
+  --surface-2: #252a30;
+  --text: #f1efe9;
+  --text-dim: #a8a399;
+  --accent: #f3b54a;
+  --accent-strong: #f6c163;
+  --on-accent: #15171a;
+  --rule: rgba(241, 239, 233, 0.15);
+  --shadow: 0 4px 22px rgba(0, 0, 0, 0.30);
+  --shot-edge: rgba(255, 255, 255, 0.18);
+  --hero-grad: linear-gradient(160deg, #1c2025 0%, #131418 65%);
+}
+</style><script>// Resolve and apply the saved theme before first paint, so the page never
+// flashes the wrong palette. Inlined into every page's <head> verbatim by
+// scripts/extract-theme-prelude.mjs, ahead of any React code: it must run
+// synchronously and cannot be a module.
+(function () {
+  var choice = "system";
+  try {
+    var key = "speakwith-theme";
+    var raw = localStorage.getItem(key);
+    if (raw == null) {
+      var legacy = localStorage.getItem("lifebond-theme");
+      if (legacy != null) {
+        localStorage.setItem(key, legacy);
+        localStorage.removeItem("lifebond-theme");
+        raw = legacy;
+      }
+    }
+    if (raw === "system" || raw === "light" || raw === "dark") {
+      choice = raw;
+    }
+  } catch (e) {}
+  var resolved = choice === "system"
+    ? (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+    : choice;
+  document.documentElement.setAttribute("data-theme", resolved);
+})();
+</script><link rel="stylesheet" href="/assets/root-66fJ256p.css"/><link rel="stylesheet" href="/assets/guides-Dq5Yygoq.css"/></head><body><app-root class="_shell_ypk7l_8"><header class="_nav_v6nbp_4"><div class="container _nav__inner_v6nbp_13"><a class="_wordmark_v6nbp_21" aria-label="SpeakWith home" href="/" data-discover="true"><img class="_wordmark__icon_v6nbp_32" src="/brand-icon.svg" alt="" aria-hidden="true" width="44" height="44"/>SpeakWith</a><nav class="_nav__links_v6nbp_48" aria-label="Primary"><a href="/" data-discover="true">Home</a><a class="_active_v6nbp_65" aria-current="page" href="/guides/" data-discover="true">Guides</a><a href="/privacy/" data-discover="true">Privacy</a><a href="/terms/" data-discover="true">Terms</a><a href="/pricing/" data-discover="true">Pricing</a></nav><label class="_theme_v6nbp_70"><span class="visually-hidden">Appearance</span><select aria-label="Appearance"><option value="system" selected="">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label></div></header><main><app-status-monitor-guide><article class="container prose"><p class="_eyebrow_1mk42_2">Guides</p><h1>The floating status monitor</h1><p>While the live-direct mic is held, SpeakWith can float a small pill above every other window. It shows one colored dot and one or two words: the mode you are in right now. It can also carry a small live waveform, so the same glance tells you the mic is still hearing you. You read it from across the room, or from the corner of your eye while you type in another app, without bringing SpeakWith forward. The diagram below shows the pill, its five modes, and the one thing it cannot replace.</p><figure class="_diagram_1mk42_11"><img src="/assets/guides/status-monitor-annotated.svg?v=20261027a" alt="Annotated diagram of the SpeakWith floating status monitor: a small rounded badge sitting over another app&#x27;s window. Its top row carries the SpeakWith mark, a blue dot, the words Type into app, and a smaller detail line reading Into open field. Under that row runs a live waveform strip, its bars rising and falling with speech and flattening to a line across a quiet stretch in the middle. Five numbered callouts name the mark, the mode color, the mode word, the detail line, and the waveform. Below the badge, five smaller pills show the five modes with their colors: Recording in red, Type into app in blue, Voice pull in indigo, Listening in orange, and Monitoring in green, with a note that Listening is level mode and a hardware mute switch pauses and resumes it. A row of check marks reads Menu bar hidden, Dock hidden, SpeakWith in the background. At the bottom, three app icons carry small red Dock badges reading REC, TYPE, and a pause mark, captioned as the fallback." width="1600" height="1220" loading="lazy" decoding="async"/></figure><h2>What the pill shows</h2><p>Four things across the top row, left to right. The SpeakWith mark, so you know whose badge it is when it is the only thing of ours on screen. A colored dot for the mode. The mode word beside the dot, because a color on its own is easy to misread and the word settles it. And, when there is something to add, a smaller detail line, for example when your words are going into an open text field.</p><p>The fifth thing sits under that row: a small live waveform, the same one that scrolls inside SpeakWith&#x27;s own window. The dot and the word say what dictation is doing. The waveform answers the other question, the one that comes up when a take has gone quiet and SpeakWith is hidden behind the app you are typing into: is the mic hearing me? The bars rise with your voice and fall to a flat line in silence, so there is nothing to misread. The pill grows a little taller to make room, and never wider.</p><p>The dot can pulse, fading in and out like the recording light in the sidebar: faster while recording or typing into another app, slower while listening. That is a separate switch, so you can keep the dot solid if a moving light in the corner of your eye is not what you want.</p><h2>The five modes</h2><p>Recording, in red: a take is running and going where it always goes, into your day document. Type into app, in blue: a take is running and being typed into whatever app is in front of you. Voice pull, in indigo: a take is running and a shell client is pulling the words instead. Listening, in orange: level mode standby, with the mic held and a take starting the moment you speak up. Monitoring, in green: the mic is held and metering, with no take running.</p><p>Blue against red is the comparison this pill exists to make easy. Before it, recording into your document and typing into another app looked the same from a distance, and finding out which one you were in meant switching to SpeakWith. Now a glance at the pill tells you whether your next sentence lands in your document or in the email you are looking at.</p><p>Listening is the mode to know about if your microphone has a hardware mute switch. Level mode watches the audio level rather than a button, so flipping the mute switch drops the level and pauses the recorder, and flipping it back resumes. No key, no click, no window to find: the orange dot tells you SpeakWith is waiting, and the pill going red tells you it heard you.</p><p>When more than one applies, the pill shows the one that matters most: Voice pull first, then Type into app, then Recording. It appears only in live-direct dictation. Batch capture, and the mic being off, show no pill at all.</p><h2>Nothing else to keep on screen</h2><p>The pill is its own small window. It takes no slot in the menu bar, needs no Dock, and never takes keyboard focus, so it cannot steal a keystroke from the app you are typing into. You can hide the menu bar and the Dock, put SpeakWith in the background, fill the screen with the app you are working in, and the pill is still there.</p><p>Drag it anywhere once and it stays put, on top of everything, until you power the mic off. Many people park it in a corner next to where their words are landing, so the mode and the text sit in one glance.</p><h2>If you keep the Dock showing</h2><p>The Dock badge is the fallback. SpeakWith&#x27;s Dock icon reads REC while recording, TYPE while typing into another app, and a pause mark while listening in level mode. It is there whether or not the pill is, and it is enough if your Dock is always visible and you only need to know that a take is running.</p><p>What it cannot do is color-code the modes: macOS paints every Dock badge the same red, whatever the word inside it. That is the reason the floating monitor exists, and the reason it, not the badge, is the one to reach for when you type into other apps.</p><h2>Turning it on</h2><p>Settings, Dictation, under Type into app: Show mode indicator floats the pill; Pulse the mode indicator makes the dot breathe; Waveform in the mode indicator draws the strip. The waveform is on to begin with, so switching it off is what gets you the short pill back, exactly as it was. It greys out when Show mode indicator is off, because there is no badge to draw it in. All three are in the direct-download builds of SpeakWith. The Mac App Store build keeps the Dock badge.</p><p class="_see-also_1mk42_15"><a href="/guides/recorder-badge/" data-discover="true">See also: reading the recorder badge, the two lines at the left of the record bar.</a></p></article></app-status-monitor-guide></main><footer class="_footer_1wi85_2"><div class="container _footer__inner_1wi85_9"><nav class="_footer__links_1wi85_14" aria-label="Footer"><a href="/" data-discover="true">Home</a><a href="/automation/" data-discover="true">Automation</a><a href="/guides/" data-discover="true">Guides</a><a href="/privacy/" data-discover="true">Privacy</a><a href="/terms/" data-discover="true">Terms</a><a href="https://ikisystems.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a><a href="https://x.com/ikisystems" target="_blank" rel="noopener noreferrer">X</a><a href="https://ikisystems.com/" target="_blank" rel="noopener noreferrer">IKI Systems</a></nav><p>SpeakWith: your spoken ideas, captured as a daily document.</p><p class="_footer__credits_1wi85_37"><span class="_footer__credits-label_1wi85_42">Built on</span>Apple Speech · Whisper · Parakeet · Nemotron · wav2vec2 · Silero</p><p class="_footer__credits_1wi85_37"><span class="_footer__credits-label_1wi85_42">Research</span><a href="https://doi.org/10.1145/3161187" target="_blank" rel="noopener noreferrer">Ruan et al., ACM IMWUT (2017)</a></p><p class="_footer__fine_1wi85_56">© 2026 <a href="https://ikisystems.com/" target="_blank" rel="noopener noreferrer">IKI Systems</a>. All rights reserved.</p></div></footer></app-root><script>((storageKey2, restoreKey) => {
+    if (!window.history.state || !window.history.state.key) {
+      let key = Math.random().toString(32).slice(2);
+      window.history.replaceState({ key }, "");
+    }
+    try {
+      let positions = JSON.parse(sessionStorage.getItem(storageKey2) || "{}");
+      let storedY = positions[restoreKey || window.history.state.key];
+      if (typeof storedY === "number") {
+        window.scrollTo(0, storedY);
+      }
+    } catch (error) {
+      console.error(error);
+      sessionStorage.removeItem(storageKey2);
+    }
+  })("react-router-scroll-positions", null)</script><script>window.__reactRouterContext = {"basename":"/","future":{"unstable_optimizeDeps":false,"v8_passThroughRequests":false,"v8_trailingSlashAwareDataRequests":false,"unstable_previewServerPrerendering":false,"v8_middleware":false,"v8_splitRouteModules":false,"v8_viteEnvironmentApi":false},"routeDiscovery":{"mode":"initial"},"ssr":true,"isSpaMode":false};window.__reactRouterContext.stream = new ReadableStream({start(controller){window.__reactRouterContext.streamController = controller;}}).pipeThrough(new TextEncoderStream());</script><script type="module" async="">import "/assets/manifest-b7cb41c6.js";
+import * as route0 from "/assets/root-KPeEKpAC.js";
+import * as route1 from "/assets/guides.status-monitor-CVwtqn0z.js";
+  
+  window.__reactRouterRouteModules = {"root":route0,"en/guides/status-monitor":route1};
+
+import("/assets/entry.client-CXCBEhj1.js");</script><!--$?--><template id="B:0"></template><!--/$--><script id="_R_">requestAnimationFrame(function(){$RT=performance.now()});</script><div hidden id="S:0"><script>window.__reactRouterContext.streamController.enqueue("[{\"_1\":2,\"_3\":-5,\"_4\":-5},\"loaderData\",{},\"actionData\",\"errors\"]\n");</script><!--$?--><template id="B:1"></template><!--/$--></div><script>$RB=[];$RV=function(a){$RT=performance.now();for(var b=0;b<a.length;b+=2){var c=a[b],e=a[b+1];null!==e.parentNode&&e.parentNode.removeChild(e);var f=c.parentNode;if(f){var g=c.previousSibling,h=0;do{if(c&&8===c.nodeType){var d=c.data;if("/$"===d||"/&"===d)if(0===h)break;else h--;else"$"!==d&&"$?"!==d&&"$~"!==d&&"$!"!==d&&"&"!==d||h++}d=c.nextSibling;f.removeChild(c);c=d}while(c);for(;e.firstChild;)f.insertBefore(e.firstChild,c);g.data="$";g._reactRetry&&requestAnimationFrame(g._reactRetry)}}a.length=0};
+$RC=function(a,b){if(b=document.getElementById(b))(a=document.getElementById(a))?(a.previousSibling.data="$~",$RB.push(a,b),2===$RB.length&&("number"!==typeof $RT?requestAnimationFrame($RV.bind(null,$RB)):(a=performance.now(),setTimeout($RV.bind(null,$RB),2300>a&&2E3<a?2300-a:$RT+300-a)))):b.parentNode.removeChild(b)};$RC("B:0","S:0")</script><div hidden id="S:1"><script>window.__reactRouterContext.streamController.close();</script></div><script>$RC("B:1","S:1")</script></body></html>
