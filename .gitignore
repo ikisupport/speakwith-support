@@ -13,3 +13,6 @@ app/generated/
 # published snapshots rather than hidden from git (see private/publish-tokens.json).
 .env
 .env.example
+
+# Local editor settings (Peacock, etc.)
+.vscode/

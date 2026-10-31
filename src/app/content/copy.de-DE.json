@@ -118,8 +118,8 @@
     },
     "moments": {
       "title": "Deine Wörter erscheinen. Während du sprichst.",
-      "heroImageDark": "canonical_screenshots/hero.png?v=20261025a",
-      "heroImageLight": "canonical_screenshots/hero-light.png?v=20261025a",
+      "heroImageDark": "canonical_screenshots/hero.png?v=20261030c",
+      "heroImageLight": "canonical_screenshots/hero-light.png?v=20261030c",
       "heroAlt": "SpeakWith für Mac im Live-Diktat: gesprochene Wörter landen als transkribierte Zeilen unter einer Live-Wellenform, falsch verstandene Namen werden an Ort und Stelle korrigiert, und daneben wird ein Titel für die Sitzung vorgeschlagen.",
       "heroCaption": "Sprich, und sieh zu, wie die Untertitel für deine Gedanken Gestalt annehmen, bevor die Idee entgleitet. Die optionale Politur bringt die fertige Aufnahme in Ordnung und zeigt, was sie verändert hat, bevor du sie anwendest. Sitzungstitel sind ebenfalls optional: Nutze deinen OpenAI-Schlüssel oder ein lokales Ollama-Modell auf deinem Mac, oder schreib sie selbst."
     },
@@ -138,7 +138,9 @@
             "In App tippen (Direktversion)",
             "Projekte mit getrennten Ordnern",
             "Audio und Video importieren",
-            "Engines von Apple, Whisper und Parakeet"
+            "Engines von Apple, Whisper und Parakeet",
+            "Dictate in an input language, translate to an output language",
+            "Screenshots in your Markdown, with OCR"
           ],
           "src": "",
           "ariaLabel": ""
@@ -152,6 +154,7 @@
             "Automatische Titel, wenn du sie willst",
             "Automatische Politur, auch das",
             "Transkripte nach Tagen durchsuchen",
+            "Projects with separate folders",
             "Apple Speech auf dem Gerät",
             "Diktiere in anderen Sprachen, mit einer Übersetzung darunter"
           ],
