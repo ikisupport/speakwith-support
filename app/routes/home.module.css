@@ -306,10 +306,50 @@ app-home so the image stays in the wide 1.45fr column — order
 .shot__image {
   display: block;
   width: 100%;
-  /* 16:10 composed frame with the headline baked in — contain, never crop. */
+  /* 16:10 composed frame with the headline baked in. Contain, never crop. */
   height: auto;
   aspect-ratio: 16 / 10;
   object-fit: contain;
+}
+
+/* Bezelled phones in a tight grid. The Mac row (image beside a caption)
+   leaves a wide empty column around a portrait frame. */
+.shots--phone .shots__list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem 1rem;
+  max-width: 52rem;
+  margin-inline: auto;
+  align-items: start;
+}
+.shots--phone .shot,
+.shots--phone .shot:nth-child(even) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  text-align: center;
+}
+.shots--phone .shot:nth-child(even) .shot__frame {
+  order: 0;
+}
+.shots--phone .shot__frame {
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+  background: transparent;
+}
+.shots--phone .shot__image {
+  width: 100%;
+  max-width: none;
+  aspect-ratio: 1424 / 2956;
+  margin-inline: auto;
+  background: transparent;
+}
+.shots--phone .shot__caption {
+  font-size: 0.98rem;
+  line-height: 1.4;
 }
 
 .shot__caption {
@@ -516,6 +556,10 @@ app-home so the image stays in the wide 1.45fr column — order
 app-home regardless of row parity. */
   .shot:nth-child(even) .shot__frame {
     order: 0;
+  }
+  .shots--phone .shots__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: none;
   }
 }
 

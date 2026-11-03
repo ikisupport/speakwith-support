@@ -1,7 +1,6 @@
 import { Link } from 'react-router';
 import s from './Footer.module.css';
 import { useLocaleApi } from '../lib/locale';
-import { signal } from '../lib/telemetry';
 
 /**
  * Shared footer, carrying the locale switcher.
@@ -30,25 +29,7 @@ export function Footer() {
           <Link to={locale.path('guides')}>{copy.app.footer.links.guides}</Link>
           <Link to={locale.path('privacy')}>{copy.app.footer.links.privacy}</Link>
           <Link to={locale.path('terms')}>{copy.app.footer.links.terms}</Link>
-          <a
-            href={copy.links.newsletter}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => signal('cta.newsletter', { placement: 'footer' })}
-          >
-            {copy.app.footer.links.newsletter}
-          </a>
-          <a
-            href={copy.links.x}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => signal('cta.x', { placement: 'footer' })}
-          >
-            {copy.app.footer.links.x}
-          </a>
-          <a href={copy.links.ikiSystemsHome} target="_blank" rel="noopener noreferrer">
-            {copy.app.footer.links.ikiSystems}
-          </a>
+          <a href={copy.links.supportMailto}>{copy.app.footer.links.contact}</a>
         </nav>
         <p>{copy.app.footer.tagline}</p>
 

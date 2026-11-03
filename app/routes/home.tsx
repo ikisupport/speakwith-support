@@ -40,8 +40,7 @@ export default function Home() {
   const platformImageSrc = (item: { src: string; srcLight?: string }): string =>
     siteIsLight && item.srcLight ? item.srcLight : item.src;
 
-  /** The gallery shows the three captured macOS frames under /assets/screenshots/
-      (iOS shots are deferred and removed from copy.json). */
+  /** Mac gallery under /assets/screenshots/, plus the iPhone band below it. */
   const showScreenshots = true;
 
   /** The Voice Examples band; its frame is assets/screenshots/voice-examples.png. */
@@ -62,6 +61,10 @@ export default function Home() {
                 <Link className="button button--primary" to={locale.path('pricing')}
                    onClick={() => signal('cta.pricing', { placement: 'hero' })}>{copy.home.hero.ctaPrimary}</Link>
                 <a className="button button--ghost" href="#moments">{copy.home.hero.ctaGhost}</a>
+                {showScreenshots && (<>
+                  <a className="button button--ghost" href="#ios-screenshots"
+                     onClick={() => signal('cta.ios_gallery', { placement: 'hero' })}>{copy.home.hero.ctaIos}</a>
+                </>)}
                 <a className="button button--ghost" href={'#' + copy.home.typeIntoApp.id}>{copy.home.hero.ctaDemo}</a>
               </div>
               <p className={css.hero__note}>{copy.home.hero.note}</p>
@@ -211,12 +214,31 @@ export default function Home() {
       <Fragment key={s.src}>
                     <figure className={css.shot}>
                       <div className={css.shot__frame}>
-                        <img className={css.shot__image} src={asset(s.src)} alt={s.ariaLabel} loading="lazy" />
+                        <img className={css.shot__image} src={asset(platformImageSrc(s))} alt={s.ariaLabel} loading="lazy" />
                       </div>
                       <figcaption className={css.shot__caption}>{s.caption}</figcaption>
                     </figure>
                   </Fragment>
       ))}
+                </div>
+              </div>
+            </section>
+            <section id="ios-screenshots" className={cx(css.shots, css['shots--phone'])}>
+              <div className="container home-band">
+                <h2 className={css.shots__title}>{copy.home.iosScreenshots.title}</h2>
+                <p className={css.shots__subtitle}>{copy.home.iosScreenshots.subtitle}</p>
+                <div className={css.shots__list}>
+                  {copy.home.iosScreenshots.items.map((s) => (
+                    <Fragment key={s.src}>
+                      <figure className={css.shot}>
+                        <div className={css.shot__frame}>
+                          <img className={css.shot__image} src={asset(platformImageSrc(s))} alt={s.ariaLabel}
+                               width={400} height={830} loading="lazy" />
+                        </div>
+                        <figcaption className={css.shot__caption}>{s.caption}</figcaption>
+                      </figure>
+                    </Fragment>
+                  ))}
                 </div>
               </div>
             </section>

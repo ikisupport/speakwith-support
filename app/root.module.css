@@ -13,4 +13,6 @@
 
 .shell > main {
   flex: 1 0 auto;
+  /* min-width:auto would keep a wide descendant from shrinking the column. */
+  min-width: 0;
 }

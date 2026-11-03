@@ -33,11 +33,28 @@
   margin-bottom: 0;
 }
 
+.subscription {
+  margin: 1.25rem 0 2.75rem;
+  padding: 1.15rem 1.35rem;
+  border: 1px solid var(--rule);
+  border-radius: 1rem;
+  background: var(--surface-2);
+}
+
+.subscription h3 {
+  margin: 0 0 0.55rem;
+}
+
+.subscription p {
+  margin: 0.35rem 0;
+  color: var(--text-dim);
+}
+
 /* Comparison table */
 .table-wrap {
   border: 1px solid var(--rule);
   border-radius: 1rem;
-  overflow: hidden;
+  overflow-x: auto;
   box-shadow: var(--shadow);
   margin-bottom: 0;
 }
@@ -113,19 +130,6 @@ app-pricing tbody tr:last-child td {
 .dash {
   color: var(--text-dim);
   font-size: 1.12rem;
-}
-
-.pill {
-  display: inline-block;
-  padding: 3px 10px;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 600;
-}
-
-.addon {
-  background: color-mix(in srgb, var(--accent) 12%, transparent);
-  color: var(--accent-strong);
 }
 
 .val {

@@ -46,6 +46,81 @@ export default function Pricing() {
               <p className={css.sub}>{copy.pricing.header.sub}</p>
             </div>
 
+            <h2 className={css['section-title']}>{copy.pricing.ios.heading}</h2>
+            <p className={css['section-sub']}>{copy.pricing.ios.sub}</p>
+            <div className={css['table-wrap']}>
+              <table>
+                <thead>
+                  <tr>
+                    <th>{copy.pricing.ios.table.headers.feature}</th>
+                    <th className={css['plan-col']}>
+                      <span className={cx(css['plan-name'], css['plan-name--free'])}>{copy.pricing.ios.table.headers.freeName}</span>
+                      <span className={css['plan-tag']}>{copy.pricing.ios.table.headers.freeTag}</span>
+                    </th>
+                    <th className={css['plan-col']}>
+                      <span className={cx(css['plan-name'], css['plan-name--paid'])}>{copy.pricing.ios.table.headers.paidName}</span>
+                      <span className={css['plan-tag']}>{copy.pricing.ios.table.headers.paidTag}</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className={css.feat}>{copy.pricing.ios.table.rows.liveDictation.feature}<small>{copy.pricing.ios.table.rows.liveDictation.subtitle}</small></td>
+                    <td className={css.cell}><span className={css.check}>&#10003;</span></td>
+                    <td className={css.cell}><span className={css.check}>&#10003;</span></td>
+                  </tr>
+                  <tr>
+                    <td className={css.feat}>{copy.pricing.ios.table.rows.dayDocs.feature}<small>{copy.pricing.ios.table.rows.dayDocs.subtitle}</small></td>
+                    <td className={css.cell}><span className={css.check}>&#10003;</span></td>
+                    <td className={css.cell}><span className={css.check}>&#10003;</span></td>
+                  </tr>
+                  <tr>
+                    <td className={css.feat}>{copy.pricing.ios.table.rows.projects.feature}</td>
+                    <td className={css.cell}><span className={css.val}>{copy.pricing.ios.table.rows.projects.free}</span></td>
+                    <td className={css.cell}><span className={css.val}>{copy.pricing.ios.table.rows.projects.paid}</span></td>
+                  </tr>
+                  <tr>
+                    <td className={css.feat}>{copy.pricing.ios.table.rows.titles.feature}<small>{copy.pricing.ios.table.rows.titles.subtitle}</small></td>
+                    <td className={css.cell}><span className={css.dash}>·</span></td>
+                    <td className={css.cell}><span className={css.check}>&#10003;</span></td>
+                  </tr>
+                  <tr>
+                    <td className={css.feat}>{copy.pricing.ios.table.rows.polish.feature}<small>{copy.pricing.ios.table.rows.polish.subtitle}</small></td>
+                    <td className={css.cell}><span className={css.dash}>·</span></td>
+                    <td className={css.cell}><span className={css.check}>&#10003;</span></td>
+                  </tr>
+                  <tr>
+                    <td className={css.feat}>{copy.pricing.ios.table.rows.allowance.feature}</td>
+                    <td className={css.cell}><span className={css.dash}>{copy.pricing.ios.table.rows.allowance.free}</span></td>
+                    <td className={css.cell}><span className={css.val}>{copy.pricing.ios.table.rows.allowance.paid}</span></td>
+                  </tr>
+                  <tr className={css['price-row']}>
+                    <td className={css.feat}>{copy.pricing.ios.table.rows.price.feature}</td>
+                    <td className={css.cell}><span className={css['price-free']}>{copy.pricing.ios.table.rows.price.freePrice}</span></td>
+                    <td className={css.cell}>
+                      <span className={css['coming-soon']}>{copy.pricing.ios.table.rows.price.paidPrice}</span><br />
+                      <small>{copy.pricing.ios.table.rows.price.paidPriceSub}</small>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <aside className={css.subscription}>
+              <h3>{copy.pricing.ios.subscription.heading}</h3>
+              <p>{copy.pricing.ios.subscription.summary}</p>
+              <p>{copy.pricing.ios.subscription.trial}</p>
+              <p>{copy.pricing.ios.subscription.billing}</p>
+              <p>{copy.pricing.ios.subscription.includes}</p>
+              <p>{copy.pricing.ios.subscription.manage}</p>
+              <p>
+                <a href={copy.links.appleTermsOfUse}>{copy.pricing.ios.subscription.termsLabel}</a>
+                {' · '}
+                <a href={copy.links.applePrivacyPolicy}>{copy.pricing.ios.subscription.privacyLabel}</a>
+              </p>
+            </aside>
+
+            <h2 className={css['section-title']}>{copy.pricing.macHeading}</h2>
+
             {/* Comparison table */}
             <div className={css['table-wrap']}>
               <table>
@@ -92,11 +167,6 @@ export default function Pricing() {
                     <td className={css.feat}>{copy.pricing.table.rows.formatting.feature}<small>{copy.pricing.table.rows.formatting.subtitle}</small></td>
                     <td className={css.cell}><span className={css.dash}>·</span></td>
                     <td className={css.cell}><span className={css.check}>&#10003;</span></td>
-                  </tr>
-                  <tr>
-                    <td className={css.feat}>{copy.pricing.table.rows.escalation.feature}<small>{copy.pricing.table.rows.escalation.subtitle}</small></td>
-                    <td className={css.cell}><span className={css.dash}>·</span></td>
-                    <td className={css.cell}><span className={cx(css.pill, css.addon)}>{copy.pricing.table.rows.escalation.paidPill}</span></td>
                   </tr>
                   <tr>
                     <td className={css.feat}>{copy.pricing.table.rows.bestFor.feature}</td>

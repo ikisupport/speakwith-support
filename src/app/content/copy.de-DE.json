@@ -24,9 +24,7 @@
         "guides": "Anleitungen",
         "privacy": "Datenschutz",
         "terms": "Nutzungsbedingungen",
-        "newsletter": "Substack",
-        "x": "X",
-        "ikiSystems": "IKI Systems"
+        "contact": "E-Mail-Support"
       },
       "tagline": "SpeakWith: deine gesprochenen Gedanken, festgehalten als Tagesdokument.",
       "builtOn": {
@@ -46,11 +44,11 @@
   "seo": {
     "home": {
       "title": "SpeakWith Support: Deine gesprochenen Gedanken, festgehalten als Tagesdokument",
-      "description": "SpeakWith ist ein lokaler Sprachrekorder für den Mac, der tägliches Sprechen in ein durchsuchbares, geordnetes Tagesdokument verwandelt. Abgestimmt auf Sprache und Diktat, nicht auf Musik oder Umgebungsgeräusche. Eine iOS-Begleit-App ist in Arbeit."
+      "description": "SpeakWith ist ein Sprache-zu-Text-Tagebuch mit lokalem Vorrang für Mac, iPhone und iPad, das aus dem, was du sagst, ein durchsuchbares, tageweise geordnetes Dokument macht. Abgestimmt auf Sprache und Diktat, nicht auf Musik oder Umgebungsgeräusche. SpeakWith Pro auf iPhone und iPad fügt Sitzungstitel und Feinschliff hinzu."
     },
     "pricing": {
       "title": "Preise | SpeakWith",
-      "description": "Starte mit dem eingebauten Diktat oder wechsle zu Pro für die Engines Whisper und Parakeet, Stapeltranskription und intelligente Absatzformatierung."
+      "description": "iPhone und iPad: SpeakWith Pro ergänzt Sitzungstitel und Feinschliff, mit einer 7-tägigen kostenlosen Testphase. Der Mac ergänzt erweiterte Engines, Import und Stapeltranskription über Gumroad."
     },
     "automation": {
       "title": "Automatisierung | SpeakWith",
@@ -106,14 +104,15 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Ein Tagesdokument, gesteuert mit der Stimme",
+      "eyebrow": "Ein Sprache-zu-Text-Tagebuch",
       "headline": "Untertitel für deine Gedanken.",
       "lead": "Sprich deinen Tag in eine saubere Markdown-Datei auf deinem Mac. Lies sie, bearbeite sie, teile sie. Sie funktioniert für sich allein und öffnet sich in VS Code, Obsidian oder jedem anderen Werkzeug, auf das du sie richtest.",
       "leadSecondary": "Nutze den Rekorder-Schalter oder einen Hotkey. Sprich, und die Wörter landen dort, wo der Cursor steht.",
       "ctaPrimary": "SpeakWith kostenlos testen",
-      "ctaSecondary": "iPhone: demnächst",
+      "ctaSecondary": "iPhone und iPad: SpeakWith Pro",
       "ctaGhost": "So funktioniert es",
-      "note": "Heute für den Mac verfügbar. Eine iOS-Begleitapp kommt. Aufnahme und Transkription finden auf deinem Gerät statt.",
+      "ctaIos": "Sieh dir die iPhone-App an",
+      "note": "Verfügbar auf Mac, iPhone und iPad. Aufnahme und Transkription laufen auf deinem Gerät.",
       "ctaDemo": "Beim Tippen zusehen"
     },
     "moments": {
@@ -121,12 +120,12 @@
       "heroImageDark": "canonical_screenshots/hero.png?v=20261030c",
       "heroImageLight": "canonical_screenshots/hero-light.png?v=20261030c",
       "heroAlt": "SpeakWith für Mac im Live-Diktat: gesprochene Wörter landen als transkribierte Zeilen unter einer Live-Wellenform, falsch verstandene Namen werden an Ort und Stelle korrigiert, und daneben wird ein Titel für die Sitzung vorgeschlagen.",
-      "heroCaption": "Sprich, und sieh zu, wie die Untertitel für deine Gedanken Gestalt annehmen, bevor die Idee entgleitet. Die optionale Politur bringt die fertige Aufnahme in Ordnung und zeigt, was sie verändert hat, bevor du sie anwendest. Sitzungstitel sind ebenfalls optional: Nutze deinen OpenAI-Schlüssel oder ein lokales Ollama-Modell auf deinem Mac, oder schreib sie selbst."
+      "heroCaption": "Sprich, und sieh zu, wie die Untertitel deiner Gedanken Form annehmen, bevor die Idee entgleitet. Der optionale Feinschliff bringt die fertige Aufnahme in Form und zeigt, was er geändert hat, bevor du ihn anwendest. Wähle eine Eingabesprache zum Sprechen und eine Ausgabesprache, und der Feinschliff schreibt die Übersetzung unter deine eigenen Worte. Sitzungstitel sind ebenfalls optional: Eine monatliche Mitgliedschaft enthält den KI-Dienst, der sie schreibt, oder du nutzt einen OpenAI-API-Schlüssel, den du angibst, oder ein lokales Ollama-Modell auf deinem Mac, oder du schreibst sie selbst."
     },
     "platforms": {
-      "eyebrow": "Die iPhone-App ist unterwegs",
+      "eyebrow": "Mac, iPhone und iPad",
       "title": "Ein Rekorder für den Schreibtisch, ein Begleiter für alles andere",
-      "sub": "SpeakWith ist ein Sprachrekorder. Er ist auf Sprache und Diktat abgestimmt, so wie ein Mensch tatsächlich redet, nicht auf die Aufnahme von Musik oder Umgebungsgeräuschen.",
+      "sub": "SpeakWith ist ein Sprache-zu-Text-Tagebuch. Es ist auf Sprache und Diktat abgestimmt, so wie ein Mensch tatsächlich spricht, nicht auf das Aufnehmen von Musik oder Umgebungsgeräuschen.",
       "items": [
         {
           "name": "SpeakWith für Mac",
@@ -148,7 +147,7 @@
         {
           "name": "SpeakWith für iOS",
           "tag": "Der Begleiter",
-          "body": "Ein Sprachrekorder für unterwegs, wenn du nicht am Schreibtisch bist. Diktiere live, gib der Sitzung einen Titel und tippe auf „Verwenden“, um ihn zu behalten, oder poliere eine Aufnahme mit deinem eigenen OpenAI-Schlüssel zu sauberen Absätzen. Politur markiert jedes Wort, das sie geändert hat, damit du die Bearbeitung prüfen kannst, bevor du sie anwendest. Deine Transkripte sind dabei, nach Tagen geordnet, auf dem Gerät mit Apple Speech transkribiert.",
+          "body": "Ein Sprachrekorder für die Zeit, in der du nicht am Schreibtisch bist. Diktiere live, erzeuge einen Titel und tippe auf Verwenden, um ihn zu behalten, oder poliere eine Aufnahme zu klaren Absätzen. SpeakWith Pro enthält den KI-Dienst für Titel und Feinschliff, mit einer 7-tägigen kostenlosen Testphase, und der App Store zeigt den Preis. Der Feinschliff markiert jedes Wort, das er geändert hat, damit du die Bearbeitung prüfen kannst, bevor du sie übernimmst. Deine Transkripte begleiten dich, nach Tag geordnet, auf dem Gerät mit Apple Speech transkribiert.",
           "points": [
             "Live-Diktat",
             "Automatische Titel, wenn du sie willst",
@@ -253,12 +252,12 @@
       "items": [
         {
           "label": "Lokal.",
-          "body": "Deine Aufnahmen verlassen deinen Rechner nie. Punkt.",
+          "body": "Deine Aufnahmen verlassen deinen Mac nie. Optionale Sitzungstitel und optionaler Feinschliff senden Transkripttext, nie Audio, und nur wenn du sie einschaltest. Eine monatliche Mitgliedschaft enthält einen KI-Dienst für diesen Text. Sonst läuft er auf einem lokalen Ollama-Modell oder mit einem OpenAI-API-Schlüssel, den du angibst. Auf iPhone und iPad enthält SpeakWith Pro diesen Dienst für Titel und Feinschliff.",
           "isHtml": false
         },
         {
           "label": "Markdown.",
-          "body": "Eine einfache <code>.md</code>-Datei auf der Festplatte. Öffne sie in VS Code, Obsidian oder jedem anderen Editor. Gib sie an jedes Werkzeug weiter.",
+          "body": "Eine einfache <code>.md</code>-Datei pro Tag, automatisch in Jahres-, Monats- und Tagesordner sortiert. Diktate kannst du auch in jede andere Markdown-Datei schreiben, die du auswählst. Jedes Dokument nutzt Standardüberschriften und eignet sich so als Gliederung, die du umordnen kannst. Öffne es in VS Code, Obsidian oder einem beliebigen Editor.",
           "isHtml": true
         },
         {
@@ -294,7 +293,7 @@
         },
         {
           "title": "Sitzungstitel, lokal oder in der Cloud",
-          "body": "Benenne jede Diktatsitzung anhand ihres Transkripts. Wähle unter Einstellungen, Session-KI, OpenAI oder ein lokales Ollama-Modell. „Generieren“ bleibt in der KI-Seitenleiste, wenn du eine Überschrift möchtest.",
+          "body": "Benenne jede Diktatsitzung anhand ihres Transkripts. Eine monatliche Mitgliedschaft enthält den KI-Dienst, der Titel und Feinschliff erstellt. Oder wähle unter Einstellungen, Sitzungs-KI einen OpenAI-API-Schlüssel, den du angibst, oder ein lokales Ollama-Modell. Generieren bleibt in der KI-Seitenleiste, wenn du eine Überschrift möchtest.",
           "wide": false
         },
         {
@@ -368,7 +367,7 @@
         },
         {
           "q": "Können die optionalen KI-Funktionen lokal laufen?",
-          "a": "Sitzungstitel können das, auf dem Mac. Wähle Ollama unter Einstellungen, Session-KI, und Titel bleiben auf deinem Mac. Auf iPhone und iPad nutzen Sitzungstitel und Politur deinen eigenen OpenAI-Schlüssel, sie sind also optional, aber nicht lokal. Korrekturprüfungen, wenn du sie aktivierst, nutzen deinen OpenAI-Schlüssel. Kernaufnahme und Transkription brauchen niemals das Netzwerk."
+          "a": "Sitzungstitel können das, auf dem Mac. Wähle Ollama unter Einstellungen, Sitzungs-KI, und die Titel bleiben auf deinem Mac. Eine monatliche Mitgliedschaft enthält stattdessen einen Cloud-KI-Dienst für Titel und Feinschliff, und du kannst auch einen OpenAI-API-Schlüssel mitbringen, den du angibst. Auf iPhone und iPad enthält SpeakWith Pro diesen Dienst für Titel und Feinschliff. Beides ist optional und nicht lokal. Die Aufnahme und die Transkription selbst brauchen nie das Netzwerk."
         },
         {
           "q": "Wo werden meine Aufnahmen und Dokumente gespeichert?",
@@ -398,7 +397,7 @@
         },
         {
           "q": "Gibt es eine iOS-App?",
-          "a": "Sie ist unterwegs und wird kostenlos sein. SpeakWith für iOS ist ein begleitender Sprachrekorder: Live-Diktat, optionale Sitzungstitel und Politur mit deinem eigenen OpenAI-Schlüssel, und deine Transkripte griffbereit, nach Tagen geordnet. Die Transkription läuft auf dem Gerät mit Apple Speech, und die App arbeitet neben der Mac-App, statt sie zu ersetzen."
+          "a": "Ja. SpeakWith für iOS ist im App Store für iPhone und iPad. Live-Diktat, Tagesdokumente, Suche und Projekte sind kostenlos. SpeakWith Pro ergänzt Sitzungstitel und Feinschliff, mit enthaltenem KI-Kontingent und einer 7-tägigen kostenlosen Testphase; der App Store zeigt den Preis in deiner Währung. Transkribiert wird auf dem Gerät mit Apple Speech, und die App arbeitet neben der Mac-App, ohne sie zu ersetzen."
         },
         {
           "q": "Unter iOS sagt die Berechtigungsabfrage, Sprache werde „an Apple gesendet“. Wird meine Stimme hochgeladen?",
@@ -410,7 +409,7 @@
         },
         {
           "q": "Ist das ein Audiorekorder?",
-          "a": "Es ist ein Sprachrekorder. SpeakWith ist auf Sprache und Diktat abgestimmt, so wie ein Mensch tatsächlich redet, und leistet seine beste Arbeit mit der menschlichen Stimme. Für die Aufnahme von Musik oder Umgebungsgeräuschen ist es nicht gebaut."
+          "a": "Es ist ein Aufnahmegerät für die Worte, die du sprichst und in Text verwandelt haben willst. Stell es dir als Sprache-zu-Text-Tagebuch vor. SpeakWith ist auf Sprache und Diktat abgestimmt, so wie ein Mensch tatsächlich spricht, und arbeitet deshalb am besten mit der menschlichen Stimme. Es ist nicht dafür gebaut, Musik oder Umgebungsgeräusche aufzunehmen."
         },
         {
           "q": "Ist der Mac-Download signiert und von Apple geprüft?",
@@ -420,17 +419,59 @@
     },
     "download": {
       "heading": "SpeakWith holen",
-      "body": "SpeakWith läuft auf einem Mac mit Apple Silicon (M1 oder neuer) unter macOS 26 (Tahoe) oder neuer. Lade es herunter, erlaube den Mikrofonzugriff, und deine erste Aufnahme ist einen Klick entfernt. Eine iOS-Begleit-App für das iPhone mit iOS 26 oder neuer ist in Arbeit.",
+      "body": "SpeakWith läuft auf einem Mac mit Apple Silicon (M1 oder neuer) und macOS 26 (Tahoe) oder neuer. Lade es herunter, erlaube den Mikrofonzugriff, und deine erste Aufnahme ist nur einen Klick entfernt. Die App für iPhone und iPad braucht iOS 26 oder neuer.",
       "ctaPrimary": "SpeakWith für Mac abonnieren",
-      "ctaSecondary": "iPhone: demnächst",
+      "ctaSecondary": "iPhone und iPad im App Store",
       "ctaBuyOnce": "Lieber einmal kaufen? Hol dir stattdessen eine Einmallizenz."
+    },
+    "iosScreenshots": {
+      "title": "Was die iPhone-App macht",
+      "subtitle": "Nimm einen Gedanken auf, lege ihn unter einem Projekt ab und lies ihn dann, überarbeite ihn und spiele ihn ab.",
+      "items": [
+        {
+          "src": "assets/screenshots/ios-live-recording.png?v=20261102c",
+          "caption": "Wörter erscheinen, während du sprichst, mit einem Titel, den du behalten kannst.",
+          "ariaLabel": "iPhone-Liveaufnahme: eine Wellenform, Rohtext, ein Sitzungstitel-Chip mit Verwenden und die Leseansicht.",
+          "srcLight": "assets/screenshots/ios-live-recording-light.png?v=20261102c"
+        },
+        {
+          "src": "assets/screenshots/ios-transcripts-list.png?v=20261102c",
+          "caption": "Eine Focus-Notiz steht über den Tagen.",
+          "ariaLabel": "iPhone-Transkriptliste: eine Focus-Notiz namens Bay Area Access Build über den datierten Tageszeilen.",
+          "srcLight": "assets/screenshots/ios-transcripts-list-light.png?v=20261102c"
+        },
+        {
+          "src": "assets/screenshots/ios-projects-list.png?v=20261102c",
+          "caption": "Jedes Projekt ist ein Ordner auf diesem iPhone.",
+          "ariaLabel": "iPhone-Projektliste: Zeilen für Research Journal, Client Work und Product Ideas, jeder Pfad beginnt mit On My iPhone.",
+          "srcLight": "assets/screenshots/ios-projects-list-light.png?v=20261102c"
+        },
+        {
+          "src": "assets/screenshots/ios-transcript-reader.png?v=20261102c",
+          "caption": "Öffne einen Abschnitt eines Tagesdokuments.",
+          "ariaLabel": "iPhone-Transkriptleser: ein Tagesdokument, auf einen Abschnitt geöffnet, mit ausgeblendeten Dokumentmarkern.",
+          "srcLight": "assets/screenshots/ios-transcript-reader-light.png?v=20261102e"
+        },
+        {
+          "src": "assets/screenshots/ios-live-polish-v3.png?v=20261102c",
+          "caption": "Feinschliff zeigt den Absatz, bevor du ihn anwendest.",
+          "ariaLabel": "iPhone-Feinschliff: eine Auswahl für Transkript und Feinschliff, überarbeitete Absätze und eine Schaltfläche Anwenden.",
+          "srcLight": "assets/screenshots/ios-live-polish-v3-light.png?v=20261102c"
+        },
+        {
+          "src": "assets/screenshots/ios-take-playback.png?v=20261102c",
+          "caption": "Spiel die Aufnahme ab und finde eine Zeile darin.",
+          "ariaLabel": "iPhone-Wiedergabe: Transportsteuerung, Segmente mit Zeitstempel und Suche in dieser Aufnahme.",
+          "srcLight": "assets/screenshots/ios-take-playback-light.png?v=20261102c"
+        }
+      ]
     }
   },
   "pricing": {
     "header": {
       "eyebrow": "Pläne & Funktionen",
       "heading": "Wähle, wie SpeakWith für dich arbeitet",
-      "sub": "Starte mit dem eingebauten Diktat und rüste dann auf für erweiterte Engines, Stapeltranskription und intelligente Formatierung."
+      "sub": "Zuerst iPhone und iPad, dann der Mac. Aufnahme und Transkription bleiben kostenlos. SpeakWith Pro auf dem Telefon fügt Sitzungstitel und Feinschliff hinzu."
     },
     "table": {
       "headers": {
@@ -466,11 +507,6 @@
           "feature": "Intelligente Absatzformatierung",
           "subtitle": "Gruppiert Gesprochenes automatisch in saubere Absätze"
         },
-        "escalation": {
-          "feature": "Automatische Genauigkeitseskalation",
-          "subtitle": "Erkennt Audio mit geringer Konfidenz und lässt es erneut durch ein genaueres Modell laufen",
-          "paidPill": "Optionales Add-on"
-        },
         "bestFor": {
           "feature": "Am besten für",
           "free": "Schnelle Notizen & Diktat",
@@ -499,8 +535,8 @@
           "badge": "Pro",
           "badgeKind": "paid",
           "name": "Whisper",
-          "body": "Maximale Robustheit bei schwierigem Audio: Akzente, Hintergrundgeräusche, Durcheinanderreden. Wechselt von einem schnellen zu einem hochgenauen Modell, wenn es geringere Konfidenz bemerkt.",
-          "note": "Die automatische Eskalation setzt das optionale Genauigkeits-Add-on voraus."
+          "body": "Maximale Robustheit bei schwierigem Audio: Akzente, Hintergrundgeräusche, Durcheinanderreden.",
+          "note": ""
         },
         {
           "badge": "Pro",
@@ -520,12 +556,12 @@
     },
     "channels": {
       "heading": "Wo du SpeakWith bekommst",
-      "sub": "Die Mac-App gibt es direkt zu kaufen. Die iPhone-App ist kostenlos.",
+      "sub": "iPhone und iPad im App Store. Die Mac-App wird direkt verkauft.",
       "items": [
         {
           "lead": "App Store",
-          "heading": "Kostenlos im App Store für das iPhone",
-          "body": "SpeakWith für das iPhone ist ein kostenloser Begleit-Rekorder und kommt demnächst in den App Store. Live-Diktat wird auf deinem iPhone mit Apple Speech transkribiert, und deine Transkripte bleiben griffbereit, nach Tagen geordnet. Optionale Sitzungstitel und Politur nutzen deinen eigenen OpenAI-Schlüssel. Kein Abo.",
+          "heading": "SpeakWith Pro auf iPhone und iPad",
+          "body": "Live-Diktat transkribiert auf deinem iPhone mit Apple Speech, und deine Transkripte bleiben griffbereit, nach Tag geordnet. Projekte sind kostenlos und unbegrenzt. Sitzungstitel und Feinschliff gibt es mit SpeakWith Pro, mit einer 7-tägigen kostenlosen Testphase und dem enthaltenen monatlichen Kontingent. Der Preis wird im App Store angezeigt.",
           "ctaLabel": "",
           "ctaUrl": "",
           "ctaSecondaryLabel": "",
@@ -546,7 +582,65 @@
         }
       ]
     },
-    "finePrint": "Pro auf dem Mac (erweiterte Engines, Audio- und Videoimport, Stapeltranskription und intelligente Formatierung) gibt es über eine Gumroad-Mitgliedschaft oder über einen Einmalkauf bei Gumroad, wenn du lieber einmal kaufst. Die Gumroad-Version enthält einen kostenlosen 14-Tage-Test, der sich nach 14 Tagen bis zum Abo oder Kauf sperrt, sowie einen Schalter, der dein Diktat in andere Anwendungen tippt. Die iPhone-App ist kostenlos, ohne Abo."
+    "finePrint": "Pro auf dem Mac (erweiterte Engines, Audio- und Videoimport, Stapeltranskription und intelligente Formatierung) wird über eine Gumroad-Mitgliedschaft verkauft oder über einen einmaligen Gumroad-Kauf, wenn du lieber einmal kaufst. Die monatliche Mitgliedschaft enthält den KI-Dienst für Sitzungstitel und Feinschliff, mit einem monatlichen Kontingent; der Einmalkauf und die kostenlose Testphase nutzen einen OpenAI-API-Schlüssel, den du bereitstellst, oder stattdessen ein lokales Ollama-Modell. Die Gumroad-Version enthält eine 14-tägige kostenlose Testphase, die nach 14 Tagen gesperrt wird, bis du abonnierst oder kaufst, und einen Schalter, der dein Diktat in andere Anwendungen tippt. Auf iPhone und iPad bietet SpeakWith Pro eine 7-tägige kostenlose Testphase, und der App Store nennt den Preis.",
+    "macHeading": "Mac",
+    "ios": {
+      "heading": "iPhone und iPad",
+      "sub": "SpeakWith Pro gilt ausschließlich für Sitzungstitel und Feinschliff. Projekte bleiben kostenlos und unbegrenzt.",
+      "table": {
+        "headers": {
+          "feature": "Funktion",
+          "freeName": "Kostenlos",
+          "freeTag": "Keine Kosten",
+          "paidName": "Pro",
+          "paidTag": "Monatlich"
+        },
+        "rows": {
+          "liveDictation": {
+            "feature": "Live-Diktat",
+            "subtitle": "Apple Speech, auf dem Gerät"
+          },
+          "dayDocs": {
+            "feature": "Tagesdokumente und Suche",
+            "subtitle": "Deine Transkripte, nach Tag geordnet"
+          },
+          "projects": {
+            "feature": "Projekte",
+            "free": "Unbegrenzt",
+            "paid": "Unbegrenzt"
+          },
+          "titles": {
+            "feature": "Sitzungstitel",
+            "subtitle": "Eine Überschrift aus der Aufnahme, wenn du danach fragst"
+          },
+          "polish": {
+            "feature": "Eine Aufnahme überarbeiten",
+            "subtitle": "Saubere Absätze, mit markierten Änderungen"
+          },
+          "allowance": {
+            "feature": "KI-Kontingent inklusive",
+            "free": "·",
+            "paid": "Monatlich"
+          },
+          "price": {
+            "feature": "Preis",
+            "freePrice": "Kostenlos",
+            "paidPrice": "Monatlich, über den App Store",
+            "paidPriceSub": "7-tägige kostenlose Testphase."
+          }
+        }
+      },
+      "subscription": {
+        "heading": "Abonnementdetails",
+        "summary": "SpeakWith Pro. Automatisch verlängerndes Monatsabonnement. Der App Store zeigt den Preis, in deiner Währung, bevor du abonnierst.",
+        "trial": "7-tägige kostenlose Testphase, danach verlängert es sich, außer du kündigst mindestens 24 Stunden vor Ablauf des Zeitraums.",
+        "billing": "Die Zahlung wird deinem Apple Account belastet. Das Abonnement verlängert sich automatisch, außer du kündigst mindestens 24 Stunden vor Ende des Zeitraums.",
+        "includes": "Enthalten: Sitzungstitel, Feinschliff und ein monatliches KI-Kontingent. Live-Diktat, Tagesdokumente, Suche und Projekte bleiben kostenlos.",
+        "manage": "Verwalte oder kündige in der App Store-App, unter deinem Account, dann Abonnements.",
+        "termsLabel": "Nutzungsbedingungen (EULA)",
+        "privacyLabel": "Datenschutzerklärung"
+      }
+    }
   },
   "automation": {
     "heading": "Automatisierung",

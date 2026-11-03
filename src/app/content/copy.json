@@ -23,9 +23,7 @@
         "guides": "Guides",
         "privacy": "Privacy",
         "terms": "Terms",
-        "newsletter": "Substack",
-        "x": "X",
-        "ikiSystems": "IKI Systems"
+        "contact": "Email support"
       },
       "tagline": "SpeakWith: your spoken ideas, captured as a daily document.",
       "builtOn": {
@@ -46,18 +44,19 @@
     "buyMacGumroad": "https://ikisystems.gumroad.com/l/vozgsy",
     "subscribeMacGumroad": "https://ikisystems.gumroad.com/l/dcltnn",
     "trialMacGumroad": "https://ikisystems.gumroad.com/l/vkaxll",
-    "newsletter": "https://ikisystems.substack.com/",
-    "x": "https://x.com/ikisystems",
-    "ikiSystemsHome": "https://ikisystems.com/"
+    "ikiSystemsHome": "https://ikisystems.com/",
+    "supportMailto": "mailto:support@ikisystems.com",
+    "appleTermsOfUse": "https://ikisystems.com/terms",
+    "applePrivacyPolicy": "https://ikisystems.com/privacy"
   },
   "seo": {
     "home": {
       "title": "SpeakWith Support: Your spoken ideas, captured as a daily document",
-      "description": "SpeakWith is a local-first voice recorder for Mac that turns daily speaking into a searchable, organised daily document. Tuned for speech and dictation, not music or ambient sound. An iOS companion is on the way."
+      "description": "SpeakWith is a local-first voice-to-text journal for Mac, iPhone, and iPad that turns what you say into a searchable document, organised by day. Tuned for speech and dictation, not music or ambient sound. SpeakWith Pro on iPhone and iPad adds session titles and polish."
     },
     "pricing": {
       "title": "Pricing | SpeakWith",
-      "description": "Start with built-in dictation, or go Paid for Whisper, Parakeet, and Nemotron engines, batch transcription, and smart paragraph formatting."
+      "description": "iPhone and iPad: SpeakWith Pro adds session titles and polish, with a 7-day free trial. The Mac adds advanced engines, import, and batch transcription through Gumroad."
     },
     "automation": {
       "title": "Automation | SpeakWith",
@@ -101,7 +100,7 @@
     },
     "privacy": {
       "title": "Privacy Policy | SpeakWith",
-      "description": "Your words are yours. SpeakWith keeps recordings, transcripts, and documents on your device, with no tracking in the app. This website counts anonymous visits only."
+      "description": "Your words are yours. SpeakWith keeps recordings, transcripts, and documents on your device, with no tracking in the app. Optional AI features send transcript text only when you turn them on, and the included service on a monthly membership keeps only token totals. This website counts anonymous visits only."
     },
     "terms": {
       "title": "Terms of Service | SpeakWith",
@@ -113,14 +112,15 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "A voice-driven daily document",
+      "eyebrow": "A voice-to-text journal",
       "headline": "Subtitles for your thoughts.",
       "lead": "Speak your day into a clean markdown file on your Mac. Read it, edit it, share it. It works on its own, and it opens in VS Code, Obsidian, or any tool you point at it.",
       "leadSecondary": "Use the recorder switch or a hotkey. Talk, and the words land where the cursor is.",
       "ctaPrimary": "Try SpeakWith free",
-      "ctaSecondary": "iPhone: coming soon",
+      "ctaSecondary": "iPhone and iPad: SpeakWith Pro",
       "ctaGhost": "See how it works",
-      "note": "Available on Mac today. An iOS companion is on the way. Recording and transcription happen on your device.",
+      "ctaIos": "See the iPhone app",
+      "note": "Available on Mac, iPhone, and iPad. Recording and transcription happen on your device.",
       "ctaDemo": "Watch it type"
     },
     "moments": {
@@ -128,12 +128,12 @@
       "heroImageDark": "canonical_screenshots/hero.png?v=20261030c",
       "heroImageLight": "canonical_screenshots/hero-light.png?v=20261030c",
       "heroAlt": "SpeakWith for Mac in live dictation: spoken words landing as transcribed lines under a live waveform, with misheard names corrected in place and a session title suggested alongside.",
-      "heroCaption": "Speak, and watch the subtitles for your thoughts take shape before the idea slips away. Optional polish tidies the finished take and shows what it touched before you apply it. Choose an input language to speak in and an output language, and polish writes the translation under your own words. Session titles are optional too: use your OpenAI key or a local Ollama model on your Mac, or write your own."
+      "heroCaption": "Speak, and watch the subtitles for your thoughts take shape before the idea slips away. Optional polish tidies the finished take and shows what it touched before you apply it. Choose an input language to speak in and an output language, and polish writes the translation under your own words. Session titles are optional too: a monthly membership includes the AI service that writes them, or an OpenAI API key you provide, a local Ollama model on your Mac, or write your own."
     },
     "platforms": {
-      "eyebrow": "The iPhone app is on the way",
+      "eyebrow": "Mac, iPhone, and iPad",
       "title": "A recorder for the desk, a companion for everywhere else",
-      "sub": "SpeakWith is a voice recorder. It is tuned for speech and dictation, the way a person actually talks, not for capturing music or ambient sound.",
+      "sub": "SpeakWith is a voice-to-text journal. It is tuned for speech and dictation, the way a person actually talks, not for capturing music or ambient sound.",
       "items": [
         {
           "name": "SpeakWith for Mac",
@@ -155,7 +155,7 @@
         {
           "name": "SpeakWith for iOS",
           "tag": "The companion",
-          "body": "A voice recorder for when you are away from the desk. Dictate live, generate a title and tap Use to keep it, or polish a take into clean paragraphs with your own OpenAI key. Polish marks every word it changed, so you can check the edit before you apply it. Your transcripts come along, organised by day, transcribed on-device with Apple Speech.",
+          "body": "A voice recorder for when you are away from the desk. Dictate live, generate a title and tap Use to keep it, or polish a take into clean paragraphs. SpeakWith Pro includes the AI service for titles and polish, with a 7-day free trial, and the App Store shows its price. Polish marks every word it changed, so you can check the edit before you apply it. Your transcripts come along, organised by day, transcribed on-device with Apple Speech.",
           "points": [
             "Live dictation",
             "Automatic titles, when you want them",
@@ -260,17 +260,17 @@
       "items": [
         {
           "label": "Local",
-          "body": "Your recordings never leave your Mac. Optional session titles can run on a local Ollama model or your own OpenAI key, and only when you switch them on. On iPhone, titles and polish use your OpenAI key alone. A separate optional correction check can ask OpenAI to vet flagged lines.",
+          "body": "Your recordings never leave your Mac. Optional session titles and polish send transcript text, never audio, and only when you switch them on. A monthly membership includes an AI service for that text; otherwise it can run on a local Ollama model or an OpenAI API key you provide. On iPhone and iPad, SpeakWith Pro includes that service for titles and polish.",
           "isHtml": false
         },
         {
           "label": "Markdown",
-          "body": "A plain <code>.md</code> file on disk. Open it in VS Code, Obsidian, or any editor. Feed it to any tool.",
+          "body": "One plain <code>.md</code> file per day, sorted into year, month, and day folders automatically. Dictation can also go into any other Markdown file you pick. Every document uses standard headings, so it works as an outline you can rearrange. Open it in VS Code, Obsidian, or any editor.",
           "isHtml": true
         },
         {
           "label": "On your computer",
-          "body": "Transcription and summarization run on your Mac. A key you bring for optional AI sends the text for that step.",
+          "body": "Transcription and summarization run on your Mac. Optional AI sends the text for that step: through the service included with a monthly membership, or a key you bring.",
           "isHtml": false
         }
       ]
@@ -300,8 +300,8 @@
           "wide": false
         },
         {
-          "title": "Session titles, local or cloud",
-          "body": "Name each dictation session from its transcript. Pick OpenAI or a local Ollama model under Settings, Session AI. Generate stays in the AI sidebar when you want a heading.",
+          "title": "Session titles, included or local",
+          "body": "Name each dictation session from its transcript. A monthly membership includes the AI service that writes titles and polish. Or pick an OpenAI API key you provide or a local Ollama model under Settings, Session AI. Generate stays in the AI sidebar when you want a heading.",
           "wide": false
         },
         {
@@ -371,11 +371,11 @@
       "items": [
         {
           "q": "Does SpeakWith need an internet connection?",
-          "a": "No. Recording, transcription, organising your daily document, and searching its text all happen on your Mac. SpeakWith does its core work offline."
+          "a": "No. Recording, transcription, organising your daily document, and searching its text all happen on your Mac. SpeakWith does its core work offline. Only the optional AI features need a connection, and only when you turn them on."
         },
         {
           "q": "Can the optional AI features run locally?",
-          "a": "Session titles can, on the Mac. Choose Ollama under Settings, Session AI, and titles stay on your Mac. On iPhone and iPad, session titles and polish use your own OpenAI key, so they are optional but not local. Correction checks, if you enable them, use your OpenAI key. Core recording and transcription never need the network."
+          "a": "Session titles can, on the Mac. Choose Ollama under Settings, Session AI, and titles stay on your Mac. A monthly membership includes a cloud AI service for titles and polish instead, and you can also bring an OpenAI API key you provide. On iPhone and iPad, SpeakWith Pro includes that service for titles and polish. They are optional, and they are not local. Core recording and transcription never need the network."
         },
         {
           "q": "Where are my recordings and documents stored?",
@@ -405,7 +405,7 @@
         },
         {
           "q": "Is there an iOS app?",
-          "a": "It's on the way, and it will be free. SpeakWith for iOS is a companion voice recorder: live dictation, optional session titles and polish with your own OpenAI key, and your transcripts on hand, organised by day. It transcribes on-device with Apple Speech, and it works alongside the Mac app rather than replacing it."
+          "a": "Yes. SpeakWith for iOS is on the App Store for iPhone and iPad. Live dictation, day documents, search, and projects are free. SpeakWith Pro adds session titles and polish, with the AI allowance included and a 7-day free trial; the App Store shows the price in your currency. It transcribes on-device with Apple Speech, and it works alongside the Mac app rather than replacing it."
         },
         {
           "q": "On iOS, the permission prompt says speech is \"sent to Apple\". Is my voice uploaded?",
@@ -417,7 +417,7 @@
         },
         {
           "q": "Is this an audio recorder?",
-          "a": "It is a voice recorder. SpeakWith is tuned for speech and dictation, the way a person actually talks, so it does its best work on the human voice. It is not built for capturing music or ambient sound."
+          "a": "It is a recorder for the words you speak and want turned into text. Think of it as a voice-to-text journal. SpeakWith is tuned for speech and dictation, the way a person actually talks, so it does its best work on the human voice. It is not built for capturing music or ambient sound."
         },
         {
           "q": "Is the Mac download signed and checked by Apple?",
@@ -427,17 +427,59 @@
     },
     "download": {
       "heading": "Get SpeakWith",
-      "body": "SpeakWith runs on a Mac with Apple Silicon (M1 or later) and macOS 26 (Tahoe) or later. Download it, grant microphone access, and your first recording is a click away. An iOS companion for iPhone on iOS 26 or later is on the way.",
+      "body": "SpeakWith runs on a Mac with Apple Silicon (M1 or later) and macOS 26 (Tahoe) or later. Download it, grant microphone access, and your first recording is a click away. The iPhone and iPad app needs iOS 26 or later.",
       "ctaPrimary": "Subscribe to SpeakWith for Mac",
-      "ctaSecondary": "iPhone: coming soon",
+      "ctaSecondary": "iPhone and iPad on the App Store",
       "ctaBuyOnce": "Prefer to buy once? Get a one-time license instead."
+    },
+    "iosScreenshots": {
+      "title": "What the iPhone app does",
+      "subtitle": "Record a thought, file it under a project, then read, polish and replay it.",
+      "items": [
+        {
+          "src": "assets/screenshots/ios-live-recording.png?v=20261102c",
+          "caption": "Words appear as you speak, with a title you can keep.",
+          "ariaLabel": "iPhone live recording: a waveform, rough text, a session title chip with Use, and the reading view.",
+          "srcLight": "assets/screenshots/ios-live-recording-light.png?v=20261102c"
+        },
+        {
+          "src": "assets/screenshots/ios-transcripts-list.png?v=20261102c",
+          "caption": "A focus note sits above the days.",
+          "ariaLabel": "iPhone transcripts list: a Focus note named Bay Area Access Build above dated day rows.",
+          "srcLight": "assets/screenshots/ios-transcripts-list-light.png?v=20261102c"
+        },
+        {
+          "src": "assets/screenshots/ios-projects-list.png?v=20261102c",
+          "caption": "Each project is a folder on this iPhone.",
+          "ariaLabel": "iPhone projects list: rows for Research Journal, Client Work, and Product Ideas, each path starting On My iPhone.",
+          "srcLight": "assets/screenshots/ios-projects-list-light.png?v=20261102c"
+        },
+        {
+          "src": "assets/screenshots/ios-transcript-reader.png?v=20261102c",
+          "caption": "Open one section of a day document.",
+          "ariaLabel": "iPhone transcript reader: a day document opened to one section, with document markers hidden.",
+          "srcLight": "assets/screenshots/ios-transcript-reader-light.png?v=20261102e"
+        },
+        {
+          "src": "assets/screenshots/ios-live-polish-v3.png?v=20261102c",
+          "caption": "Polish shows the paragraph before you apply it.",
+          "ariaLabel": "iPhone polish: a Transcript and Polish picker, polished paragraphs, and an Apply button.",
+          "srcLight": "assets/screenshots/ios-live-polish-v3-light.png?v=20261102c"
+        },
+        {
+          "src": "assets/screenshots/ios-take-playback.png?v=20261102c",
+          "caption": "Play the take and find a line in it.",
+          "ariaLabel": "iPhone playback: transport controls, timestamped segments, and Find in this take.",
+          "srcLight": "assets/screenshots/ios-take-playback-light.png?v=20261102c"
+        }
+      ]
     }
   },
   "pricing": {
     "header": {
       "eyebrow": "Plans & Features",
       "heading": "Choose how SpeakWith works for you",
-      "sub": "Start with built-in dictation, then upgrade for advanced engines, batch transcription, and smart formatting."
+      "sub": "iPhone and iPad first, then the Mac. Recording and transcription stay free. SpeakWith Pro on the phone adds session titles and polish."
     },
     "table": {
       "headers": {
@@ -473,11 +515,6 @@
           "feature": "Smart paragraph formatting",
           "subtitle": "Automatically groups speech into clean paragraphs"
         },
-        "escalation": {
-          "feature": "Automatic accuracy escalation",
-          "subtitle": "Detects low-confidence audio and re-runs it on a higher-accuracy model",
-          "paidPill": "Optional add-on"
-        },
         "bestFor": {
           "feature": "Best for",
           "free": "Quick notes & dictation",
@@ -506,8 +543,8 @@
           "badge": "Pro",
           "badgeKind": "paid",
           "name": "Whisper",
-          "body": "Maximum robustness on tough audio: accents, background noise, crosstalk. Steps up from a fast model to a high-accuracy model when it senses lower confidence.",
-          "note": "Automatic escalation requires the optional accuracy add-on."
+          "body": "Maximum robustness on tough audio: accents, background noise, crosstalk.",
+          "note": ""
         },
         {
           "badge": "Pro",
@@ -527,12 +564,12 @@
     },
     "channels": {
       "heading": "Where to get SpeakWith",
-      "sub": "The Mac app is sold direct. The iPhone app is free.",
+      "sub": "iPhone and iPad on the App Store. The Mac app is sold direct.",
       "items": [
         {
           "lead": "App Store",
-          "heading": "Free on the App Store for iPhone",
-          "body": "SpeakWith for iPhone is a free companion recorder, arriving on the App Store soon. Live dictation transcribes on your iPhone with Apple Speech, and your transcripts stay on hand, organised by day. Optional session titles and polish use your own OpenAI key. No subscription.",
+          "heading": "SpeakWith Pro on iPhone and iPad",
+          "body": "Live dictation transcribes on your iPhone with Apple Speech, and your transcripts stay on hand, organised by day. Projects are free and unlimited. Session titles and polish are SpeakWith Pro, with a 7-day free trial and the monthly allowance included. The price is shown in the App Store.",
           "ctaLabel": "",
           "ctaUrl": "",
           "ctaSecondaryLabel": "",
@@ -543,7 +580,7 @@
         {
           "lead": "Direct (Gumroad)",
           "heading": "Subscribe, or buy once",
-          "body": "The direct build unlocks with a Gumroad membership, billed monthly, that you can cancel any time. If you would rather own it outright, a one-time license is still available. Either way you get the complete, unsandboxed version of SpeakWith, including the switch that types your dictation into other applications. Not sure yet? Start with a 14-day free trial. The Mac download is signed with our Developer ID and checked by Apple's notary service before we upload it.",
+          "body": "The direct build unlocks with a Gumroad membership, billed monthly, that you can cancel any time. A monthly membership also includes the AI service behind session titles and polish, with a monthly allowance, so you do not need your own API key. If you would rather own it outright, a one-time license is still available; it brings your own key for optional AI. Either way you get the complete, unsandboxed version of SpeakWith, including the switch that types your dictation into other applications. Not sure yet? Start with a 14-day free trial. The Mac download is signed with our Developer ID and checked by Apple's notary service before we upload it.",
           "ctaLabel": "Subscribe",
           "ctaUrl": "https://ikisystems.gumroad.com/l/dcltnn",
           "ctaSecondaryLabel": "Buy once",
@@ -553,7 +590,65 @@
         }
       ]
     },
-    "finePrint": "Pro on the Mac (advanced engines, audio and video import, batch transcription, and smart formatting) is sold through a Gumroad membership, or through a one-time Gumroad purchase if you prefer to buy once. The Gumroad build includes a 14-day free trial that locks after 14 days until you subscribe or buy, and a switch that types your dictation into other applications. The iPhone app is free, with no subscription."
+    "finePrint": "Pro on the Mac (advanced engines, audio and video import, batch transcription, and smart formatting) is sold through a Gumroad membership, or through a one-time Gumroad purchase if you prefer to buy once. The monthly membership includes the AI service for session titles and polish, with a monthly allowance; the one-time purchase and the free trial use an OpenAI API key you provide or a local Ollama model instead. The Gumroad build includes a 14-day free trial that locks after 14 days until you subscribe or buy, and a switch that types your dictation into other applications. On iPhone and iPad, SpeakWith Pro comes with a 7-day free trial, and the App Store lists its price.",
+    "macHeading": "Mac",
+    "ios": {
+      "heading": "iPhone and iPad",
+      "sub": "SpeakWith Pro gates session titles and polish only. Projects stay free and unlimited.",
+      "table": {
+        "headers": {
+          "feature": "Feature",
+          "freeName": "Free",
+          "freeTag": "No cost",
+          "paidName": "Pro",
+          "paidTag": "Monthly"
+        },
+        "rows": {
+          "liveDictation": {
+            "feature": "Live dictation",
+            "subtitle": "Apple Speech, on the device"
+          },
+          "dayDocs": {
+            "feature": "Day documents and search",
+            "subtitle": "Your transcripts, organised by day"
+          },
+          "projects": {
+            "feature": "Projects",
+            "free": "Unlimited",
+            "paid": "Unlimited"
+          },
+          "titles": {
+            "feature": "Session titles",
+            "subtitle": "A heading from the take, when you ask"
+          },
+          "polish": {
+            "feature": "Polish a take",
+            "subtitle": "Clean paragraphs, with the edits marked"
+          },
+          "allowance": {
+            "feature": "AI allowance included",
+            "free": "·",
+            "paid": "Monthly"
+          },
+          "price": {
+            "feature": "Price",
+            "freePrice": "Free",
+            "paidPrice": "Monthly, via the App Store",
+            "paidPriceSub": "7-day free trial."
+          }
+        }
+      },
+      "subscription": {
+        "heading": "Subscription details",
+        "summary": "SpeakWith Pro. Auto-renewing monthly subscription. The App Store shows the price, in your currency, before you subscribe.",
+        "trial": "7-day free trial, then it renews unless you cancel at least 24 hours before the period ends.",
+        "billing": "Payment is charged to your Apple Account. The subscription renews automatically unless cancelled at least 24 hours before the end of the period.",
+        "includes": "Included: session titles, polish, and a monthly AI allowance. Live dictation, day documents, search, and projects stay free.",
+        "manage": "Manage or cancel in the App Store app, under your account, then Subscriptions.",
+        "termsLabel": "Terms of Use (EULA)",
+        "privacyLabel": "Privacy Policy"
+      }
+    }
   },
   "automation": {
     "heading": "Automation",
@@ -797,7 +892,7 @@
               "text": "Apple Speech reports the recognizer's own confidence under the same label. Its bands are High, Moderate, and Low. The names overlap and the cutoffs do not: 0.85 is High on Apple Speech and only Moderate for the phoneme listener. This guide prints no single band table for both, because one table would mix two scales."
             },
             {
-              "text": "On a Whisper batch job, a low score can send the audio to the larger model. That step needs the optional accuracy add-on. The bundled checker is English only. When no score exists yet, the percentage stays off the line. Live dictation waits until the checker is installed and a first utterance has been scored."
+              "text": "The bundled checker is English only. When no score exists yet, the percentage stays off the line. Live dictation waits until the checker is installed and a first utterance has been scored."
             }
           ]
         },
@@ -1385,7 +1480,7 @@
               "text": "The iPhone app has the same pair of languages, in its own places. Open Settings and choose Live Dictation: the row Spoken input is the language the recorder listens in. Translate polish into is in Settings under Session AI, and the tick lists that shorten the menus are in Settings under Languages. The day document choice, Both versions or Translation only, works the same as on the Mac."
             },
             {
-              "text": "Some things differ. The phone transcribes with Apple Speech on the device, and its recorder has its own language menu rather than a Language: line in a panel header. There is no translate chip on the Polish heading, so the settings rows are the place to check whether a polish will translate. The translation goes to your own OpenAI key; there is no Ollama option on the phone."
+              "text": "Some things differ. The phone transcribes with Apple Speech on the device, and its recorder has its own language menu rather than a Language: line in a panel header. There is no translate chip on the Polish heading, so the settings rows are the place to check whether a polish will translate. The translation uses the AI service included with SpeakWith Pro. An OpenAI API key you provide is an alternative. There is no Ollama option on the phone."
             }
           ]
         },
@@ -1407,7 +1502,7 @@
           "heading": "Where the translation happens",
           "paragraphs": [
             {
-              "text": "Transcription happens on your device. The translation does not. It is a language-model call, like the other optional AI features, and it goes to your own OpenAI key. On the Mac it can go instead to a local Ollama model you run yourself; the iPhone uses your OpenAI key only."
+              "text": "Transcription happens on your device. The translation does not. It is a language-model call, like the other optional AI features. On the Mac it goes to the AI service included with a monthly membership, to an OpenAI API key you provide, or to a local Ollama model you run yourself; on iPhone and iPad, SpeakWith Pro includes that service."
             }
           ]
         }
@@ -1513,8 +1608,8 @@
   },
   "privacy": {
     "heading": "Privacy Policy",
-    "meta": "Last updated: October 2026",
-    "intro": "SpeakWith is built around a simple principle: your words are yours. This policy explains what SpeakWith does and does not do with the recordings, transcripts, and documents you create.",
+    "meta": "Last updated: November 2026",
+    "intro": "SpeakWith is built around a simple principle: your words are yours. This policy explains what SpeakWith does and does not do with the recordings, transcripts, and documents you create. November 2026 change: a new section describes the AI service included with a monthly membership, which sends transcript text to IKI Systems and then to OpenAI.",
     "sections": [
       {
         "heading": "Your recordings are processed on your device",
@@ -1524,11 +1619,32 @@
             "isHtml": false
           },
           {
-            "text": "Three optional features can send transcript text, never audio, to a language model: generating a session title, polishing a take, and checking corrections. All of them are off until you turn them on. On the Mac, session titles can use your OpenAI API key or a local Ollama model, so nothing leaves your machine when you choose Ollama. On iPhone and iPad, session titles and polish use your own OpenAI key, and without a key nothing leaves the device. Correction checks, if you enable them, use your OpenAI key.",
+            "text": "Two optional features can send transcript text, never audio, to a language model: generating a session title and polishing a take. Both are off until you turn them on. Session titles and polish can run through the AI service included with a monthly membership, described in the next section, or through your own OpenAI API key. On the Mac they can also use a local Ollama model, so nothing leaves your machine when you choose Ollama. On iPhone and iPad, session titles and polish use the AI service included with SpeakWith Pro. An OpenAI API key you provide is an alternative. Without Pro and without a key, nothing leaves the device.",
             "isHtml": false
           },
           {
             "text": "One more feature can send transcript text off your device, and it works differently: Send to agent, on the Mac only. When you use it, the topics you have ticked in the Outline are handed to a coding agent already installed on your Mac, such as Claude Code, Cursor, Codex, or Gemini. SpeakWith hands that text to the program on your machine; the program is what contacts a provider, under your own account with whichever service it uses, and that provider then sees the topics you sent. What happens to the text from there is covered by that agent's own terms and privacy policy, not by this one. Nothing is sent until you press Send to agent, and nothing is sent if you never use the feature.",
+            "isHtml": false
+          }
+        ]
+      },
+      {
+        "heading": "The AI service included with a monthly membership",
+        "paragraphs": [
+          {
+            "text": "A monthly membership includes an AI service for session titles and polish, so you do not need to supply your own API key. When you use it, SpeakWith sends the transcript text for that step to a service run by IKI Systems, which forwards it to OpenAI to produce the title or the polished text. Audio never leaves your device, and transcription still happens locally. If you turn on automatic polish, text is sent each time a take settles, not only when you press a button.",
+            "isHtml": false
+          },
+          {
+            "text": "To confirm that your membership is current, the app sends a hashed form of your purchase credential. The service stores that hash, a hashed short-lived session token, your membership tier, and the time of first and most recent use. It does not store the credential itself, your name, or your email address. It keeps a monthly total of the tokens each membership has used, so it can apply the allowance. That ledger holds counts, not your words. These records live in Amazon Web Services, in the US West (Oregon) region.",
+            "isHtml": false
+          },
+          {
+            "text": "SpeakWith can reach a language model three ways, and your text only passes through us on one of them: a local Ollama model on the Mac, where nothing leaves your device; an OpenAI API key you provide, where the text goes from the app straight to OpenAI and never through us; and the included service. For that third path our role is transit and nothing else. Our AI service never writes the text you send, or the text that comes back, to a log or to a database  -  not when a request succeeds, and not when it fails. Whatever we record about a failure describes the failure, never the text that was in flight. What OpenAI does with the text on its side is governed by <a href=\"https://openai.com/policies/\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI's terms and policies</a>.",
+            "isHtml": true
+          },
+          {
+            "text": "The allowance is a monthly ceiling on how much text the service will process for one membership. If it runs out, or the service is unavailable, the app offers to use an OpenAI API key you provide instead, and nothing is sent until you choose. A one-time purchase and the 14-day free trial do not include the service; they use your own key or, on the Mac, a local Ollama model.",
             "isHtml": false
           }
         ]
@@ -1541,7 +1657,7 @@
             "isHtml": false
           },
           {
-            "text": "This is a statement about the app itself. This website, which is separate software running in your browser, measures anonymous visitor counts; that is described under “The support website” below. Nothing measured on the website is connected to the app, and the app never reports anything to us.",
+            "text": "This is a statement about the app itself. This website, which is separate software running in your browser, measures anonymous visitor counts; that is described under “The support website” below. Nothing measured on the website is connected to the app, and the app never reports usage to us. The one exception is the included AI service: when a monthly membership uses it, the service records the token totals needed to apply the allowance, as described above. That is billing bookkeeping for a feature you chose to use, not product analytics, and it records amounts, not content.",
             "isHtml": false
           }
         ]
@@ -1572,7 +1688,7 @@
             "isHtml": false
           },
           {
-            "text": "No cookies are set for analytics and no advertising or cross-site tracking identifiers are used. Visits are identified only by a random value that lives in your browser tab and is discarded when you close it, and TelemetryDeck anonymises that value before storing it. We see aggregate counts — pages, referrers, campaign links, browser and country — never individual visitors, and never anything you type.",
+            "text": "No cookies are set for analytics and no advertising or cross-site tracking identifiers are used. Visits are identified only by a random value that lives in your browser tab and is discarded when you close it, and TelemetryDeck anonymises that value before storing it. We see aggregate counts  -  pages, referrers, campaign links, browser and country  -  never individual visitors, and never anything you type.",
             "isHtml": false
           },
           {
@@ -1594,7 +1710,7 @@
         "heading": "Contact",
         "paragraphs": [
           {
-            "text": "Questions about privacy? Reach us through the support channels listed with the app.",
+            "text": "Questions about privacy? Email support@ikisystems.com.",
             "isHtml": false
           }
         ]
@@ -1603,7 +1719,7 @@
   },
   "terms": {
     "heading": "Terms of Service",
-    "meta": "Last updated: June 2026",
+    "meta": "Last updated: November 2026",
     "intro": "These terms govern your use of the SpeakWith application. By installing or using SpeakWith, you agree to them. Please read them carefully.",
     "sections": [
       {
@@ -1638,6 +1754,27 @@
         ]
       },
       {
+        "heading": "The included AI service",
+        "paragraphs": [
+          {
+            "text": "A monthly membership includes access to an AI service for session titles and polish. Using it is optional. The service sends the transcript text for that step to IKI Systems and then to OpenAI, as described in the Privacy Policy. A one-time purchase and the free trial do not include it.",
+            "isHtml": false
+          },
+          {
+            "text": "The service comes with a monthly allowance. We do not guarantee any particular allowance, that it will cover your use, or that the service will be available at any given time. If the allowance is used up or the service is unavailable, the app lets you continue with your own API key. We may change the model the service uses, the allowance, or the way the allowance is measured, and we may withdraw the service with reasonable notice.",
+            "isHtml": false
+          },
+          {
+            "text": "Titles and polished text are produced by an automated language model. They are suggestions, not a certified record, and the accuracy disclaimer above applies to them. Review what the service returns before you rely on it.",
+            "isHtml": false
+          },
+          {
+            "text": "You keep ownership of the text you send and of what comes back. IKI Systems does not claim rights over either, and does not keep the text once the request completes.",
+            "isHtml": false
+          }
+        ]
+      },
+      {
         "heading": "Provided \"as is\"",
         "paragraphs": [
           {
@@ -1665,10 +1802,23 @@
         ]
       },
       {
+        "heading": "Auto-renewing subscription",
+        "paragraphs": [
+          {
+            "text": "SpeakWith Pro on iPhone and iPad is an auto-renewing monthly subscription named SpeakWith Pro (product com.ikisystems.speakwith.pro.subscription). The App Store shows the price, in your local currency, before you subscribe. A 7-day free trial converts to the paid month unless you cancel. Payment is charged to your Apple Account. The subscription renews automatically unless cancelled at least 24 hours before the end of the period. Manage or cancel in the App Store app, under your account, then Subscriptions. Refunds are handled by Apple.",
+            "isHtml": false
+          },
+          {
+            "text": "Pro includes session titles, polish, and a monthly AI allowance. Live dictation, day documents, search, and projects stay free and are not part of the subscription. The Mac app's Gumroad membership is a separate purchase and is not this App Store subscription.",
+            "isHtml": false
+          }
+        ]
+      },
+      {
         "heading": "Contact",
         "paragraphs": [
           {
-            "text": "Questions about these terms can be directed to the support channels listed with the application.",
+            "text": "Questions about these terms: email support@ikisystems.com.",
             "isHtml": false
           }
         ]

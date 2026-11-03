@@ -13,6 +13,12 @@
   font-weight: 600;
 }
 
+.prose__html {
+  overflow-x: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+
 .prose__html :is(pre) {
   overflow-x: auto;
   padding: 0.85rem 1rem;
@@ -25,6 +31,9 @@
 
 .prose__html :is(code) {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  /* Long tokens in a paragraph set the min-content width. anywhere is inert
+     inside pre, where white-space: pre leaves no wrap point. */
+  overflow-wrap: anywhere;
 }
 
 .prose__html :is(p) > code {
