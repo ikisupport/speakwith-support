@@ -19,7 +19,7 @@
     "check:parity": "node scripts/dev/parity-diff.mjs",
     "check:assets": "node scripts/check-asset-refs.mjs",
     "check:repo": "node scripts/check-repo-hygiene.mjs",
-    "check:publish": "npm run build && rm -rf _site && mkdir -p _site && cp -r build/client/* _site/ && cp _site/404/index.html _site/404.html && touch _site/.nojekyll && node scripts/verify-publish-artifact.mjs \"$PWD/_site\"",
+    "check:publish": "npm run build && rm -rf _site && mkdir -p _site && cp -r build/client/* _site/ && cp _site/404/index.html _site/404.html && touch _site/.nojekyll && node scripts/verify-publish-artifact.mjs \"$PWD/_site\" && node scripts/check-repo-hygiene.mjs \"$PWD/_site\"",
     "pretypecheck": "node scripts/resolve-locales.mjs && node scripts/extract-theme-prelude.mjs",
     "typecheck": "react-router typegen && tsc --noEmit"
   },

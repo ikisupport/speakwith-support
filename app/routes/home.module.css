@@ -18,6 +18,10 @@
   text-wrap: balance;
 }
 
+.hero__lead--translate {
+  margin: 0 auto 0.85rem;
+}
+
 .hero__lead--secondary {
   margin: 0 auto 1.8rem;
   max-width: 42rem;
@@ -453,6 +457,18 @@ app-home so the image stays in the wide 1.45fr column — order
 .metrics__more {
   margin-top: 0.6rem;
   font-weight: 600;
+}
+
+/* Translation band, directly under the hero screenshot. */
+.translate {
+  background: var(--bg);
+  border-bottom: 1px solid var(--rule);
+}
+
+.translate :global(.home-narrow) .translate__more {
+  margin-top: 1.4rem;
+  font-weight: 600;
+  color: var(--text);
 }
 
 /* Value-prop band */

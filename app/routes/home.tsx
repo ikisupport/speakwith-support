@@ -54,6 +54,7 @@ export default function Home() {
               <p className="eyebrow">{copy.home.hero.eyebrow}</p>
               <h1>{copy.home.hero.headline}</h1>
               <p className={css.hero__lead}>{copy.home.hero.lead}</p>
+              <p className={cx(css.hero__lead, css['hero__lead--translate'])}>{copy.home.hero.translateLine}</p>
               {copy.home.hero.leadSecondary && (<>
                 <p className={cx(css.hero__lead, css['hero__lead--secondary'])}>{copy.home.hero.leadSecondary}</p>
               </>)}
@@ -82,6 +83,18 @@ export default function Home() {
                 </div>
                 <figcaption className={css.heroshot__caption}>{copy.home.moments.heroCaption}</figcaption>
               </figure>
+            </div>
+          </section>
+
+          <section id={copy.home.translate.id} className={css.translate}>
+            <div className="container home-narrow">
+              <p className="eyebrow eyebrow--accent">{copy.home.translate.eyebrow}</p>
+              <h2>{copy.home.translate.heading}</h2>
+              <p>{copy.home.translate.p1}</p>
+              <p>{copy.home.translate.p2}</p>
+              <p className={css.translate__more}>
+                <Link to={locale.path(copy.home.translate.morePath)}>{copy.home.translate.moreLabel}</Link>
+              </p>
             </div>
           </section>
 
@@ -356,6 +369,9 @@ export default function Home() {
                   <p>{item.a}</p>
                   {item.morePath && (<>
                     <p><Link to={locale.path(item.morePath)}>{item.moreLabel}</Link></p>
+                  </>)}
+                  {item.moreUrl && (<>
+                    <p><a href={item.moreUrl} target="_blank" rel="noopener noreferrer">{item.moreLabel}</a></p>
                   </>)}
                 </details>
               </Fragment>

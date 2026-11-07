@@ -29,7 +29,9 @@ export function Footer() {
           <Link to={locale.path('guides')}>{copy.app.footer.links.guides}</Link>
           <Link to={locale.path('privacy')}>{copy.app.footer.links.privacy}</Link>
           <Link to={locale.path('terms')}>{copy.app.footer.links.terms}</Link>
-          <a href={copy.links.supportMailto}>{copy.app.footer.links.contact}</a>
+          <a href={copy.links.supportContactUrl} target="_blank" rel="noopener noreferrer">
+            {copy.app.footer.links.contact}
+          </a>
         </nav>
         <p>{copy.app.footer.tagline}</p>
 

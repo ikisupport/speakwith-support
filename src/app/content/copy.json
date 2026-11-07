@@ -23,7 +23,7 @@
         "guides": "Guides",
         "privacy": "Privacy",
         "terms": "Terms",
-        "contact": "Email support"
+        "contact": "Contact support"
       },
       "tagline": "SpeakWith: your spoken ideas, captured as a daily document.",
       "builtOn": {
@@ -45,18 +45,18 @@
     "subscribeMacGumroad": "https://ikisystems.gumroad.com/l/dcltnn",
     "trialMacGumroad": "https://ikisystems.gumroad.com/l/vkaxll",
     "ikiSystemsHome": "https://ikisystems.com/",
-    "supportMailto": "mailto:support@ikisystems.com",
-    "appleTermsOfUse": "https://ikisystems.com/terms",
-    "applePrivacyPolicy": "https://ikisystems.com/privacy"
+    "supportContactUrl": "https://speakwith.discourse.group/about",
+    "appleTermsOfUse": "https://speakwith.ikisystems.com/terms/",
+    "applePrivacyPolicy": "https://speakwith.ikisystems.com/privacy/"
   },
   "seo": {
     "home": {
-      "title": "SpeakWith Support: Your spoken ideas, captured as a daily document",
-      "description": "SpeakWith is a local-first voice-to-text journal for Mac, iPhone, and iPad that turns what you say into a searchable document, organised by day. Tuned for speech and dictation, not music or ambient sound. SpeakWith Pro on iPhone and iPad adds session titles and polish."
+      "title": "SpeakWith: Your Voice-to-Text Journal",
+      "description": "SpeakWith is a local-first voice-to-text journal for Mac, iPhone, and iPad that turns what you say into a searchable document, organised by day. Speak in one language and read the translation in another. Tuned for speech and dictation, not music or ambient sound. SpeakWith Pro on iPhone and iPad adds session titles and polish."
     },
     "pricing": {
       "title": "Pricing | SpeakWith",
-      "description": "iPhone and iPad: SpeakWith Pro adds session titles and polish, with a 7-day free trial. The Mac adds advanced engines, import, and batch transcription through Gumroad."
+      "description": "iPhone and iPad: SpeakWith Pro adds session titles and polish, with a 7-day free trial. The Mac, sold through Gumroad, starts with a 14-day free trial, then a subscription or a one-time purchase."
     },
     "automation": {
       "title": "Automation | SpeakWith",
@@ -94,6 +94,10 @@
       "title": "Practise a language aloud | SpeakWith",
       "description": "Dictate in the language you are learning and read the translation under your own words: choosing an input and an output language, and the three limits."
     },
+    "guidesAiUsage": {
+      "title": "Viewing your AI usage | SpeakWith",
+      "description": "How to read AI Usage on Mac and iPhone: the percentage covers every device, the counts and bars are this Mac, and the diagram uses example figures."
+    },
     "technicalAgentLists": {
       "title": "Project and model lists | SpeakWith",
       "description": "How a program on your Mac fills the Project menu and the Model menu on the Agent tab of SpeakWith from Gumroad: one local call for the folders, and two ways to hand over the models."
@@ -112,10 +116,11 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "A voice-to-text journal",
+      "eyebrow": "Your voice-to-text journal",
       "headline": "Subtitles for your thoughts.",
-      "lead": "Speak your day into a clean markdown file on your Mac. Read it, edit it, share it. It works on its own, and it opens in VS Code, Obsidian, or any tool you point at it.",
-      "leadSecondary": "Use the recorder switch or a hotkey. Talk, and the words land where the cursor is.",
+      "lead": "Speak your day into a clean markdown file on your Mac. Read it, edit it, share it. Each day is automatically created and opens in VS Code, Obsidian, or any tool you point at it.",
+      "translateLine": "Speak in one language and read the translation in another.",
+      "leadSecondary": "Type into app. Use the recorder switch or a hotkey, and the words land where the cursor is.",
       "ctaPrimary": "Try SpeakWith free",
       "ctaSecondary": "iPhone and iPad: SpeakWith Pro",
       "ctaGhost": "See how it works",
@@ -128,7 +133,7 @@
       "heroImageDark": "canonical_screenshots/hero.png?v=20261030c",
       "heroImageLight": "canonical_screenshots/hero-light.png?v=20261030c",
       "heroAlt": "SpeakWith for Mac in live dictation: spoken words landing as transcribed lines under a live waveform, with misheard names corrected in place and a session title suggested alongside.",
-      "heroCaption": "Speak, and watch the subtitles for your thoughts take shape before the idea slips away. Optional polish tidies the finished take and shows what it touched before you apply it. Choose an input language to speak in and an output language, and polish writes the translation under your own words. Session titles are optional too: a monthly membership includes the AI service that writes them, or an OpenAI API key you provide, a local Ollama model on your Mac, or write your own."
+      "heroCaption": "Speak, and watch the subtitles for your thoughts take shape before the idea slips away. Optional polish tidies the finished take and shows what it touched before you apply it. Session titles are optional too: a monthly membership includes the AI service that writes them, or an OpenAI API key you provide, a local Ollama model on your Mac, or write your own."
     },
     "platforms": {
       "eyebrow": "Mac, iPhone, and iPad",
@@ -138,13 +143,13 @@
         {
           "name": "SpeakWith for Mac",
           "tag": "The studio",
-          "body": "Live and batch recorders, audio and video import, and a choice of transcription engines: Apple on-device, Whisper, Parakeet, or Nemotron for languages beyond English. Every recording lands in your daily document, with playback you can click straight into. The direct build can also type finished phrases into the app you are already using.",
+          "body": "Live and batch recorders, audio and video import, and a choice of transcription engines. Apple on-device opens many spoken input languages; Whisper handles tough imported audio; Parakeet and Nemotron are options for live dictation, and Parakeet is also fastest when you import a whole file. Timestamps from transcription become SubRip (SRT) subtitles you can copy or export, with a plain text transcript in the same job folder. Every recording lands in your daily document, with playback you can click straight into. The direct build can also type finished phrases into the app you are already using.",
           "points": [
             "Live and batch recording",
             "Hands-free standby when you want it",
             "Type into app (direct build)",
             "Projects with separate folders",
-            "Import audio and video",
+            "Import audio and video (SRT and plain-text export)",
             "Apple, Whisper, Parakeet, and Nemotron engines",
             "Dictate in an input language, translate to an output language",
             "Screenshots in your Markdown as HTML img or figure tags, with OCR"
@@ -181,11 +186,20 @@
       "caption": "A real take: SpeakWith typing into Messages as each utterance settles.",
       "ariaLabel": "Screen recording of SpeakWith live dictation with the typing switch on, sending spoken phrases into an iMessage conversation."
     },
+    "translate": {
+      "id": "translate",
+      "eyebrow": "Your languages",
+      "heading": "Speak in other languages",
+      "p1": "You can move between them. Practise the one you are learning, stay in the one a conversation is already using, or say a thought in the language it arrived in. What you said stays on the page, and a translation is written with it.",
+      "p2": "That is the freedom, and it is also how a real day goes. A meeting, a voice memo, or a message can be spoken as it happened and read in the language you keep for work. The day document holds both, so you can check what you said.",
+      "moreLabel": "Choosing which language you speak and which you read",
+      "morePath": "guides/language-learning"
+    },
     "liveEdit": {
       "id": "live-edit",
       "eyebrow": "Live dictation",
       "heading": "Fix lines as they land",
-      "lead": "Wrong word? Wrong line? Edit or remove it while you are still recording. No need to wait for a finished take.",
+      "lead": "Wrong word? Wrong line? Edit or remove it while you are still recording. The line shows track changes, so you can see what you changed. No need to wait for a finished take.",
       "items": [
         {
           "src": "assets/screenshots/live-edit-remove.png?v=20260801a",
@@ -286,7 +300,12 @@
       "items": [
         {
           "title": "A document for every day",
-          "body": "Everything you record or type on a given day flows into a single organised document, in the order it happened. Tomorrow, a fresh one begins.",
+          "body": "Everything you record or type on a given day flows into a single organised document, in the order it happened. That layout makes it easy to start recording your thoughts without worrying about files. Tomorrow, a fresh one begins.",
+          "wide": false
+        },
+        {
+          "title": "Move between languages",
+          "body": "What you speak and what you read can differ. Your words stay on the page, and a translation is there to read.",
           "wide": false
         },
         {
@@ -296,12 +315,12 @@
         },
         {
           "title": "Bring in audio & video",
-          "body": "Drop in a voice memo, a recorded call, or a screen recording. SpeakWith writes it up and folds it into your daily document like anything else.",
+          "body": "Drop in a voice memo, a recorded call, or a screen recording. SpeakWith writes it up and folds it into your daily document like anything else. Transcription carries timestamps: copy or export SubRip (SRT) subtitles for an editor, and grab the plain text transcript from the job folder when you need it without cues.",
           "wide": false
         },
         {
           "title": "Session titles, included or local",
-          "body": "Name each dictation session from its transcript. A monthly membership includes the AI service that writes titles and polish. Or pick an OpenAI API key you provide or a local Ollama model under Settings, Session AI. Generate stays in the AI sidebar when you want a heading.",
+          "body": "Name each dictation session from its transcript. A monthly membership includes the AI service that writes titles and polish. Or pick an OpenAI API key you provide or a local Ollama model under Settings, Session AI. Generate is available in both the AI sidebar and the live dictation recorder when you want a heading.",
           "wide": false
         },
         {
@@ -405,7 +424,15 @@
         },
         {
           "q": "Is there an iOS app?",
-          "a": "Yes. SpeakWith for iOS is on the App Store for iPhone and iPad. Live dictation, day documents, search, and projects are free. SpeakWith Pro adds session titles and polish, with the AI allowance included and a 7-day free trial; the App Store shows the price in your currency. It transcribes on-device with Apple Speech, and it works alongside the Mac app rather than replacing it."
+          "a": "Yes. SpeakWith for iOS is on the App Store for iPhone and iPad. Live dictation, day documents, search, and projects are free. SpeakWith Pro adds session titles and polish, with the AI allowance included and a 7-day free trial; the App Store shows the price in your currency. It transcribes on-device with Apple Speech, and it works alongside the Mac app rather than replacing it.",
+          "moreLabel": "See where that allowance shows on iPhone and Mac.",
+          "morePath": "guides/ai-usage"
+        },
+        {
+          "q": "I use a Mac and an iPhone. Which should I buy?",
+          "a": "Either. Buy SpeakWith Pro on the App Store or SpeakWith for Mac on Gumroad, open the app on each device signed in to the same Apple Account, and Pro follows through iCloud. A monthly membership on either store includes the AI allowance everywhere; the one-time Gumroad license unlocks Pro on all your devices, custom themes included, with your own OpenAI key.",
+          "moreLabel": "See how that allowance is counted across your devices.",
+          "morePath": "guides/ai-usage"
         },
         {
           "q": "On iOS, the permission prompt says speech is \"sent to Apple\". Is my voice uploaded?",
@@ -413,7 +440,7 @@
         },
         {
           "q": "What languages does SpeakWith support?",
-          "a": "English on every build, and other languages in the direct Mac download and the iPhone app. On both, you choose an input language to dictate in and, when you want a translation, an output language for it. The Mac App Store build does not have them."
+          "a": "On the direct Mac build and the iPhone app, Apple Speech opens many spoken input languages: choose the one you dictate in, and pick an output language when you want a translation underneath. On Mac, Parakeet and Nemotron are additional live engines if you prefer them to Apple. The Mac App Store build does not include those engines or language menus."
         },
         {
           "q": "Is this an audio recorder?",
@@ -422,55 +449,61 @@
         {
           "q": "Is the Mac download signed and checked by Apple?",
           "a": "Yes. The direct Mac download is signed with our Apple Developer ID, so the apps you install match the build we shipped. Before upload, Apple's notary service scans that submission for known malicious software and for code-signing problems, and we staple the ticket so Gatekeeper can check it. That scan is not an App Store review, and it is not a promise that the software is free of malware."
+        },
+        {
+          "q": "Where can I ask questions or suggest features?",
+          "a": "The SpeakWith Community is a new forum, still small and growing along with the app. Ask how to do something, suggest a feature, or share how you use SpeakWith; early posts help shape what comes next. For anything about your licence or a purchase, message the staff there privately instead of posting, since topics are public.",
+          "moreLabel": "Visit the SpeakWith Community",
+          "moreUrl": "https://speakwith.discourse.group/"
         }
       ]
     },
     "download": {
       "heading": "Get SpeakWith",
       "body": "SpeakWith runs on a Mac with Apple Silicon (M1 or later) and macOS 26 (Tahoe) or later. Download it, grant microphone access, and your first recording is a click away. The iPhone and iPad app needs iOS 26 or later.",
-      "ctaPrimary": "Subscribe to SpeakWith for Mac",
+      "ctaPrimary": "Get SpeakWith Pro for Mac",
       "ctaSecondary": "iPhone and iPad on the App Store",
       "ctaBuyOnce": "Prefer to buy once? Get a one-time license instead."
     },
     "iosScreenshots": {
       "title": "What the iPhone app does",
-      "subtitle": "Record a thought, file it under a project, then read, polish and replay it.",
+      "subtitle": "Record a thought, file it under a project, then read, polish and replay it",
       "items": [
         {
-          "src": "assets/screenshots/ios-live-recording.png?v=20261102c",
+          "src": "assets/screenshots/ios-live-recording.png?v=20261105a",
           "caption": "Words appear as you speak, with a title you can keep.",
           "ariaLabel": "iPhone live recording: a waveform, rough text, a session title chip with Use, and the reading view.",
-          "srcLight": "assets/screenshots/ios-live-recording-light.png?v=20261102c"
+          "srcLight": "assets/screenshots/ios-live-recording-light.png?v=20261105a"
         },
         {
-          "src": "assets/screenshots/ios-transcripts-list.png?v=20261102c",
+          "src": "assets/screenshots/ios-transcripts-list.png?v=20261105a",
           "caption": "A focus note sits above the days.",
           "ariaLabel": "iPhone transcripts list: a Focus note named Bay Area Access Build above dated day rows.",
-          "srcLight": "assets/screenshots/ios-transcripts-list-light.png?v=20261102c"
+          "srcLight": "assets/screenshots/ios-transcripts-list-light.png?v=20261105a"
         },
         {
-          "src": "assets/screenshots/ios-projects-list.png?v=20261102c",
+          "src": "assets/screenshots/ios-projects-list.png?v=20261105a",
           "caption": "Each project is a folder on this iPhone.",
           "ariaLabel": "iPhone projects list: rows for Research Journal, Client Work, and Product Ideas, each path starting On My iPhone.",
-          "srcLight": "assets/screenshots/ios-projects-list-light.png?v=20261102c"
+          "srcLight": "assets/screenshots/ios-projects-list-light.png?v=20261105a"
         },
         {
-          "src": "assets/screenshots/ios-transcript-reader.png?v=20261102c",
+          "src": "assets/screenshots/ios-transcript-reader.png?v=20261105a",
           "caption": "Open one section of a day document.",
           "ariaLabel": "iPhone transcript reader: a day document opened to one section, with document markers hidden.",
-          "srcLight": "assets/screenshots/ios-transcript-reader-light.png?v=20261102e"
+          "srcLight": "assets/screenshots/ios-transcript-reader-light.png?v=20261105a"
         },
         {
-          "src": "assets/screenshots/ios-live-polish-v3.png?v=20261102c",
+          "src": "assets/screenshots/ios-live-polish-v3.png?v=20261105a",
           "caption": "Polish shows the paragraph before you apply it.",
           "ariaLabel": "iPhone polish: a Transcript and Polish picker, polished paragraphs, and an Apply button.",
-          "srcLight": "assets/screenshots/ios-live-polish-v3-light.png?v=20261102c"
+          "srcLight": "assets/screenshots/ios-live-polish-v3-light.png?v=20261105a"
         },
         {
-          "src": "assets/screenshots/ios-take-playback.png?v=20261102c",
+          "src": "assets/screenshots/ios-take-playback.png?v=20261105a",
           "caption": "Play the take and find a line in it.",
           "ariaLabel": "iPhone playback: transport controls, timestamped segments, and Find in this take.",
-          "srcLight": "assets/screenshots/ios-take-playback-light.png?v=20261102c"
+          "srcLight": "assets/screenshots/ios-take-playback-light.png?v=20261105a"
         }
       ]
     }
@@ -479,15 +512,15 @@
     "header": {
       "eyebrow": "Plans & Features",
       "heading": "Choose how SpeakWith works for you",
-      "sub": "iPhone and iPad first, then the Mac. Recording and transcription stay free. SpeakWith Pro on the phone adds session titles and polish."
+      "sub": "On iPhone and iPad, recording and transcription are free, and SpeakWith Pro adds session titles, polish, and the Mac monthly membership. The Mac has no free tier yet: try every feature for 14 days, then subscribe or buy once."
     },
     "table": {
       "headers": {
         "feature": "Feature",
-        "freeName": "Free",
-        "freeTag": "No cost",
+        "freeName": "Free trial",
+        "freeTag": "14 days, then locks",
         "paidName": "Pro",
-        "paidTag": "Subscription, or buy once"
+        "paidTag": "Monthly (or iOS Pro), or buy once"
       },
       "rows": {
         "liveDictation": {
@@ -500,29 +533,37 @@
         },
         "engines": {
           "feature": "Transcription engines",
-          "free": "Apple built-in",
+          "free": "Apple + Whisper + Parakeet + Nemotron",
           "paid": "Apple + Whisper + Parakeet + Nemotron"
         },
         "importMedia": {
           "feature": "Import audio & video files",
-          "subtitle": "Transcribe recordings you already have"
-        },
-        "batch": {
-          "feature": "Batch recorder",
-          "subtitle": "Record now, get polished text after"
+          "subtitle": "Transcribe files you already have, with timed SRT and plain text"
         },
         "formatting": {
           "feature": "Smart paragraph formatting",
           "subtitle": "Automatically groups speech into clean paragraphs"
         },
+        "translate": {
+          "feature": "Translate a take",
+          "subtitle": "Dictate in one language and write it into another"
+        },
+        "themes": {
+          "feature": "Custom themes",
+          "subtitle": "Style the whole app your way"
+        },
+        "iosPro": {
+          "feature": "Pro on iPhone and iPad",
+          "subtitle": "Session titles, polish and custom themes on your phone too, through iCloud; the one-time license brings your own key there"
+        },
         "bestFor": {
           "feature": "Best for",
-          "free": "Quick notes & dictation",
-          "paid": "Serious transcription & long recordings"
+          "free": "Trying everything before you pay",
+          "paid": "Everyday use, with no time limit"
         },
         "price": {
           "feature": "Price",
-          "freePrice": "Free",
+          "freePrice": "Free for 14 days",
           "paidPrice": "See options ↓",
           "paidPriceSub": "subscription, or buy once, see below"
         }
@@ -533,45 +574,60 @@
       "sub": "SpeakWith picks the right tool for the job. Here's what each engine is great at.",
       "items": [
         {
-          "badge": "Free & Pro",
+          "badge": "Trial & Pro",
           "badgeKind": "free-paid",
           "name": "Apple",
-          "body": "Built into macOS. Instant, offline, and free. Perfect for quick dictation and everyday notes.",
+          "body": "Built into macOS. Instant and offline. Many spoken input languages for dictation, ideal for quick notes and everyday use.",
           "note": ""
         },
         {
-          "badge": "Pro",
-          "badgeKind": "paid",
+          "badge": "Trial & Pro",
+          "badgeKind": "free-paid",
           "name": "Whisper",
           "body": "Maximum robustness on tough audio: accents, background noise, crosstalk.",
           "note": ""
         },
         {
-          "badge": "Pro",
-          "badgeKind": "paid",
+          "badge": "Trial & Pro",
+          "badgeKind": "free-paid",
           "name": "Parakeet",
-          "body": "The speed champion. Near-instant transcription with excellent accuracy on clean audio.",
+          "body": "Live dictation and fast batch import. Words arrive as you speak; a whole imported file comes back in seconds, with excellent accuracy on clean English audio.",
           "note": ""
         },
         {
-          "badge": "Pro",
-          "badgeKind": "paid",
+          "badge": "Trial & Pro",
+          "badgeKind": "free-paid",
           "name": "Nemotron",
-          "body": "Live dictation in around 40 languages. Choose it when you dictate in German or another language besides English; on English, Parakeet stays a little sharper.",
+          "body": "Another live option alongside Apple and Parakeet. It streams as you speak, so words keep arriving at the same pace however long you talk.",
           "note": ""
         }
       ]
     },
+    "chooser": {
+      "heading": "Buy once, use everywhere",
+      "sub": "Buy on either store. Open the app on each device signed in to the same Apple Account, and SpeakWith Pro follows through iCloud.",
+      "both": {
+        "title": "On the App Store",
+        "body": "Subscribe to SpeakWith Pro on your iPhone or iPad. The same subscription also unlocks the direct Mac download.",
+        "ctaLabel": "See SpeakWith Pro"
+      },
+      "macOnly": {
+        "title": "Direct from Gumroad",
+        "body": "A membership, or buy once, on the Mac. Either one also unlocks Pro on your iPhone and iPad: session titles, polish and custom themes.",
+        "ctaLabel": "Start a 14-day free trial"
+      },
+      "note": "The monthly AI allowance comes with a monthly membership on either store; a one-time Gumroad license brings your own OpenAI key for AI on every device. The free trial stays on the Mac."
+    },
     "channels": {
       "heading": "Where to get SpeakWith",
-      "sub": "iPhone and iPad on the App Store. The Mac app is sold direct.",
+      "sub": "iPhone and iPad on the App Store. The Mac app is sold direct. Buy on either, and SpeakWith Pro follows your Apple Account: a Gumroad membership also unlocks Pro on your iPhone and iPad, and an App Store subscription also unlocks the direct Mac download.",
       "items": [
         {
           "lead": "App Store",
           "heading": "SpeakWith Pro on iPhone and iPad",
-          "body": "Live dictation transcribes on your iPhone with Apple Speech, and your transcripts stay on hand, organised by day. Projects are free and unlimited. Session titles and polish are SpeakWith Pro, with a 7-day free trial and the monthly allowance included. The price is shown in the App Store.",
-          "ctaLabel": "",
-          "ctaUrl": "",
+          "body": "Live dictation transcribes on your iPhone with Apple Speech, and your transcripts stay on hand, organised by day. Projects are free, up to 100. Session titles and polish are SpeakWith Pro, with a 7-day free trial and the monthly allowance included. The same subscription also unlocks the direct Mac download on a Mac signed in to the same Apple Account. The price is shown in the App Store.",
+          "ctaLabel": "Get the Mac app",
+          "ctaUrl": "https://ikisystems.gumroad.com/l/vkaxll",
           "ctaSecondaryLabel": "",
           "ctaSecondaryUrl": "",
           "ctaTertiaryLabel": "",
@@ -580,7 +636,7 @@
         {
           "lead": "Direct (Gumroad)",
           "heading": "Subscribe, or buy once",
-          "body": "The direct build unlocks with a Gumroad membership, billed monthly, that you can cancel any time. A monthly membership also includes the AI service behind session titles and polish, with a monthly allowance, so you do not need your own API key. If you would rather own it outright, a one-time license is still available; it brings your own key for optional AI. Either way you get the complete, unsandboxed version of SpeakWith, including the switch that types your dictation into other applications. Not sure yet? Start with a 14-day free trial. The Mac download is signed with our Developer ID and checked by Apple's notary service before we upload it.",
+          "body": "Unlock the direct build with a monthly membership you can cancel any time, or buy a one-time license. The membership includes the AI service for session titles and polish, with a monthly allowance; the one-time license uses your own OpenAI key. Both unlock Pro on your iPhone and iPad signed in to the same Apple Account, and both include the switch that types your dictation into other apps. Already subscribed on iPhone or iPad? Your subscription stands in for the membership here. Not sure yet? Start with a 14-day free trial. Every download is notarized by Apple.",
           "ctaLabel": "Subscribe",
           "ctaUrl": "https://ikisystems.gumroad.com/l/dcltnn",
           "ctaSecondaryLabel": "Buy once",
@@ -590,23 +646,28 @@
         }
       ]
     },
-    "finePrint": "Pro on the Mac (advanced engines, audio and video import, batch transcription, and smart formatting) is sold through a Gumroad membership, or through a one-time Gumroad purchase if you prefer to buy once. The monthly membership includes the AI service for session titles and polish, with a monthly allowance; the one-time purchase and the free trial use an OpenAI API key you provide or a local Ollama model instead. The Gumroad build includes a 14-day free trial that locks after 14 days until you subscribe or buy, and a switch that types your dictation into other applications. On iPhone and iPad, SpeakWith Pro comes with a 7-day free trial, and the App Store lists its price.",
+    "allowanceGuide": {
+      "chooserLabel": "How AI Usage reads that allowance.",
+      "finePrintLabel": "The window that shows the allowance.",
+      "path": "guides/ai-usage"
+    },
+    "finePrint": "Pro on the Mac (advanced engines, audio and video import, batch transcription, and smart formatting) is sold through a Gumroad membership or a one-time purchase. The membership includes the AI service with a monthly allowance; the one-time purchase and the free trial use an OpenAI key you provide or a local Ollama model. The 14-day trial locks until you subscribe or buy, and it does not carry to iPhone or iPad. On iPhone and iPad, SpeakWith Pro has a 7-day free trial, and the App Store lists its price.",
     "macHeading": "Mac",
     "ios": {
       "heading": "iPhone and iPad",
-      "sub": "SpeakWith Pro gates session titles and polish only. Projects stay free and unlimited.",
+      "sub": "SpeakWith Pro adds session titles, polish, and the Mac monthly membership. Projects stay free, up to 100.",
       "table": {
         "headers": {
           "feature": "Feature",
           "freeName": "Free",
           "freeTag": "No cost",
           "paidName": "Pro",
-          "paidTag": "Monthly"
+          "paidTag": "Monthly, or with your Mac licence"
         },
         "rows": {
           "liveDictation": {
             "feature": "Live dictation",
-            "subtitle": "Apple Speech, on the device"
+            "subtitle": "Apple Speech on the device, editable mid-take"
           },
           "dayDocs": {
             "feature": "Day documents and search",
@@ -614,8 +675,8 @@
           },
           "projects": {
             "feature": "Projects",
-            "free": "Unlimited",
-            "paid": "Unlimited"
+            "free": "Up to 100",
+            "paid": "Up to 100"
           },
           "titles": {
             "feature": "Session titles",
@@ -625,25 +686,44 @@
             "feature": "Polish a take",
             "subtitle": "Clean paragraphs, with the edits marked"
           },
+          "translate": {
+            "feature": "Translate a take",
+            "subtitle": "Dictate in one language and write it into another"
+          },
+          "themes": {
+            "feature": "Custom themes",
+            "subtitle": "Style the whole app your way"
+          },
+          "macApp": {
+            "feature": "Mac monthly membership",
+            "subtitle": "The direct Mac download, unlocked by your subscription"
+          },
           "allowance": {
             "feature": "AI allowance included",
-            "free": "·",
             "paid": "Monthly"
           },
           "price": {
             "feature": "Price",
             "freePrice": "Free",
-            "paidPrice": "Monthly, via the App Store",
-            "paidPriceSub": "7-day free trial."
+            "paidPrice": "Monthly via the App Store, or included with your Mac licence",
+            "paidPriceSub": "7-day free trial on the App Store."
           }
         }
+      },
+      "mac": {
+        "heading": "Use your subscription on your Mac",
+        "step1": "Download SpeakWith for Mac from the free trial listing on Gumroad. You pay nothing there.",
+        "step2": "Open SpeakWith on your iPhone or iPad once, so your subscription syncs through iCloud.",
+        "step3": "Open SpeakWith on a Mac signed in to the same Apple Account. It finds your subscription and unlocks as the monthly membership.",
+        "note": "The listing also emails you a 14-day trial key. You can ignore it while your subscription is active.",
+        "linkLabel": "Download SpeakWith for Mac"
       },
       "subscription": {
         "heading": "Subscription details",
         "summary": "SpeakWith Pro. Auto-renewing monthly subscription. The App Store shows the price, in your currency, before you subscribe.",
         "trial": "7-day free trial, then it renews unless you cancel at least 24 hours before the period ends.",
         "billing": "Payment is charged to your Apple Account. The subscription renews automatically unless cancelled at least 24 hours before the end of the period.",
-        "includes": "Included: session titles, polish, and a monthly AI allowance. Live dictation, day documents, search, and projects stay free.",
+        "includes": "Included: session titles, polish, a monthly AI allowance, and the monthly membership for the SpeakWith Mac app downloaded from our website. Live dictation, day documents, search, and projects stay free.",
         "manage": "Manage or cancel in the App Store app, under your account, then Subscriptions.",
         "termsLabel": "Terms of Use (EULA)",
         "privacyLabel": "Privacy Policy"
@@ -826,6 +906,12 @@
           "body": "For people who write programs: how a program on your Mac fills the Project and Model menus on the Agent tab.",
           "path": "technical/agent-lists",
           "cta": "Read the page"
+        },
+        {
+          "title": "Viewing your AI usage",
+          "body": "The AI Usage window shows a percentage for the whole membership, and the counts and daily bars for this Mac. The figures in the guide are an example.",
+          "path": "guides/ai-usage",
+          "cta": "Read the guide"
         }
       ]
     },
@@ -1511,6 +1597,100 @@
         "path": "guides/recorder-badge",
         "label": "See also: reading the recorder badge, the other lines the live panel header shows."
       }
+    },
+    "aiUsage": {
+      "eyebrow": "Guides",
+      "heading": "Viewing your AI usage",
+      "intro": "AI Usage is the window that shows how much of the included AI a monthly membership has used, and what this Mac spent it on. The figures in the diagram were invented for this guide. On the Mac, open the app menu and choose AI Usage…. On iPhone and iPad that reading sits under Settings, Session AI. You can also press and hold the meter row on the live panel.",
+      "diagramDark": "assets/guides/ai-usage-annotated.svg?v=20261105a",
+      "diagramLight": "assets/guides/ai-usage-annotated-light.svg?v=20261105a",
+      "diagramAlt": "Annotated example of the AI Usage window. The chrome reads Example. A gauge shows 47 percent beside the words this month. A box lists 126 polishes, 58 titles, and 7 regenerates, plus 12 calls on your own key, and the line Counted on this Mac. A bar chart for 1 to 5 November has a grey earlier column, with By feature selected beside By model. Six callouts name the period, the all-device gauge, counts rather than tokens, this Mac, the feature or model switch, and the grey column.",
+      "sections": [
+        {
+          "heading": "The gauge is every device",
+          "paragraphs": [
+            {
+              "text": "The bar at the top is the share of included AI used in the current period. A paid month labels that period this month. A trial labels it this week. There is no 1-day, 7-day, or 30-day control. The membership is in one period, and the window shows that period."
+            },
+            {
+              "text": "The percentage is the service's figure for the whole membership, every Mac and every iPhone on it. A polish on the phone and a title on the Mac move the same bar. The window prints a percentage. The terms guarantee no particular allowance, so no token ceiling appears."
+            }
+          ]
+        },
+        {
+          "heading": "What you did with it",
+          "paragraphs": [
+            {
+              "text": "Under the gauge, a box names the work the allowance paid for on this Mac. The line counts calls, and in the diagram it reads 126 polishes, 58 titles, and 7 regenerates. Tokens are the unit on the chart below."
+            },
+            {
+              "text": "Calls on an OpenAI key you supply are a second line. The plan is not charged for them, and they stay outside the gauge. That line reads 12."
+            },
+            {
+              "text": "The box ends with Counted on this Mac. Calls from the phone sit inside the percentage. They do not appear in this list."
+            }
+          ]
+        },
+        {
+          "heading": "Each day, on this Mac",
+          "paragraphs": [
+            {
+              "text": "The columns use the same scope as those counts: this Mac. Each column is one day in the period, stacked by the kind of work. By feature colours them Polish, Titles, and Regenerate. By model recolours those days by which model answered. That pair is the only picker."
+            },
+            {
+              "text": "The grey column, marked earlier, is usage this Mac has already counted that the chart cannot split into a day, a feature, or a model. It still belongs in the Mac's total."
+            }
+          ]
+        },
+        {
+          "heading": "Before any usage",
+          "paragraphs": [
+            {
+              "text": "Until the membership has used the service, the gauge stays off the page, and so does the chart. What remains is the standing note that the service comes with every plan."
+            },
+            {
+              "text": "Development builds can show a row for the cost of the service. That row is absent from the window everyone else sees, and this guide leaves it undescribed."
+            }
+          ]
+        },
+        {
+          "heading": "The names on the chart",
+          "paragraphs": [
+            {
+              "text": "Feature names are the app's own list: Polish, Regenerate, Translate, Feedback, Titles, Sends, and Other. The figure draws three of them. A real window lists only the kinds of work that have actually run on this Mac."
+            }
+          ]
+        },
+        {
+          "heading": "On the Mac and on the iPhone",
+          "paragraphs": [
+            {
+              "text": "On the Mac, the command is AI Usage… in the app menu. Holding the live panel's meter row for half a second opens the same window. On iPhone and iPad, the page is under Settings, then Session AI."
+            },
+            {
+              "text": "Opened from either device, the percentage stays the membership total, and the counts and bars stay the Mac's itemised record. The callouts keep that split visible."
+            }
+          ]
+        },
+        {
+          "heading": "These figures are an example",
+          "paragraphs": [
+            {
+              "text": "The gauge at 47 percent, the counts 126, 58, 7, and 12, the days from 1 November through 5 November, and the grey column at 38,000 were drawn for this page. They are a sample. They record no real membership, and they state no size for the allowance."
+            }
+          ]
+        }
+      ],
+      "seeAlso": [
+        {
+          "path": "pricing",
+          "label": "See also: pricing, where a monthly membership includes the allowance."
+        },
+        {
+          "path": "privacy",
+          "label": "See also: privacy, where the included AI service and its allowance are described."
+        }
+      ]
     }
   },
   "technical": {
@@ -1636,7 +1816,11 @@
             "isHtml": false
           },
           {
-            "text": "To confirm that your membership is current, the app sends a hashed form of your purchase credential. The service stores that hash, a hashed short-lived session token, your membership tier, and the time of first and most recent use. It does not store the credential itself, your name, or your email address. It keeps a monthly total of the tokens each membership has used, so it can apply the allowance. That ledger holds counts, not your words. These records live in Amazon Web Services, in the US West (Oregon) region.",
+            "text": "To confirm that your membership is current, the app sends your purchase credential over an encrypted connection, and the service checks it with the store that sold it. What the service keeps is a hash of that credential, which identifies your membership without being usable to buy or unlock anything, along with a hashed short-lived session token, your membership tier, and the time of first and most recent use. It does not store your name or your email address. It keeps a monthly total of the tokens each membership has used, so it can apply the allowance. That ledger holds counts, not your words. These records live in Amazon Web Services, in the US West (Oregon) region.",
+            "isHtml": false
+          },
+          {
+            "text": "Separately, if your Mac holds a licence and has iCloud sync turned on, it asks the service to hold your purchase credential so that an iPhone signed into the same iCloud account can reach what you have paid for without ever storing the credential itself. This happens on any licensed Mac, whether or not you use an iPhone, and for a one-time purchase as well as a membership. The copy the service keeps is encrypted, and the only thing that can open it is a token your Mac generates and passes to your other devices through your own private iCloud storage. The service keeps no copy of that token, so it cannot read your credential on its own, only while one of your devices presents the token to check your licence. Your Mac replaces the token periodically. Removing your licence on that Mac deletes the stored copy; until you do, it stays.",
             "isHtml": false
           },
           {
@@ -1646,6 +1830,10 @@
           {
             "text": "The allowance is a monthly ceiling on how much text the service will process for one membership. If it runs out, or the service is unavailable, the app offers to use an OpenAI API key you provide instead, and nothing is sent until you choose. A one-time purchase and the 14-day free trial do not include the service; they use your own key or, on the Mac, a local Ollama model.",
             "isHtml": false
+          },
+          {
+            "text": "The app shows that reading in AI Usage. <a href=\"/guides/ai-usage/\">The guide to viewing your AI usage</a> walks through the window: which figures cover every device, and which ones are this Mac.",
+            "isHtml": true
           }
         ]
       },
@@ -1702,15 +1890,6 @@
         "paragraphs": [
           {
             "text": "If this policy changes, the updated version will be posted here with a new date. Material changes will be summarised at the top of the page.",
-            "isHtml": false
-          }
-        ]
-      },
-      {
-        "heading": "Contact",
-        "paragraphs": [
-          {
-            "text": "Questions about privacy? Email support@ikisystems.com.",
             "isHtml": false
           }
         ]
@@ -1809,16 +1988,7 @@
             "isHtml": false
           },
           {
-            "text": "Pro includes session titles, polish, and a monthly AI allowance. Live dictation, day documents, search, and projects stay free and are not part of the subscription. The Mac app's Gumroad membership is a separate purchase and is not this App Store subscription.",
-            "isHtml": false
-          }
-        ]
-      },
-      {
-        "heading": "Contact",
-        "paragraphs": [
-          {
-            "text": "Questions about these terms: email support@ikisystems.com.",
+            "text": "Pro includes session titles, polish, and a monthly AI allowance. Live dictation, day documents, search, and projects stay free and are not part of the subscription. The Mac app's Gumroad membership is a separate purchase. While it is active, this subscription also unlocks the direct Mac download on a Mac signed in to the same Apple Account, on the same terms as the monthly membership; likewise, an active Gumroad membership or one-time license unlocks SpeakWith Pro on iPhone and iPad signed in to the same Apple Account.",
             "isHtml": false
           }
         ]

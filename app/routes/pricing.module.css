@@ -1,8 +1,9 @@
-/* From pricing.component.ts's `styles` block. */
-:host {
+/* From pricing.component.ts's `styles` block. <app-pricing> is light DOM, so
+   `:host` cannot scope these tokens. */
+app-pricing {
   --clr-check: #1f9d57;
 }
-:host-context(html[data-theme='dark']) {
+:global(html[data-theme='dark']) app-pricing {
   --clr-check: #22c55e;
 }
 
@@ -48,6 +49,16 @@
 .subscription p {
   margin: 0.35rem 0;
   color: var(--text-dim);
+}
+
+.subscription ol {
+  margin: 0.35rem 0 0.6rem;
+  padding-left: 1.3rem;
+  color: var(--text-dim);
+}
+
+.subscription li + li {
+  margin-top: 0.3rem;
 }
 
 /* Comparison table */
@@ -158,6 +169,19 @@ app-pricing tbody tr:last-child td {
   color: var(--accent-strong);
 }
 
+/* Long price copy wraps; a pill radius clips the text block — use a soft rect instead. */
+.price-label {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 0.5rem;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.45;
+  text-align: center;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent-strong);
+}
+
 /* Section headings */
 .section-title {
   font-size: 1.38rem;
@@ -258,6 +282,37 @@ app-pricing tbody tr:last-child td {
 .channel-grid :global(.card) .channel-cta--tertiary {
   margin: 0.9rem 0 0;
   font-size: 0.92rem;
+}
+
+/* "Which should I buy?" chooser: two equal columns above the channel cards */
+.chooser-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.chooser-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.chooser-card p {
+  margin-bottom: 0;
+  color: var(--text-dim);
+  font-size: 0.875rem;
+}
+
+.chooser-link {
+  display: inline-block;
+  margin-top: 0.9rem;
+  font-size: 0.92rem;
+}
+
+.chooser-note {
+  margin: 1rem auto 2.5rem;
+  font-size: 0.875rem;
+  color: var(--text-dim);
+  text-align: center;
+  max-width: 680px;
 }
 
 /* Fine print */

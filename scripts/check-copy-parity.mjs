@@ -26,7 +26,7 @@ const matrix = JSON.parse(readFileSync(resolve(dir, 'locales.json'), 'utf8'));
 const PINNED_KEYS = new Set([
   'id', 'src', 'srcLight', 'videoSrc', 'posterSrc', 'heroImageDark', 'heroImageLight', 'isHtml', 'wide', 'badgeKind',
   'ctaUrl', 'ctaSecondaryUrl', 'ctaTertiaryUrl', 'diagramDark', 'diagramLight',
-  'figureDark', 'figureLight', 'figureWidth', 'figureHeight', 'path', 'morePath',
+  'figureDark', 'figureLight', 'figureWidth', 'figureHeight', 'path', 'morePath', 'moreUrl',
 ]);
 const PINNED_SECTIONS = new Set(['links']);
 

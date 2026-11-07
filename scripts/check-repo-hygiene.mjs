@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Fail if a tracked file names a machine, a host or a port.
+// Fail if a tracked file names a machine, a host, a port or a mailbox.
 //
 // The site's own pages document commands people run on their own Mac, so the
 // rule cannot be "no paths" or "no URLs". It is narrower: nothing in this repo
@@ -26,6 +26,12 @@ const RULES = [
   [/\/Volumes\//g, 'absolute path to a mounted volume'],
   // `/Users/you/...` is the placeholder the docs use on purpose.
   [/\/Users\/(?!you\b)[A-Za-z0-9._-]+/g, 'absolute path naming a home directory'],
+  // A published address is a mailbox for whoever finds it first, and the
+  // footer no longer has one: contact routes through an HTTPS page. The rule
+  // matches the address, not the `mailto:` scheme — a scheme rule would fail
+  // over scripts/lib/html-compare.mjs, which legitimately names it, and would
+  // miss the address written as plain prose.
+  [/\b[\w.+-]+@ikisystems\.com\b/g, 'published email address'],
 ];
 
 // Binary and lock files: the first carries no prose, the second is a registry
@@ -123,8 +129,9 @@ for (const rel of files) {
 if (problems.length) {
   console.error(`check-repo-hygiene: ${problems.length} problem(s) across ${scanned} file(s)`);
   for (const p of problems) console.error(`  ${p}`);
-  console.error('\nRead a port off the running service instead of printing one, and keep');
-  console.error('machine-specific paths out of tracked files.');
+  console.error('\nRead a port off the running service instead of printing one, keep');
+  console.error('machine-specific paths out of tracked files, and route contact through an');
+  console.error('HTTPS page rather than publishing an address.');
   process.exit(1);
 }
 console.log(`check-repo-hygiene: ok — ${scanned} text file(s), no address or port literals`);

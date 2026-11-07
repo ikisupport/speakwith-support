@@ -1,6 +1,6 @@
-# SpeakWith support website
+# SpeakWith website
 
-The official help site for [SpeakWith](https://speakwith.ikisystems.com) — a
+The official website for [SpeakWith](https://speakwith.ikisystems.com) — a
 local-first voice recorder for Mac that turns daily speaking into a searchable,
 organised daily document. This repo holds the whole site: the guides, the
 pricing page, the privacy policy and the terms.

@@ -30,7 +30,11 @@ Per `copy.<locale>.json`, against `copy.json`:
 - values that are not prose (asset paths, ids, URLs, booleans, `badgeKind`)
   must be byte-identical to English, so a translation cannot accidentally
   retarget a screenshot or a purchase link;
-- no em dash (U+2014) anywhere — the house style uses a spaced hyphen.
+- no em dash (U+2014) anywhere. A spaced hyphen (` - `) is not the
+  substitute: rewrite the sentence per [`STYLE.md`](STYLE.md) § Punctuation,
+  which is the authority on house punctuation (including whether a string
+  takes a trailing period). This parity check enforces only the em dash;
+  the rest of STYLE.md is enforced by review.
 
 A section a locale omits falls back to English at runtime, which is how the
 privacy policy and terms ship English-canonical everywhere.

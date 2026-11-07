@@ -7,7 +7,7 @@ import { cx } from '../lib/cx';
 import css from './pricing.module.css';
 
 /**
- * Pricing matrix: Free vs. Paid feature comparison, engine callout, and
+ * Pricing matrix: iOS Free vs. Pro and Mac trial vs. Pro, engine callout, and
  * two-channel distribution overview. Uses a wider .pricing-wrap (960px)
  * instead of .container so the table and engine grid have room to breathe.
  */
@@ -81,30 +81,57 @@ export default function Pricing() {
                   </tr>
                   <tr>
                     <td className={css.feat}>{copy.pricing.ios.table.rows.titles.feature}<small>{copy.pricing.ios.table.rows.titles.subtitle}</small></td>
-                    <td className={css.cell}><span className={css.dash}>·</span></td>
+                    <td className={css.cell}><span className={css.dash}>&mdash;</span></td>
                     <td className={css.cell}><span className={css.check}>&#10003;</span></td>
                   </tr>
                   <tr>
                     <td className={css.feat}>{copy.pricing.ios.table.rows.polish.feature}<small>{copy.pricing.ios.table.rows.polish.subtitle}</small></td>
-                    <td className={css.cell}><span className={css.dash}>·</span></td>
+                    <td className={css.cell}><span className={css.dash}>&mdash;</span></td>
+                    <td className={css.cell}><span className={css.check}>&#10003;</span></td>
+                  </tr>
+                  <tr>
+                    <td className={css.feat}>{copy.pricing.ios.table.rows.translate.feature}<small>{copy.pricing.ios.table.rows.translate.subtitle}</small></td>
+                    <td className={css.cell}><span className={css.dash}>&mdash;</span></td>
+                    <td className={css.cell}><span className={css.check}>&#10003;</span></td>
+                  </tr>
+                  <tr>
+                    <td className={css.feat}>{copy.pricing.ios.table.rows.themes.feature}<small>{copy.pricing.ios.table.rows.themes.subtitle}</small></td>
+                    <td className={css.cell}><span className={css.dash}>&mdash;</span></td>
+                    <td className={css.cell}><span className={css.check}>&#10003;</span></td>
+                  </tr>
+                  <tr>
+                    <td className={css.feat}>{copy.pricing.ios.table.rows.macApp.feature}<small>{copy.pricing.ios.table.rows.macApp.subtitle}</small></td>
+                    <td className={css.cell}><span className={css.dash}>&mdash;</span></td>
                     <td className={css.cell}><span className={css.check}>&#10003;</span></td>
                   </tr>
                   <tr>
                     <td className={css.feat}>{copy.pricing.ios.table.rows.allowance.feature}</td>
-                    <td className={css.cell}><span className={css.dash}>{copy.pricing.ios.table.rows.allowance.free}</span></td>
+                    <td className={css.cell}><span className={css.dash}>&mdash;</span></td>
                     <td className={css.cell}><span className={css.val}>{copy.pricing.ios.table.rows.allowance.paid}</span></td>
                   </tr>
                   <tr className={css['price-row']}>
                     <td className={css.feat}>{copy.pricing.ios.table.rows.price.feature}</td>
                     <td className={css.cell}><span className={css['price-free']}>{copy.pricing.ios.table.rows.price.freePrice}</span></td>
                     <td className={css.cell}>
-                      <span className={css['coming-soon']}>{copy.pricing.ios.table.rows.price.paidPrice}</span><br />
+                      <span className={css['price-label']}>{copy.pricing.ios.table.rows.price.paidPrice}</span><br />
                       <small>{copy.pricing.ios.table.rows.price.paidPriceSub}</small>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
+            <aside className={css.subscription}>
+              <h3>{copy.pricing.ios.mac.heading}</h3>
+              <ol>
+                <li>{copy.pricing.ios.mac.step1}</li>
+                <li>{copy.pricing.ios.mac.step2}</li>
+                <li>{copy.pricing.ios.mac.step3}</li>
+              </ol>
+              <p>{copy.pricing.ios.mac.note}</p>
+              <a className={cx("button", "button--primary", css['channel-cta'])} href={copy.links.trialMacGumroad}
+                 target="_blank" rel="noopener noreferrer"
+                 onClick={() => signal('cta.trial_gumroad', { placement: 'pricing_ios_mac_steps' })}>{copy.pricing.ios.mac.linkLabel}</a>
+            </aside>
             <aside className={css.subscription}>
               <h3>{copy.pricing.ios.subscription.heading}</h3>
               <p>{copy.pricing.ios.subscription.summary}</p>
@@ -155,17 +182,27 @@ export default function Pricing() {
                   </tr>
                   <tr>
                     <td className={css.feat}>{copy.pricing.table.rows.importMedia.feature}<small>{copy.pricing.table.rows.importMedia.subtitle}</small></td>
-                    <td className={css.cell}><span className={css.dash}>·</span></td>
                     <td className={css.cell}><span className={css.check}>&#10003;</span></td>
-                  </tr>
-                  <tr>
-                    <td className={css.feat}>{copy.pricing.table.rows.batch.feature}<small>{copy.pricing.table.rows.batch.subtitle}</small></td>
-                    <td className={css.cell}><span className={css.dash}>·</span></td>
                     <td className={css.cell}><span className={css.check}>&#10003;</span></td>
                   </tr>
                   <tr>
                     <td className={css.feat}>{copy.pricing.table.rows.formatting.feature}<small>{copy.pricing.table.rows.formatting.subtitle}</small></td>
-                    <td className={css.cell}><span className={css.dash}>·</span></td>
+                    <td className={css.cell}><span className={css.check}>&#10003;</span></td>
+                    <td className={css.cell}><span className={css.check}>&#10003;</span></td>
+                  </tr>
+                  <tr>
+                    <td className={css.feat}>{copy.pricing.table.rows.translate.feature}<small>{copy.pricing.table.rows.translate.subtitle}</small></td>
+                    <td className={css.cell}><span className={css.check}>&#10003;</span></td>
+                    <td className={css.cell}><span className={css.check}>&#10003;</span></td>
+                  </tr>
+                  <tr>
+                    <td className={css.feat}>{copy.pricing.table.rows.themes.feature}<small>{copy.pricing.table.rows.themes.subtitle}</small></td>
+                    <td className={css.cell}><span className={css.dash}>&mdash;</span></td>
+                    <td className={css.cell}><span className={css.check}>&#10003;</span></td>
+                  </tr>
+                  <tr>
+                    <td className={css.feat}>{copy.pricing.table.rows.iosPro.feature}<small>{copy.pricing.table.rows.iosPro.subtitle}</small></td>
+                    <td className={css.cell}><span className={css.dash}>&mdash;</span></td>
                     <td className={css.cell}><span className={css.check}>&#10003;</span></td>
                   </tr>
                   <tr>
@@ -206,13 +243,34 @@ export default function Pricing() {
       ))}
             </div>
 
+            {/* Which should I buy? Two columns of equal weight: the answer is which devices
+                the reader owns, so there is no "recommended" badge. Each column links to the
+                matching channel card below; the disclaimer sits outside both columns on purpose. */}
+            <h2 className={css['section-title']}>{copy.pricing.chooser.heading}</h2>
+            <p className={css['section-sub']}>{copy.pricing.chooser.sub}</p>
+            <div className={css['chooser-grid']}>
+              <div className={cx("card", css['chooser-card'])}>
+                <h3>{copy.pricing.chooser.both.title}</h3>
+                <p>{copy.pricing.chooser.both.body}</p>
+                <a className={css['chooser-link']} href="#channel-app-store"
+                   onClick={() => signal('pricing.chooser', { placement: 'pricing_chooser', choice: 'both' })}>{copy.pricing.chooser.both.ctaLabel}</a>
+              </div>
+              <div className={cx("card", css['chooser-card'])}>
+                <h3>{copy.pricing.chooser.macOnly.title}</h3>
+                <p>{copy.pricing.chooser.macOnly.body}</p>
+                <a className={css['chooser-link']} href="#channel-gumroad"
+                   onClick={() => signal('pricing.chooser', { placement: 'pricing_chooser', choice: 'mac_only' })}>{copy.pricing.chooser.macOnly.ctaLabel}</a>
+              </div>
+            </div>
+            <p className={css['chooser-note']}>{copy.pricing.chooser.note}</p>
+
             {/* Distribution channels */}
             <h2 className={css['section-title']}>{copy.pricing.channels.heading}</h2>
             <p className={css['section-sub']}>{copy.pricing.channels.sub}</p>
             <div className={css['channel-grid']}>
               {copy.pricing.channels.items.map((ch, $index) => (
       <Fragment key={ch.heading}>
-                <div className="card">
+                <div className="card" id={$index === 0 ? 'channel-app-store' : 'channel-gumroad'}>
                   <span className={css['channel-lead']}>{ch.lead}</span>
                   <h3>{ch.heading}</h3>
                   <p>{ch.body}</p>
