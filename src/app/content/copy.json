@@ -130,8 +130,8 @@
     },
     "moments": {
       "title": "Words land as you speak, and you can edit them live.",
-      "heroImageDark": "canonical_screenshots/hero.png?v=20261030c",
-      "heroImageLight": "canonical_screenshots/hero-light.png?v=20261030c",
+      "heroImageDark": "canonical_screenshots/hero.png?v=20261112a",
+      "heroImageLight": "canonical_screenshots/hero-light.png?v=20261112a",
       "heroAlt": "SpeakWith for Mac in live dictation: spoken words landing as transcribed lines under a live waveform, with misheard names corrected in place and a session title suggested alongside.",
       "heroCaption": "Speak, and watch the subtitles for your thoughts take shape before the idea slips away. Optional polish tidies the finished take and shows what it touched before you apply it. Session titles are optional too: a monthly membership includes the AI service that writes them, or an OpenAI API key you provide, a local Ollama model on your Mac, or write your own."
     },
@@ -408,7 +408,7 @@
         },
         {
           "q": "Does using SpeakWith change how I speak?",
-          "a": "It can, through quiet feedback. While you record, a small meter shows the pauses inside what you are saying, something you can glance at without breaking your train of thought. Over weeks, you may hold a topic together longer and let it land in a single, coherent piece. Your daily document gets easier to work with, and so can the way you speak to people away from the screen."
+          "a": "It can, through quiet feedback. While you record, a small meter shows the pauses inside what you are saying, including each “uh” and “um”, something you can glance at without breaking your train of thought. Watching those marks as you speak is what changes the habit: the same fillers keep appearing on the meter, session after session, until you stop saying them. Over weeks, you may hold a topic together longer and let it land in a single, coherent piece. Your daily document gets easier to work with, and so can the way you speak to people away from the screen."
         },
         {
           "q": "Can I import audio and video I already have?",

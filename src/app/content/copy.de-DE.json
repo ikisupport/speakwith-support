@@ -122,8 +122,8 @@
     },
     "moments": {
       "title": "Deine Wörter erscheinen. Während du sprichst.",
-      "heroImageDark": "canonical_screenshots/hero.png?v=20261030c",
-      "heroImageLight": "canonical_screenshots/hero-light.png?v=20261030c",
+      "heroImageDark": "canonical_screenshots/hero.png?v=20261112a",
+      "heroImageLight": "canonical_screenshots/hero-light.png?v=20261112a",
       "heroAlt": "SpeakWith für Mac im Live-Diktat: gesprochene Wörter landen als transkribierte Zeilen unter einer Live-Wellenform, falsch verstandene Namen werden an Ort und Stelle korrigiert, und daneben wird ein Titel für die Sitzung vorgeschlagen.",
       "heroCaption": "Sprich und sieh zu, wie die Untertitel deiner Gedanken Gestalt annehmen, bevor dir die Idee entgleitet. Optionaler Feinschliff bringt die fertige Aufnahme in Form und zeigt, was er verändert hat, bevor du ihn anwendest. Sitzungstitel sind ebenfalls optional: Eine monatliche Mitgliedschaft umfasst den KI-Dienst, der sie schreibt, oder du gibst einen OpenAI-API-Schlüssel an, nutzt ein lokales Ollama-Modell auf deinem Mac oder schreibst sie selbst."
     },
