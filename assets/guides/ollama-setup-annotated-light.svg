@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" font-family="SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title>Ollama on this Mac, an example</title>
+  <desc>Constructed diagram of ollama list, the Session AI Ollama section, and the AI sidebar warm controls. The tags are examples. SpeakWith does not read the list.</desc>
+  <defs>
+    <style>
+      .title { font-size: 34px; font-weight: 700; fill: #1D1D1F; }
+      .subtitle { font-size: 18px; fill: #515154; }
+      .win-title { font-size: 15px; font-weight: 650; fill: #1D1D1F; }
+      .example { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; fill: #C93400; }
+      .term { font-family: ui-monospace, SF Mono, Menlo, Consolas, monospace; font-size: 16px; fill: #F5F5F7; }
+      .prompt { font-family: ui-monospace, SF Mono, Menlo, Consolas, monospace; font-size: 16px; fill: #248A3D; }
+      .dim { font-size: 14px; fill: #6E6E73; }
+      .section { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; fill: #6E6E73; }
+      .row { font-size: 16px; font-weight: 600; fill: #1D1D1F; }
+      .caption { font-size: 14px; fill: #3A3A3C; }
+      .field { font-family: ui-monospace, SF Mono, Menlo, Consolas, monospace; font-size: 15px; fill: #1D1D1F; }
+      .placeholder { font-family: ui-monospace, SF Mono, Menlo, Consolas, monospace; font-size: 14px; fill: #6E6E73; }
+      .err { font-family: ui-monospace, SF Mono, Menlo, Consolas, monospace; font-size: 14px; font-weight: 650; fill: #D70015; }
+      .pill { font-size: 14px; font-weight: 650; }
+      .banner { font-size: 16px; font-weight: 700; fill: #8A5A00; }
+      .call-head { font-size: 16px; font-weight: 700; fill: #1D1D1F; }
+      .call-body { font-size: 14px; fill: #3A3A3C; }
+      .box-call { fill: #F2F2F7; stroke: #D2D2D7; stroke-width: 1.5; }
+      .leader { stroke: #D70015; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; opacity: 0.85; }
+      .pin-num { font-size: 16px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect width="1600" height="980" fill="#F5F5F7"/>
+  <rect x="1.5" y="1.5" width="1597" height="977" rx="26" fill="none" stroke="#B0B0B8" stroke-width="3"/>
+<text class="title" x="48" y="64">Ollama on this Mac</text>
+<text class="subtitle" x="48" y="98">Example tags, drawn for this guide. SpeakWith never reads the list itself.</text>
+<rect x="40" y="124" width="980" height="214" rx="14" fill="#FFFFFF" stroke="#C7C7CC" stroke-width="1.5"/>
+<circle cx="62" cy="146" r="5.5" fill="#D2D2D7"/>
+<circle cx="80" cy="146" r="5.5" fill="#D2D2D7"/>
+<circle cx="98" cy="146" r="5.5" fill="#D2D2D7"/>
+<text class="win-title" x="530" y="151" text-anchor="middle">Terminal</text>
+<text class="example" x="1002" y="150" text-anchor="end">EXAMPLE</text>
+<line x1="54" y1="166" x2="1006" y2="166" stroke="#D2D2D7" stroke-width="1"/>
+<rect x="60" y="180" width="940" height="142" rx="10" fill="#1D1D1F"/>
+<text class="prompt" x="76" y="208">$ ollama list</text>
+<text class="dim" x="76" y="238">NAME                  SIZE</text>
+<text class="term" x="76" y="266">llama3.1:8b           4.9 GB</text>
+<text class="term" x="76" y="294">qwen3:8b              5.2 GB</text>
+<text class="term" x="76" y="322">nomic-embed-text      274 MB</text>
+<rect x="40" y="356" width="980" height="318" rx="14" fill="#FFFFFF" stroke="#C7C7CC" stroke-width="1.5"/>
+<circle cx="62" cy="378" r="5.5" fill="#D2D2D7"/>
+<circle cx="80" cy="378" r="5.5" fill="#D2D2D7"/>
+<circle cx="98" cy="378" r="5.5" fill="#D2D2D7"/>
+<text class="win-title" x="530" y="383" text-anchor="middle">Settings  ·  Session AI</text>
+<text class="example" x="1002" y="382" text-anchor="end">EXAMPLE</text>
+<line x1="54" y1="398" x2="1006" y2="398" stroke="#D2D2D7" stroke-width="1"/>
+<text class="row" x="64" y="428">Provider</text>
+<rect x="260" y="408" width="66" height="28" rx="14" fill="#FFFFFF" stroke="#C7C7CC" stroke-width="1.25"/>
+<text class="pill" x="293" y="427" text-anchor="middle" fill="#515154">OpenAI</text>
+<rect x="370" y="408" width="66" height="28" rx="14" fill="#007AFF" stroke="#007AFF" stroke-width="1.25"/>
+<text class="pill" x="403" y="427" text-anchor="middle" fill="#FFFFFF">Ollama</text>
+<text class="section" x="64" y="464">OLLAMA</text>
+<text class="caption" x="64" y="488">Local, no key. Any tag from ollama list. The daemon must be running on this Mac.</text>
+<text class="row" x="64" y="528">Title model</text>
+<rect x="260" y="506" width="420" height="32" rx="7" fill="#FFFFFF" stroke="#C7C7CC" stroke-width="1.25"/>
+<text class="field" x="272" y="527">llama3.1:8b</text>
+<text class="row" x="64" y="570">Polish model</text>
+<rect x="260" y="548" width="420" height="32" rx="7" fill="#FFFFFF" stroke="#C7C7CC" stroke-width="1.25"/>
+<text class="placeholder" x="272" y="569">blank = same as the title model</text>
+<text class="row" x="64" y="612">Context</text>
+<rect x="260" y="590" width="220" height="32" rx="7" fill="#FFFFFF" stroke="#C7C7CC" stroke-width="1.25"/>
+<text class="field" x="272" y="611">16k</text>
+<text class="row" x="64" y="654">Keep warm</text>
+<rect x="260" y="632" width="220" height="32" rx="7" fill="#FFFFFF" stroke="#C7C7CC" stroke-width="1.25"/>
+<text class="field" x="272" y="653">15 minutes</text>
+<rect x="40" y="692" width="980" height="248" rx="14" fill="#FFFFFF" stroke="#C7C7CC" stroke-width="1.5"/>
+<circle cx="62" cy="714" r="5.5" fill="#D2D2D7"/>
+<circle cx="80" cy="714" r="5.5" fill="#D2D2D7"/>
+<circle cx="98" cy="714" r="5.5" fill="#D2D2D7"/>
+<text class="win-title" x="530" y="719" text-anchor="middle">AI sidebar  ·  Session title</text>
+<text class="example" x="1002" y="718" text-anchor="end">EXAMPLE</text>
+<line x1="54" y1="734" x2="1006" y2="734" stroke="#D2D2D7" stroke-width="1"/>
+<text class="row" x="64" y="764">Ollama model</text>
+<text class="field" x="260" y="764">llama3.1:8b</text>
+<rect x="64" y="788" width="94" height="30" rx="8" fill="#FFFFFF" stroke="#C7C7CC" stroke-width="1.25"/>
+<text class="row" x="111" y="808" text-anchor="middle">Warm now</text>
+<rect x="173.6" y="788" width="77" height="30" rx="8" fill="#FFFFFF" stroke="#C7C7CC" stroke-width="1.25"/>
+<text class="row" x="212" y="808" text-anchor="middle">Unload</text>
+<text class="caption" x="64" y="856">Whole session fits. 16k context, kept 15 minutes.</text>
+<text class="err" x="64" y="896">Ollama HTTP 404 model 'llama3.1' not found</text>
+  <g id="callout-1">
+    <path class="leader" d="M 1088 238 L 1028 238"/>
+    <circle cx="1028" cy="238" r="5" fill="#D70015"/>
+    <rect class="box-call" x="1088" y="199" width="472" height="78" rx="10"/>
+    <text class="call-head" x="1128" y="223">This list is the menu</text>
+    <text class="call-body" x="1128" y="245">You type a NAME from it.</text>
+    <text class="call-body" x="1128" y="263">The app never fetches the list.</text>
+    <circle cx="1108" cy="238" r="13" fill="#D70015"/>
+    <text class="pin-num" x="1108" y="243">1</text>
+  </g>
+  <g id="callout-2">
+    <path class="leader" d="M 1088.0 330.0 L 1070.0 330.0 Q 1066.0 330.0 1066.0 326.0 L 1066.0 326.0 Q 1066.0 322.0 1062.0 322.0 L 1028.0 322.0"/>
+    <circle cx="1028" cy="322" r="5" fill="#D70015"/>
+    <rect class="box-call" x="1088" y="291" width="472" height="78" rx="10"/>
+    <text class="call-head" x="1128" y="315">Cannot write a title</text>
+    <text class="call-body" x="1128" y="337">An embedding model only embeds.</text>
+    <text class="call-body" x="1128" y="355">It cannot chat.</text>
+    <circle cx="1108" cy="330" r="13" fill="#D70015"/>
+    <text class="pin-num" x="1108" y="335">2</text>
+  </g>
+  <g id="callout-3">
+    <path class="leader" d="M 1088 422 L 1028 422"/>
+    <circle cx="1028" cy="422" r="5" fill="#D70015"/>
+    <rect class="box-call" x="1088" y="383" width="472" height="78" rx="10"/>
+    <text class="call-head" x="1128" y="407">One switch, no key</text>
+    <text class="call-body" x="1128" y="429">Provider set to Ollama.</text>
+    <text class="call-body" x="1128" y="447">Nothing to paste in.</text>
+    <circle cx="1108" cy="422" r="13" fill="#D70015"/>
+    <text class="pin-num" x="1108" y="427">3</text>
+  </g>
+  <g id="callout-4">
+    <path class="leader" d="M 1088 522 L 1028 522"/>
+    <circle cx="1028" cy="522" r="5" fill="#D70015"/>
+    <rect class="box-call" x="1088" y="483" width="472" height="78" rx="10"/>
+    <text class="call-head" x="1128" y="507">Type name:tag</text>
+    <text class="call-body" x="1128" y="529">Bare llama3.1 means</text>
+    <text class="call-body" x="1128" y="547">llama3.1:latest.</text>
+    <circle cx="1108" cy="522" r="13" fill="#D70015"/>
+    <text class="pin-num" x="1108" y="527">4</text>
+  </g>
+  <g id="callout-5">
+    <path class="leader" d="M 1088.0 614.0 L 1070.0 614.0 Q 1066.0 614.0 1066.0 610.0 L 1066.0 610.0 Q 1066.0 606.0 1062.0 606.0 L 1028.0 606.0"/>
+    <circle cx="1028" cy="606" r="5" fill="#D70015"/>
+    <rect class="box-call" x="1088" y="575" width="472" height="78" rx="10"/>
+    <text class="call-head" x="1128" y="599">Memory follows the step</text>
+    <text class="call-body" x="1128" y="621">4k, 8k, 16k, or 32k.</text>
+    <text class="call-body" x="1128" y="639">A larger step reserves more.</text>
+    <circle cx="1108" cy="614" r="13" fill="#D70015"/>
+    <text class="pin-num" x="1108" y="619">5</text>
+  </g>
+  <g id="callout-6">
+    <path class="leader" d="M 1088.0 706.0 L 1077.0 706.0 Q 1066.0 706.0 1066.0 695.0 L 1066.0 666.0 Q 1066.0 648.0 1048.0 648.0 L 1028.0 648.0"/>
+    <circle cx="1028" cy="648" r="5" fill="#D70015"/>
+    <rect class="box-call" x="1088" y="667" width="472" height="78" rx="10"/>
+    <text class="call-head" x="1128" y="691">Title tag only</text>
+    <text class="call-body" x="1128" y="713">Keep warm holds that name.</text>
+    <text class="call-body" x="1128" y="731">A different polish tag loads cold.</text>
+    <circle cx="1108" cy="706" r="13" fill="#D70015"/>
+    <text class="pin-num" x="1108" y="711">6</text>
+  </g>
+  <g id="callout-7">
+    <path class="leader" d="M 1088 896 L 1028 896"/>
+    <circle cx="1028" cy="896" r="5" fill="#D70015"/>
+    <rect class="box-call" x="1088" y="857" width="472" height="78" rx="10"/>
+    <text class="call-head" x="1128" y="881">Warm before Generate</text>
+    <text class="call-body" x="1128" y="903">The red line names the miss.</text>
+    <text class="call-body" x="1128" y="921">Paste the NAME, colon included.</text>
+    <circle cx="1108" cy="896" r="13" fill="#D70015"/>
+    <text class="pin-num" x="1108" y="901">7</text>
+  </g>
+</svg>
