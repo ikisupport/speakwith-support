@@ -30,6 +30,7 @@ const MODULES: Record<string, string> = {
   'guides/context-aware-insertion': 'routes/guides.context-aware-insertion.tsx',
   'guides/language-learning': 'routes/guides.language-learning.tsx',
   'guides/ai-usage': 'routes/guides.ai-usage.tsx',
+  'guides/ollama-setup': 'routes/guides.ollama-setup.tsx',
   'technical/agent-lists': 'routes/technical.agent-lists.tsx',
   privacy: 'routes/privacy.tsx',
   terms: 'routes/terms.tsx',

@@ -90,6 +90,10 @@
       "title": "Deine KI-Nutzung ansehen | SpeakWith",
       "description": "So liest du die KI-Nutzung auf dem Mac und dem iPhone: Der Prozentsatz umfasst alle Geräte, die Zahlen und Balken gelten für diesen Mac, und das Diagramm verwendet Beispielzahlen."
     },
+    "guidesOllamaSetup": {
+      "title": "Ollama auf deinem Mac einrichten | SpeakWith",
+      "description": "Installiere Ollama, lade ein Chat-Modell herunter und tippe genau dieses Tag für Sitzungstitel und Feinschliff in SpeakWith ein. Der Name muss mit ollama list übereinstimmen, Doppelpunkt inklusive. Nur auf dem Mac."
+    },
     "technicalAgentLists": {
       "title": "Projekt- und Modelllisten | SpeakWith",
       "description": "Wie ein Programm auf deinem Mac das Projektmenü und das Modellmenü im Agent-Tab von SpeakWith von Gumroad füllt: ein lokaler Aufruf für die Ordner und zwei Wege, die Modelle zu übergeben."
@@ -111,21 +115,36 @@
       "eyebrow": "Ein Sprache-zu-Text-Tagebuch",
       "headline": "Untertitel für deine Gedanken.",
       "lead": "Sprich deinen Tag in eine saubere Markdown-Datei auf deinem Mac. Lies sie, bearbeite sie, teile sie. Sie funktioniert für sich allein und öffnet sich in VS Code, Obsidian oder jedem anderen Werkzeug, auf das du sie richtest.",
-      "translateLine": "Sprich in einer Sprache und lies die Übersetzung in einer anderen.",
-      "leadSecondary": "In App tippen. Nutze den Rekorder-Schalter oder einen Hotkey, und die Wörter landen dort, wo der Cursor steht.",
+      "leadSecondary": "Diktiere in jede App, lies deine Worte in einer anderen Sprache und sieh, was du dazu schon einmal gesagt hast.",
       "ctaPrimary": "SpeakWith kostenlos testen",
-      "ctaSecondary": "iPhone und iPad: SpeakWith Pro",
       "ctaGhost": "So funktioniert es",
       "ctaIos": "Sieh dir die iPhone-App an",
-      "note": "Verfügbar auf Mac, iPhone und iPad. Aufnahme und Transkription laufen auf deinem Gerät.",
+      "note": "Verfügbar auf Mac, iPhone und iPad. Aufnahme und Transkription laufen auf deinem Gerät, und auf dem Mac auch der Abgleich mit deinen früheren Sitzungen.",
       "ctaDemo": "Beim Tippen zusehen"
     },
     "moments": {
       "title": "Deine Wörter erscheinen. Während du sprichst.",
-      "heroImageDark": "canonical_screenshots/hero.png?v=20261112a",
-      "heroImageLight": "canonical_screenshots/hero-light.png?v=20261112a",
-      "heroAlt": "SpeakWith für Mac im Live-Diktat: gesprochene Wörter landen als transkribierte Zeilen unter einer Live-Wellenform, falsch verstandene Namen werden an Ort und Stelle korrigiert, und daneben wird ein Titel für die Sitzung vorgeschlagen.",
-      "heroCaption": "Sprich und sieh zu, wie die Untertitel deiner Gedanken Gestalt annehmen, bevor dir die Idee entgleitet. Optionaler Feinschliff bringt die fertige Aufnahme in Form und zeigt, was er verändert hat, bevor du ihn anwendest. Sitzungstitel sind ebenfalls optional: Eine monatliche Mitgliedschaft umfasst den KI-Dienst, der sie schreibt, oder du gibst einen OpenAI-API-Schlüssel an, nutzt ein lokales Ollama-Modell auf deinem Mac oder schreibst sie selbst."
+      "heroImageDark": "canonical_screenshots/hero.png?v=20261113a",
+      "heroImageLight": "canonical_screenshots/hero-light.png?v=20261113a",
+      "heroAlt": "SpeakWith für den Mac beim Live-Diktieren: gesprochene Worte landen als transkribierte Zeilen unter einer Live-Wellenform, daneben ein Sitzungstitel und eine Fassung der Aufnahme mit Feinschliff, und rechts eine Liste verwandter Sitzungen, die unter einer kurzen Zusammenfassung steht und frühere Sitzungen zum selben Thema zeigt.",
+      "heroCaption": "Sprich, und sieh zu, wie die Untertitel deiner Gedanken Gestalt annehmen, bevor die Idee entgleitet.",
+      "heroPointsHeading": "In der monatlichen Mitgliedschaft enthalten",
+      "heroPointsLead": "Der KI-Dienst ist integriert und einsatzbereit. Wenn du es vorziehst, verbinde deinen eigenen OpenAI-API-Schlüssel oder lass ein lokales Ollama-Modell auf deinem Mac laufen.",
+      "heroPoints": [
+        {
+          "label": "Sitzungstitel",
+          "body": "Markdown-Überschriften, die dein Tagesdokument Sitzung für Sitzung gliedern. Mit dem KI-Dienst kann jeder Titel automatisch für dich geschrieben werden. Oder schreib deine eigenen."
+        },
+        {
+          "label": "Feinschliff",
+          "body": "Er räumt die fertige Aufnahme auf, damit sie leichter zu lesen ist, und zeigt, was er geändert hat, bevor du ihn anwendest. Du behältst eine saubere Kopie, bereit zum Archivieren oder Teilen."
+        },
+        {
+          "label": "Verwandte Sitzungen",
+          "body": "Bezieht deine früheren Sitzungen zum gleichen Thema ein, während du sprichst, damit du weißt, worüber du schon gesprochen hast. Der KI-Dienst ergänzt sie im direkten Mac-Build um eine kurze Zusammenfassung."
+        }
+      ],
+      "heroPointsCta": "Sieh, was eine Mitgliedschaft enthält"
     },
     "platforms": {
       "eyebrow": "Mac, iPhone und iPad",
@@ -266,7 +285,7 @@
       "items": [
         {
           "label": "Lokal.",
-          "body": "Deine Aufnahmen verlassen deinen Mac nie. Optionale Sitzungstitel und optionaler Feinschliff senden Transkripttext, nie Audio, und nur wenn du sie einschaltest. Eine monatliche Mitgliedschaft enthält einen KI-Dienst für diesen Text. Sonst läuft er auf einem lokalen Ollama-Modell oder mit einem OpenAI-API-Schlüssel, den du angibst. Auf iPhone und iPad enthält SpeakWith Pro diesen Dienst für Titel und Feinschliff.",
+          "body": "Deine Aufnahmen verlassen deinen Mac nie. Der Abgleich auch nicht: Verwandte Sitzungen vergleicht, was du gerade sagst, mit deinen früheren Tagen und nutzt dafür ein Modell und einen Index, die beide auf deinem Mac liegen. Optionale Sitzungstitel, Feinschliff und die kurze Zusammenfassung über der Liste verwandter Sitzungen senden den Transkripttext, nie Audio, und nur, wenn du sie einschaltest. Eine monatliche Mitgliedschaft enthält einen KI-Dienst für diesen Text; sonst läuft das über ein lokales Ollama-Modell oder einen OpenAI-API-Schlüssel, den du angibst. Auf iPhone und iPad enthält SpeakWith Pro diesen Dienst für Titel und Feinschliff.",
           "isHtml": false
         },
         {
@@ -293,6 +312,11 @@
         {
           "title": "Ein Dokument für jeden Tag",
           "body": "Alles, was du an einem Tag aufnimmst oder tippst, fließt in ein einziges geordnetes Dokument, in der Reihenfolge, in der es passiert ist. Dieses Layout macht es leicht, deine Gedanken aufzunehmen, ohne dich um Dateien kümmern zu müssen. Morgen beginnt ein neues.",
+          "wide": false
+        },
+        {
+          "title": "Verwandte Sitzungen, abgeglichen auf deinem Mac",
+          "body": "Während du sprichst, vergleicht SpeakWith, was du sagst, mit deinen früheren Tagen und listet die Sitzungen zum selben Thema in der KI-Seitenleiste auf. Klicke eine Zeile an, um den Tag zu öffnen, aus dem sie stammt. Der Abgleich läuft auf deinem Mac nach einem einmaligen Download des Modells. In der direkten (Gumroad) Version kann eine kurze Zusammenfassung über der Liste stehen, geschrieben vom KI-Dienst, der in einer monatlichen Mitgliedschaft enthalten ist, von einem OpenAI-API-Schlüssel, den du angibst, oder von einem lokalen Ollama-Modell. Nur auf dem Mac, und aus, bis du sie unter Einstellungen, Verwandt einschaltest.",
           "wide": false
         },
         {
@@ -323,7 +347,7 @@
         {
           "title": "Sprechrhythmus, auf dem Bildschirm",
           "body": "Eine Live-Anzeige zeigt die Pausen in dem, was du sagst. Mit der Zeit formt dieses stille Feedback, wie du sprichst: Du hältst ein Thema länger zusammen, und der Text am anderen Ende lässt sich leichter weiterverarbeiten.",
-          "wide": true
+          "wide": false
         }
       ]
     },
@@ -382,11 +406,11 @@
       "items": [
         {
           "q": "Braucht SpeakWith eine Internetverbindung?",
-          "a": "Nein. Aufnahme, Transkription, das Ordnen deines Tagesdokuments und die Textsuche darin passieren alle auf deinem Mac. Seine Kernarbeit erledigt SpeakWith offline."
+          "a": "Nein. Aufnahme, Transkription, das Organisieren deines Tagesdokuments und die Suche in seinem Text laufen alle auf deinem Mac. SpeakWith erledigt seine Kernarbeit offline. Verwandte Sitzungen auf dem Mac gleichen ebenfalls offline ab, sobald das Abgleichsmodell auf deinem Mac liegt: Das ist ein einmaliger Download unter Einstellungen, Pipeline, KI-Modelle. Nur die optionalen KI-Funktionen brauchen eine Verbindung, und nur dann, wenn du sie einschaltest."
         },
         {
           "q": "Können die optionalen KI-Funktionen lokal laufen?",
-          "a": "Sitzungstitel können das, auf dem Mac. Wähle Ollama unter Einstellungen, Sitzungs-KI, und die Titel bleiben auf deinem Mac. Eine monatliche Mitgliedschaft enthält stattdessen einen Cloud-KI-Dienst für Titel und Feinschliff, und du kannst auch einen OpenAI-API-Schlüssel mitbringen, den du angibst. Auf iPhone und iPad enthält SpeakWith Pro diesen Dienst für Titel und Feinschliff. Beides ist optional und nicht lokal. Die Aufnahme und die Transkription selbst brauchen nie das Netzwerk."
+          "a": "Auf dem Mac, ja. Verwandte Sitzungen gleichen immer lokal ab: Das Modell und der Index, den sie durchsuchen, liegen beide auf deinem Mac, und keine Einstellung sendet diesen Schritt irgendwohin. Sitzungstitel bleiben lokal, wenn du unter Einstellungen, Sitzungs-KI Ollama wählst, und ebenso die kurze Zusammenfassung über der Liste verwandter Sitzungen, wenn du unter Einstellungen, Verwandt Auf diesem Mac wählst. Diese Zusammenfassung gibt es in der direkten (Gumroad) Mac-Version. Eine monatliche Mitgliedschaft enthält stattdessen einen Cloud-KI-Dienst für Titel, Feinschliff und die Zusammenfassung von Verwandt, und du kannst auch einen OpenAI-API-Schlüssel nutzen, den du angibst. Auf iPhone und iPad enthält SpeakWith Pro diesen Dienst für Titel und Feinschliff. Sie sind optional, und sie sind nicht lokal. Die Kernfunktionen Aufnahme und Transkription brauchen nie das Netzwerk."
         },
         {
           "q": "Wo werden meine Aufnahmen und Dokumente gespeichert?",
@@ -532,9 +556,9 @@
           "feature": "Audio- & Videodateien importieren",
           "subtitle": "Dateien transkribieren, die du schon hast, mit zeitgestempeltem SRT und Klartext"
         },
-        "formatting": {
-          "feature": "Intelligente Absatzformatierung",
-          "subtitle": "Gruppiert Gesprochenes automatisch in saubere Absätze"
+        "relatedSessions": {
+          "feature": "Verwandte Sitzungen",
+          "subtitle": "Frühere Sitzungen zum selben Thema, abgeglichen auf deinem Mac"
         },
         "translate": {
           "feature": "Eine Aufnahme übersetzen",

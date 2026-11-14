@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" font-family="SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title>Related summary on this Mac</title>
+  <desc>Constructed Related settings with On this Mac selected. A caption states this control is absent from the Mac App Store build.</desc>
+  <defs>
+    <style>
+      .title { font-size: 34px; font-weight: 700; fill: #F2F2F7; }
+      .subtitle { font-size: 18px; fill: #AEAEB2; }
+      .win-title { font-size: 15px; font-weight: 650; fill: #F2F2F7; }
+      .example { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; fill: #FF9F0A; }
+      .term { font-family: ui-monospace, SF Mono, Menlo, Consolas, monospace; font-size: 16px; fill: #F2F2F7; }
+      .prompt { font-family: ui-monospace, SF Mono, Menlo, Consolas, monospace; font-size: 16px; fill: #32D74B; }
+      .dim { font-size: 14px; fill: #8E8E93; }
+      .section { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; fill: #8E8E93; }
+      .row { font-size: 16px; font-weight: 600; fill: #F2F2F7; }
+      .caption { font-size: 14px; fill: #D1D1D6; }
+      .field { font-family: ui-monospace, SF Mono, Menlo, Consolas, monospace; font-size: 15px; fill: #F2F2F7; }
+      .placeholder { font-family: ui-monospace, SF Mono, Menlo, Consolas, monospace; font-size: 14px; fill: #8E8E93; }
+      .err { font-family: ui-monospace, SF Mono, Menlo, Consolas, monospace; font-size: 14px; font-weight: 650; fill: #FF6961; }
+      .pill { font-size: 14px; font-weight: 650; }
+      .banner { font-size: 16px; font-weight: 700; fill: #FFD60A; }
+      .call-head { font-size: 16px; font-weight: 700; fill: #F2F2F7; }
+      .call-body { font-size: 14px; fill: #D1D1D6; }
+      .box-call { fill: #262628; stroke: #48484A; stroke-width: 1.5; }
+      .leader { stroke: #FF453A; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; opacity: 0.85; }
+      .pin-num { font-size: 16px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect width="1280" height="640" fill="#1C1C1E"/>
+  <rect x="1.5" y="1.5" width="1277" height="637" rx="26" fill="none" stroke="#54545A" stroke-width="3"/>
+<rect x="32" y="24" width="760" height="470" rx="14" fill="#2C2C2E" stroke="#3A3A3C" stroke-width="1.5"/>
+<circle cx="54" cy="46" r="5.5" fill="#3A3A3C"/>
+<circle cx="72" cy="46" r="5.5" fill="#3A3A3C"/>
+<circle cx="90" cy="46" r="5.5" fill="#3A3A3C"/>
+<text class="win-title" x="412" y="51" text-anchor="middle">Settings  ·  Related</text>
+<text class="example" x="774" y="50" text-anchor="end">EXAMPLE</text>
+<line x1="46" y1="66" x2="778" y2="66" stroke="#3A3A3C" stroke-width="1"/>
+<text class="section" x="60" y="98">SUMMARY MODEL</text>
+<text class="row" x="60" y="136">Provider</text>
+<rect x="262" y="114" width="66" height="28" rx="14" fill="#2C2C2E" stroke="#5A5A5E" stroke-width="1.25"/>
+<text class="pill" x="295" y="133" text-anchor="middle" fill="#AEAEB2">OpenAI</text>
+<rect x="372" y="114" width="108" height="28" rx="14" fill="#0A84FF" stroke="#0A84FF" stroke-width="1.25"/>
+<text class="pill" x="426" y="133" text-anchor="middle" fill="#FFFFFF">On this Mac</text>
+<text class="row" x="60" y="192">Local summary model</text>
+<rect x="60" y="208" width="560" height="32" rx="7" fill="#1C1C1E" stroke="#5A5A5E" stroke-width="1.25"/>
+<text class="placeholder" x="72" y="229">blank = same as the title model</text>
+<text class="caption" x="60" y="280">Blank uses the title tag. A different tag loads cold the first time.</text>
+<text class="caption" x="60" y="308">A different context size reloads the model even when the tag matches.</text>
+<text class="caption" x="60" y="356">On this Mac, the summary stays on the machine. No allowance is spent.</text>
+<text class="dim" x="60" y="400">Matching earlier sessions still runs inside SpeakWith, either way.</text>
+<rect x="32" y="512" width="760" height="100" rx="14" fill="#3A2A12"/>
+<text class="banner" x="56" y="552">Not in the Mac App Store build.</text>
+<text class="caption" x="56" y="584">The direct download has this control. The App Store build does not.</text>
+  <g id="callout-1">
+    <path class="leader" d="M 820 128 L 800 128"/>
+    <circle cx="800" cy="128" r="5" fill="#FF453A"/>
+    <rect class="box-call" x="820" y="89" width="424" height="78" rx="10"/>
+    <text class="call-head" x="860" y="113">On this Mac</text>
+    <text class="call-body" x="860" y="135">The local choice in this menu.</text>
+    <text class="call-body" x="860" y="153">OpenAI is the hosted one.</text>
+    <circle cx="840" cy="128" r="13" fill="#FF453A"/>
+    <text class="pin-num" x="840" y="133">1</text>
+  </g>
+  <g id="callout-2">
+    <path class="leader" d="M 820 224 L 800 224"/>
+    <circle cx="800" cy="224" r="5" fill="#FF453A"/>
+    <rect class="box-call" x="820" y="185" width="424" height="78" rx="10"/>
+    <text class="call-head" x="860" y="209">Its own tag</text>
+    <text class="call-body" x="860" y="231">Empty follows Title model.</text>
+    <text class="call-body" x="860" y="249">A second name starts cold.</text>
+    <circle cx="840" cy="224" r="13" fill="#FF453A"/>
+    <text class="pin-num" x="840" y="229">2</text>
+  </g>
+  <g id="callout-3">
+    <path class="leader" d="M 820 562 L 800 562"/>
+    <circle cx="800" cy="562" r="5" fill="#FF453A"/>
+    <rect class="box-call" x="820" y="523" width="424" height="78" rx="10"/>
+    <text class="call-head" x="860" y="547">Read the banner</text>
+    <text class="call-body" x="860" y="569">App Store buyers never see</text>
+    <text class="call-body" x="860" y="587">this Summary model section.</text>
+    <circle cx="840" cy="562" r="13" fill="#FF453A"/>
+    <text class="pin-num" x="840" y="567">3</text>
+  </g>
+</svg>

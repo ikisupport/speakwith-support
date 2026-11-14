@@ -98,6 +98,10 @@
       "title": "Viewing your AI usage | SpeakWith",
       "description": "How to read AI Usage on Mac and iPhone: the percentage covers every device, the counts and bars are this Mac, and the diagram uses example figures."
     },
+    "guidesOllamaSetup": {
+      "title": "Set up Ollama on your Mac | SpeakWith",
+      "description": "Install Ollama, pull a chat model, and type that exact tag into SpeakWith for session titles and polish. The name has to match ollama list, colon included. Mac only."
+    },
     "technicalAgentLists": {
       "title": "Project and model lists | SpeakWith",
       "description": "How a program on your Mac fills the Project menu and the Model menu on the Agent tab of SpeakWith from Gumroad: one local call for the folders, and two ways to hand over the models."
@@ -119,21 +123,36 @@
       "eyebrow": "Your voice-to-text journal",
       "headline": "Subtitles for your thoughts.",
       "lead": "Speak your day into a clean markdown file on your Mac. Read it, edit it, share it. Each day is automatically created and opens in VS Code, Obsidian, or any tool you point at it.",
-      "translateLine": "Speak in one language and read the translation in another.",
-      "leadSecondary": "Type into app. Use the recorder switch or a hotkey, and the words land where the cursor is.",
+      "leadSecondary": "Dictate into any app, read your words in another language, and see what you said about this before.",
       "ctaPrimary": "Try SpeakWith free",
-      "ctaSecondary": "iPhone and iPad: SpeakWith Pro",
       "ctaGhost": "See how it works",
       "ctaIos": "See the iPhone app",
-      "note": "Available on Mac, iPhone, and iPad. Recording and transcription happen on your device.",
+      "note": "Available on Mac, iPhone, and iPad. Recording and transcription happen on your device, and on the Mac so does matching against your earlier sessions.",
       "ctaDemo": "Watch it type"
     },
     "moments": {
       "title": "Words land as you speak, and you can edit them live.",
-      "heroImageDark": "canonical_screenshots/hero.png?v=20261112a",
-      "heroImageLight": "canonical_screenshots/hero-light.png?v=20261112a",
-      "heroAlt": "SpeakWith for Mac in live dictation: spoken words landing as transcribed lines under a live waveform, with misheard names corrected in place and a session title suggested alongside.",
-      "heroCaption": "Speak, and watch the subtitles for your thoughts take shape before the idea slips away. Optional polish tidies the finished take and shows what it touched before you apply it. Session titles are optional too: a monthly membership includes the AI service that writes them, or an OpenAI API key you provide, a local Ollama model on your Mac, or write your own."
+      "heroImageDark": "canonical_screenshots/hero.png?v=20261113a",
+      "heroImageLight": "canonical_screenshots/hero-light.png?v=20261113a",
+      "heroAlt": "SpeakWith for Mac in live dictation: spoken words landing as transcribed lines under a live waveform, with a session title and a polished version of the take beside them, and a Related list on the right showing earlier sessions on the same subject under a short summary.",
+      "heroCaption": "Speak, and watch the subtitles for your thoughts take shape before the idea slips away.",
+      "heroPointsHeading": "Included with a monthly membership",
+      "heroPointsLead": "The AI service is built in and ready to use. If you would rather, connect your own OpenAI API key, or run a local Ollama model on your Mac.",
+      "heroPoints": [
+        {
+          "label": "Session titles",
+          "body": "Markdown headings that organize your day document, session by session. With the AI service, each title can be written for you automatically. Or write your own."
+        },
+        {
+          "label": "Polish",
+          "body": "It tidies the finished take so it is easier to read, and shows what it touched before you apply it. You keep a clean copy, ready to archive or share."
+        },
+        {
+          "label": "Related sessions",
+          "body": "Brings in your previous sessions on the same subject while you talk, so you know what you have talked about before. The AI service adds a short summary of them, in the direct Mac build."
+        }
+      ],
+      "heroPointsCta": "See what a membership includes"
     },
     "platforms": {
       "eyebrow": "Mac, iPhone, and iPad",
@@ -274,7 +293,7 @@
       "items": [
         {
           "label": "Local",
-          "body": "Your recordings never leave your Mac. Optional session titles and polish send transcript text, never audio, and only when you switch them on. A monthly membership includes an AI service for that text; otherwise it can run on a local Ollama model or an OpenAI API key you provide. On iPhone and iPad, SpeakWith Pro includes that service for titles and polish.",
+          "body": "Your recordings never leave your Mac. Neither does matching: Related sessions compares what you are saying with your earlier days using a model and an index that both live on your Mac. Optional session titles, polish, and the short summary above the Related list send transcript text, never audio, and only when you switch them on. A monthly membership includes an AI service for that text; otherwise it can run on a local Ollama model or an OpenAI API key you provide. On iPhone and iPad, SpeakWith Pro includes that service for titles and polish.",
           "isHtml": false
         },
         {
@@ -300,12 +319,17 @@
       "items": [
         {
           "title": "A document for every day",
-          "body": "Everything you record or type on a given day flows into a single organised document, in the order it happened. That layout makes it easy to start recording your thoughts without worrying about files. Tomorrow, a fresh one begins.",
+          "body": "Everything you record or type on a given day flows into a single organised document, in the order it happened. That layout makes it easy to start recording your thoughts without worrying about files. Each session can carry a generated title, and those titles become the headings the Outline lists, so a long day stays easy to scan and rearrange. Apply a polished take and the clean paragraphs land where the rough ones were, while any screenshots you inserted along the way stay exactly where you put them. Tomorrow, a fresh one begins.",
+          "wide": false
+        },
+        {
+          "title": "Related sessions, matched on your Mac",
+          "body": "While you talk, SpeakWith compares what you are saying with your earlier days and lists the sessions on the same subject in the AI sidebar. Click a row to open the day it came from. Matching runs on your Mac, after a one-time model download. In the direct (Gumroad) build, a short summary can sit above the list, written by the AI service included with a monthly membership, an OpenAI API key you provide, or a local Ollama model. Mac only, and off until you turn it on under Settings, Related.",
           "wide": false
         },
         {
           "title": "Move between languages",
-          "body": "What you speak and what you read can differ. Your words stay on the page, and a translation is there to read.",
+          "body": "What you speak and what you read can differ. Your words stay on the page, and the translation is saved beneath them in the same daily document.",
           "wide": false
         },
         {
@@ -331,7 +355,7 @@
         {
           "title": "Speaking rhythm, on screen",
           "body": "A live meter shows the pauses inside what you are saying. Over time, that quiet feedback shapes how you speak: you hold a topic together longer, and the text on the other end gets easier to work with.",
-          "wide": true
+          "wide": false
         }
       ]
     },
@@ -390,11 +414,11 @@
       "items": [
         {
           "q": "Does SpeakWith need an internet connection?",
-          "a": "No. Recording, transcription, organising your daily document, and searching its text all happen on your Mac. SpeakWith does its core work offline. Only the optional AI features need a connection, and only when you turn them on."
+          "a": "No. Recording, transcription, organising your daily document, and searching its text all happen on your Mac. SpeakWith does its core work offline. Related sessions on the Mac matches offline too, once its matching model is on your Mac: that is a one-time download under Settings, Pipeline, AI Models. Only the optional AI features need a connection, and only when you turn them on."
         },
         {
           "q": "Can the optional AI features run locally?",
-          "a": "Session titles can, on the Mac. Choose Ollama under Settings, Session AI, and titles stay on your Mac. A monthly membership includes a cloud AI service for titles and polish instead, and you can also bring an OpenAI API key you provide. On iPhone and iPad, SpeakWith Pro includes that service for titles and polish. They are optional, and they are not local. Core recording and transcription never need the network."
+          "a": "On the Mac, yes. Related sessions always matches locally: the model and the index it searches both live on your Mac, and no setting sends that step anywhere. Session titles stay local when you choose Ollama under Settings, Session AI, and so does the short summary above the Related list when you choose On this Mac under Settings, Related. That summary is in the direct (Gumroad) Mac build. A monthly membership includes a cloud AI service for titles, polish, and the Related summary instead, and you can also use an OpenAI API key you provide. On iPhone and iPad, SpeakWith Pro includes that service for titles and polish. They are optional, and they are not local. Core recording and transcription never need the network."
         },
         {
           "q": "Where are my recordings and documents stored?",
@@ -540,9 +564,9 @@
           "feature": "Import audio & video files",
           "subtitle": "Transcribe files you already have, with timed SRT and plain text"
         },
-        "formatting": {
-          "feature": "Smart paragraph formatting",
-          "subtitle": "Automatically groups speech into clean paragraphs"
+        "relatedSessions": {
+          "feature": "Related sessions",
+          "subtitle": "Earlier sessions on the same subject, matched on your Mac"
         },
         "translate": {
           "feature": "Translate a take",
@@ -911,6 +935,12 @@
           "title": "Viewing your AI usage",
           "body": "The AI Usage window shows a percentage for the whole membership, and the counts and daily bars for this Mac. The figures in the guide are an example.",
           "path": "guides/ai-usage",
+          "cta": "Read the guide"
+        },
+        {
+          "title": "Set up Ollama on your Mac",
+          "body": "Install the local app, pull a chat model, and type that same tag into Settings, Session AI. SpeakWith does not list the models on your machine for you.",
+          "path": "guides/ollama-setup",
           "cta": "Read the guide"
         }
       ]
@@ -1691,6 +1721,224 @@
           "label": "See also: privacy, where the included AI service and its allowance are described."
         }
       ]
+    },
+    "ollamaSetup": {
+      "eyebrow": "Guides",
+      "heading": "Set up Ollama on your Mac",
+      "intro": "Ollama is an app that runs a language model on your Mac. SpeakWith can ask it for a session title and a polish, and, on the direct download, for the short summary above Related. There is no API key, and the transcript stays on the machine. You give up the hosted model's punctuation and the way it phrases a title. The names in the drawings are examples.",
+      "examplesLabel": "For example",
+      "diagramDark": "assets/guides/ollama-setup-annotated.svg?v=20261113a",
+      "diagramLight": "assets/guides/ollama-setup-annotated-light.svg?v=20261113a",
+      "diagramAlt": "Annotated example of Ollama beside SpeakWith. A terminal lists llama3.1:8b, qwen3:8b, and nomic-embed-text. Settings, Session AI, has Provider set to Ollama, Title model llama3.1:8b, an empty Polish model, Context 16k, and Keep warm 15 minutes. The AI sidebar shows Warm now, Unload, and a red line reading Ollama HTTP 404 model 'llama3.1' not found. Seven callouts name the list, the embedding model, the provider switch, the colon in the tag, context memory, keep warm, and that red line.",
+      "sections": [
+        {
+          "heading": "Why a local model",
+          "paragraphs": [
+            {
+              "text": "A monthly membership's allowance is not spent, and the session text is not sent to a service. That is the reason to flip the switch. A local model is not a discount copy of the hosted one."
+            },
+            {
+              "text": "Open Settings, Session AI, and set Provider to Ollama. Titles and polish follow that one choice together. Feedback has no model row of its own. It uses the Title model tag."
+            },
+            {
+              "text": "The rest of this page is the Mac. iPhone and iPad have no Ollama provider, and they cannot reach a model running on your computer."
+            }
+          ],
+          "steps": []
+        },
+        {
+          "heading": "Install it, and leave it running",
+          "paragraphs": [
+            {
+              "text": "Confirm the app from the menu bar and from Terminal before you pull a model."
+            }
+          ],
+          "figureDark": "assets/guides/ollama-setup-install.svg?v=20261113a",
+          "figureLight": "assets/guides/ollama-setup-install-light.svg?v=20261113a",
+          "figureAlt": "A menu bar with an ollama item whose menu reads ollama is running, and a Terminal window showing ollama --version with an example version number. Callouts mark the menu-bar daemon and the version check.",
+          "figureWidth": 1280,
+          "figureHeight": 520,
+          "steps": [
+            {
+              "title": "Install Ollama.",
+              "text": "Use the installer from Ollama. A menu-bar item appears, and the app is set to open at login. That item is the daemon SpeakWith talks to.",
+              "examples": [
+                "After a restart the item should already be up, without you opening Ollama by hand."
+              ]
+            },
+            {
+              "title": "Ask for the version.",
+              "text": "In Terminal, run ollama --version. A version line means the command is on your path. The number in the drawing is an example. Any current release is enough.",
+              "examples": [
+                "command not found means the install did not land on your path, or this Terminal was opened before the install finished. Open a new window and try again."
+              ]
+            },
+            {
+              "title": "Do not quit that menu-bar item.",
+              "text": "SpeakWith will not launch Ollama for you. Quitting the item is what later shows up as a connection failure, with no title written.",
+              "examples": []
+            }
+          ]
+        },
+        {
+          "heading": "Pull a tag, then read the list",
+          "paragraphs": [
+            {
+              "text": "The NAME column of ollama list is the only menu there is. SpeakWith never asks the daemon which tags are installed, so the field in Settings is plain text."
+            }
+          ],
+          "figureDark": "assets/guides/ollama-setup-pull.svg?v=20261113a",
+          "figureLight": "assets/guides/ollama-setup-pull-light.svg?v=20261113a",
+          "figureAlt": "A terminal pulling qwen3:8b, with a progress bar at 67 percent and then success, above ollama list. The new qwen3:8b row is outlined and the :8b suffix is highlighted. Callouts mark the download and the colon.",
+          "figureWidth": 1280,
+          "figureHeight": 560,
+          "steps": [
+            {
+              "title": "Pull a model that can chat.",
+              "text": "llama3.1:8b and qwen3:8b are the tags that suit a title. The first pull downloads the weights, several gigabytes. An embedding model such as nomic-embed-text can appear in the list and still cannot write a title.",
+              "examples": [
+                "ollama pull llama3.1:8b",
+                "ollama pull qwen3:8b"
+              ]
+            },
+            {
+              "title": "Read ollama list.",
+              "text": "Copy from the NAME column. Size is only there so you can see what the download cost in disk. SpeakWith does not show this table.",
+              "examples": []
+            },
+            {
+              "title": "Keep the colon.",
+              "text": "llama3.1:8b and llama3.1:latest are different tags. The Title model field ships as llama3.1, and a name with no colon is treated as that name plus :latest. A Mac that pulled only llama3.1:8b will refuse llama3.1.",
+              "examples": [
+                "The refusal names the tag you asked for: model 'llama3.1' not found.",
+                "Pasting llama3.1:8b, colon and all, is the fix."
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Type that tag into SpeakWith",
+          "paragraphs": [
+            {
+              "text": "The Ollama section is in Settings, Session AI, and only after Provider is set to Ollama. Its first sentence says the daemon must be running, and it prints the address on this Mac. There is no field for that address, and nothing in Settings changes it."
+            }
+          ],
+          "figureDark": "assets/guides/ollama-setup-settings.svg?v=20261113a",
+          "figureLight": "assets/guides/ollama-setup-settings-light.svg?v=20261113a",
+          "figureAlt": "The Ollama section of Settings, Session AI. Title model reads llama3.1:8b. Polish model shows the blank placeholder. Context shows 16k and Keep warm shows 15 minutes, as an example. Callouts name the typed tag, a different polish tag, context memory, and how long the model stays loaded. A split at the bottom shows title and polish sharing one provider.",
+          "figureWidth": 1480,
+          "figureHeight": 720,
+          "steps": [
+            {
+              "title": "Title model.",
+              "text": "Replace the placeholder with a NAME from ollama list, colon included. llama3.1:8b is the usual replacement for the shipped llama3.1.",
+              "examples": [
+                "Leave the field as llama3.1 only when ollama list actually has llama3.1:latest."
+              ]
+            },
+            {
+              "title": "Polish model.",
+              "text": "Empty means polish reuses the Title model tag. Type a second tag only when polish should run on a different model. The first polish on that other tag waits for a cold load. Keep warm, the last row, holds that same tag only. Warming both would have the daemon drop one to keep the other.",
+              "examples": []
+            },
+            {
+              "title": "One provider for both jobs.",
+              "text": "Polish cannot stay on OpenAI once titles are local. The Provider row is the only switch, and it covers both.",
+              "examples": []
+            }
+          ]
+        },
+        {
+          "heading": "Context, and how long it stays loaded",
+          "paragraphs": [
+            {
+              "text": "Context offers 4k, 8k, 16k, and 32k. A fresh install starts at 16k, which is what the drawing shows. Each title asks for a window big enough for that session, and never bigger than the step you picked. A larger step reserves more memory. A short session does not fill the step. When the text does not fit, the AI sidebar says so before you generate, and the heading is taken from the start of the session."
+            },
+            {
+              "text": "Keep warm is how long the title model stays in memory after a title: Ollama default, 15 minutes, 1 hour, 4 hours, or Until quit. A fresh install uses Ollama default, leaving the timing to Ollama. The drawing picks 15 minutes only so the row shows a duration. Until quit holds the model until you quit SpeakWith, and SpeakWith releases it on the way out."
+            },
+            {
+              "text": "Changing Context reloads the model even when the tag is the same. Count on the same wait as a first load."
+            }
+          ],
+          "steps": []
+        },
+        {
+          "heading": "Warm it before the first title",
+          "paragraphs": [
+            {
+              "text": "Warm now sits in the AI sidebar, next to the session title. It loads the title model at the context the following title will request, so Generate finds the model already resident. An 8B model can take about a minute the first time. Spend that wait on Warm now."
+            },
+            {
+              "text": "Unload frees the memory. If nothing was loaded, the press is harmless."
+            },
+            {
+              "text": "The line under the model name is the fit report for the session you have selected. Orange means the cap will trim it."
+            }
+          ],
+          "steps": []
+        },
+        {
+          "heading": "The summary above Related",
+          "paragraphs": [
+            {
+              "text": "Finding earlier sessions always runs on the Mac, with a model that lives inside SpeakWith. The paragraph above that list is a separate request. The direct download can hand it to Ollama. The Mac App Store build has no such control, which is why the drawing carries a banner."
+            },
+            {
+              "text": "In Settings, Related, under Summary model, choose On this Mac. Local summary model is another free-text tag. Leave it blank and the summary follows Title model. A different tag starts cold, and a different context size reloads the model even when the name matches."
+            },
+            {
+              "text": "With On this Mac selected, that paragraph is written locally and the allowance is untouched. OpenAI, the other item in the menu, sends titles and short excerpts off the machine and meters the call."
+            }
+          ],
+          "figureDark": "assets/guides/ollama-setup-related.svg?v=20261113a",
+          "figureLight": "assets/guides/ollama-setup-related-light.svg?v=20261113a",
+          "figureAlt": "Settings, Related, Summary model, with On this Mac selected and Local summary model left blank. A banner across the bottom reads Not in the Mac App Store build. Callouts name the local choice, the separate tag, and the banner.",
+          "figureWidth": 1280,
+          "figureHeight": 640,
+          "steps": []
+        },
+        {
+          "heading": "Two lines you may see in red",
+          "paragraphs": [
+            {
+              "text": "A missing tag. The sidebar shows Ollama HTTP 404, then the daemon's note that the model was not found, in the shape model 'llama3.1' not found. The usual cause is the shipped default: the field still says llama3.1, you pulled llama3.1:8b, and the daemon looks for llama3.1:latest. Paste the NAME column in full."
+            },
+            {
+              "text": "The daemon is stopped. The line reads cannot connect to 127.0.0.1. No heading is written. Open the menu-bar item again. There is no Settings row that starts Ollama."
+            },
+            {
+              "text": "A name that cannot chat fails too. If Title model is the embedding tag from the pull section, switch it to a chat model."
+            }
+          ],
+          "steps": []
+        },
+        {
+          "heading": "What never calls Ollama",
+          "paragraphs": [
+            {
+              "text": "Transcription. The recording and the transcript are produced on the device. The daemon is not in that path."
+            },
+            {
+              "text": "Matching earlier sessions. That search never consults Ollama, including when an embedding tag is what you pulled."
+            },
+            {
+              "text": "iPhone and iPad. Those apps cannot reach Ollama at all."
+            }
+          ],
+          "steps": []
+        }
+      ],
+      "seeAlso": [
+        {
+          "path": "guides/ai-usage",
+          "label": "See also: viewing your AI usage, the allowance a local model does not spend."
+        },
+        {
+          "path": "privacy",
+          "label": "See also: privacy, what is sent when you choose a hosted model instead."
+        }
+      ]
     }
   },
   "technical": {
@@ -1789,7 +2037,7 @@
   "privacy": {
     "heading": "Privacy Policy",
     "meta": "Last updated: November 2026",
-    "intro": "SpeakWith is built around a simple principle: your words are yours. This policy explains what SpeakWith does and does not do with the recordings, transcripts, and documents you create. November 2026 change: a new section describes the AI service included with a monthly membership, which sends transcript text to IKI Systems and then to OpenAI.",
+    "intro": "SpeakWith is built around a simple principle: your words are yours. This policy explains what SpeakWith does and does not do with the recordings, transcripts, and documents you create. November 2026 changes: a new section describes the AI service included with a monthly membership, which sends transcript text to IKI Systems and then to OpenAI. The policy also now covers Related sessions on the Mac, which matches on your device and can send excerpts from earlier days to a language model for a short summary.",
     "sections": [
       {
         "heading": "Your recordings are processed on your device",
@@ -1799,7 +2047,11 @@
             "isHtml": false
           },
           {
-            "text": "Two optional features can send transcript text, never audio, to a language model: generating a session title and polishing a take. Both are off until you turn them on. Session titles and polish can run through the AI service included with a monthly membership, described in the next section, or through your own OpenAI API key. On the Mac they can also use a local Ollama model, so nothing leaves your machine when you choose Ollama. On iPhone and iPad, session titles and polish use the AI service included with SpeakWith Pro. An OpenAI API key you provide is an alternative. Without Pro and without a key, nothing leaves the device.",
+            "text": "On the Mac, Related sessions is processed on your device too. When you turn it on, SpeakWith builds an index of your day documents and, while you dictate, compares what you have just said with that index to list earlier sessions on the same subject. The model that does the comparing is downloaded once and then runs on your Mac, and the index is a file on your Mac. Neither your words nor the index is sent anywhere for matching. Related sessions is off until you turn it on in Settings, and it is not part of the iPhone and iPad app.",
+            "isHtml": false
+          },
+          {
+            "text": "Three optional features can send transcript text, never audio, to a language model: generating a session title, polishing a take, and, on the Mac, writing the short summary above the Related list. Titles and polish are off until you turn them on, and the summary comes with Related sessions, which is also off until you turn it on. All three can run through the AI service included with a monthly membership, described in the next section, or through your own OpenAI API key. On the Mac they can also use a local Ollama model, so nothing leaves your machine when you choose Ollama. On iPhone and iPad, session titles and polish use the AI service included with SpeakWith Pro. An OpenAI API key you provide is an alternative. Without Pro and without a key, nothing leaves the device.",
             "isHtml": false
           },
           {
@@ -1812,7 +2064,7 @@
         "heading": "The AI service included with a monthly membership",
         "paragraphs": [
           {
-            "text": "A monthly membership includes an AI service for session titles and polish, so you do not need to supply your own API key. When you use it, SpeakWith sends the transcript text for that step to a service run by IKI Systems, which forwards it to OpenAI to produce the title or the polished text. Audio never leaves your device, and transcription still happens locally. If you turn on automatic polish, text is sent each time a take settles, not only when you press a button.",
+            "text": "A monthly membership includes an AI service for session titles, polish, and, on the Mac, the Related summary, so you do not need to supply your own API key. When you use it, SpeakWith sends the transcript text for that step to a service run by IKI Systems, which forwards it to OpenAI to produce the title, the polished text, or the summary. Audio never leaves your device, and transcription still happens locally. If you turn on automatic polish, text is sent each time a take settles, not only when you press a button.",
             "isHtml": false
           },
           {
@@ -1826,6 +2078,10 @@
           {
             "text": "SpeakWith can reach a language model three ways, and your text only passes through us on one of them: a local Ollama model on the Mac, where nothing leaves your device; an OpenAI API key you provide, where the text goes from the app straight to OpenAI and never through us; and the included service. For that third path our role is transit and nothing else. Our AI service never writes the text you send, or the text that comes back, to a log or to a database  -  not when a request succeeds, and not when it fails. Whatever we record about a failure describes the failure, never the text that was in flight. What OpenAI does with the text on its side is governed by <a href=\"https://openai.com/policies/\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI's terms and policies</a>.",
             "isHtml": true
+          },
+          {
+            "text": "The Related summary on the Mac sends more than the take in front of you. To write it, SpeakWith sends the lines you have just dictated together with, for each earlier session in the list, its date, its title, and an excerpt of its text clipped to 320 characters. Those excerpts come from earlier day documents, so text you dictated on other days is included. The summary is requested automatically once the list has stayed unchanged for a short wait that you can set, and each request counts against the same monthly allowance as titles and polish. It follows the same three paths as the other features. Choose On this Mac under Settings, Related, and a local Ollama model writes it with nothing leaving your Mac. With an OpenAI API key you provide, the text goes straight to OpenAI. With the included service, it passes through us in transit only. With no membership, no key, and no local model chosen, no summary is written and nothing is sent. The Mac App Store build does not write a summary at all.",
+            "isHtml": false
           },
           {
             "text": "The allowance is a monthly ceiling on how much text the service will process for one membership. If it runs out, or the service is unavailable, the app offers to use an OpenAI API key you provide instead, and nothing is sent until you choose. A one-time purchase and the 14-day free trial do not include the service; they use your own key or, on the Mac, a local Ollama model.",
