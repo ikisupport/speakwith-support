@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1321" viewBox="0 0 1600 1321" font-family="SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title>SpeakWith AI Usage, an example</title>
+  <desc>Constructed diagram of the AI Usage window with example figures: a 38 percent gauge over a line of tokens used, a reset date and when the figure was checked, call counts, daily bars by feature, and the note on what every plan includes. The numbers are invented for the guide.</desc>
+  <defs>
+    <style>
+      .title { font-size: 40px; font-weight: 700; fill: #F2F2F7; }
+      .subtitle { font-size: 22px; fill: #AEAEB2; }
+      .win-title { font-size: 18px; font-weight: 650; fill: #F2F2F7; }
+      .example { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; fill: #FF9F0A; }
+      .row-label { font-size: 20px; font-weight: 650; fill: #F2F2F7; }
+      .period { font-size: 18px; font-weight: 650; fill: #AEAEB2; }
+      .pct { font-size: 22px; font-weight: 700; fill: #F2F2F7; }
+      .caption { font-size: 17px; fill: #AEAEB2; }
+      .box-head { font-size: 18px; font-weight: 700; fill: #F2F2F7; }
+      .counts { font-size: 22px; font-weight: 650; fill: #F2F2F7; }
+      .box-body { font-size: 17px; fill: #D1D1D6; }
+      .box-note { font-size: 17px; fill: #AEAEB2; }
+      .mac { font-size: 16px; font-weight: 650; fill: #8E8E93; }
+      .foot { font-size: 16px; fill: #AEAEB2; }
+      .chart-title { font-size: 20px; font-weight: 700; fill: #F2F2F7; }
+      .seg { font-size: 15px; font-weight: 650; }
+      .axis { font-size: 14px; fill: #8E8E93; }
+      .legend { font-size: 15px; fill: #D1D1D6; }
+      .box-call { fill: #262628; stroke: #48484A; stroke-width: 1.5; }
+      .call-head { font-size: 18px; font-weight: 700; fill: #F2F2F7; }
+      .call-body { font-size: 16px; fill: #D1D1D6; }
+      .leader { stroke: #FF453A; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; opacity: 0.85; }
+      .pin-num { font-size: 18px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect width="1600" height="1321" fill="#1C1C1E"/>
+  <rect x="1.5" y="1.5" width="1597" height="1318" rx="26" fill="none" stroke="#54545A" stroke-width="3"/>
+  <text class="title" x="56" y="78">Viewing your AI usage</text>
+  <text class="subtitle" x="56" y="116">Example figures, drawn for this guide. Not a reading from a real membership.</text>
+  <g id="window">
+    <rect x="48" y="148" width="1000" height="1121" rx="16" fill="#2C2C2E" stroke="#3A3A3C" stroke-width="2"/>
+    <circle cx="76" cy="174" r="6" fill="#3A3A3C"/>
+    <circle cx="96" cy="174" r="6" fill="#3A3A3C"/>
+    <circle cx="116" cy="174" r="6" fill="#3A3A3C"/>
+    <text class="win-title" x="548.0" y="180" text-anchor="middle">AI Usage</text>
+    <text class="example" x="1016" y="179" text-anchor="end">EXAMPLE</text>
+    <line x1="64" y1="200" x2="1032" y2="200" stroke="#3A3A3C" stroke-width="1"/>
+    <text class="row-label" x="80" y="240">Included with your plan</text>
+    <text class="period" x="1016" y="240" text-anchor="end">this month</text>
+    <rect x="80" y="258" width="760" height="26" rx="13" fill="#3A3A3C"/>
+    <rect x="80" y="258" width="288.8" height="26" rx="13" fill="#0A84FF"/>
+    <text class="pct" x="858" y="278">38%</text>
+    <text class="caption" x="80" y="316">912,000 of 2,400,000 tokens · resets 3 Dec · checked 2 hours ago</text>
+    <rect x="80" y="334" width="936" height="204" rx="12" fill="#262628" stroke="#48484A" stroke-width="1.5"/>
+    <text class="box-head" x="102" y="366">What you did with it</text>
+    <text class="counts" x="102" y="402">214 polishes  ·  143 related-sessions passes  ·  96 titles</text>
+    <text class="counts" x="102" y="432">61 related-feedback passes  ·  9 regenerates  ·  3 feedback requests</text>
+    <text class="box-body" x="102" y="466">…and 17 more on your own key, which your plan is not charged for.</text>
+    <text class="mac" x="102" y="496">Counted on this Mac, since this feature arrived — so it can be short of what the service has</text>
+    <text class="mac" x="102" y="517">recorded for you.</text>
+    <text class="chart-title" x="80" y="578">Your usage per day</text>
+    <rect x="748" y="554" width="268" height="36" rx="9" fill="#2C2C2E" stroke="#5A5A5E" stroke-width="1.5"/>
+    <rect x="751" y="557" width="130.0" height="30" rx="7" fill="#0A84FF"/>
+    <text class="seg" x="815.0" y="577" text-anchor="middle" fill="#FFFFFF">By feature</text>
+    <text class="seg" x="949.0" y="577" text-anchor="middle" fill="#AEAEB2">By model</text>
+    <text class="mac" x="80" y="604">Measured on this Mac</text>
+    <line x1="132" y1="624.0" x2="1016" y2="624.0" stroke="#3A3A3C" stroke-width="1"/>
+    <text class="axis" x="122" y="628.0" text-anchor="end">200k</text>
+    <line x1="132" y1="764.0" x2="1016" y2="764.0" stroke="#3A3A3C" stroke-width="1"/>
+    <text class="axis" x="122" y="768.0" text-anchor="end">100k</text>
+    <line x1="132" y1="904.0" x2="1016" y2="904.0" stroke="#3A3A3C" stroke-width="1"/>
+    <text class="axis" x="122" y="908.0" text-anchor="end">0</text>
+    <rect x="150.2" y="643.6" width="44" height="260.4" fill="#8E8E93"/>
+    <rect x="150.7" y="644.1" width="43" height="259.4" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <text class="axis" x="172.2" y="926" text-anchor="middle">earlier</text>
+    <rect x="230.5" y="878.2" width="44" height="25.8" fill="#0A84FF"/>
+    <rect x="231.0" y="878.7" width="43" height="24.8" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="230.5" y="873.8" width="44" height="4.5" fill="#40CBE0"/>
+    <rect x="231.0" y="874.3" width="43" height="3.5" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="230.5" y="844.4" width="44" height="29.4" fill="#30D158"/>
+    <rect x="231.0" y="844.9" width="43" height="28.4" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="230.5" y="835.5" width="44" height="8.8" fill="#1F8A3A"/>
+    <rect x="231.0" y="836.0" width="43" height="7.8" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <text class="axis" x="252.5" y="926" text-anchor="middle">Nov 4</text>
+    <rect x="310.9" y="869.6" width="44" height="34.4" fill="#0A84FF"/>
+    <rect x="311.4" y="870.1" width="43" height="33.4" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="310.9" y="866.6" width="44" height="2.9" fill="#075BB0"/>
+    <rect x="310.9" y="860.9" width="44" height="5.7" fill="#40CBE0"/>
+    <rect x="311.4" y="861.4" width="43" height="4.7" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="310.9" y="818.2" width="44" height="42.7" fill="#30D158"/>
+    <rect x="311.4" y="818.7" width="43" height="41.7" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="310.9" y="805.3" width="44" height="12.9" fill="#1F8A3A"/>
+    <rect x="311.4" y="805.8" width="43" height="11.9" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <text class="axis" x="332.9" y="926" text-anchor="middle">Nov 5</text>
+    <rect x="391.3" y="886.9" width="44" height="17.1" fill="#0A84FF"/>
+    <rect x="391.8" y="887.4" width="43" height="16.1" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="391.3" y="883.6" width="44" height="3.4" fill="#40CBE0"/>
+    <rect x="391.3" y="846.0" width="44" height="37.5" fill="#30D158"/>
+    <rect x="391.8" y="846.5" width="43" height="36.5" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="391.3" y="834.7" width="44" height="11.3" fill="#1F8A3A"/>
+    <rect x="391.8" y="835.2" width="43" height="10.3" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="391.3" y="829.9" width="44" height="4.8" fill="#FF375F"/>
+    <rect x="391.8" y="830.4" width="43" height="3.8" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <text class="axis" x="413.3" y="926" text-anchor="middle">Nov 6</text>
+    <rect x="471.6" y="862.3" width="44" height="41.7" fill="#0A84FF"/>
+    <rect x="472.1" y="862.8" width="43" height="40.7" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="471.6" y="857.7" width="44" height="4.6" fill="#075BB0"/>
+    <rect x="472.1" y="858.2" width="43" height="3.6" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="471.6" y="850.7" width="44" height="7.0" fill="#40CBE0"/>
+    <rect x="472.1" y="851.2" width="43" height="6.0" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="471.6" y="797.2" width="44" height="53.5" fill="#30D158"/>
+    <rect x="472.1" y="797.7" width="43" height="52.5" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="471.6" y="779.5" width="44" height="17.6" fill="#1F8A3A"/>
+    <rect x="472.1" y="780.0" width="43" height="16.6" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <text class="axis" x="493.6" y="926" text-anchor="middle">Nov 7</text>
+    <rect x="552.0" y="873.9" width="44" height="30.1" fill="#0A84FF"/>
+    <rect x="552.5" y="874.4" width="43" height="29.1" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="552.0" y="868.9" width="44" height="5.0" fill="#40CBE0"/>
+    <rect x="552.5" y="869.4" width="43" height="4.0" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="552.0" y="782.9" width="44" height="86.0" fill="#30D158"/>
+    <rect x="552.5" y="783.4" width="43" height="85.0" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="552.0" y="755.9" width="44" height="27.0" fill="#1F8A3A"/>
+    <rect x="552.5" y="756.4" width="43" height="26.0" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <text class="axis" x="574.0" y="926" text-anchor="middle">Nov 8</text>
+    <rect x="632.4" y="867.2" width="44" height="36.8" fill="#0A84FF"/>
+    <rect x="632.9" y="867.7" width="43" height="35.8" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="632.4" y="863.3" width="44" height="3.9" fill="#075BB0"/>
+    <rect x="632.4" y="857.1" width="44" height="6.2" fill="#40CBE0"/>
+    <rect x="632.9" y="857.6" width="43" height="5.2" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="632.4" y="738.7" width="44" height="118.4" fill="#30D158"/>
+    <rect x="632.9" y="739.2" width="43" height="117.4" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="632.4" y="701.0" width="44" height="37.7" fill="#1F8A3A"/>
+    <rect x="632.9" y="701.5" width="43" height="36.7" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="632.4" y="694.6" width="44" height="6.4" fill="#FF375F"/>
+    <rect x="632.9" y="695.1" width="43" height="5.4" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <text class="axis" x="654.4" y="926" text-anchor="middle">Nov 9</text>
+    <rect x="712.7" y="882.0" width="44" height="22.0" fill="#0A84FF"/>
+    <rect x="713.2" y="882.5" width="43" height="21.0" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="712.7" y="878.0" width="44" height="4.1" fill="#40CBE0"/>
+    <rect x="713.2" y="878.5" width="43" height="3.1" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="712.7" y="804.7" width="44" height="73.2" fill="#30D158"/>
+    <rect x="713.2" y="805.2" width="43" height="72.2" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="712.7" y="781.8" width="44" height="23.0" fill="#1F8A3A"/>
+    <rect x="713.2" y="782.3" width="43" height="22.0" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <text class="axis" x="734.7" y="926" text-anchor="middle">Nov 10</text>
+    <rect x="793.1" y="890.8" width="44" height="13.2" fill="#0A84FF"/>
+    <rect x="793.6" y="891.3" width="43" height="12.2" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="793.1" y="888.3" width="44" height="2.5" fill="#40CBE0"/>
+    <rect x="793.1" y="862.1" width="44" height="26.2" fill="#30D158"/>
+    <rect x="793.6" y="862.6" width="43" height="25.2" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="793.1" y="853.9" width="44" height="8.3" fill="#1F8A3A"/>
+    <rect x="793.6" y="854.4" width="43" height="7.3" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <text class="axis" x="815.1" y="926" text-anchor="middle">Nov 11</text>
+    <rect x="873.5" y="874.7" width="44" height="29.3" fill="#0A84FF"/>
+    <rect x="874.0" y="875.2" width="43" height="28.3" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="873.5" y="872.1" width="44" height="2.7" fill="#075BB0"/>
+    <rect x="873.5" y="867.2" width="44" height="4.9" fill="#40CBE0"/>
+    <rect x="874.0" y="867.7" width="43" height="3.9" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="873.5" y="833.4" width="44" height="33.7" fill="#30D158"/>
+    <rect x="874.0" y="833.9" width="43" height="32.7" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="873.5" y="823.1" width="44" height="10.4" fill="#1F8A3A"/>
+    <rect x="874.0" y="823.6" width="43" height="9.4" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="873.5" y="820.0" width="44" height="3.1" fill="#FF375F"/>
+    <text class="axis" x="895.5" y="926" text-anchor="middle">Nov 12</text>
+    <rect x="953.8" y="892.0" width="44" height="12.0" fill="#0A84FF"/>
+    <rect x="954.3" y="892.5" width="43" height="11.0" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="953.8" y="889.9" width="44" height="2.1" fill="#40CBE0"/>
+    <rect x="953.8" y="872.5" width="44" height="17.4" fill="#30D158"/>
+    <rect x="954.3" y="873.0" width="43" height="16.4" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <rect x="953.8" y="867.2" width="44" height="5.3" fill="#1F8A3A"/>
+    <rect x="954.3" y="867.7" width="43" height="4.3" fill="none" stroke="#2C2C2E" stroke-width="1"/>
+    <text class="axis" x="975.8" y="926" text-anchor="middle">Nov 13</text>
+    <rect x="80" y="946" width="16" height="16" rx="3" fill="#8E8E93"/>
+    <text class="legend" x="104" y="960">earlier · not itemised</text>
+    <rect x="310" y="946" width="16" height="16" rx="3" fill="#0A84FF"/>
+    <text class="legend" x="334" y="960">Polish</text>
+    <rect x="412" y="946" width="16" height="16" rx="3" fill="#075BB0"/>
+    <text class="legend" x="436" y="960">Regenerate</text>
+    <rect x="546" y="946" width="16" height="16" rx="3" fill="#40CBE0"/>
+    <text class="legend" x="570" y="960">Titles</text>
+    <rect x="80" y="974" width="16" height="16" rx="3" fill="#30D158"/>
+    <text class="legend" x="104" y="988">Related sessions</text>
+    <rect x="262" y="974" width="16" height="16" rx="3" fill="#1F8A3A"/>
+    <text class="legend" x="286" y="988">Related feedback</text>
+    <rect x="444" y="974" width="16" height="16" rx="3" fill="#FF375F"/>
+    <text class="legend" x="468" y="988">Feedback</text>
+    <text class="foot" x="80" y="1026">The grey column is what the service has recorded for this month that this Mac cannot itemise —</text>
+    <text class="foot" x="80" y="1047">usage from before this view existed, or from another device.</text>
+    <rect x="80" y="1073" width="936" height="164" rx="12" fill="#29292B" stroke="#48484A" stroke-width="1"/>
+    <text class="box-head" x="102" y="1105">Included with every plan</text>
+    <text class="box-body" x="102" y="1135">Live automatic polish, polish on demand, regenerating a polish you did not like, and session</text>
+    <text class="box-body" x="102" y="1157">titles — all of it runs on the AI included with your plan, with nothing to set up.</text>
+    <text class="box-note" x="102" y="1189">If you prefer your own API key, SpeakWith will use it instead, and that usage is never counted</text>
+    <text class="box-note" x="102" y="1211">against what your plan includes.</text>
+  </g>
+  <g id="callout-1">
+    <path class="leader" d="M 1088 234 L 1060 234 Q 1060 234 1024 234"/>
+    <circle cx="1024" cy="234" r="5" fill="#FF453A"/>
+    <rect class="box-call" x="1088" y="198" width="468" height="72" rx="10"/>
+    <text class="call-head" x="1132" y="224">The period</text>
+    <text class="call-body" x="1132" y="246">This month on a paid month.</text>
+    <text class="call-body" x="1132" y="264">A trial reads this week.</text>
+    <circle cx="1110" cy="234" r="16" fill="#FF453A"/><text x="1110" y="240" class="pin-num">1</text>
+  </g>
+  <g id="callout-2">
+    <path class="leader" d="M 1088 320 L 1060 320 Q 952 320 916 270"/>
+    <circle cx="916" cy="270" r="5" fill="#FF453A"/>
+    <rect class="box-call" x="1088" y="284" width="468" height="72" rx="10"/>
+    <text class="call-head" x="1132" y="310">Every device</text>
+    <text class="call-body" x="1132" y="332">The gauge and the token line under</text>
+    <text class="call-body" x="1132" y="350">it total every device on the plan.</text>
+    <circle cx="1110" cy="320" r="16" fill="#FF453A"/><text x="1110" y="326" class="pin-num">2</text>
+  </g>
+  <g id="callout-3">
+    <path class="leader" d="M 1088 410 L 1060 410 Q 1044 410 1008 410"/>
+    <circle cx="1008" cy="410" r="5" fill="#FF453A"/>
+    <rect class="box-call" x="1088" y="374" width="468" height="72" rx="10"/>
+    <text class="call-head" x="1132" y="400">Counts, not tokens</text>
+    <text class="call-body" x="1132" y="422">Polishes, titles, Related passes.</text>
+    <text class="call-body" x="1132" y="440">How many times, not tokens.</text>
+    <circle cx="1110" cy="410" r="16" fill="#FF453A"/><text x="1110" y="416" class="pin-num">3</text>
+  </g>
+  <g id="callout-4">
+    <path class="leader" d="M 1088 502 L 1060 502 Q 1044 502 1008 502"/>
+    <circle cx="1008" cy="502" r="5" fill="#FF453A"/>
+    <rect class="box-call" x="1088" y="466" width="468" height="72" rx="10"/>
+    <text class="call-head" x="1132" y="492">This Mac</text>
+    <text class="call-body" x="1132" y="514">The counts and the bars are</text>
+    <text class="call-body" x="1132" y="532">this Mac only.</text>
+    <circle cx="1110" cy="502" r="16" fill="#FF453A"/><text x="1110" y="508" class="pin-num">4</text>
+  </g>
+  <g id="callout-5">
+    <path class="leader" d="M 1088 588 L 1060 588 Q 1060 588 1024 572"/>
+    <circle cx="1024" cy="572" r="5" fill="#FF453A"/>
+    <rect class="box-call" x="1088" y="552" width="468" height="72" rx="10"/>
+    <text class="call-head" x="1132" y="578">By feature or By model</text>
+    <text class="call-body" x="1132" y="600">The only switch on the page.</text>
+    <text class="call-body" x="1132" y="618">It recolours the same days.</text>
+    <circle cx="1110" cy="588" r="16" fill="#FF453A"/><text x="1110" y="594" class="pin-num">5</text>
+  </g>
+  <g id="callout-6">
+    <path class="leader" d="M 1088 674 L 1080 674 Q 1064 674 1064 657 Q 1064 640 1028 640 L 194 640"/>
+    <circle cx="194" cy="640" r="5" fill="#FF453A"/>
+    <rect class="box-call" x="1088" y="638" width="468" height="72" rx="10"/>
+    <text class="call-head" x="1132" y="664">The grey column</text>
+    <text class="call-body" x="1132" y="686">Recorded by the service, and not</text>
+    <text class="call-body" x="1132" y="704">split into a feature or a model.</text>
+    <circle cx="1110" cy="674" r="16" fill="#FF453A"/><text x="1110" y="680" class="pin-num">6</text>
+  </g>
+  <g id="callout-7">
+    <path class="leader" d="M 1088 982 L 1060 982 Q 584 982 548 982"/>
+    <circle cx="548" cy="982" r="5" fill="#FF453A"/>
+    <rect class="box-call" x="1088" y="946" width="468" height="72" rx="10"/>
+    <text class="call-head" x="1132" y="972">Colour families</text>
+    <text class="call-body" x="1132" y="994">A darker shade is a sibling:</text>
+    <text class="call-body" x="1132" y="1012">Regenerate, Related feedback.</text>
+    <circle cx="1110" cy="982" r="16" fill="#FF453A"/><text x="1110" y="988" class="pin-num">7</text>
+  </g>
+  <g id="callout-8">
+    <path class="leader" d="M 1088 1101 L 1060 1101 Q 1060 1101 1024 1101"/>
+    <circle cx="1024" cy="1101" r="5" fill="#FF453A"/>
+    <rect class="box-call" x="1088" y="1065" width="468" height="72" rx="10"/>
+    <text class="call-head" x="1132" y="1091">Every plan</text>
+    <text class="call-body" x="1132" y="1113">This note stands before any usage</text>
+    <text class="call-body" x="1132" y="1131">and never changes with it.</text>
+    <circle cx="1110" cy="1101" r="16" fill="#FF453A"/><text x="1110" y="1107" class="pin-num">8</text>
+  </g>
+</svg>
