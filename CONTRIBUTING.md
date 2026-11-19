@@ -29,7 +29,11 @@ Per `copy.<locale>.json`, against `copy.json`:
   array lengths, same value types — so a template never reads `undefined`;
 - values that are not prose (asset paths, ids, URLs, booleans, `badgeKind`)
   must be byte-identical to English, so a translation cannot accidentally
-  retarget a screenshot or a purchase link;
+  retarget a screenshot or a purchase link. `src` and `srcLight` may instead
+  name that same file with the locale's language code in the stem
+  (`photo.png` becomes `photo-de.png`; `photo-light.png` becomes
+  `photo-de-light.png`) when the file is in `public/` and the cache query
+  matches English;
 - no em dash (U+2014) anywhere. A spaced hyphen (` - `) is not the
   substitute: rewrite the sentence per [`STYLE.md`](STYLE.md) § Punctuation,
   which is the authority on house punctuation (including whether a string

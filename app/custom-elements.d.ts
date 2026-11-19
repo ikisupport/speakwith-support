@@ -32,11 +32,13 @@ declare module 'react' {
       'app-status-monitor-guide': Host;
       'app-live-transcript-corrections-guide': Host;
       'app-send-to-agent-guide': Host;
+      'app-ollama-setup-guide': Host;
       'app-outline-guide': Host;
       'app-context-aware-insertion-guide': Host;
       'app-agent-lists': Host;
       'app-privacy': Host;
       'app-terms': Host;
+      'app-contact': Host;
       'app-not-found': Host;
     }
   }

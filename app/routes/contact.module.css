@@ -1,0 +1,126 @@
+/* The privacy contact form. Same prose column as Privacy and Terms, with the
+   form controls styled here rather than globally — this is the only page on the
+   site with a form, so a global rule would be a rule with one user. */
+
+.meta {
+  color: var(--text-dim);
+  font-size: 0.92rem;
+  margin-bottom: 1.4rem;
+}
+
+.privacyNote {
+  border-left: 3px solid var(--border);
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  margin: 1.4rem 0;
+  padding: 0.2rem 0 0.2rem 1rem;
+}
+
+.notice {
+  background: var(--surface-2, rgba(127, 127, 127, 0.08));
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin: 1.6rem 0;
+  padding: 1rem 1.2rem;
+}
+
+.notice h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.4rem;
+}
+
+.notice p {
+  margin: 0.4rem 0 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin: 2rem 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.control {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font: inherit;
+  padding: 0.6rem 0.7rem;
+  /* Without this a textarea ignores the column width and overflows the prose
+     measure on a narrow screen. */
+  max-width: 100%;
+  width: 100%;
+}
+
+.control:focus-visible {
+  outline: 2px solid var(--accent, currentColor);
+  outline-offset: 1px;
+}
+
+textarea.control {
+  /* Vertical only: horizontal resizing escapes the prose column. */
+  resize: vertical;
+}
+
+.hint {
+  color: var(--text-dim);
+  font-size: 0.88rem;
+}
+
+/*
+  The honeypot.
+
+  **Not `display: none` and not `visibility: hidden`.** Both are the first
+  things a form filler checks for, and a field it can see is skipped — which
+  turns the trap into decoration. Taking it out of the layout by position with
+  real dimensions keeps it in the DOM looking ordinary, while being off screen,
+  untabbable and invisible to a person.
+
+  `left: -10000px` rather than `clip-path` or a zero size for the same reason:
+  a 0x0 input is another well-known tell.
+*/
+.honeypot {
+  height: 1px;
+  left: -10000px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  width: 1px;
+}
+
+.actions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.submit {
+  background: var(--accent, var(--text));
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: var(--accent-contrast, var(--bg));
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  padding: 0.65rem 1.4rem;
+}
+
+.submit:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.submit:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}

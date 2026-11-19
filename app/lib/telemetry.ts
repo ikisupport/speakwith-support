@@ -5,6 +5,7 @@ import TelemetryDeck from '@telemetrydeck/sdk';
 // `localhost` entry already covers every local preview, because the port is not
 // part of the hostname check.
 import { TELEMETRY_DECK_APP_ID, TELEMETRY_TEST_HOSTS } from '@site/app/services/telemetry.config';
+import { TELEMETRY_WEB_INGEST, pageLeaveBody, scrollDepthPercent } from './telemetry-engagement';
 
 /** Payload values TelemetryDeck accepts; everything is stringified on send. */
 type SignalPayload = Record<string, string>;
@@ -15,10 +16,11 @@ const SESSION_KEY = 'speakwith-td-session';
 /**
  * Privacy-conscious site analytics via TelemetryDeck.
  *
- * Two jobs: page views (the CDN Web SDK only fires on a full document load,
+ * Three jobs: page views (the CDN Web SDK only fires on a full document load,
  * which for this SPA means the entry page and nothing after it, so client-side
- * navigations are counted here instead) and named `cta.*` signals, which
- * measure intent rather than traffic.
+ * navigations are counted here instead), one leave per page with read depth
+ * and foreground time, and named `cta.*` signals, which measure intent rather
+ * than traffic.
  *
  * Two hard constraints shape it:
  *
@@ -35,6 +37,21 @@ let td: TelemetryDeck | null = null;
 let previousUrl = '';
 let lastPath: string | null = null;
 let campaign: SignalPayload = {};
+let reportAsTest = false;
+
+interface OpenVisit {
+  url: string;
+  referrer: string;
+  visibleMs: number;
+  /** `performance.now()` when the tab became visible, or null while hidden. */
+  visibleSince: number | null;
+  maxDepth: number;
+  sent: boolean;
+}
+
+/** The page currently on screen. One leave is sent, then this is replaced. */
+let visit: OpenVisit | null = null;
+let engagementArmed = false;
 
 function random(): string {
   return Math.random().toString(36).slice(2) + Date.now().toString(36);
@@ -109,14 +126,109 @@ export function signal(type: string, payload: SignalPayload = {}): void {
     .catch(() => undefined);
 }
 
+function currentDepth(): number {
+  const root = document.documentElement;
+  const height = Math.max(root.scrollHeight, document.body?.scrollHeight ?? 0);
+  const viewport = window.innerHeight || root.clientHeight;
+  return scrollDepthPercent(window.scrollY, viewport, height);
+}
+
+function sampleDepth(): void {
+  if (!visit || visit.sent) return;
+  const depth = currentDepth();
+  if (depth > visit.maxDepth) visit.maxDepth = depth;
+}
+
+/** Page address for the web ingest, query kept so campaign tags survive. */
+function ingestUrl(url: string): string {
+  const path = normalizePath(url);
+  const search = path === normalizePath(window.location.pathname) ? window.location.search : '';
+  return `${window.location.origin}${path}${search}`;
+}
+
+function postLeave(body: Record<string, string | number>): void {
+  const json = JSON.stringify(body);
+  try {
+    const blob = new Blob([json], { type: 'text/plain' });
+    if (navigator.sendBeacon(TELEMETRY_WEB_INGEST, blob)) return;
+  } catch {
+    // sendBeacon can throw if the payload is rejected; fetch is the fallback.
+  }
+  void fetch(TELEMETRY_WEB_INGEST, {
+    method: 'POST',
+    body: json,
+    keepalive: true,
+    mode: 'cors',
+    headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
+  }).catch(() => undefined);
+}
+
+function startVisit(referrer: string, url: string): void {
+  visit = {
+    url,
+    referrer,
+    visibleMs: 0,
+    visibleSince: document.visibilityState === 'visible' ? performance.now() : null,
+    maxDepth: currentDepth(),
+    sent: false,
+  };
+}
+
+/** Send read depth and foreground seconds once for the open page. */
+function finishVisit(): void {
+  if (!visit || visit.sent || !TELEMETRY_DECK_APP_ID) return;
+  if (visit.visibleSince != null && document.visibilityState === 'visible') {
+    visit.visibleMs += performance.now() - visit.visibleSince;
+    visit.visibleSince = null;
+  }
+  sampleDepth();
+  visit.sent = true;
+  postLeave(
+    pageLeaveBody({
+      appID: TELEMETRY_DECK_APP_ID,
+      url: visit.url,
+      referrer: visit.referrer,
+      locale: window.navigator.language,
+      isTestMode: reportAsTest,
+      depth: visit.maxDepth,
+      visibleMs: visit.visibleMs,
+    }),
+  );
+}
+
+function onVisibility(): void {
+  if (!visit || visit.sent) return;
+  const now = performance.now();
+  if (document.visibilityState === 'hidden') {
+    if (visit.visibleSince != null) {
+      visit.visibleMs += now - visit.visibleSince;
+      visit.visibleSince = null;
+    }
+    finishVisit();
+    return;
+  }
+  visit.visibleSince = now;
+}
+
+function armEngagement(): void {
+  if (engagementArmed) return;
+  engagementArmed = true;
+  window.addEventListener('scroll', sampleDepth, { passive: true });
+  window.addEventListener('resize', sampleDepth);
+  document.addEventListener('visibilitychange', onVisibility);
+  window.addEventListener('pagehide', finishVisit);
+}
+
 function pageView(url: string): void {
   const path = normalizePath(url);
   if (!td || path === lastPath) return;
+  finishVisit();
   lastPath = path;
 
   const absolute = absoluteUrl(url);
   const referer = previousUrl;
   previousUrl = absolute;
+  startVisit(referer, ingestUrl(url));
 
   void td
     .signal('pageView', {
@@ -137,13 +249,15 @@ export function useTelemetry(): void {
     started.current = true;
 
     const host = window.location.hostname;
+    reportAsTest = TELEMETRY_TEST_HOSTS.includes(host) || host.endsWith('.local');
     td = new TelemetryDeck({
       appID: TELEMETRY_DECK_APP_ID,
       clientUser: sessionUser(),
-      testMode: TELEMETRY_TEST_HOSTS.includes(host) || host.endsWith('.local'),
+      testMode: reportAsTest,
     });
     previousUrl = document.referrer;
     campaign = campaignParams();
+    armEngagement();
   }, []);
 
   useEffect(() => {

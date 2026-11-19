@@ -36,7 +36,7 @@ export default function GuidesAiUsage() {
             src={asset(diagramSrc)}
             alt={guide.diagramAlt}
             width="1600"
-            height="1060"
+            height="1321"
             loading="lazy"
             decoding="async" />
         </figure>

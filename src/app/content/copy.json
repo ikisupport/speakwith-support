@@ -46,6 +46,7 @@
     "trialMacGumroad": "https://ikisystems.gumroad.com/l/vkaxll",
     "ikiSystemsHome": "https://ikisystems.com/",
     "supportContactUrl": "https://speakwith.discourse.group/about",
+    "contactEndpoint": "https://ai.ikisystems.com/api/contact",
     "appleTermsOfUse": "https://speakwith.ikisystems.com/terms/",
     "applePrivacyPolicy": "https://speakwith.ikisystems.com/privacy/"
   },
@@ -98,6 +99,10 @@
       "title": "Viewing your AI usage | SpeakWith",
       "description": "How to read AI Usage on Mac and iPhone: the percentage covers every device, the counts and bars are this Mac, and the diagram uses example figures."
     },
+    "guidesOllamaSetup": {
+      "title": "Set up Ollama on your Mac | SpeakWith",
+      "description": "Install Ollama, pull a chat model, and type that exact tag into SpeakWith for session titles and polish. The name has to match ollama list, colon included. Mac only."
+    },
     "technicalAgentLists": {
       "title": "Project and model lists | SpeakWith",
       "description": "How a program on your Mac fills the Project menu and the Model menu on the Agent tab of SpeakWith from Gumroad: one local call for the folders, and two ways to hand over the models."
@@ -110,6 +115,10 @@
       "title": "Terms of Service | SpeakWith",
       "description": "The terms of service for SpeakWith, the local-first voice recorder and transcription app for Mac and iOS."
     },
+    "contact": {
+      "title": "Contact IKI Systems | SpeakWith",
+      "description": "Send a privacy question, or ask for your records to be deleted. The form goes straight to our mailbox; the service that carries it stores nothing and does not record your IP address."
+    },
     "notFound": {
       "title": "Page Not Found | SpeakWith"
     }
@@ -119,21 +128,36 @@
       "eyebrow": "Your voice-to-text journal",
       "headline": "Subtitles for your thoughts.",
       "lead": "Speak your day into a clean markdown file on your Mac. Read it, edit it, share it. Each day is automatically created and opens in VS Code, Obsidian, or any tool you point at it.",
-      "translateLine": "Speak in one language and read the translation in another.",
-      "leadSecondary": "Type into app. Use the recorder switch or a hotkey, and the words land where the cursor is.",
+      "leadSecondary": "Dictate into any app or read your words in another language. Polish tidies what you said and keeps your wording. Generated titles keep you organized. Related topics refresh your memory.",
       "ctaPrimary": "Try SpeakWith free",
-      "ctaSecondary": "iPhone and iPad: SpeakWith Pro",
       "ctaGhost": "See how it works",
       "ctaIos": "See the iPhone app",
-      "note": "Available on Mac, iPhone, and iPad. Recording and transcription happen on your device.",
+      "note": "Available on Mac, iPhone, and iPad. Recording and transcription happen on your device, and on the Mac so does matching against your earlier sessions.",
       "ctaDemo": "Watch it type"
     },
     "moments": {
-      "title": "Words land as you speak, and you can edit them live.",
-      "heroImageDark": "canonical_screenshots/hero.png?v=20261112a",
-      "heroImageLight": "canonical_screenshots/hero-light.png?v=20261112a",
-      "heroAlt": "SpeakWith for Mac in live dictation: spoken words landing as transcribed lines under a live waveform, with misheard names corrected in place and a session title suggested alongside.",
-      "heroCaption": "Speak, and watch the subtitles for your thoughts take shape before the idea slips away. Optional polish tidies the finished take and shows what it touched before you apply it. Session titles are optional too: a monthly membership includes the AI service that writes them, or an OpenAI API key you provide, a local Ollama model on your Mac, or write your own."
+      "title": "Words land as you speak. Edit them live. Your related topics appear.",
+      "heroImageDark": "canonical_screenshots/hero.png?v=20261113a",
+      "heroImageLight": "canonical_screenshots/hero-light.png?v=20261113a",
+      "heroAlt": "SpeakWith for Mac in live dictation: spoken words landing as transcribed lines under a live waveform, with a session title and a polished version of the take beside them, and a Related list on the right showing earlier sessions on the same subject under a short summary.",
+      "heroCaption": "Speak, and watch the subtitles for your thoughts take shape before the idea slips away.",
+      "heroPointsHeading": "Included with a monthly membership",
+      "heroPointsLead": "The AI service is built in and ready to use. If you would rather, connect your own OpenAI API key, or run a local Ollama model on your Mac.",
+      "heroPoints": [
+        {
+          "label": "Session titles",
+          "body": "Markdown headings that organize your day document, session by session. With the AI service, each title can be written for you automatically. Or write your own."
+        },
+        {
+          "label": "Polish",
+          "body": "It tidies the finished take so it is easier to read, and shows what it touched before you apply it. You keep a clean copy, ready to archive or share."
+        },
+        {
+          "label": "Related sessions",
+          "body": "Brings in your previous sessions on the same subject while you talk, so you know what you have talked about before. The AI service adds a short summary of them, in the direct Mac build."
+        }
+      ],
+      "heroPointsCta": "See what a membership includes"
     },
     "platforms": {
       "eyebrow": "Mac, iPhone, and iPad",
@@ -199,17 +223,19 @@
       "id": "live-edit",
       "eyebrow": "Live dictation",
       "heading": "Fix lines as they land",
-      "lead": "Wrong word? Wrong line? Edit or remove it while you are still recording. The line shows track changes, so you can see what you changed. No need to wait for a finished take.",
+      "lead": "Wrong word? Wrong line? Edit or remove it while you are still recording. The line shows track changes, so you can see where each word came from: the words as first transcribed stay plain, and the ones you typed or dictated in are marked. No need to wait for a finished take.",
       "items": [
         {
-          "src": "assets/screenshots/live-edit-remove.png?v=20260801a",
-          "caption": "Drop a line that does not belong with the minus tool, still mid-session.",
-          "ariaLabel": "SpeakWith live dictation showing a line marked for removal: This line does not belong here, with the minus control highlighted beside the timestamp."
+          "src": "assets/screenshots/live-edit-remove.png?v=20261119a",
+          "srcLight": "assets/screenshots/live-edit-remove-light.png?v=20261119a",
+          "caption": "Said something you do not want to keep? Take the line out. It stays where you can see it, struck through, and Restore brings it back.",
+          "ariaLabel": "SpeakWith live dictation transcript of a photographer's session note, nine lines. Line four, an aside about ordering more mats, is struck through and dimmed, with a Restore button at the end of the row. Line six carries marks inside the line: two deleted words struck through, one typed word tinted, and a dictated phrase with a dotted underline. The other seven lines are plain."
         },
         {
-          "src": "assets/screenshots/live-edit-inline.png?v=20260801a",
-          "caption": "Tap a line, fix the wording, save. The take keeps going.",
-          "ariaLabel": "SpeakWith live dictation with one line open for inline editing: the text The metering is at tree o'clock is in an edit field with Save and Cancel, while recording continues."
+          "src": "assets/screenshots/live-edit-inline.png?v=20261119a",
+          "srcLight": "assets/screenshots/live-edit-inline-light.png?v=20261119a",
+          "caption": "A word came out wrong? Fix it where it sits. You can still see what was heard, what you typed, and what you spoke into the line.",
+          "ariaLabel": "SpeakWith live dictation transcript of a photographer's session note, nine lines, with two edited lines. Line five reads: Edit the three headshots, then call Aaliyah before Okafor's sitting. In it the words first and tree are struck through and faded, three is tinted on a pale band because it was typed, and then call sits on a pale band with a dotted underline because it was dictated into the line. In line seven the word too is struck through beside a typed two. The other seven lines are plain."
         }
       ]
     },
@@ -274,7 +300,7 @@
       "items": [
         {
           "label": "Local",
-          "body": "Your recordings never leave your Mac. Optional session titles and polish send transcript text, never audio, and only when you switch them on. A monthly membership includes an AI service for that text; otherwise it can run on a local Ollama model or an OpenAI API key you provide. On iPhone and iPad, SpeakWith Pro includes that service for titles and polish.",
+          "body": "Your recordings never leave your Mac. Neither does matching: Related sessions compares what you are saying with your earlier days using a model and an index that both live on your Mac. Optional session titles, polish, and the short summary above the Related list send transcript text, never audio, and only when you switch them on. A monthly membership includes an AI service for that text; otherwise it can run on a local Ollama model or an OpenAI API key you provide. On iPhone and iPad, SpeakWith Pro includes that service for titles and polish.",
           "isHtml": false
         },
         {
@@ -291,21 +317,32 @@
     },
     "inclusive": {
       "eyebrow": "For the AI-skeptical, too",
-      "heading": "You don't have to talk to AI to use this.",
+      "heading": "You're in control of your words and how you share them with AI.",
       "p1": "SpeakWith works on its own. Speak, get a clean markdown file, then edit it, search its text, and share it. Keep it that way for as long as you like.",
-      "p2Html": "The file is also something you can hand to an AI when <em>you</em> decide that's useful. AI is a thing the file can do, not a thing you have to do."
+      "p2Html": "Use it as a home base for your words: the place where <em>you</em> talk a thing through before you send it anywhere.",
+      "points": [
+        {
+          "title": "A private space for your own words",
+          "body": "SpeakWith does not mix an AI's words into yours. The transcript holds what you said. Polish shows you its paragraph before you apply it, and a translation is saved beneath your words, not over them."
+        }
+      ]
     },
     "features": {
       "title": "What SpeakWith does",
       "items": [
         {
           "title": "A document for every day",
-          "body": "Everything you record or type on a given day flows into a single organised document, in the order it happened. That layout makes it easy to start recording your thoughts without worrying about files. Tomorrow, a fresh one begins.",
+          "body": "Everything you record or type on a given day flows into a single organised document, in the order it happened. That layout makes it easy to start recording your thoughts without worrying about files. Each session can carry a generated title, and those titles become the headings the Outline lists, so a long day stays easy to scan and rearrange. Apply a polished take and the clean paragraphs land where the rough ones were, while any screenshots you inserted along the way stay exactly where you put them. Tomorrow, a fresh one begins.",
+          "wide": false
+        },
+        {
+          "title": "Related sessions, matched on your Mac",
+          "body": "While you talk, SpeakWith compares what you are saying with your earlier days and lists the sessions on the same subject in the AI sidebar. Click a row to open the day it came from. Matching runs on your Mac, after a one-time model download. In the direct (Gumroad) build, a short summary can sit above the list, written by the AI service included with a monthly membership, an OpenAI API key you provide, or a local Ollama model. Mac only, and off until you turn it on under Settings, Related.",
           "wide": false
         },
         {
           "title": "Move between languages",
-          "body": "What you speak and what you read can differ. Your words stay on the page, and a translation is there to read.",
+          "body": "What you speak and what you read can differ. Your words stay on the page, and the translation is saved beneath them in the same daily document.",
           "wide": false
         },
         {
@@ -331,7 +368,7 @@
         {
           "title": "Speaking rhythm, on screen",
           "body": "A live meter shows the pauses inside what you are saying. Over time, that quiet feedback shapes how you speak: you hold a topic together longer, and the text on the other end gets easier to work with.",
-          "wide": true
+          "wide": false
         }
       ]
     },
@@ -390,11 +427,11 @@
       "items": [
         {
           "q": "Does SpeakWith need an internet connection?",
-          "a": "No. Recording, transcription, organising your daily document, and searching its text all happen on your Mac. SpeakWith does its core work offline. Only the optional AI features need a connection, and only when you turn them on."
+          "a": "No. Recording, transcription, organising your daily document, and searching its text all happen on your Mac. SpeakWith does its core work offline. Related sessions on the Mac matches offline too, once its matching model is on your Mac: that is a one-time download under Settings, Pipeline, AI Models. Only the optional AI features need a connection, and only when you turn them on."
         },
         {
           "q": "Can the optional AI features run locally?",
-          "a": "Session titles can, on the Mac. Choose Ollama under Settings, Session AI, and titles stay on your Mac. A monthly membership includes a cloud AI service for titles and polish instead, and you can also bring an OpenAI API key you provide. On iPhone and iPad, SpeakWith Pro includes that service for titles and polish. They are optional, and they are not local. Core recording and transcription never need the network."
+          "a": "On the Mac, yes. Related sessions always matches locally: the model and the index it searches both live on your Mac, and no setting sends that step anywhere. Session titles stay local when you choose Ollama under Settings, Session AI, and so does the short summary above the Related list when you choose On this Mac under Settings, Related. That summary is in the direct (Gumroad) Mac build. A monthly membership includes a cloud AI service for titles, polish, and the Related summary instead, and you can also use an OpenAI API key you provide. On iPhone and iPad, SpeakWith Pro includes that service for titles and polish. They are optional, and they are not local. Core recording and transcription never need the network."
         },
         {
           "q": "Where are my recordings and documents stored?",
@@ -540,9 +577,9 @@
           "feature": "Import audio & video files",
           "subtitle": "Transcribe files you already have, with timed SRT and plain text"
         },
-        "formatting": {
-          "feature": "Smart paragraph formatting",
-          "subtitle": "Automatically groups speech into clean paragraphs"
+        "relatedSessions": {
+          "feature": "Related sessions",
+          "subtitle": "Earlier sessions on the same subject, matched on your Mac"
         },
         "translate": {
           "feature": "Translate a take",
@@ -911,6 +948,12 @@
           "title": "Viewing your AI usage",
           "body": "The AI Usage window shows a percentage for the whole membership, and the counts and daily bars for this Mac. The figures in the guide are an example.",
           "path": "guides/ai-usage",
+          "cta": "Read the guide"
+        },
+        {
+          "title": "Set up Ollama on your Mac",
+          "body": "Install the local app, pull a chat model, and type that same tag into Settings, Session AI. SpeakWith does not list the models on your machine for you.",
+          "path": "guides/ollama-setup",
           "cta": "Read the guide"
         }
       ]
@@ -1602,9 +1645,9 @@
       "eyebrow": "Guides",
       "heading": "Viewing your AI usage",
       "intro": "AI Usage is the window that shows how much of the included AI a monthly membership has used, and what this Mac spent it on. The figures in the diagram were invented for this guide. On the Mac, open the app menu and choose AI Usage…. On iPhone and iPad that reading sits under Settings, Session AI. You can also press and hold the meter row on the live panel.",
-      "diagramDark": "assets/guides/ai-usage-annotated.svg?v=20261105a",
-      "diagramLight": "assets/guides/ai-usage-annotated-light.svg?v=20261105a",
-      "diagramAlt": "Annotated example of the AI Usage window. The chrome reads Example. A gauge shows 47 percent beside the words this month. A box lists 126 polishes, 58 titles, and 7 regenerates, plus 12 calls on your own key, and the line Counted on this Mac. A bar chart for 1 to 5 November has a grey earlier column, with By feature selected beside By model. Six callouts name the period, the all-device gauge, counts rather than tokens, this Mac, the feature or model switch, and the grey column.",
+      "diagramDark": "assets/guides/ai-usage-annotated.svg?v=20261118a",
+      "diagramLight": "assets/guides/ai-usage-annotated-light.svg?v=20261118a",
+      "diagramAlt": "Annotated example of the AI Usage window. The chrome reads Example. A gauge shows 38 percent beside the words this month, over the line 912,000 of 2,400,000 tokens, resets 3 Dec, checked 2 hours ago. A box lists 214 polishes, 143 related-sessions passes, 96 titles, 61 related-feedback passes, 9 regenerates, and 3 feedback requests, plus 17 calls on your own key, and a note that the counts are this Mac's. A bar chart for 4 to 13 November has a grey earlier column, with By feature selected beside By model, and a legend for Polish, Regenerate, Titles, Related sessions, Related feedback, and Feedback. A footnote explains the grey column, and a closing box is headed Included with every plan. Eight callouts name the period, the all-device gauge, counts rather than tokens, this Mac, the feature or model switch, the grey column, the colour families, and the note every plan carries.",
       "sections": [
         {
           "heading": "The gauge is every device",
@@ -1613,7 +1656,10 @@
               "text": "The bar at the top is the share of included AI used in the current period. A paid month labels that period this month. A trial labels it this week. There is no 1-day, 7-day, or 30-day control. The membership is in one period, and the window shows that period."
             },
             {
-              "text": "The percentage is the service's figure for the whole membership, every Mac and every iPhone on it. A polish on the phone and a title on the Mac move the same bar. The window prints a percentage. The terms guarantee no particular allowance, so no token ceiling appears."
+              "text": "The percentage is the service's figure for the whole membership, every Mac and every iPhone on it. A polish on the phone and a title on the Mac move the same bar."
+            },
+            {
+              "text": "Under the bar, one line gives the same figure in tokens: how many are used, out of how many the period includes. Then it gives the date the period resets and how long ago the service was asked. A trial week leaves the reset date out. The ceiling in the diagram is a sample. The terms guarantee no particular allowance."
             }
           ]
         },
@@ -1621,13 +1667,16 @@
           "heading": "What you did with it",
           "paragraphs": [
             {
-              "text": "Under the gauge, a box names the work the allowance paid for on this Mac. The line counts calls, and in the diagram it reads 126 polishes, 58 titles, and 7 regenerates. Tokens are the unit on the chart below."
+              "text": "Under the gauge, a box names the work the allowance paid for on this Mac. The line counts calls, and in the diagram it reads 214 polishes, 143 related-sessions passes, 96 titles, 61 related-feedback passes, 9 regenerates, and 3 feedback requests. Tokens are the unit on the chart below."
             },
             {
-              "text": "Calls on an OpenAI key you supply are a second line. The plan is not charged for them, and they stay outside the gauge. That line reads 12."
+              "text": "Related work is counted in passes. One pass reads however many earlier sessions were retrieved, so the number says how many times the pass ran. It is not a number of sessions found."
             },
             {
-              "text": "The box ends with Counted on this Mac. Calls from the phone sit inside the percentage. They do not appear in this list."
+              "text": "Calls on an OpenAI key you supply are a second line. The plan is not charged for them, and they stay outside the gauge. That line reads 17."
+            },
+            {
+              "text": "The box ends with a scope note: Counted on this Mac, since this feature arrived. The list can therefore be short of what the service has recorded. Calls from the phone sit inside the percentage. They do not appear in this list."
             }
           ]
         },
@@ -1635,10 +1684,13 @@
           "heading": "Each day, on this Mac",
           "paragraphs": [
             {
-              "text": "The columns use the same scope as those counts: this Mac. Each column is one day in the period, stacked by the kind of work. By feature colours them Polish, Titles, and Regenerate. By model recolours those days by which model answered. That pair is the only picker."
+              "text": "The columns use the same scope as those counts, and the chart says so under its heading: Measured on this Mac. Each column is one day in the period, stacked by the kind of work. By feature colours them Polish, Regenerate, Titles, Related sessions, Related feedback, and Feedback. By model recolours those days by which model answered. That pair is the only picker."
             },
             {
-              "text": "The grey column, marked earlier, is usage this Mac has already counted that the chart cannot split into a day, a feature, or a model. It still belongs in the Mac's total."
+              "text": "Colours come in families. Regenerate is a darker blue beside Polish, and Related feedback is a darker green beside Related sessions, because each pair is one kind of work. A thin border in the window's own colour separates the slices. A slice too short to hold a border is drawn without one."
+            },
+            {
+              "text": "The grey column, marked earlier, is the part of the service's figure that this Mac cannot split into a day, a feature, or a model. It is usage from before this view existed, or from another device, and a footnote under the legend says so. The grey column and the dated columns together add up to the tokens used on the line under the gauge."
             }
           ]
         },
@@ -1646,7 +1698,7 @@
           "heading": "Before any usage",
           "paragraphs": [
             {
-              "text": "Until the membership has used the service, the gauge stays off the page, and so does the chart. What remains is the standing note that the service comes with every plan."
+              "text": "Until the membership has used the service, the gauge stays off the page, and so does the chart. What remains is the standing note that the service comes with every plan. The diagram shows that note at the foot of the window, headed Included with every plan."
             },
             {
               "text": "Development builds can show a row for the cost of the service. That row is absent from the window everyone else sees, and this guide leaves it undescribed."
@@ -1657,7 +1709,7 @@
           "heading": "The names on the chart",
           "paragraphs": [
             {
-              "text": "Feature names are the app's own list: Polish, Regenerate, Translate, Feedback, Titles, Sends, and Other. The figure draws three of them. A real window lists only the kinds of work that have actually run on this Mac."
+              "text": "Feature names are the app's own list: Polish, Regenerate, Translate, Feedback, Titles, Sends, Related sessions, Related feedback, and Other. The figure draws six of them. A real window lists only the kinds of work that have actually run on this Mac."
             }
           ]
         },
@@ -1676,7 +1728,7 @@
           "heading": "These figures are an example",
           "paragraphs": [
             {
-              "text": "The gauge at 47 percent, the counts 126, 58, 7, and 12, the days from 1 November through 5 November, and the grey column at 38,000 were drawn for this page. They are a sample. They record no real membership, and they state no size for the allowance."
+              "text": "The gauge at 38 percent, the line of 912,000 out of 2,400,000 tokens, the reset on 3 December, the counts 214, 143, 96, 61, 9, 3, and 17, the days from 4 November through 13 November, and the grey column at 186,000 were drawn for this page. They are a sample. They record no real membership, and they state no size for the allowance."
             }
           ]
         }
@@ -1689,6 +1741,224 @@
         {
           "path": "privacy",
           "label": "See also: privacy, where the included AI service and its allowance are described."
+        }
+      ]
+    },
+    "ollamaSetup": {
+      "eyebrow": "Guides",
+      "heading": "Set up Ollama on your Mac",
+      "intro": "Ollama is an app that runs a language model on your Mac. SpeakWith can ask it for a session title and a polish, and, on the direct download, for the short summary above Related. There is no API key, and the transcript stays on the machine. You give up the hosted model's punctuation and the way it phrases a title. The names in the drawings are examples.",
+      "examplesLabel": "For example",
+      "diagramDark": "assets/guides/ollama-setup-annotated.svg?v=20261113a",
+      "diagramLight": "assets/guides/ollama-setup-annotated-light.svg?v=20261113a",
+      "diagramAlt": "Annotated example of Ollama beside SpeakWith. A terminal lists llama3.1:8b, qwen3:8b, and nomic-embed-text. Settings, Session AI, has Provider set to Ollama, Title model llama3.1:8b, an empty Polish model, Context 16k, and Keep warm 15 minutes. The AI sidebar shows Warm now, Unload, and a red line reading Ollama HTTP 404 model 'llama3.1' not found. Seven callouts name the list, the embedding model, the provider switch, the colon in the tag, context memory, keep warm, and that red line.",
+      "sections": [
+        {
+          "heading": "Why a local model",
+          "paragraphs": [
+            {
+              "text": "A monthly membership's allowance is not spent, and the session text is not sent to a service. That is the reason to flip the switch. A local model is not a discount copy of the hosted one."
+            },
+            {
+              "text": "Open Settings, Session AI, and set Provider to Ollama. Titles and polish follow that one choice together. Feedback has no model row of its own. It uses the Title model tag."
+            },
+            {
+              "text": "The rest of this page is the Mac. iPhone and iPad have no Ollama provider, and they cannot reach a model running on your computer."
+            }
+          ],
+          "steps": []
+        },
+        {
+          "heading": "Install it, and leave it running",
+          "paragraphs": [
+            {
+              "text": "Confirm the app from the menu bar and from Terminal before you pull a model."
+            }
+          ],
+          "figureDark": "assets/guides/ollama-setup-install.svg?v=20261113a",
+          "figureLight": "assets/guides/ollama-setup-install-light.svg?v=20261113a",
+          "figureAlt": "A menu bar with an ollama item whose menu reads ollama is running, and a Terminal window showing ollama --version with an example version number. Callouts mark the menu-bar daemon and the version check.",
+          "figureWidth": 1280,
+          "figureHeight": 520,
+          "steps": [
+            {
+              "title": "Install Ollama.",
+              "text": "Use the installer from Ollama. A menu-bar item appears, and the app is set to open at login. That item is the daemon SpeakWith talks to.",
+              "examples": [
+                "After a restart the item should already be up, without you opening Ollama by hand."
+              ]
+            },
+            {
+              "title": "Ask for the version.",
+              "text": "In Terminal, run ollama --version. A version line means the command is on your path. The number in the drawing is an example. Any current release is enough.",
+              "examples": [
+                "command not found means the install did not land on your path, or this Terminal was opened before the install finished. Open a new window and try again."
+              ]
+            },
+            {
+              "title": "Do not quit that menu-bar item.",
+              "text": "SpeakWith will not launch Ollama for you. Quitting the item is what later shows up as a connection failure, with no title written.",
+              "examples": []
+            }
+          ]
+        },
+        {
+          "heading": "Pull a tag, then read the list",
+          "paragraphs": [
+            {
+              "text": "The NAME column of ollama list is the only menu there is. SpeakWith never asks the daemon which tags are installed, so the field in Settings is plain text."
+            }
+          ],
+          "figureDark": "assets/guides/ollama-setup-pull.svg?v=20261113a",
+          "figureLight": "assets/guides/ollama-setup-pull-light.svg?v=20261113a",
+          "figureAlt": "A terminal pulling qwen3:8b, with a progress bar at 67 percent and then success, above ollama list. The new qwen3:8b row is outlined and the :8b suffix is highlighted. Callouts mark the download and the colon.",
+          "figureWidth": 1280,
+          "figureHeight": 560,
+          "steps": [
+            {
+              "title": "Pull a model that can chat.",
+              "text": "llama3.1:8b and qwen3:8b are the tags that suit a title. The first pull downloads the weights, several gigabytes. An embedding model such as nomic-embed-text can appear in the list and still cannot write a title.",
+              "examples": [
+                "ollama pull llama3.1:8b",
+                "ollama pull qwen3:8b"
+              ]
+            },
+            {
+              "title": "Read ollama list.",
+              "text": "Copy from the NAME column. Size is only there so you can see what the download cost in disk. SpeakWith does not show this table.",
+              "examples": []
+            },
+            {
+              "title": "Keep the colon.",
+              "text": "llama3.1:8b and llama3.1:latest are different tags. The Title model field ships as llama3.1, and a name with no colon is treated as that name plus :latest. A Mac that pulled only llama3.1:8b will refuse llama3.1.",
+              "examples": [
+                "The refusal names the tag you asked for: model 'llama3.1' not found.",
+                "Pasting llama3.1:8b, colon and all, is the fix."
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Type that tag into SpeakWith",
+          "paragraphs": [
+            {
+              "text": "The Ollama section is in Settings, Session AI, and only after Provider is set to Ollama. Its first sentence says the daemon must be running, and it prints the address on this Mac. There is no field for that address, and nothing in Settings changes it."
+            }
+          ],
+          "figureDark": "assets/guides/ollama-setup-settings.svg?v=20261113a",
+          "figureLight": "assets/guides/ollama-setup-settings-light.svg?v=20261113a",
+          "figureAlt": "The Ollama section of Settings, Session AI. Title model reads llama3.1:8b. Polish model shows the blank placeholder. Context shows 16k and Keep warm shows 15 minutes, as an example. Callouts name the typed tag, a different polish tag, context memory, and how long the model stays loaded. A split at the bottom shows title and polish sharing one provider.",
+          "figureWidth": 1480,
+          "figureHeight": 720,
+          "steps": [
+            {
+              "title": "Title model.",
+              "text": "Replace the placeholder with a NAME from ollama list, colon included. llama3.1:8b is the usual replacement for the shipped llama3.1.",
+              "examples": [
+                "Leave the field as llama3.1 only when ollama list actually has llama3.1:latest."
+              ]
+            },
+            {
+              "title": "Polish model.",
+              "text": "Empty means polish reuses the Title model tag. Type a second tag only when polish should run on a different model. The first polish on that other tag waits for a cold load. Keep warm, the last row, holds that same tag only. Warming both would have the daemon drop one to keep the other.",
+              "examples": []
+            },
+            {
+              "title": "One provider for both jobs.",
+              "text": "Polish cannot stay on OpenAI once titles are local. The Provider row is the only switch, and it covers both.",
+              "examples": []
+            }
+          ]
+        },
+        {
+          "heading": "Context, and how long it stays loaded",
+          "paragraphs": [
+            {
+              "text": "Context offers 4k, 8k, 16k, and 32k. A fresh install starts at 16k, which is what the drawing shows. Each title asks for a window big enough for that session, and never bigger than the step you picked. A larger step reserves more memory. A short session does not fill the step. When the text does not fit, the AI sidebar says so before you generate, and the heading is taken from the start of the session."
+            },
+            {
+              "text": "Keep warm is how long the title model stays in memory after a title: Ollama default, 15 minutes, 1 hour, 4 hours, or Until quit. A fresh install uses Ollama default, leaving the timing to Ollama. The drawing picks 15 minutes only so the row shows a duration. Until quit holds the model until you quit SpeakWith, and SpeakWith releases it on the way out."
+            },
+            {
+              "text": "Changing Context reloads the model even when the tag is the same. Count on the same wait as a first load."
+            }
+          ],
+          "steps": []
+        },
+        {
+          "heading": "Warm it before the first title",
+          "paragraphs": [
+            {
+              "text": "Warm now sits in the AI sidebar, next to the session title. It loads the title model at the context the following title will request, so Generate finds the model already resident. An 8B model can take about a minute the first time. Spend that wait on Warm now."
+            },
+            {
+              "text": "Unload frees the memory. If nothing was loaded, the press is harmless."
+            },
+            {
+              "text": "The line under the model name is the fit report for the session you have selected. Orange means the cap will trim it."
+            }
+          ],
+          "steps": []
+        },
+        {
+          "heading": "The summary above Related",
+          "paragraphs": [
+            {
+              "text": "Finding earlier sessions always runs on the Mac, with a model that lives inside SpeakWith. The paragraph above that list is a separate request. The direct download can hand it to Ollama. The Mac App Store build has no such control, which is why the drawing carries a banner."
+            },
+            {
+              "text": "In Settings, Related, under Summary model, choose On this Mac. Local summary model is another free-text tag. Leave it blank and the summary follows Title model. A different tag starts cold, and a different context size reloads the model even when the name matches."
+            },
+            {
+              "text": "With On this Mac selected, that paragraph is written locally and the allowance is untouched. OpenAI, the other item in the menu, sends titles and short excerpts off the machine and meters the call."
+            }
+          ],
+          "figureDark": "assets/guides/ollama-setup-related.svg?v=20261113a",
+          "figureLight": "assets/guides/ollama-setup-related-light.svg?v=20261113a",
+          "figureAlt": "Settings, Related, Summary model, with On this Mac selected and Local summary model left blank. A banner across the bottom reads Not in the Mac App Store build. Callouts name the local choice, the separate tag, and the banner.",
+          "figureWidth": 1280,
+          "figureHeight": 640,
+          "steps": []
+        },
+        {
+          "heading": "Two lines you may see in red",
+          "paragraphs": [
+            {
+              "text": "A missing tag. The sidebar shows Ollama HTTP 404, then the daemon's note that the model was not found, in the shape model 'llama3.1' not found. The usual cause is the shipped default: the field still says llama3.1, you pulled llama3.1:8b, and the daemon looks for llama3.1:latest. Paste the NAME column in full."
+            },
+            {
+              "text": "The daemon is stopped. The line reads cannot connect to 127.0.0.1. No heading is written. Open the menu-bar item again. There is no Settings row that starts Ollama."
+            },
+            {
+              "text": "A name that cannot chat fails too. If Title model is the embedding tag from the pull section, switch it to a chat model."
+            }
+          ],
+          "steps": []
+        },
+        {
+          "heading": "What never calls Ollama",
+          "paragraphs": [
+            {
+              "text": "Transcription. The recording and the transcript are produced on the device. The daemon is not in that path."
+            },
+            {
+              "text": "Matching earlier sessions. That search never consults Ollama, including when an embedding tag is what you pulled."
+            },
+            {
+              "text": "iPhone and iPad. Those apps cannot reach Ollama at all."
+            }
+          ],
+          "steps": []
+        }
+      ],
+      "seeAlso": [
+        {
+          "path": "guides/ai-usage",
+          "label": "See also: viewing your AI usage, the allowance a local model does not spend."
+        },
+        {
+          "path": "privacy",
+          "label": "See also: privacy, what is sent when you choose a hosted model instead."
         }
       ]
     }
@@ -1789,7 +2059,7 @@
   "privacy": {
     "heading": "Privacy Policy",
     "meta": "Last updated: November 2026",
-    "intro": "SpeakWith is built around a simple principle: your words are yours. This policy explains what SpeakWith does and does not do with the recordings, transcripts, and documents you create. November 2026 change: a new section describes the AI service included with a monthly membership, which sends transcript text to IKI Systems and then to OpenAI.",
+    "intro": "SpeakWith is built around a simple principle: your words are yours. This policy explains what SpeakWith does and does not do with the recordings, transcripts, and documents you create. November 2026 changes: a new section describes the AI service included with a monthly membership, which sends transcript text to IKI Systems and then to OpenAI. The policy also now covers Related sessions on the Mac, which matches on your device and can send excerpts from earlier days to a language model for a short summary. It now also lists the hashed records the service keeps when a licence key is used on a Mac, says what happens to IP addresses, names the companies involved, and explains how to ask for your records to be deleted.",
     "sections": [
       {
         "heading": "Your recordings are processed on your device",
@@ -1799,7 +2069,11 @@
             "isHtml": false
           },
           {
-            "text": "Two optional features can send transcript text, never audio, to a language model: generating a session title and polishing a take. Both are off until you turn them on. Session titles and polish can run through the AI service included with a monthly membership, described in the next section, or through your own OpenAI API key. On the Mac they can also use a local Ollama model, so nothing leaves your machine when you choose Ollama. On iPhone and iPad, session titles and polish use the AI service included with SpeakWith Pro. An OpenAI API key you provide is an alternative. Without Pro and without a key, nothing leaves the device.",
+            "text": "On the Mac, Related sessions is processed on your device too. When you turn it on, SpeakWith builds an index of your day documents and, while you dictate, compares what you have just said with that index to list earlier sessions on the same subject. The model that does the comparing is downloaded once and then runs on your Mac, and the index is a file on your Mac. Neither your words nor the index is sent anywhere for matching. Related sessions is off until you turn it on in Settings, and it is not part of the iPhone and iPad app.",
+            "isHtml": false
+          },
+          {
+            "text": "Three optional features can send transcript text, never audio, to a language model: generating a session title, polishing a take, and, on the Mac, writing the short summary above the Related list. Titles and polish are off until you turn them on, and the summary comes with Related sessions, which is also off until you turn it on. All three can run through the AI service included with a monthly membership, described in the next section, or through your own OpenAI API key. On the Mac they can also use a local Ollama model, so nothing leaves your machine when you choose Ollama. On iPhone and iPad, session titles and polish use the AI service included with SpeakWith Pro. An OpenAI API key you provide is an alternative. Without Pro and without a key, nothing leaves the device.",
             "isHtml": false
           },
           {
@@ -1812,20 +2086,24 @@
         "heading": "The AI service included with a monthly membership",
         "paragraphs": [
           {
-            "text": "A monthly membership includes an AI service for session titles and polish, so you do not need to supply your own API key. When you use it, SpeakWith sends the transcript text for that step to a service run by IKI Systems, which forwards it to OpenAI to produce the title or the polished text. Audio never leaves your device, and transcription still happens locally. If you turn on automatic polish, text is sent each time a take settles, not only when you press a button.",
+            "text": "A monthly membership includes an AI service for session titles, polish, and, on the Mac, the Related summary, so you do not need to supply your own API key. When you use it, SpeakWith sends the transcript text for that step to a service run by IKI Systems, which forwards it to OpenAI to produce the title, the polished text, or the summary. Audio never leaves your device, and transcription still happens locally. If you turn on automatic polish, text is sent each time a take settles, not only when you press a button.",
             "isHtml": false
           },
           {
-            "text": "To confirm that your membership is current, the app sends your purchase credential over an encrypted connection, and the service checks it with the store that sold it. What the service keeps is a hash of that credential, which identifies your membership without being usable to buy or unlock anything, along with a hashed short-lived session token, your membership tier, and the time of first and most recent use. It does not store your name or your email address. It keeps a monthly total of the tokens each membership has used, so it can apply the allowance. That ledger holds counts, not your words. These records live in Amazon Web Services, in the US West (Oregon) region.",
+            "text": "To confirm that your membership is current, the app sends your purchase credential over an encrypted connection, and the service checks it with the store that sold it. What the service keeps is a hash of that credential, which identifies your membership without being usable to buy or unlock anything, along with a hashed short-lived session token, your membership tier, the time of first and most recent use, and the version of macOS or iOS the app last reported. It does not store your name or your email address, and it does not record your IP address. It keeps a monthly total of the tokens each membership has used, so it can apply the allowance, and it records which feature the tokens went to and whether the call came from a Mac or from an iPhone or iPad. The ledger also holds the totals the app reports for calls made with your own OpenAI API key: token counts, the feature, and the model, never the text and never the key. That ledger holds counts, not your words. If you use a licence key bought through Gumroad, the service also keeps an activation record for each Mac the key is used on, which is how one key is held to a limited number of Macs. That record is a hash of the licence key, paired with a per-device hash derived from that Mac's hardware identifier and that key, with the time of first and most recent use. Because the key is part of the device hash, the same Mac gets a different hash under every licence, so these records cannot be used to link one Mac across licences. These records live in Amazon Web Services, in the US West (Oregon) region.",
             "isHtml": false
           },
           {
-            "text": "Separately, if your Mac holds a licence and has iCloud sync turned on, it asks the service to hold your purchase credential so that an iPhone signed into the same iCloud account can reach what you have paid for without ever storing the credential itself. This happens on any licensed Mac, whether or not you use an iPhone, and for a one-time purchase as well as a membership. The copy the service keeps is encrypted, and the only thing that can open it is a token your Mac generates and passes to your other devices through your own private iCloud storage. The service keeps no copy of that token, so it cannot read your credential on its own, only while one of your devices presents the token to check your licence. Your Mac replaces the token periodically. Removing your licence on that Mac deletes the stored copy; until you do, it stays.",
+            "text": "Separately, if your Mac holds a licence and has iCloud sync turned on, it asks the service to hold your purchase credential so that an iPhone signed into the same iCloud account can reach what you have paid for without ever storing the credential itself. This happens on any licensed Mac, whether or not you use an iPhone, and for a one-time purchase as well as a membership. The copy the service keeps is encrypted, and the only thing that can open it is a token your Mac generates and passes to your other devices through your own private iCloud storage. The copy is filed under the per-device hash described above, the one derived from that Mac and that licence key. The service keeps no copy of that token, so it cannot read your credential on its own, only while one of your devices presents the token to check your licence. Your Mac replaces the token periodically. Removing your licence on that Mac deletes the stored copy; until you do, it stays.",
             "isHtml": false
           },
           {
-            "text": "SpeakWith can reach a language model three ways, and your text only passes through us on one of them: a local Ollama model on the Mac, where nothing leaves your device; an OpenAI API key you provide, where the text goes from the app straight to OpenAI and never through us; and the included service. For that third path our role is transit and nothing else. Our AI service never writes the text you send, or the text that comes back, to a log or to a database  -  not when a request succeeds, and not when it fails. Whatever we record about a failure describes the failure, never the text that was in flight. What OpenAI does with the text on its side is governed by <a href=\"https://openai.com/policies/\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI's terms and policies</a>.",
+            "text": "SpeakWith can reach a language model three ways, and your text only passes through us on one of them: a local Ollama model on the Mac, where nothing leaves your device; an OpenAI API key you provide, where the text goes from the app straight to OpenAI and never through us; and the included service. For that third path our role is transit and nothing else. The text is encrypted in transit, to our service and from there to OpenAI, and held only in memory for the length of the request. Our AI service never writes the text you send, or the text that comes back, to a log or to a database, not when a request succeeds and not when it fails. Whatever we record about a failure describes the failure, never the text that was in flight. A failure record can name the membership it belongs to, by the hash described above, and the service's logs are deleted after 30 days. What OpenAI does with the text on its side is governed by <a href=\"https://openai.com/policies/\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI's terms and policies</a>.",
             "isHtml": true
+          },
+          {
+            "text": "The Related summary on the Mac sends more than the take in front of you. To write it, SpeakWith sends the lines you have just dictated together with, for each earlier session in the list, its date, its title, and an excerpt of its text clipped to 320 characters. Those excerpts come from earlier day documents, so text you dictated on other days is included. The summary is requested automatically once the list has stayed unchanged for a short wait that you can set, and each request counts against the same monthly allowance as titles and polish. It follows the same three paths as the other features. Choose On this Mac under Settings, Related, and a local Ollama model writes it with nothing leaving your Mac. With an OpenAI API key you provide, the text goes straight to OpenAI. With the included service, it passes through us in transit only. With no membership, no key, and no local model chosen, no summary is written and nothing is sent. The Mac App Store build does not write a summary at all.",
+            "isHtml": false
           },
           {
             "text": "The allowance is a monthly ceiling on how much text the service will process for one membership. If it runs out, or the service is unavailable, the app offers to use an OpenAI API key you provide instead, and nothing is sent until you choose. A one-time purchase and the 14-day free trial do not include the service; they use your own key or, on the Mac, a local Ollama model.",
@@ -1838,23 +2116,18 @@
         ]
       },
       {
-        "heading": "No telemetry, analytics, or tracking in the app",
+        "heading": "Your content and where it is kept",
         "paragraphs": [
           {
-            "text": "The SpeakWith application does not include usage analytics, advertising, or behavioural tracking. We do not collect a record of how you use the app, what you record, or what you search for. There are no third-party trackers in the application.",
+            "text": "Ownership of what you record and write is covered by the <a href=\"/terms/\">Terms</a>: it is yours, and IKI Systems claims no rights over it.",
+            "isHtml": true
+          },
+          {
+            "text": "Today, SpeakWith keeps your recordings, transcripts, and daily documents as ordinary files on your device, where you can open, copy, move, back up, or delete them with any tool you like.",
             "isHtml": false
           },
           {
-            "text": "This is a statement about the app itself. This website, which is separate software running in your browser, measures anonymous visitor counts; that is described under “The support website” below. Nothing measured on the website is connected to the app, and the app never reports usage to us. The one exception is the included AI service: when a monthly membership uses it, the service records the token totals needed to apply the allowance, as described above. That is billing bookkeeping for a feature you chose to use, not product analytics, and it records amounts, not content.",
-            "isHtml": false
-          }
-        ]
-      },
-      {
-        "heading": "Your files belong to you",
-        "paragraphs": [
-          {
-            "text": "Everything SpeakWith produces (your recordings, transcripts, and daily documents) is stored as ordinary files on your device. Open, copy, move, back up, or delete them with any tool you like.",
+            "text": "When iCloud sync is on, your own private iCloud storage carries some of your settings, your heading tags, and the licence token described in the section above between your devices. It does not carry your recordings, transcripts, or daily documents.",
             "isHtml": false
           }
         ]
@@ -1872,15 +2145,53 @@
         "heading": "The support website",
         "paragraphs": [
           {
-            "text": "This website uses TelemetryDeck, a privacy-focused analytics service, to count page views and how often the download and pricing links are used. It tells us which pages people find useful. It is not used to profile you.",
+            "text": "This website uses TelemetryDeck, a privacy-focused analytics service, to count page views, how far a page was read, how long it stayed on screen, and how often the download and pricing links are used. It tells us which pages people find useful. It is not used to profile you.",
             "isHtml": false
           },
           {
-            "text": "No cookies are set for analytics and no advertising or cross-site tracking identifiers are used. Visits are identified only by a random value that lives in your browser tab and is discarded when you close it, and TelemetryDeck anonymises that value before storing it. We see aggregate counts  -  pages, referrers, campaign links, browser and country  -  never individual visitors, and never anything you type.",
-            "isHtml": false
+            "text": "No cookies are set for analytics and no advertising or cross-site tracking identifiers are used. Visits are identified only by a random value that lives in your browser tab and is discarded when you close it, and TelemetryDeck anonymises that value before storing it. We do not store an IP address for analytics, and TelemetryDeck <a href=\"https://telemetrydeck.com/docs/guides/privacy-faq/\" target=\"_blank\" rel=\"noopener noreferrer\">states that it never stores one</a>: it uses part of the address on a request to work out a country and, for a report that carries no visitor value, to build a hashed identifier that changes every day. We see aggregate counts (pages, read depth, time on screen, referrers, campaign links, browser, and country), never individual visitors, and never anything you type.",
+            "isHtml": true
           },
           {
             "text": "Standard server request logs may exist at the hosting provider, as they do for any website.",
+            "isHtml": false
+          }
+        ]
+      },
+      {
+        "heading": "Who we are, and how to reach us",
+        "paragraphs": [
+          {
+            "text": "SpeakWith is made by IKI Systems. IKI Systems decides what the app and the AI service collect and why, which makes it the controller of the records this policy describes. For a privacy question, or a request about your records, use the <a href=\"/contact/\">contact form</a>. The form sends what you type, and an email address and licence key only if you choose to give them; the service that carries it stores none of that and does not record your IP address, so your message is kept only in the mailbox it arrives in.",
+            "isHtml": true
+          },
+          {
+            "text": "Payment is handled by the store you buy from: Gumroad for a direct purchase, Apple for a purchase in the App Store. Each holds your payment and contact details under its own privacy policy, and IKI Systems never receives your card details. Gumroad does show us, as the seller, the email address you bought with next to the licence key it issued. Those seller records stay with Gumroad and are not copied into the AI service, but they are why the hashes described above are pseudonymous and not anonymous: starting from a licence key, IKI Systems could work out which purchase a record belongs to.",
+            "isHtml": false
+          },
+          {
+            "text": "Two companies process data for the AI service on our behalf. Amazon Web Services hosts the service and stores the records described above, in the US West (Oregon) region. OpenAI receives the transcript text the service forwards and returns the result.",
+            "isHtml": false
+          },
+          {
+            "text": "Some requests go from your device straight to another company, which sees your IP address the way any web request shows one: Gumroad, when the Mac app checks a licence key; Cloudflare, which serves the app download; the host of this website, when you load a page; Apple, when you use the App Store or iCloud; and OpenAI, if you use your own API key. What each of them does with a request is covered by its own privacy policy.",
+            "isHtml": false
+          }
+        ]
+      },
+      {
+        "heading": "Keeping and deleting your records",
+        "paragraphs": [
+          {
+            "text": "The AI service deletes each usage record 13 months after the month it covers, automatically and without being asked: a record of something you did in January is gone by the following February. Its logs are deleted after 30 days. The records of which devices a licence has activated are kept for as long as the licence is in use, because they are what the three-device limit counts; releasing a device on a Mac removes its record straight away. The membership record is kept while the purchase is in use. The encrypted copy of a purchase credential stays until you remove the licence on the Mac that stored it.",
+            "isHtml": false
+          },
+          {
+            "text": "To have the membership hash, the activation records, and the usage ledger for your purchase deleted, ask through the <a href=\"/contact/\">contact form</a>. The service holds hashes, not names, so we will need to know which licence key or purchase the records belong to. The form has a field for the key, and nothing you send through it is published.",
+            "isHtml": true
+          },
+          {
+            "text": "Recordings, transcripts, and daily documents kept on your device are yours to delete, and that needs nothing from us.",
             "isHtml": false
           }
         ]
@@ -1927,7 +2238,7 @@
         "heading": "Your content",
         "paragraphs": [
           {
-            "text": "You own the recordings, transcripts, and documents you create with SpeakWith. SpeakWith does not claim any rights over your content. You are responsible for what you record and for having the right to record it. Because your content is stored as files on your own device, you are also responsible for backing it up.",
+            "text": "You own the recordings, transcripts, and documents you create with SpeakWith. SpeakWith does not claim any rights over your content. You are responsible for what you record and for having the right to record it. You are also responsible for backing up content that is stored on your own device.",
             "isHtml": false
           }
         ]
@@ -1936,7 +2247,7 @@
         "heading": "The included AI service",
         "paragraphs": [
           {
-            "text": "A monthly membership includes access to an AI service for session titles and polish. Using it is optional. The service sends the transcript text for that step to IKI Systems and then to OpenAI, as described in the Privacy Policy. A one-time purchase and the free trial do not include it.",
+            "text": "A monthly membership includes access to an AI service for session titles, polish, and, on the Mac, the Related summary. Using it is optional. The service sends the transcript text for that step to IKI Systems and then to OpenAI, as described in the Privacy Policy. A one-time purchase and the free trial do not include it.",
             "isHtml": false
           },
           {
@@ -1944,11 +2255,11 @@
             "isHtml": false
           },
           {
-            "text": "Titles and polished text are produced by an automated language model. They are suggestions, not a certified record, and the accuracy disclaimer above applies to them. Review what the service returns before you rely on it.",
+            "text": "Titles, polished text, and Related summaries are produced by an automated language model. They are suggestions, not a certified record, and the accuracy disclaimer above applies to them. Review what the service returns before you rely on it.",
             "isHtml": false
           },
           {
-            "text": "You keep ownership of the text you send and of what comes back. IKI Systems does not claim rights over either, and does not keep the text once the request completes.",
+            "text": "As between you and IKI Systems, IKI Systems claims no rights in the text you send or in the text that comes back, and does not keep either once the request completes.",
             "isHtml": false
           }
         ]
@@ -1994,6 +2305,52 @@
         ]
       }
     ]
+  },
+  "contact": {
+    "heading": "Contact IKI Systems",
+    "meta": "For privacy questions and requests about your records.",
+    "intro": "Use this form to ask a privacy question, or to ask for the records held for your purchase to be deleted. It goes to our mailbox and nowhere else.",
+    "privacyNote": "What you send here is carried by the same AI service described in the Privacy Policy, and it is handled the same way: the service does not store your message, your reply address or your licence key, and it does not record your IP address. Your message is kept only in the mailbox it arrives in.",
+    "topicLabel": "What is this about?",
+    "topics": [
+      {
+        "value": "privacy_delete",
+        "label": "Delete the records for my purchase"
+      },
+      {
+        "value": "privacy_question",
+        "label": "A privacy question"
+      },
+      {
+        "value": "other",
+        "label": "Something else"
+      }
+    ],
+    "messageLabel": "Your message",
+    "messageHint": "Up to 4,000 characters.",
+    "replyToLabel": "Your email address, if you would like a reply",
+    "replyToHint": "Optional. Leave it blank and we have no way to answer.",
+    "licenseKeyLabel": "Your licence key",
+    "licenseKeyHint": "Optional, and only needed to find your records. The service holds hashes rather than names, so a deletion request needs the key or the purchase it belongs to. This form is private, so the key is not posted anywhere public.",
+    "honeypotLabel": "Leave this field empty",
+    "submit": "Send message",
+    "sending": "Sending...",
+    "sentHeading": "Thank you, your message is on its way.",
+    "sentBody": "We read this mailbox ourselves, so a reply may take a few days. Nothing about your message was stored by the service that carried it.",
+    "failedHeading": "That did not send.",
+    "failedBody": "Something went wrong between here and our mailbox, and your message was not sent. Please try again in a few minutes, or reach us through the Community if it keeps failing.",
+    "busyHeading": "The form is taking a rest.",
+    "busyBody": "This form has a daily limit, and today's is used up. Please try again tomorrow, or reach us through the Community in the meantime.",
+    "unavailableHeading": "The form is not available right now.",
+    "unavailableBody": "Please reach us through the Community instead.",
+    "invalidHeading": "Please check your message.",
+    "tooLongBody": "Your message is longer than 4,000 characters. Please shorten it and try again.",
+    "missingMessageBody": "Please write a message before sending.",
+    "badReplyToBody": "That email address does not look right. Please correct it, or clear the field if you do not want a reply.",
+    "longLicenseKeyBody": "That licence key is longer than expected. Please check it, or clear the field and describe your purchase in the message instead.",
+    "communityLinkLabel": "Visit the SpeakWith Community",
+    "noscriptHtml": "This form needs JavaScript, which is switched off in this browser. You can reach us through the <a href=\"https://speakwith.discourse.group/about\" target=\"_blank\" rel=\"noopener noreferrer\">contact page on the SpeakWith Community</a> instead. Please do not post a licence key in a public topic; message the staff there privately and we will ask for it.",
+    "retryLabel": "Try again"
   },
   "error": {
     "heading": "Something went wrong",

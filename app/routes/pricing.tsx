@@ -186,7 +186,7 @@ export default function Pricing() {
                     <td className={css.cell}><span className={css.check}>&#10003;</span></td>
                   </tr>
                   <tr>
-                    <td className={css.feat}>{copy.pricing.table.rows.formatting.feature}<small>{copy.pricing.table.rows.formatting.subtitle}</small></td>
+                    <td className={css.feat}>{copy.pricing.table.rows.relatedSessions.feature}<small>{copy.pricing.table.rows.relatedSessions.subtitle}</small></td>
                     <td className={css.cell}><span className={css.check}>&#10003;</span></td>
                     <td className={css.cell}><span className={css.check}>&#10003;</span></td>
                   </tr>

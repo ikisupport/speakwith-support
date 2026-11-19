@@ -54,7 +54,6 @@ export default function Home() {
               <p className="eyebrow">{copy.home.hero.eyebrow}</p>
               <h1>{copy.home.hero.headline}</h1>
               <p className={css.hero__lead}>{copy.home.hero.lead}</p>
-              <p className={cx(css.hero__lead, css['hero__lead--translate'])}>{copy.home.hero.translateLine}</p>
               {copy.home.hero.leadSecondary && (<>
                 <p className={cx(css.hero__lead, css['hero__lead--secondary'])}>{copy.home.hero.leadSecondary}</p>
               </>)}
@@ -81,7 +80,23 @@ export default function Home() {
                   <img className={css.heroshot__image} src={asset(heroImageSrc)}
                        alt={copy.home.moments.heroAlt} loading="lazy" />
                 </div>
-                <figcaption className={css.heroshot__caption}>{copy.home.moments.heroCaption}</figcaption>
+                <figcaption className={css.heroshot__legend}>
+                  <p className={css.heroshot__lead}>{copy.home.moments.heroCaption}</p>
+                  <div className={css.heroshot__plan}>
+                    <p className="eyebrow eyebrow--accent">{copy.home.moments.heroPointsHeading}</p>
+                    <p className={css['heroshot__plan-lead']}>{copy.home.moments.heroPointsLead}</p>
+                    <ul className={css.heroshot__points}>
+                      {copy.home.moments.heroPoints.map((point) => (
+                        <li key={point.label} className={css.heroshot__point}>
+                          <p className={css['heroshot__point-label']}>{point.label}</p>
+                          <p className={css['heroshot__point-body']}>{point.body}</p>
+                        </li>
+                      ))}
+                    </ul>
+                    <Link className={css['heroshot__plan-cta']} to={locale.path('pricing')}
+                       onClick={() => signal('cta.pricing', { placement: 'heroshot' })}>{copy.home.moments.heroPointsCta}</Link>
+                  </div>
+                </figcaption>
               </figure>
             </div>
           </section>
@@ -165,7 +180,7 @@ export default function Home() {
       <Fragment key={s.src}>
                   <figure className={css.liveedit__figure}>
                     <div className={css.liveedit__frame}>
-                      <img className={css.liveedit__image} src={asset(s.src)} alt={s.ariaLabel} loading="lazy" />
+                      <img className={css.liveedit__image} src={asset(platformImageSrc(s))} alt={s.ariaLabel} loading="lazy" />
                     </div>
                     <figcaption className={css.liveedit__caption}>{s.caption}</figcaption>
                   </figure>
@@ -278,13 +293,19 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Inclusive band: you don't have to talk to AI */}
+          {/* Inclusive band: your words, and whether they go to an AI, are yours to decide */}
           <section className={cx(css.band, "band--inclusive")}>
             <div className="container home-narrow">
               <p className="eyebrow eyebrow--accent">{copy.home.inclusive.eyebrow}</p>
               <h2>{copy.home.inclusive.heading}</h2>
               <p>{copy.home.inclusive.p1}</p>
               <p dangerouslySetInnerHTML={{ __html: copy.home.inclusive.p2Html }}></p>
+              {copy.home.inclusive.points.map((p) => (
+                <Fragment key={p.title}>
+                  <h3>{p.title}</h3>
+                  <p>{p.body}</p>
+                </Fragment>
+              ))}
             </div>
           </section>
 

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="560" viewBox="0 0 1280 560" font-family="SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif">
+  <title>Pull a tag and read ollama list</title>
+  <desc>Constructed pull progress above ollama list, with the colon suffix marked. Tags are examples.</desc>
+  <defs>
+    <style>
+      .title { font-size: 34px; font-weight: 700; fill: #F2F2F7; }
+      .subtitle { font-size: 18px; fill: #AEAEB2; }
+      .win-title { font-size: 15px; font-weight: 650; fill: #F2F2F7; }
+      .example { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; fill: #FF9F0A; }
+      .term { font-family: ui-monospace, SF Mono, Menlo, Consolas, monospace; font-size: 16px; fill: #F2F2F7; }
+      .prompt { font-family: ui-monospace, SF Mono, Menlo, Consolas, monospace; font-size: 16px; fill: #32D74B; }
+      .dim { font-size: 14px; fill: #8E8E93; }
+      .section { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; fill: #8E8E93; }
+      .row { font-size: 16px; font-weight: 600; fill: #F2F2F7; }
+      .caption { font-size: 14px; fill: #D1D1D6; }
+      .field { font-family: ui-monospace, SF Mono, Menlo, Consolas, monospace; font-size: 15px; fill: #F2F2F7; }
+      .placeholder { font-family: ui-monospace, SF Mono, Menlo, Consolas, monospace; font-size: 14px; fill: #8E8E93; }
+      .err { font-family: ui-monospace, SF Mono, Menlo, Consolas, monospace; font-size: 14px; font-weight: 650; fill: #FF6961; }
+      .pill { font-size: 14px; font-weight: 650; }
+      .banner { font-size: 16px; font-weight: 700; fill: #FFD60A; }
+      .call-head { font-size: 16px; font-weight: 700; fill: #F2F2F7; }
+      .call-body { font-size: 14px; fill: #D1D1D6; }
+      .box-call { fill: #262628; stroke: #48484A; stroke-width: 1.5; }
+      .leader { stroke: #FF453A; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; opacity: 0.85; }
+      .pin-num { font-size: 16px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect width="1280" height="560" fill="#1C1C1E"/>
+  <rect x="1.5" y="1.5" width="1277" height="557" rx="26" fill="none" stroke="#54545A" stroke-width="3"/>
+<rect x="32" y="24" width="760" height="248" rx="14" fill="#2C2C2E" stroke="#3A3A3C" stroke-width="1.5"/>
+<circle cx="54" cy="46" r="5.5" fill="#3A3A3C"/>
+<circle cx="72" cy="46" r="5.5" fill="#3A3A3C"/>
+<circle cx="90" cy="46" r="5.5" fill="#3A3A3C"/>
+<text class="win-title" x="412" y="51" text-anchor="middle">Terminal  ·  pull</text>
+<text class="example" x="774" y="50" text-anchor="end">EXAMPLE</text>
+<line x1="46" y1="66" x2="778" y2="66" stroke="#3A3A3C" stroke-width="1"/>
+<rect x="52" y="80" width="720" height="168" rx="10" fill="#0E0E10"/>
+<text class="prompt" x="72" y="114">$ ollama pull qwen3:8b</text>
+<text class="dim" x="72" y="148">pulling manifest</text>
+<text class="term" x="72" y="180">pulling 7a4f1c   67%</text>
+<rect x="72" y="196" width="480" height="12" rx="6" fill="#3A3A3C"/>
+<rect x="72" y="196" width="322" height="12" rx="6" fill="#0A84FF"/>
+<text class="prompt" x="72" y="230">success</text>
+<rect x="32" y="288" width="760" height="244" rx="14" fill="#2C2C2E" stroke="#3A3A3C" stroke-width="1.5"/>
+<circle cx="54" cy="310" r="5.5" fill="#3A3A3C"/>
+<circle cx="72" cy="310" r="5.5" fill="#3A3A3C"/>
+<circle cx="90" cy="310" r="5.5" fill="#3A3A3C"/>
+<text class="win-title" x="412" y="315" text-anchor="middle">Terminal  ·  list</text>
+<text class="example" x="774" y="314" text-anchor="end">EXAMPLE</text>
+<line x1="46" y1="330" x2="778" y2="330" stroke="#3A3A3C" stroke-width="1"/>
+<rect x="52" y="344" width="720" height="164" rx="10" fill="#0E0E10"/>
+<text class="prompt" x="72" y="376">$ ollama list</text>
+<text class="dim" x="72" y="408">NAME                  SIZE</text>
+<text class="term" x="72" y="440">llama3.1:8b           4.9 GB</text>
+<rect x="60" y="452" width="700" height="34" rx="8" fill="none" stroke="#FF9F0A" stroke-width="2"/>
+<rect x="140" y="456" width="46" height="24" rx="4" fill="#FF9F0A" opacity="0.28"/>
+<text class="term" x="72" y="474">qwen3:8b              5.2 GB</text>
+  <g id="callout-1">
+    <path class="leader" d="M 828 180 L 800 180"/>
+    <circle cx="800" cy="180" r="5" fill="#FF453A"/>
+    <rect class="box-call" x="828" y="141" width="416" height="78" rx="10"/>
+    <text class="call-head" x="868" y="165">A download</text>
+    <text class="call-body" x="868" y="187">The first pull fetches the weights.</text>
+    <text class="call-body" x="868" y="205">An 8B chat model suits a title.</text>
+    <circle cx="848" cy="180" r="13" fill="#FF453A"/>
+    <text class="pin-num" x="848" y="185">1</text>
+  </g>
+  <g id="callout-2">
+    <path class="leader" d="M 828 470 L 800 470"/>
+    <circle cx="800" cy="470" r="5" fill="#FF453A"/>
+    <rect class="box-call" x="828" y="431" width="416" height="78" rx="10"/>
+    <text class="call-head" x="868" y="455">Keep the colon</text>
+    <text class="call-body" x="868" y="477">qwen3:8b is not qwen3.</text>
+    <text class="call-body" x="868" y="495">latest is a different file.</text>
+    <circle cx="848" cy="470" r="13" fill="#FF453A"/>
+    <text class="pin-num" x="848" y="475">2</text>
+  </g>
+</svg>
