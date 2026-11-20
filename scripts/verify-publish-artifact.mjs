@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 // Fail if a GitHub Pages staging folder contains anything beyond the static
 // site the public should receive. Run after copying build/client/* into _site.
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';

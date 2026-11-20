@@ -1,0 +1,8 @@
+LicenseRef-Proprietary
+
+Copyright © 2026-Present IKI Systems. All rights reserved.
+
+This source code is proprietary. No license, express or implied, is granted to
+copy, modify, distribute, sublicense, or create derivative works from any part
+of it. It is published so that the website it builds can be read and audited,
+not so that it can be reused.

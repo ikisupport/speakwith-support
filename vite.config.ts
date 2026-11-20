@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 import { reactRouter } from '@react-router/dev/vite';
 import { resolve } from 'node:path';
 import { defineConfig, searchForWorkspaceRoot } from 'vite';

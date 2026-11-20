@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 import { type RouteConfig, index, route } from '@react-router/dev/routes';
 import { routeEntries } from '../scripts/lib/route-matrix.mjs';
 

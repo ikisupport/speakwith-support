@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 /* From navbar.component.ts's `styles` block. Angular's emulated view
    encapsulation scoped these to the component; CSS Modules do the same job by
    hashing the class names, so a name here cannot collide with a page's. */
@@ -13,6 +18,7 @@
 .nav__inner {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 1rem 1.5rem;
   flex-wrap: wrap;
   padding: 0.85rem 0;
@@ -27,6 +33,7 @@
   letter-spacing: -0.01em;
   color: var(--text);
   text-decoration: none;
+  margin-right: auto;
 }
 
 .wordmark__icon {
@@ -48,8 +55,9 @@
 .nav__links {
   display: flex;
   gap: 0.4rem 1.2rem;
-  flex-wrap: wrap;
-  margin-left: auto;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  min-width: 0;
   font-weight: 600;
   font-size: 0.96rem;
 }
@@ -67,6 +75,22 @@
   border-bottom-color: var(--accent);
 }
 
+/* The appearance menu and the language control, kept together so the narrow
+   layout below cannot split them across rows.
+
+   This, not `.locale`, is the locale panel's containing block. An absolutely
+   positioned box shrink-to-fits within its containing block, and the pill is
+   only as wide as its own label: anchored there, the panel could never be wider
+   than about 118px and the legal note would wrap into a thin column. Anchored
+   to the group, the panel gets the width of both controls and still cannot pass
+   either edge of the group at any viewport width. */
+.nav__controls {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .theme select {
   font: inherit;
   font-size: 0.9rem;
@@ -78,9 +102,102 @@
   cursor: pointer;
 }
 
+/* Locale switcher. Moved here from Footer.module.css when the control moved
+   into the header: in the footer the open list sat in normal flow, which in a
+   sticky bar would push the page down as it opens, so the panel is an overlay
+   positioned against `.nav__controls`. */
+/* Matches `.theme select` — same padding, radius, border and surface, so the
+   two controls read as one pair of pills. */
+.locale__summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  list-style: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--text);
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--rule);
+  background: var(--surface);
+  white-space: nowrap;
+}
+
+.locale__summary::-webkit-details-marker {
+  display: none;
+}
+
+.locale__summary:hover {
+  color: var(--accent);
+}
+
+.locale__chevron {
+  transition: transform 120ms ease;
+}
+
+.locale[open] .locale__chevron {
+  transform: rotate(180deg);
+}
+
+.locale__panel {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  right: 0;
+  z-index: 1;
+  padding: 0.3rem 0;
+  text-align: left;
+  border-radius: 0.5rem;
+  border: 1px solid var(--rule);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.locale__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.locale__list a {
+  display: block;
+  padding: 0.35rem 0.8rem 0.35rem 1.7rem;
+  color: var(--text);
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+}
+
+.locale__list a:hover {
+  color: var(--accent);
+}
+
+.locale__link--current::before {
+  content: '\2713';
+  position: absolute;
+  left: 0.65rem;
+}
+
+/* The global `p` rule carries a bottom margin; inside the panel the note sets
+   its own box. */
+.locale__note {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  max-width: 18rem;
+  margin: 0.3rem 0 0;
+  padding: 0.35rem 0.8rem 0.1rem;
+  border-top: 1px solid var(--rule);
+}
+
 @media (max-width: 560px) {
   .nav__links {
-    margin-left: 0;
-    width: 100%;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .nav__controls {
+    margin-left: auto;
+    max-width: 100%;
   }
 }

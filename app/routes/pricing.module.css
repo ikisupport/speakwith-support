@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 /* From pricing.component.ts's `styles` block. <app-pricing> is light DOM, so
    `:host` cannot scope these tokens. */
 app-pricing {

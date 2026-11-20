@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 import { Link, type MetaArgs } from 'react-router';
 import { headFor } from '../head';
 import { useLocaleApi } from '../lib/locale';

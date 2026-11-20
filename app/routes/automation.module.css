@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 /* From automation.component.ts's `styles` block. */
 .prose__html :is(pre) {
   overflow-x: auto;

@@ -1,0 +1,30 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
+/* The clip is a dark canvas in both site themes, so it gets a frame of its own
+   and its corners are cut here, not in the file. `aspect-ratio` holds the space
+   before the first frame arrives. Width and outer margins belong to the page. */
+/* `:where` so the page's own class always wins, whatever order the bundles load in. */
+:where(.flow) {
+  margin: 0;
+}
+
+.flow__video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1900 / 978;
+  border-radius: 0.9rem;
+  border: 1px solid var(--rule);
+  background: #11111b;
+}
+
+.flow__caption {
+  margin: 0.7rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--muted, #6b7280);
+  text-wrap: pretty;
+}

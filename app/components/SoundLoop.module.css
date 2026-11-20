@@ -1,0 +1,80 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
+/* `:where` so the page's own classes always win, whatever order the bundles load in. */
+:where(.figure) {
+  margin: 0;
+}
+
+/* The two videos share one box: the loop sets its size, the take lies over it. */
+.stage {
+  position: relative;
+}
+
+/* That box, without the sound button, which is a child of the stage instead. A
+   page that masks its player (a window with rounded corners cut out of a flat
+   H.264 frame) or shadows its silhouette hangs those on `frameClassName` here:
+   on the stage, the mask would cut the button away and the shadow would trace
+   the button's rectangle. `relative` is what `.take`'s `inset: 0` resolves
+   against, so a player that passes no class lays out exactly as before. */
+.clip {
+  position: relative;
+}
+
+:where(.video) {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.take {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.take[data-on='true'] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sound {
+  position: absolute;
+  right: 0.9rem;
+  bottom: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  background: rgba(17, 17, 27, 0.82);
+  color: #fff;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+}
+
+/* The browser draws the take's own controls along the bottom of the frame, so
+   once the take is on, this moves out of their way rather than sitting on them. */
+.sound[data-take='true'] {
+  top: 0.9rem;
+  bottom: auto;
+}
+
+.sound:hover,
+.sound:focus-visible {
+  background: rgba(17, 17, 27, 0.96);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.sound:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}

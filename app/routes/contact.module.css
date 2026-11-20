@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 /* The privacy contact form. Same prose column as Privacy and Terms, with the
    form controls styled here rather than globally — this is the only page on the
    site with a form, so a global rule would be a rule with one user. */

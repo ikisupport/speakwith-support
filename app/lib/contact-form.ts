@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 /**
  * The contact form's pure pieces: what gets posted, what the browser refuses
  * before posting, and what each answer means on screen.

@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 /* From send-to-agent-guide.component.ts's `styles` block. */
 .eyebrow {
   margin: 0 0 0.4rem;
@@ -72,4 +77,13 @@
   border-radius: 0.8rem;
   border: 1px solid var(--rule);
   box-shadow: var(--shadow);
+}
+
+/* The looping walk-through (components/FlowLoop). Wider than the text column
+   and centred on it: the clip is three panels side by side, and at the column's
+   own width its smallest text is about 8 px. */
+.flow {
+  width: min(92vw, 1100px);
+  margin: 1.6rem 0 2rem 50%;
+  transform: translateX(-50%);
 }

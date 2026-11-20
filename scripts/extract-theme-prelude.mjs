@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 // Inline the palette and the pre-paint script into a generated module.
 //
 // Both have to reach the browser inside the document <head>, before the

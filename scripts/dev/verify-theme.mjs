@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 // Verify 12: the settled hero asset and the hydration console, at a forced
 // colour scheme.
 //

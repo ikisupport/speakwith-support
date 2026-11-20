@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 // Minimal HTML readers for the parity gate.
 //
 // Deliberately regex-based rather than a parser dependency: the two things

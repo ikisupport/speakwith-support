@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 // Truth table for the contact form's pure pieces. Not a framework test — a
 // plain assertion script, in `test-resolve-route.mjs`'s shape.
 //

@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 import { useLocation } from 'react-router';
 import {
   DEFAULT_LOCALE,
@@ -11,7 +16,7 @@ import {
 } from '../../src/content/copy';
 import { resolveRoute } from './route-resolve';
 
-/** One entry in the footer locale switcher. */
+/** One entry in the header locale switcher. */
 export interface SwitcherLink {
   locale: LocaleDef;
   /** Site-relative URL of the current page in that locale (English URL if the page is not localized). */
@@ -35,7 +40,7 @@ export interface LocaleApi {
   page: string;
   /** False on English-only pages (legal carve-out) and on the 404 page. */
   pageIsLocalized: boolean;
-  /** True when more than one locale is active for this build; gates the switcher. */
+  /** True when more than one locale is active for this build; gates the header switcher. */
   multilingual: boolean;
   /** Site-relative link to `routePath` (e.g. `'pricing'`, `''`) in the active locale. */
   path: (routePath: string) => string;

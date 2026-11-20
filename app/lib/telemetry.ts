@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router';
 import TelemetryDeck from '@telemetrydeck/sdk';

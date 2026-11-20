@@ -57,7 +57,7 @@
     },
     "pricing": {
       "title": "Pricing | SpeakWith",
-      "description": "iPhone and iPad: SpeakWith Pro adds session titles and polish, with a 7-day free trial. The Mac, sold through Gumroad, starts with a 14-day free trial, then a subscription or a one-time purchase."
+      "description": "iPhone and iPad: SpeakWith Pro adds session titles and polish, with a 7-day free trial. The Mac, sold through Gumroad, starts with a 14-day free trial, then a monthly membership or a one-time purchase."
     },
     "automation": {
       "title": "Automation | SpeakWith",
@@ -139,8 +139,15 @@
       "title": "Words land as you speak. Edit them live. Your related topics appear.",
       "heroImageDark": "canonical_screenshots/hero.png?v=20261113a",
       "heroImageLight": "canonical_screenshots/hero-light.png?v=20261113a",
+      "videoSrc": "assets/demo/hero-speech.mp4?v=20261123c",
+      "loopSrc": "assets/demo/hero-speech-loop.mp4?v=20261123c",
+      "loopWebmSrc": "assets/demo/hero-speech-loop.webm?v=20261123c",
+      "posterSrc": "canonical_screenshots/hero.png?v=20261113a",
+      "soundLabel": "Play with sound",
+      "soundOffLabel": "Play without sound",
+      "ariaLabel": "Screen recording of SpeakWith for Mac in live dictation: spoken words landing as transcribed lines under a live waveform, with a session title and a polished version of the take beside them, and a Related list on the right showing earlier sessions on the same subject.",
       "heroAlt": "SpeakWith for Mac in live dictation: spoken words landing as transcribed lines under a live waveform, with a session title and a polished version of the take beside them, and a Related list on the right showing earlier sessions on the same subject under a short summary.",
-      "heroCaption": "Speak, and watch the subtitles for your thoughts take shape before the idea slips away.",
+      "heroCaption": "A workshop invitation, talked through in SpeakWith. Each line appears as it is spoken, Related sessions lists earlier takes on the same subject, and Polish tidies the result and shows what it touched.",
       "heroPointsHeading": "Included with a monthly membership",
       "heroPointsLead": "The AI service is built in and ready to use. If you would rather, connect your own OpenAI API key, or run a local Ollama model on your Mac.",
       "heroPoints": [
@@ -207,6 +214,10 @@
       "lead": "On the direct Mac build, turn on the recorder switch or a hotkey. SpeakWith types finished phrases into whichever app has focus.",
       "videoSrc": "assets/demo/type-into-app.mp4?v=20260726d",
       "posterSrc": "assets/demo/type-into-app-poster.jpg?v=20260726d",
+      "loopSrc": "assets/demo/type-into-app-loop.mp4?v=20261121a",
+      "loopWebmSrc": "assets/demo/type-into-app-loop.webm?v=20261121a",
+      "soundLabel": "Play with sound",
+      "soundOffLabel": "Play without sound",
       "caption": "A real take: SpeakWith typing into Messages as each utterance settles.",
       "ariaLabel": "Screen recording of SpeakWith live dictation with the typing switch on, sending spoken phrases into an iMessage conversation."
     },
@@ -314,6 +325,19 @@
           "isHtml": false
         }
       ]
+    },
+    "sendToAgent": {
+      "id": "send-to-agent",
+      "eyebrow": "When you hand it off",
+      "heading": "Send a coding agent only the topics you check",
+      "lead": "Talk a job through first. When it is ready, check its topic in the Outline, pick the agent, the project folder, and the model from menus, and press Send to agent. Nothing is sent until you press it.",
+      "videoSrc": "assets/guides/send-to-agent-flow.mp4?v=20261121a",
+      "videoWebmSrc": "assets/guides/send-to-agent-flow.webm?v=20261121a",
+      "posterSrc": "assets/guides/send-to-agent-flow-poster.png?v=20261121a",
+      "ariaLabel": "Looping animation in three panels. In the Outline, a cursor checks the topic Plan a waitlist for when the seats fill. In the Agent tab it opens the Model menu, picks a model, and presses Send to agent. In the third panel, a coding agent's terminal receives the topic and answers with a three-step plan.",
+      "caption": "The Outline and the Agent tab are the app itself. The agent's window on the right is drawn, to show what arrives.",
+      "moreLabel": "How Send to agent works",
+      "morePath": "guides/send-to-agent"
     },
     "inclusive": {
       "eyebrow": "For the AI-skeptical, too",
@@ -549,7 +573,7 @@
     "header": {
       "eyebrow": "Plans & Features",
       "heading": "Choose how SpeakWith works for you",
-      "sub": "On iPhone and iPad, recording and transcription are free, and SpeakWith Pro adds session titles, polish, and the Mac monthly membership. The Mac has no free tier yet: try every feature for 14 days, then subscribe or buy once."
+      "sub": "On iPhone and iPad, recording and transcription are free, and SpeakWith Pro adds session titles, polish, and the Mac monthly membership. The Mac has no free tier yet: try every feature for 14 days, then become a member or buy once."
     },
     "table": {
       "headers": {
@@ -602,7 +626,7 @@
           "feature": "Price",
           "freePrice": "Free for 14 days",
           "paidPrice": "See options ↓",
-          "paidPriceSub": "subscription, or buy once, see below"
+          "paidPriceSub": "monthly membership, or buy once, see below"
         }
       }
     },
@@ -672,9 +696,9 @@
         },
         {
           "lead": "Direct (Gumroad)",
-          "heading": "Subscribe, or buy once",
-          "body": "Unlock the direct build with a monthly membership you can cancel any time, or buy a one-time license. The membership includes the AI service for session titles and polish, with a monthly allowance; the one-time license uses your own OpenAI key. Both unlock Pro on your iPhone and iPad signed in to the same Apple Account, and both include the switch that types your dictation into other apps. Already subscribed on iPhone or iPad? Your subscription stands in for the membership here. Not sure yet? Start with a 14-day free trial. Every download is notarized by Apple.",
-          "ctaLabel": "Subscribe",
+          "heading": "Become a member, or buy once",
+          "body": "Unlock the direct build with a monthly membership you can cancel any time, or buy a one-time license. Members get the AI service for session titles and polish, with a monthly allowance; the one-time license uses your own OpenAI key. Both unlock Pro on your iPhone and iPad signed in to the same Apple Account, and both include the switch that types your dictation into other apps. Already have SpeakWith Pro on iPhone or iPad? It counts as your membership here. Not sure yet? Start with a 14-day free trial. Every download is notarized by Apple.",
+          "ctaLabel": "Become a member",
           "ctaUrl": "https://ikisystems.gumroad.com/l/dcltnn",
           "ctaSecondaryLabel": "Buy once",
           "ctaSecondaryUrl": "https://ikisystems.gumroad.com/l/vozgsy",
@@ -688,7 +712,7 @@
       "finePrintLabel": "The window that shows the allowance.",
       "path": "guides/ai-usage"
     },
-    "finePrint": "Pro on the Mac (advanced engines, audio and video import, batch transcription, and smart formatting) is sold through a Gumroad membership or a one-time purchase. The membership includes the AI service with a monthly allowance; the one-time purchase and the free trial use an OpenAI key you provide or a local Ollama model. The 14-day trial locks until you subscribe or buy, and it does not carry to iPhone or iPad. On iPhone and iPad, SpeakWith Pro has a 7-day free trial, and the App Store lists its price.",
+    "finePrint": "Pro on the Mac (advanced engines, audio and video import, batch transcription, and smart formatting) is sold through a Gumroad membership or a one-time purchase. The membership includes the AI service with a monthly allowance; the one-time purchase and the free trial use an OpenAI key you provide or a local Ollama model. The 14-day trial locks until you become a member or buy, and it does not carry to iPhone or iPad. On iPhone and iPad, SpeakWith Pro has a 7-day free trial, and the App Store lists its price.",
     "macHeading": "Mac",
     "ios": {
       "heading": "iPhone and iPad",
@@ -1204,6 +1228,13 @@
       "heading": "Send to agent",
       "intro": "Send to agent takes the topics you have checked in the Outline and hands them, as one message, to a coding agent running on your Mac. The agent is connected over ACP, the Agent Client Protocol, and that connection is what lets SpeakWith ask the agent which folder to work in and which model to use, so you choose both from a menu instead of typing them. This page follows one job from the Outline through to the message the agent receives.",
       "examplesLabel": "In this job",
+      "flow": {
+        "videoSrc": "assets/guides/send-to-agent-flow.mp4?v=20261121a",
+        "videoWebmSrc": "assets/guides/send-to-agent-flow.webm?v=20261121a",
+        "posterSrc": "assets/guides/send-to-agent-flow-poster.png?v=20261121a",
+        "ariaLabel": "Looping animation in three panels. In the Outline, a cursor checks the topic Plan a waitlist for when the seats fill. In the Agent tab it opens the Model menu, which lists three models under Plan and three under Exec, picks one, and presses Send to agent. In the third panel, a coding agent's terminal receives the topic and answers with a three-step plan.",
+        "caption": "Check a topic in the Outline, choose a model in the Agent tab, and press Send to agent. The Outline and the Agent tab are the app itself. The agent's window on the right is drawn, to show what arrives."
+      },
       "diagramDark": "assets/guides/send-to-agent-annotated.svg?v=20260929g",
       "diagramLight": "assets/guides/send-to-agent-annotated-light.svg?v=20260929g",
       "diagramAlt": "Annotated diagram of the two panels behind Send to agent in SpeakWith. The upper panel is the Destination block from the Agent tab: three labelled rows reading Agent, Project, and Model, each with a pop-up menu, and an Add folder button beside Project. Beneath it the Project menu is shown opened, with a Recent section listing folders and when they were last used, and an All projects section listing the rest. The lower panel is the program block of Settings under Agent: an Agent program row showing a file path with a Change button and a small minus, an Arguments text field, and a Project folder row showing a folder path with the same Change button and minus. Numbered callouts name each control.",
@@ -2059,7 +2090,7 @@
   "privacy": {
     "heading": "Privacy Policy",
     "meta": "Last updated: November 2026",
-    "intro": "SpeakWith is built around a simple principle: your words are yours. This policy explains what SpeakWith does and does not do with the recordings, transcripts, and documents you create. November 2026 changes: a new section describes the AI service included with a monthly membership, which sends transcript text to IKI Systems and then to OpenAI. The policy also now covers Related sessions on the Mac, which matches on your device and can send excerpts from earlier days to a language model for a short summary. It now also lists the hashed records the service keeps when a licence key is used on a Mac, says what happens to IP addresses, names the companies involved, and explains how to ask for your records to be deleted.",
+    "intro": "SpeakWith is built around a simple principle: your words are yours. This policy explains what SpeakWith does and does not do with the recordings, transcripts, and documents you create. November 2026 changes: a new section describes the AI service included with a monthly membership, which sends transcript text to IKI Systems and then to OpenAI. That section now says IKI Systems never reads the text the included service carries, and that training is disabled on the OpenAI account that receives it. The policy also now covers Related sessions on the Mac, which matches on your device and can send excerpts from earlier days to a language model for a short summary. It now also lists the hashed records the service keeps when a licence key is used on a Mac, says what happens to IP addresses, names the companies involved, and explains how to ask for your records to be deleted.",
     "sections": [
       {
         "heading": "Your recordings are processed on your device",
@@ -2098,7 +2129,7 @@
             "isHtml": false
           },
           {
-            "text": "SpeakWith can reach a language model three ways, and your text only passes through us on one of them: a local Ollama model on the Mac, where nothing leaves your device; an OpenAI API key you provide, where the text goes from the app straight to OpenAI and never through us; and the included service. For that third path our role is transit and nothing else. The text is encrypted in transit, to our service and from there to OpenAI, and held only in memory for the length of the request. Our AI service never writes the text you send, or the text that comes back, to a log or to a database, not when a request succeeds and not when it fails. Whatever we record about a failure describes the failure, never the text that was in flight. A failure record can name the membership it belongs to, by the hash described above, and the service's logs are deleted after 30 days. What OpenAI does with the text on its side is governed by <a href=\"https://openai.com/policies/\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI's terms and policies</a>.",
+            "text": "SpeakWith can reach a language model three ways, and your text only passes through us on one of them: a local Ollama model on the Mac, where nothing leaves your device; an OpenAI API key you provide, where the text goes from the app straight to OpenAI and never through us; and the included service. For that third path our role is transit and nothing else. The text is encrypted in transit, to our service and from there to OpenAI, and held only in memory for the length of the request. Our AI service never writes the text you send, or the text that comes back, to a log or to a database, not when a request succeeds and not when it fails. Whatever we record about a failure describes the failure, never the text that was in flight. A failure record can name the membership it belongs to, by the hash described above, and the service's logs are deleted after 30 days. IKI Systems never reads that text, so it cannot train on it. Training is disabled on the OpenAI account this service uses, so OpenAI does not train on that text either. Purchase and usage records are counts and hashes, not your words. OpenAI may still hold the text briefly to check for abuse; that holding is covered by <a href=\"https://openai.com/policies/\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI's policies</a> and is separate from training. A key you provide belongs to your own account, so this statement stops at the included service.",
             "isHtml": true
           },
           {

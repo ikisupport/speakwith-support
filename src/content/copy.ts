@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 import EN from '@content/copy.json';
 import { ACTIVE_MATRIX, ACTIVE_TRANSLATIONS } from './locales.active';
 

@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 // Fail the build when a copy.<locale>.json drifts from copy.json.
 //
 // Rules, per locale file:
@@ -29,7 +34,7 @@ const matrix = JSON.parse(readFileSync(resolve(dir, 'locales.json'), 'utf8'));
 
 // Leaf keys whose values are not prose and must stay identical to English.
 const PINNED_KEYS = new Set([
-  'id', 'src', 'srcLight', 'videoSrc', 'posterSrc', 'heroImageDark', 'heroImageLight', 'isHtml', 'wide', 'badgeKind',
+  'id', 'src', 'srcLight', 'videoSrc', 'videoWebmSrc', 'loopSrc', 'loopWebmSrc', 'posterSrc', 'heroImageDark', 'heroImageLight', 'isHtml', 'wide', 'badgeKind',
   'ctaUrl', 'ctaSecondaryUrl', 'ctaTertiaryUrl', 'diagramDark', 'diagramLight',
   'figureDark', 'figureLight', 'figureWidth', 'figureHeight', 'path', 'morePath', 'moreUrl',
 ]);

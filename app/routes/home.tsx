@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 import { Fragment } from 'react';
 import { Link, type MetaArgs } from 'react-router';
 import { headFor } from '../head';
@@ -6,6 +11,8 @@ import { useTheme } from '../lib/theme';
 import { useLocaleApi } from '../lib/locale';
 import { signal } from '../lib/telemetry';
 import { cx } from '../lib/cx';
+import { FlowLoop } from '../components/FlowLoop';
+import { SoundLoop } from '../components/SoundLoop';
 import css from './home.module.css';
 
 /**
@@ -35,6 +42,31 @@ export default function Home() {
   const heroImageSrc = siteIsLight
     ? copy.home.moments.heroImageLight
     : copy.home.moments.heroImageDark;
+
+  /**
+   * The membership legend under the hero figure. One copy, because the dark
+   * branch hands it to `SoundLoop` as its footer and the light branch puts it in
+   * its own `figcaption`.
+   */
+  const heroLegend = (
+    <>
+      <p className={css.heroshot__lead}>{copy.home.moments.heroCaption}</p>
+      <div className={css.heroshot__plan}>
+        <p className="eyebrow eyebrow--accent">{copy.home.moments.heroPointsHeading}</p>
+        <p className={css['heroshot__plan-lead']}>{copy.home.moments.heroPointsLead}</p>
+        <ul className={css.heroshot__points}>
+          {copy.home.moments.heroPoints.map((point) => (
+            <li key={point.label} className={css.heroshot__point}>
+              <p className={css['heroshot__point-label']}>{point.label}</p>
+              <p className={css['heroshot__point-body']}>{point.body}</p>
+            </li>
+          ))}
+        </ul>
+        <Link className={css['heroshot__plan-cta']} to={locale.path('pricing')}
+           onClick={() => signal('cta.pricing', { placement: 'heroshot' })}>{copy.home.moments.heroPointsCta}</Link>
+      </div>
+    </>
+  );
 
   /** Mocha for a dark page, Latte when the iOS card has a light twin. */
   const platformImageSrc = (item: { src: string; srcLight?: string }): string =>
@@ -75,29 +107,28 @@ export default function Home() {
           <section id="moments" className={css.heroshot}>
             <div className="container home-band home-band--center">
               <h2 className={css.heroshot__title}>{copy.home.moments.title}</h2>
-              <figure className={css.heroshot__figure}>
-                <div className="shot-alpha">
-                  <img className={css.heroshot__image} src={asset(heroImageSrc)}
-                       alt={copy.home.moments.heroAlt} loading="lazy" />
-                </div>
-                <figcaption className={css.heroshot__legend}>
-                  <p className={css.heroshot__lead}>{copy.home.moments.heroCaption}</p>
-                  <div className={css.heroshot__plan}>
-                    <p className="eyebrow eyebrow--accent">{copy.home.moments.heroPointsHeading}</p>
-                    <p className={css['heroshot__plan-lead']}>{copy.home.moments.heroPointsLead}</p>
-                    <ul className={css.heroshot__points}>
-                      {copy.home.moments.heroPoints.map((point) => (
-                        <li key={point.label} className={css.heroshot__point}>
-                          <p className={css['heroshot__point-label']}>{point.label}</p>
-                          <p className={css['heroshot__point-body']}>{point.body}</p>
-                        </li>
-                      ))}
-                    </ul>
-                    <Link className={css['heroshot__plan-cta']} to={locale.path('pricing')}
-                       onClick={() => signal('cta.pricing', { placement: 'heroshot' })}>{copy.home.moments.heroPointsCta}</Link>
+              {/* Dark gets the take: a silent loop on arrival, and one button that
+                  plays it from the top with sound and keeps it looping there until
+                  the same button is pressed again (components/SoundLoop). Light keeps
+                  the still -- there is no latte film. Either way one figure, and the
+                  same legend under it. */}
+              {siteIsLight ? (
+                <figure className={css.heroshot__figure}>
+                  <div className="shot-alpha">
+                    <img className={css.heroshot__image} src={asset(heroImageSrc)}
+                         alt={copy.home.moments.heroAlt} loading="lazy" />
                   </div>
-                </figcaption>
-              </figure>
+                  <figcaption className={css.heroshot__legend}>{heroLegend}</figcaption>
+                </figure>
+              ) : (
+                <SoundLoop
+                  clip={copy.home.moments}
+                  className={css.heroshot__figure}
+                  videoClassName={css.heroshot__video}
+                  frameClassName="shot-alpha"
+                  captionClassName={css.heroshot__legend}
+                  footer={heroLegend} />
+              )}
             </div>
           </section>
 
@@ -154,18 +185,32 @@ export default function Home() {
               <p className="eyebrow eyebrow--accent">{copy.home.typeIntoApp.eyebrow}</p>
               <h2 className={css.heroshot__title}>{copy.home.typeIntoApp.heading}</h2>
               <p className={css.typedemo__lead}>{copy.home.typeIntoApp.lead}</p>
-              <figure className={css.heroshot__figure}>
-                <video
-                  className={css.typedemo__video}
-                  controls
-                  playsInline
-                  preload="metadata"
-                  poster={asset(copy.home.typeIntoApp.posterSrc)}
-                  aria-label={copy.home.typeIntoApp.ariaLabel}>
-                  <source src={asset(copy.home.typeIntoApp.videoSrc)} type="video/mp4" />
-                </video>
-                <figcaption className={css.heroshot__caption}>{copy.home.typeIntoApp.caption}</figcaption>
-              </figure>
+              {/* The same player as the hero, so the same behaviour: a short silent
+                  loop on arrival, and one button that plays the full take from the top
+                  with sound and leaves it looping (components/SoundLoop). */}
+              <SoundLoop
+                clip={copy.home.typeIntoApp}
+                className={css.heroshot__figure}
+                videoClassName={css.typedemo__video}
+                captionClassName={css.heroshot__caption} />
+
+            </div>
+          </section>
+
+          {/* Send to agent: the looping walk-through. Straight after Type into app,
+              because the two answer one question, where your words go: into the app
+              you are in, or to a coding agent, and only the topics you check. Both
+              earlier places were too far down: after the band about what you share
+              with an AI (four fifths of the way), then after Corrections (half way). */}
+          <section id={copy.home.sendToAgent.id} className={css.typedemo}>
+            <div className="container home-band home-band--center">
+              <p className="eyebrow eyebrow--accent">{copy.home.sendToAgent.eyebrow}</p>
+              <h2 className={css.heroshot__title}>{copy.home.sendToAgent.heading}</h2>
+              <p className={css.typedemo__lead}>{copy.home.sendToAgent.lead}</p>
+              <FlowLoop flow={copy.home.sendToAgent} className={css.agentflow} />
+              <p className={css.liveedit__more}>
+                <Link to={locale.path(copy.home.sendToAgent.morePath)}>{copy.home.sendToAgent.moreLabel}</Link>
+              </p>
             </div>
           </section>
 

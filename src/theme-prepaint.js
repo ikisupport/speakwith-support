@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 // Resolve and apply the saved theme before first paint, so the page never
 // flashes the wrong palette. Inlined into every page's <head> verbatim by
 // scripts/extract-theme-prelude.mjs, ahead of any React code: it must run

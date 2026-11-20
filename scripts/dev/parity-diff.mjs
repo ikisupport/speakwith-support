@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 // Route-by-route parity between this build and the legacy Angular build.
 //
 // Maintainer-only, and historical: the Angular implementation this site

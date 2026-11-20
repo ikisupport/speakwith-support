@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 /* Error-page styling, deliberately a sibling of routes/not-found.module.css:
    the two pages are the same shape (one centred column, no chrome) and must
    not drift apart. Every colour is a theme token — the palette lives only in

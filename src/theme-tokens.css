@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 /* The palette. Inlined into every page's <head> before the deferred
    stylesheet loads, which is what stops a light flash on dark systems.
    styles.css only consumes these via var(--*); this file is the one place

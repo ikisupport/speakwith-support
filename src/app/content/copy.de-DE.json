@@ -130,8 +130,15 @@
       "title": "Wörter erscheinen, während du sprichst. Bearbeite sie live. Deine verwandten Themen tauchen auf.",
       "heroImageDark": "canonical_screenshots/hero.png?v=20261113a",
       "heroImageLight": "canonical_screenshots/hero-light.png?v=20261113a",
+      "videoSrc": "assets/demo/hero-speech.mp4?v=20261123c",
+      "loopSrc": "assets/demo/hero-speech-loop.mp4?v=20261123c",
+      "loopWebmSrc": "assets/demo/hero-speech-loop.webm?v=20261123c",
+      "posterSrc": "canonical_screenshots/hero.png?v=20261113a",
+      "soundLabel": "Mit Ton abspielen",
+      "soundOffLabel": "Ohne Ton abspielen",
+      "ariaLabel": "Bildschirmaufnahme von SpeakWith für Mac im Live-Diktat: gesprochene Wörter erscheinen als transkribierte Zeilen unter einer Live-Wellenform, daneben ein Sitzungstitel und eine Version des Takes mit Feinschliff, und rechts eine Verwandt-Liste, die frühere Sitzungen zum selben Thema zeigt.",
       "heroAlt": "SpeakWith für den Mac beim Live-Diktieren: gesprochene Worte landen als transkribierte Zeilen unter einer Live-Wellenform, daneben ein Sitzungstitel und eine Fassung der Aufnahme mit Feinschliff, und rechts eine Liste verwandter Sitzungen, die unter einer kurzen Zusammenfassung steht und frühere Sitzungen zum selben Thema zeigt.",
-      "heroCaption": "Sprich, und sieh zu, wie die Untertitel deiner Gedanken Gestalt annehmen, bevor die Idee entgleitet.",
+      "heroCaption": "Eine Workshop-Einladung, in SpeakWith durchgesprochen. Jede Zeile erscheint so, wie sie gesprochen wird, Verwandte Sitzungen listen frühere Fassungen desselben Themas auf, und Feinschliff räumt das Ergebnis auf und zeigt, was es verändert hat.",
       "heroPointsHeading": "In der monatlichen Mitgliedschaft enthalten",
       "heroPointsLead": "Der KI-Dienst ist integriert und einsatzbereit. Wenn du es vorziehst, verbinde deinen eigenen OpenAI-API-Schlüssel oder lass ein lokales Ollama-Modell auf deinem Mac laufen.",
       "heroPoints": [
@@ -198,6 +205,10 @@
       "lead": "Schalte in der Direktversion für Mac den Rekorder-Schalter oder einen Hotkey ein. SpeakWith tippt fertige Sätze in die App, die gerade den Fokus hat.",
       "videoSrc": "assets/demo/type-into-app.mp4?v=20260726d",
       "posterSrc": "assets/demo/type-into-app-poster.jpg?v=20260726d",
+      "loopSrc": "assets/demo/type-into-app-loop.mp4?v=20261121a",
+      "loopWebmSrc": "assets/demo/type-into-app-loop.webm?v=20261121a",
+      "soundLabel": "Mit Ton abspielen",
+      "soundOffLabel": "Ohne Ton abspielen",
       "caption": "Eine echte Aufnahme: SpeakWith tippt in Nachrichten, sobald jede Äußerung feststeht.",
       "ariaLabel": "Bildschirmaufnahme des Live-Diktats von SpeakWith mit eingeschaltetem Tipp-Schalter, die gesprochene Sätze in eine iMessage-Unterhaltung sendet."
     },
@@ -305,6 +316,19 @@
           "isHtml": false
         }
       ]
+    },
+    "sendToAgent": {
+      "id": "send-to-agent",
+      "eyebrow": "Wenn du es übergibst",
+      "heading": "Sende einem Coding-Agenten nur die Themen, die du auswählst",
+      "lead": "Sprich einen Auftrag zuerst durch. Wenn er soweit ist, hake sein Thema in der Gliederung an, wähle den Agenten, den Projektordner und das Modell aus den Menüs und drücke An den Agenten senden. Nichts wird gesendet, bis du darauf drückst.",
+      "videoSrc": "assets/guides/send-to-agent-flow.mp4?v=20261121a",
+      "videoWebmSrc": "assets/guides/send-to-agent-flow.webm?v=20261121a",
+      "posterSrc": "assets/guides/send-to-agent-flow-poster.png?v=20261121a",
+      "ariaLabel": "Schleifenanimation in drei Panels. In der Gliederung hakt ein Cursor das Thema „Plane eine Warteliste, sobald die Plätze voll werden“ an. Im Agent-Tab öffnet er das Menü Modell, wählt ein Modell und drückt An den Agenten senden. Im dritten Panel erhält das Terminal eines Coding-Agenten das Thema und antwortet mit einem Plan in drei Schritten.",
+      "caption": "Die Gliederung und der Agent-Tab sind die App selbst. Das Fenster des Agenten rechts ist gezeichnet, um zu zeigen, was ankommt.",
+      "moreLabel": "So funktioniert An den Agenten senden",
+      "morePath": "guides/send-to-agent"
     },
     "inclusive": {
       "eyebrow": "Auch für KI-Skeptiker",

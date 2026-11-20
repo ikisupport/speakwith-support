@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 // Write src/content/locales.active.ts: the locale matrix filtered to the
 // locales active for this build, plus static imports of ONLY their copy files,
 // so a disabled locale contributes no routes and no strings to the bundle.

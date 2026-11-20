@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 import { Link, type ClientLoaderFunctionArgs, type MetaArgs } from 'react-router';
 import { cx } from '../lib/cx';
 import s from './dev.module.css';

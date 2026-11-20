@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 // Maintainer-only, and historical: compare this build against the legacy
 // Angular PRODUCTION BUILD, every route, both colour schemes. See the legacy
 // parity section of CONTRIBUTING.md; LEGACY_SITE_DIR names that checkout.

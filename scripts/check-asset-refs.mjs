@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 // Every local asset a prerendered page references must exist in the build.
 //
 // This catches a whole class of bug the head and text gates cannot see.

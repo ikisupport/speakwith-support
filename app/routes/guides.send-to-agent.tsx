@@ -1,9 +1,15 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 import { Fragment } from 'react';
 import { Link, type MetaArgs } from 'react-router';
 import { headFor } from '../head';
 import { asset } from '../lib/asset';
 import { useTheme } from '../lib/theme';
 import { useLocaleApi } from '../lib/locale';
+import { FlowLoop } from '../components/FlowLoop';
 import css from './guides.send-to-agent.module.css';
 
 /**
@@ -78,6 +84,7 @@ export default function GuidesSendToAgent() {
             <p className={css.eyebrow}>{copy.guides.sendToAgent.eyebrow}</p>
             <h1>{copy.guides.sendToAgent.heading}</h1>
             <p>{copy.guides.sendToAgent.intro}</p>
+            <FlowLoop flow={guide.flow} className={css.flow} />
             <figure className={css.diagram}>
               <img
                 src={asset(diagramSrc)}

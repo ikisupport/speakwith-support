@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 // Where the site's content and static assets live.
 //
 // copy.json, copy.<locale>.json, locales.json, public/ and styles.css are all

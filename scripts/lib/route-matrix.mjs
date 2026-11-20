@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 // The locale x route product, derived from locales.json
 // through its own resolveActiveLocales(). Everything that needs to know which
 // URLs exist reads it from here: react-router.config.ts's prerender list, the

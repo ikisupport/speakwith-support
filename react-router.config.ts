@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 import type { Config } from '@react-router/dev/config';
 import { prerenderPaths } from './scripts/lib/route-matrix.mjs';
 

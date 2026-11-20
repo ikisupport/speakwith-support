@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 // Resolve which locales are active for THIS build.
 //
 // Production truth is the committed `enabled` flag in locales.json (false for

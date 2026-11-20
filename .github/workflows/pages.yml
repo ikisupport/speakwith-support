@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: © 2026-Present IKI Systems
+# SPDX-License-Identifier: LicenseRef-Proprietary
+
 # Builds the site and publishes it to the gh-pages branch.
 #
 # Slack (optional): after a successful deploy, posts to your Incoming Webhook.

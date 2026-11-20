@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 // Assemble a React page module + its CSS module from an Angular component,
 // using ng2react.mjs for the template and style blocks.
 //

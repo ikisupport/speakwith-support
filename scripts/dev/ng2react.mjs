@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 // Mechanical first pass from an Angular standalone component to a React page.
 //
 // This is a migration aid, not a compiler. It does the bulk, repetitive 90% —

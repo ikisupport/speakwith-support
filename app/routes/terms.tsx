@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 import { Fragment } from 'react';
 import type { MetaArgs } from 'react-router';
 import { headFor } from '../head';

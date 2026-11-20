@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 // Fail if a tracked file names a machine, a host, a port or a mailbox.
 //
 // The site's own pages document commands people run on their own Mac, so the

@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 /* From home.component.ts's `styles` block. */
 /* Hero */
 .hero {
@@ -58,6 +63,27 @@
   height: auto;
   aspect-ratio: 16 / 10;
   object-fit: contain;
+}
+
+/* The same frame, filmed. H.264 carries no alpha, so the take is flattened onto the
+   window's own colour and the rounded corners are cut back out here, from the same
+   silhouette the still already has. The mask sits on the two videos and not on their
+   box, because `filter` paints before `mask` on one element: :global(.shot-alpha) only
+   traces the window if what it shadows has already been cut out. The mask is 16:10 like
+   both files (the take 1920×1200, the loop 1440×900), so `100% 100%` does not stretch
+   it. No radius and no border, for the same reason as the still above. */
+.heroshot__video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  -webkit-mask-image: url('/assets/demo/hero-dark-alpha.png?v=20261122a');
+  mask-image: url('/assets/demo/hero-dark-alpha.png?v=20261122a');
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 /* Roman and held to a reading measure: this caption is a paragraph under the hero still, and
@@ -690,4 +716,12 @@ app-home regardless of row parity. */
   .hero__inner {
     padding: 3rem 0 2.8rem;
   }
+}
+
+/* Send to agent band: the looping clip (components/FlowLoop). The band's column
+   is centred text, and the clip's caption reads as a caption only when it is
+   set left under the frame. */
+.agentflow {
+  margin: 0 0 1.2rem;
+  text-align: left;
 }

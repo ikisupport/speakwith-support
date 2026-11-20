@@ -1,3 +1,8 @@
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 /* Was `:host` + the bare `main` rule in app.component.ts. Angular scoped both
    to the shell component; here they are anchored on a wrapper class so the
    `main` rule cannot leak onto any other page's markup.

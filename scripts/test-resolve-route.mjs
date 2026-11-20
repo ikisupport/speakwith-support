@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+/*
+ * SPDX-FileCopyrightText: © 2026-Present IKI Systems
+ * SPDX-License-Identifier: LicenseRef-Proprietary
+ */
+
 // Truth table for resolveRoute(). Not a framework test — a plain assertion
 // script, because this one pure function stands in for everything Angular
 // attached as per-route `data` and every head tag depends on it.
