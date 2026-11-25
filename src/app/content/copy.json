@@ -1235,9 +1235,9 @@
         "ariaLabel": "Looping animation in three panels. In the Outline, a cursor checks the topic Plan a waitlist for when the seats fill. In the Agent tab it opens the Model menu, which lists three models under Plan and three under Exec, picks one, and presses Send to agent. In the third panel, a coding agent's terminal receives the topic and answers with a three-step plan.",
         "caption": "Check a topic in the Outline, choose a model in the Agent tab, and press Send to agent. The Outline and the Agent tab are the app itself. The agent's window on the right is drawn, to show what arrives."
       },
-      "diagramDark": "assets/guides/send-to-agent-annotated.svg?v=20260929g",
-      "diagramLight": "assets/guides/send-to-agent-annotated-light.svg?v=20260929g",
-      "diagramAlt": "Annotated diagram of the two panels behind Send to agent in SpeakWith. The upper panel is the Destination block from the Agent tab: three labelled rows reading Agent, Project, and Model, each with a pop-up menu, and an Add folder button beside Project. Beneath it the Project menu is shown opened, with a Recent section listing folders and when they were last used, and an All projects section listing the rest. The lower panel is the program block of Settings under Agent: an Agent program row showing a file path with a Change button and a small minus, an Arguments text field, and a Project folder row showing a folder path with the same Change button and minus. Numbered callouts name each control.",
+      "diagramDark": "assets/guides/send-to-agent-annotated.svg?v=20261125a",
+      "diagramLight": "assets/guides/send-to-agent-annotated-light.svg?v=20261125a",
+      "diagramAlt": "Annotated diagram of the two panels behind Send to agent in SpeakWith. The upper panel is the Destination block from the Agent tab. It has an Agent row and a Project row, each with a pop-up menu, and an Add folder button beside Project. Under them one row holds three short menus, Skill, Model, and Effort, set to Plan, Opus 5.5, and H, and a caption below them spells the pick out as Plan, Opus 5.5, high. An inset shows the same row as it is by default: one Model menu reading Agent default. Beneath the card the Project menu is shown opened, with a Recent section listing folders and when they were last used, and an All projects section listing the rest. The lower panel is the program block of Settings under Agent: an Agent program row showing a file path with a Change button and a small minus, an Arguments text field, and a Project folder row showing a folder path with the same Change button and minus. Numbered callouts name each control.",
       "sections": [
         {
           "heading": "Before you start",
@@ -1364,7 +1364,7 @@
           "heading": "Rows you may or may not see",
           "paragraphs": [
             {
-              "text": "Two more rows appear under Destination only when there is a choice to make."
+              "text": "Two more rows appear under Destination only when there is a choice to make. One row can also be drawn a second way, and only when it has been turned on."
             }
           ],
           "steps": [
@@ -1382,6 +1382,14 @@
               "examples": [
                 "Choose Open a session. The terminal figure is Claude Code writing the chapter in lighthouse-book.",
                 "Answer here would put the draft on the Agent tab instead. On that path SpeakWith declines a request to create chapters/04-the-storm.md."
+              ]
+            },
+            {
+              "title": "Skill, Model, and Effort.",
+              "text": "One Model menu is the default, and it is what you see unless three menus have been turned on for this Mac. With them on, the Model row becomes three short menus. Skill is what the turn produces: a Recon note, a Plan, or Exec. Model is which model does the work, and it adds the program's name only when the list holds more than one program. Effort is how hard the model thinks: L, M, H, or XH, or a dash for a row that has no tier. A line under the menus spells the pick out in full. If the list holds a row that does not sort into the three, Destination keeps the single Model menu. The Agent lists page shows the setting.",
+              "examples": [
+                "This job leaves the three menus off. Destination has one Model menu, and it reads Agent default.",
+                "With them on and Plan, Opus 5.5, and H picked, the line under the menus reads Plan · Opus 5.5 · high."
               ]
             }
           ]
@@ -2066,7 +2074,23 @@
               "isHtml": true
             },
             {
-              "text": "What you see on the Agent tab: with the first way, the Model menu fills as soon as your push lands, before any agent has been contacted. With the second, it fills once that agent has answered session/new, which happens when a session is opened with it. Either way the status line ends in default model until someone picks a row, and a pick that is still in the list stays picked across pushes.",
+              "text": "<p><strong>On session/new, as three menus.</strong></p>",
+              "isHtml": true
+            },
+            {
+              "text": "<p>This is not a third way to send models. It is a second way to draw the list you already sent. Destination normally shows that list as one Model menu. It can show the same rows as three menus instead: Skill, Model, and Effort. An agent says which it expects in the <code>_meta</code> of the same <code>session/new</code> answer, under a <code>speakwith</code> key, next to <code>configOptions</code>:</p><pre><code>\"_meta\": {\n  \"speakwith\": {\n    \"menu\": \"axes\",\n    \"axes\": {\n      \"skill\":  [{ \"id\": \"recon\", \"name\": \"Recon note\" }, { \"id\": \"plan\", \"name\": \"Plan\" }],\n      \"model\":  [{ \"id\": \"opus\", \"name\": \"Opus\" }],\n      \"effort\": [{ \"id\": \"high\", \"name\": \"H\" }]\n    }\n  }\n}</code></pre><p><code>menu</code> is the switch. <code>axes</code> means three menus. Every other value means <code>list</code>, the single Model menu, and so does leaving the key out. A misspelt value gets the menu that has always worked, never an empty card.</p><p>The <code>configOptions</code> entry whose <code>category</code> is <code>model</code> still carries every model id, exactly as above. The three menus are three ways of choosing one of those rows. They are not a second set of ids, and a client that ignores <code>_meta</code> keeps one working menu.</p><p>SpeakWith never builds an id out of a skill, a model, and an effort. It looks up the published row that answers to the three picks and hands back that row's id. When no published row answers, the previous pick stays where it was. Publish a row for every combination people should be able to reach.</p>",
+              "isHtml": true
+            },
+            {
+              "text": "<p><strong>Where SpeakWith reads the switch today.</strong></p>",
+              "isHtml": true
+            },
+            {
+              "text": "<p>SpeakWith's own bridge keeps the same switch as a top-level <code>menu</code> key in <code>~/.config/speakwith/acp_bridge.toml</code>, above the first <code>[agents.…]</code> table:</p><pre><code>menu = \"axes\"</code></pre><p>The Destination card takes the switch from that file, so it is already drawn the right way before the first <code>session/new</code>. The bridge repeats the value in <code>_meta</code> for anything that reads the wire. The file ships with <code>menu = \"list\"</code>, so three menus are off until someone turns them on.</p><p>The <code>axes</code> lists are published for any client that wants them. The Destination card does not draw from them yet. It sorts the published rows into the three menus by itself, and today that covers the Recon note, Plan, and Exec rows that a session manager publishes. If one row in the list does not sort, the whole list stays in one Model menu, so a menu is never half converted.</p>",
+              "isHtml": true
+            },
+            {
+              "text": "What you see on the Agent tab: with the first way, the Model menu fills as soon as your push lands, before any agent has been contacted. With the second, it fills once that agent has answered session/new, which happens when a session is opened with it. Either way the status line ends in default model until someone picks a row, and a pick that is still in the list stays picked across pushes. With three menus on, a line under them spells the pick out in full, such as Plan · Opus · high, and a row that has no effort tier shows a dash in the Effort menu.",
               "isHtml": false
             }
           ]
@@ -2090,7 +2114,7 @@
   "privacy": {
     "heading": "Privacy Policy",
     "meta": "Last updated: November 2026",
-    "intro": "SpeakWith is built around a simple principle: your words are yours. This policy explains what SpeakWith does and does not do with the recordings, transcripts, and documents you create. November 2026 changes: a new section describes the AI service included with a monthly membership, which sends transcript text to IKI Systems and then to OpenAI. That section now says IKI Systems never reads the text the included service carries, and that training is disabled on the OpenAI account that receives it. The policy also now covers Related sessions on the Mac, which matches on your device and can send excerpts from earlier days to a language model for a short summary. It now also lists the hashed records the service keeps when a licence key is used on a Mac, says what happens to IP addresses, names the companies involved, and explains how to ask for your records to be deleted.",
+    "intro": "SpeakWith is built around a simple principle: your words are yours. This policy explains what SpeakWith does and does not do with the recordings, transcripts, and documents you create. November 2026 changes: a new section describes the AI service included with a monthly membership, which sends transcript text to IKI Systems and then to OpenAI. That section now says IKI Systems never reads the text the included service carries, and that training is disabled on the OpenAI account that receives it. The policy also now covers Related sessions on the Mac, which matches on your device and can send excerpts from earlier days to a language model for a short summary. It now also lists the records the service keeps when a licence key is used on a Mac, says what happens to IP addresses, names the companies involved, and explains how to ask for your records to be deleted. The membership section now states what the service keeps and why, and leaves out the internal layout of those records. The policy also now states the legal grounds we rely on, the rights you have over your records, and that the records are handled in the United States.",
     "sections": [
       {
         "heading": "Your recordings are processed on your device",
@@ -2121,15 +2145,15 @@
             "isHtml": false
           },
           {
-            "text": "To confirm that your membership is current, the app sends your purchase credential over an encrypted connection, and the service checks it with the store that sold it. What the service keeps is a hash of that credential, which identifies your membership without being usable to buy or unlock anything, along with a hashed short-lived session token, your membership tier, the time of first and most recent use, and the version of macOS or iOS the app last reported. It does not store your name or your email address, and it does not record your IP address. It keeps a monthly total of the tokens each membership has used, so it can apply the allowance, and it records which feature the tokens went to and whether the call came from a Mac or from an iPhone or iPad. The ledger also holds the totals the app reports for calls made with your own OpenAI API key: token counts, the feature, and the model, never the text and never the key. That ledger holds counts, not your words. If you use a licence key bought through Gumroad, the service also keeps an activation record for each Mac the key is used on, which is how one key is held to a limited number of Macs. That record is a hash of the licence key, paired with a per-device hash derived from that Mac's hardware identifier and that key, with the time of first and most recent use. Because the key is part of the device hash, the same Mac gets a different hash under every licence, so these records cannot be used to link one Mac across licences. These records live in Amazon Web Services, in the US West (Oregon) region.",
+            "text": "To confirm that your membership is current, the app sends your purchase credential over an encrypted connection, and the service checks it with the store that sold it. What the service keeps is an identifier for that membership, which cannot be used to buy or unlock anything, along with a short-lived session identifier, your membership tier, the time of first and most recent use, and the version of macOS or iOS the app last reported. It does not store your name or your email address, and it does not record your IP address. So on its own, the identifier does not say who you are. It keeps a monthly total of the tokens each membership has used, so it can apply the allowance, and it records which feature the tokens went to and whether the call came from a Mac or from an iPhone or iPad. The ledger also holds the totals the app reports for calls made with your own OpenAI API key: token counts, the feature, and the model, never the text and never the key. If you use a licence key bought through Gumroad, the service also keeps a record for each Mac the key is used on, which is how one key is held to a limited number of Macs. That record belongs to the licence. The same Mac cannot be recognised from these records under a different licence. These records are stored by Amazon Web Services in the US West (Oregon) region.",
             "isHtml": false
           },
           {
-            "text": "Separately, if your Mac holds a licence and has iCloud sync turned on, it asks the service to hold your purchase credential so that an iPhone signed into the same iCloud account can reach what you have paid for without ever storing the credential itself. This happens on any licensed Mac, whether or not you use an iPhone, and for a one-time purchase as well as a membership. The copy the service keeps is encrypted, and the only thing that can open it is a token your Mac generates and passes to your other devices through your own private iCloud storage. The copy is filed under the per-device hash described above, the one derived from that Mac and that licence key. The service keeps no copy of that token, so it cannot read your credential on its own, only while one of your devices presents the token to check your licence. Your Mac replaces the token periodically. Removing your licence on that Mac deletes the stored copy; until you do, it stays.",
+            "text": "Separately, if your Mac holds a licence and has iCloud sync turned on, it asks the service to hold an encrypted copy of your purchase credential, so that an iPhone signed into the same iCloud account can reach what you have paid for without storing the credential itself. This happens on any licensed Mac, whether or not you use an iPhone, and for a one-time purchase as well as a membership. Only your own devices can open that copy. They use a token your Mac creates and passes to your other devices through your private iCloud storage. The service keeps no copy of that token, so it cannot read the credential on its own. Your Mac replaces the token from time to time. Removing your licence on that Mac deletes the stored copy. Until you do, it stays.",
             "isHtml": false
           },
           {
-            "text": "SpeakWith can reach a language model three ways, and your text only passes through us on one of them: a local Ollama model on the Mac, where nothing leaves your device; an OpenAI API key you provide, where the text goes from the app straight to OpenAI and never through us; and the included service. For that third path our role is transit and nothing else. The text is encrypted in transit, to our service and from there to OpenAI, and held only in memory for the length of the request. Our AI service never writes the text you send, or the text that comes back, to a log or to a database, not when a request succeeds and not when it fails. Whatever we record about a failure describes the failure, never the text that was in flight. A failure record can name the membership it belongs to, by the hash described above, and the service's logs are deleted after 30 days. IKI Systems never reads that text, so it cannot train on it. Training is disabled on the OpenAI account this service uses, so OpenAI does not train on that text either. Purchase and usage records are counts and hashes, not your words. OpenAI may still hold the text briefly to check for abuse; that holding is covered by <a href=\"https://openai.com/policies/\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI's policies</a> and is separate from training. A key you provide belongs to your own account, so this statement stops at the included service.",
+            "text": "SpeakWith can reach a language model three ways, and your text only passes through us on one of them: a local Ollama model on the Mac, where nothing leaves your device; an OpenAI API key you provide, where the text goes from the app straight to OpenAI and never through us; and the included service. For that third path our role is transit and nothing else. The text is encrypted in transit, to our service and from there to OpenAI, and held only in memory for the length of the request. Our AI service never writes the text you send, or the text that comes back, to a log or to a database, not when a request succeeds and not when it fails. Whatever we record about a failure describes the failure, never the text that was in flight. A failure record can name the membership it belongs to, by the identifier described above, and the service's logs are deleted after 30 days. IKI Systems never reads that text, so it cannot train on it. Training is disabled on the OpenAI account this service uses, so OpenAI does not train on that text either. Purchase and usage records are counts and identifiers, not your words. OpenAI may still hold the text briefly to check for abuse; that holding is covered by <a href=\"https://openai.com/policies/\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI's policies</a> and is separate from training. A key you provide belongs to your own account, so this statement stops at the included service.",
             "isHtml": true
           },
           {
@@ -2197,11 +2221,19 @@
             "isHtml": true
           },
           {
-            "text": "Payment is handled by the store you buy from: Gumroad for a direct purchase, Apple for a purchase in the App Store. Each holds your payment and contact details under its own privacy policy, and IKI Systems never receives your card details. Gumroad does show us, as the seller, the email address you bought with next to the licence key it issued. Those seller records stay with Gumroad and are not copied into the AI service, but they are why the hashes described above are pseudonymous and not anonymous: starting from a licence key, IKI Systems could work out which purchase a record belongs to.",
+            "text": "Where European or UK data protection law applies, we rely on two grounds. The membership record, the usage totals, and the record for each Mac are needed to provide what you bought: checking that a membership is current, applying the monthly allowance, and holding a licence to its device limit. Transcript text sent to the included service is processed only to return the result you asked for. Both are necessary for our contract with you. The service's logs, and the page counts on this website, rest on our legitimate interest in keeping the service working and knowing which pages are useful.",
+            "isHtml": false
+          },
+          {
+            "text": "Payment is handled by the store you buy from: Gumroad for a direct purchase, Apple for a purchase in the App Store. Each holds your payment and contact details under its own privacy policy, and IKI Systems never receives your card details. Gumroad does show us, as the seller, the email address you bought with next to the licence key it issued. Those seller records stay with Gumroad and are not copied into the AI service, but they are why the identifiers described above are pseudonymous and not anonymous: starting from a licence key, IKI Systems could work out which purchase a record belongs to.",
             "isHtml": false
           },
           {
             "text": "Two companies process data for the AI service on our behalf. Amazon Web Services hosts the service and stores the records described above, in the US West (Oregon) region. OpenAI receives the transcript text the service forwards and returns the result.",
+            "isHtml": false
+          },
+          {
+            "text": "IKI Systems is based in the United States, and the records described here are stored and processed there. If you live in the EEA, the UK, or Switzerland, your information leaves your region when the app contacts the service.",
             "isHtml": false
           },
           {
@@ -2218,8 +2250,12 @@
             "isHtml": false
           },
           {
-            "text": "To have the membership hash, the activation records, and the usage ledger for your purchase deleted, ask through the <a href=\"/contact/\">contact form</a>. The service holds hashes, not names, so we will need to know which licence key or purchase the records belong to. The form has a field for the key, and nothing you send through it is published.",
+            "text": "To have the membership identifier, the activation records, and the usage ledger for your purchase deleted, ask through the <a href=\"/contact/\">contact form</a>. The service holds identifiers, not names, so we will need to know which licence key or purchase the records belong to. The form has a field for the key, and nothing you send through it is published.",
             "isHtml": true
+          },
+          {
+            "text": "Under European and UK data protection law you can also ask for a copy of the records held about your purchase, ask for them to be corrected, ask us to restrict or stop using them, and ask for them in a form you can take elsewhere. Use the same contact form, with the licence key or purchase the records belong to, since that is the only way we can find them. We answer within one month. If you are not satisfied with the answer, you can complain to the data protection authority where you live.",
+            "isHtml": false
           },
           {
             "text": "Recordings, transcripts, and daily documents kept on your device are yours to delete, and that needs nothing from us.",
@@ -2362,7 +2398,7 @@
     "replyToLabel": "Your email address, if you would like a reply",
     "replyToHint": "Optional. Leave it blank and we have no way to answer.",
     "licenseKeyLabel": "Your licence key",
-    "licenseKeyHint": "Optional, and only needed to find your records. The service holds hashes rather than names, so a deletion request needs the key or the purchase it belongs to. This form is private, so the key is not posted anywhere public.",
+    "licenseKeyHint": "Optional, and only needed to find your records. The service holds identifiers rather than names, so a deletion request needs the key or the purchase it belongs to. This form is private, so the key is not posted anywhere public.",
     "honeypotLabel": "Leave this field empty",
     "submit": "Send message",
     "sending": "Sending...",

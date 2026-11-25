@@ -10,6 +10,7 @@ import { asset } from '../lib/asset';
 import { useTheme } from '../lib/theme';
 import { useLocaleApi } from '../lib/locale';
 import { signal } from '../lib/telemetry';
+import { withGumroadUtm } from '../lib/gumroad-utm';
 import { cx } from '../lib/cx';
 import { FlowLoop } from '../components/FlowLoop';
 import { SoundLoop } from '../components/SoundLoop';
@@ -451,12 +452,12 @@ export default function Home() {
               <h2>{copy.home.download.heading}</h2>
               <p>{copy.home.download.body}</p>
               <div className={css.hero__actions}>
-                <a className="button button--primary" href={copy.links.subscribeMacGumroad}
+                <a className="button button--primary" href={withGumroadUtm(copy.links.subscribeMacGumroad, 'home-subscribe')}
                    target="_blank" rel="noopener noreferrer"
                    onClick={() => signal('cta.subscribe_gumroad', { placement: 'home_download' })}>{copy.home.download.ctaPrimary}</a>
               </div>
               <p className={cx(css.download__links, css['download__buy-once'])}>
-                <a href={copy.links.buyMacGumroad} target="_blank" rel="noopener noreferrer"
+                <a href={withGumroadUtm(copy.links.buyMacGumroad, 'home-buy')} target="_blank" rel="noopener noreferrer"
                    onClick={() => signal('cta.buy_gumroad', { placement: 'home_download' })}>{copy.home.download.ctaBuyOnce}</a>
               </p>
               <p className={css.download__links}>

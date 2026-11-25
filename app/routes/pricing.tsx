@@ -7,6 +7,7 @@ import { Fragment } from 'react';
 import type { MetaArgs } from 'react-router';
 import { headFor } from '../head';
 import { signal } from '../lib/telemetry';
+import { withGumroadUtm } from '../lib/gumroad-utm';
 import { useLocaleApi } from '../lib/locale';
 import { cx } from '../lib/cx';
 import css from './pricing.module.css';
@@ -38,6 +39,20 @@ export default function Pricing() {
             ? 'cta.buy_gumroad'
             : 'cta.channel';
     signal(type, { placement: 'pricing_channels', channel });
+  };
+
+  /**
+   * Gumroad `utm_content` for a channel-card button, by position.
+   *
+   * Position, not URL or label: the trial permalink appears both as the App
+   * Store card's primary button and as the Gumroad card's tertiary link, so a
+   * URL lookup could not tell those two controls apart, and `ch.lead` is
+   * localized copy. The `$index === 0` test is the same one the card's DOM id
+   * already uses.
+   */
+  const channelContent = (index: number, slot: 'primary' | 'secondary' | 'tertiary'): string => {
+    if (index === 0) return 'pricing-appstore-card';
+    return slot === 'primary' ? 'pricing-member' : slot === 'secondary' ? 'pricing-buy' : 'pricing-trial';
   };
 
   return (
@@ -133,7 +148,7 @@ export default function Pricing() {
                 <li>{copy.pricing.ios.mac.step3}</li>
               </ol>
               <p>{copy.pricing.ios.mac.note}</p>
-              <a className={cx("button", "button--primary", css['channel-cta'])} href={copy.links.trialMacGumroad}
+              <a className={cx("button", "button--primary", css['channel-cta'])} href={withGumroadUtm(copy.links.trialMacGumroad, 'pricing-steps-trial')}
                  target="_blank" rel="noopener noreferrer"
                  onClick={() => signal('cta.trial_gumroad', { placement: 'pricing_ios_mac_steps' })}>{copy.pricing.ios.mac.linkLabel}</a>
             </aside>
@@ -280,18 +295,18 @@ export default function Pricing() {
                   <h3>{ch.heading}</h3>
                   <p>{ch.body}</p>
                   {ch.ctaUrl && (<>
-                    <a className={cx("button", "button--primary", css['channel-cta'])} href={ch.ctaUrl}
+                    <a className={cx("button", "button--primary", css['channel-cta'])} href={withGumroadUtm(ch.ctaUrl, channelContent($index, 'primary'))}
                        target="_blank" rel="noopener noreferrer"
                        onClick={() => trackChannel(ch.ctaUrl, ch.lead)}>{ch.ctaLabel}</a>
                   </>)}
                   {ch.ctaSecondaryUrl && (<>
-                    <a className={cx("button", "button--ghost", css['channel-cta'], css['channel-cta--secondary'])} href={ch.ctaSecondaryUrl}
+                    <a className={cx("button", "button--ghost", css['channel-cta'], css['channel-cta--secondary'])} href={withGumroadUtm(ch.ctaSecondaryUrl, channelContent($index, 'secondary'))}
                        target="_blank" rel="noopener noreferrer"
                        onClick={() => trackChannel(ch.ctaSecondaryUrl, ch.lead)}>{ch.ctaSecondaryLabel}</a>
                   </>)}
                   {ch.ctaTertiaryUrl && (<>
                     <p className={css['channel-cta--tertiary']}>
-                      <a href={ch.ctaTertiaryUrl} target="_blank" rel="noopener noreferrer"
+                      <a href={withGumroadUtm(ch.ctaTertiaryUrl, channelContent($index, 'tertiary'))} target="_blank" rel="noopener noreferrer"
                          onClick={() => trackChannel(ch.ctaTertiaryUrl, ch.lead)}>{ch.ctaTertiaryLabel}</a>
                     </p>
                   </>)}
