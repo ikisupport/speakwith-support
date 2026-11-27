@@ -1,0 +1,1 @@
+function s(e,a){let t;try{t=new URL(e)}catch{return e}const r=t.hostname.toLowerCase();return r!=="gumroad.com"&&!r.endsWith(".gumroad.com")?e:(t.searchParams.set("utm_source","support-site"),t.searchParams.set("utm_medium","referral"),t.searchParams.set("utm_campaign","mac-checkout"),t.searchParams.set("utm_content",a),t.toString())}export{s as w};
